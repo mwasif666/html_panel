@@ -1764,7 +1764,8 @@ hr.hr-dashed {
   bottom: 0;
   left: 0;
   width: var(--bs-startbar-width);
-  background-color: var(--bs-startbar-bg);
+  /* background-color: var(--bs-startbar-bg); */
+  background-color: white !important;
   border-right: 1px solid var(--bs-startbar-e-border-color);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -1822,11 +1823,13 @@ hr.hr-dashed {
   border-radius: 0.4rem;
 }
 .startbar .startbar-menu .navbar-nav .nav-item.active .nav-link.active {
-  color: #3167f3;
+  /* color: #3167f3; */
   background-color: var(--bs-menu-link-active-bg-color);
+  /* background-color: #16266F !important; */
 }
 .startbar .startbar-menu .navbar-nav .nav-item.active .nav-link.active .menu-icon {
   color: #3167f3;
+  /* color: white; */
 }
 .startbar .startbar-menu .navbar-nav .nav-item .nav-link {
   position: relative;
