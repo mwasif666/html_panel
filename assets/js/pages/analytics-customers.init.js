@@ -1,5 +1,5 @@
 /**
- * Theme: Approx - Bootstrap 5 Responsive Admin Dashboard
+ * Theme:Leak Detector  - Bootstrap 5 Responsive Admin Dashboard
  * Author: Mannatthemes
  * Analytics Customers Js
  */
@@ -7,11 +7,11 @@
 var chart_customer = {
   series: [
     {
-      name: 'New Customers ',
+      name: "New Customers ",
       data: [0, 20, 15, 19, 14, 25, 30],
     },
     {
-      name: 'Returning Customers',
+      name: "Returning Customers",
       data: [0, 8, 7, 13, 26, 16, 25],
     },
   ],
@@ -52,4 +52,3 @@ var chart_line = new ApexCharts(
   chart_customer
 );
 chart_line.render();
-

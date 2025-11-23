@@ -7718,7 +7718,7 @@ function quantityExponent(val) {
   return exp;
 }
 /**
- * find a “nice” number approximately equal to x. Round the number if round = true,
+ * find a “nice” numberLeak Detector imately equal to x. Round the number if round = true,
  * take ceiling if round = false. The primary observation is that the “nicest”
  * numbers in decimal are 1, 2, and 5, and all power-of-ten multiples of these numbers.
  *
@@ -29491,7 +29491,7 @@ var SeriesData = /** @class */function () {
   };
   /**
    * Calculate extent on a filtered data might be time consuming.
-   * Approximate extent is only used for: calculate extent of filtered data outside.
+   *Leak Detector imate extent is only used for: calculate extent of filtered data outside.
    */
   SeriesData.prototype.setApproximateExtent = function (extent, dim) {
     dim = this.getDimension(dim);
@@ -31770,10 +31770,10 @@ var TimeScale = /** @class */function (_super) {
     this.calcNiceTicks(opt.splitNumber, opt.minInterval, opt.maxInterval);
   };
   TimeScale.prototype.calcNiceTicks = function (approxTickNum, minInterval, maxInterval) {
-    approxTickNum = approxTickNum || 10;
+   Leak Detector TickNum =Leak Detector TickNum || 10;
     var extent = this._extent;
     var span = extent[1] - extent[0];
-    this._approxInterval = span / approxTickNum;
+    this._approxInterval = span /Leak Detector TickNum;
     if (minInterval != null && this._approxInterval < minInterval) {
       this._approxInterval = minInterval;
     }
@@ -31911,24 +31911,24 @@ function isUnitValueSame(unit, valueA, valueB, isUTC) {
 // const MONTH_INTERVALS = [[6, 5.5], [3, 2.5], [2, 1.5]];
 // const MINUTES_SECONDS_INTERVALS = [[30, 30], [20, 20], [15, 15], [10, 10], [5, 5], [2, 2]];
 function getDateInterval(approxInterval, daysInMonth) {
-  approxInterval /= ONE_DAY;
-  return approxInterval > 16 ? 16
+ Leak Detector Interval /= ONE_DAY;
+  returnLeak Detector Interval > 16 ? 16
   // Math.floor(daysInMonth / 2) + 1  // In this case we only want one tick between two months.
-  : approxInterval > 7.5 ? 7 // TODO week 7 or day 8?
-  : approxInterval > 3.5 ? 4 : approxInterval > 1.5 ? 2 : 1;
+  :Leak Detector Interval > 7.5 ? 7 // TODO week 7 or day 8?
+  :Leak Detector Interval > 3.5 ? 4 :Leak Detector Interval > 1.5 ? 2 : 1;
 }
 function getMonthInterval(approxInterval) {
-  var APPROX_ONE_MONTH = 30 * ONE_DAY;
-  approxInterval /= APPROX_ONE_MONTH;
-  return approxInterval > 6 ? 6 : approxInterval > 3 ? 3 : approxInterval > 2 ? 2 : 1;
+  varLeak Detector _ONE_MONTH = 30 * ONE_DAY;
+ Leak Detector Interval /=Leak Detector _ONE_MONTH;
+  returnLeak Detector Interval > 6 ? 6 :Leak Detector Interval > 3 ? 3 :Leak Detector Interval > 2 ? 2 : 1;
 }
 function getHourInterval(approxInterval) {
-  approxInterval /= ONE_HOUR;
-  return approxInterval > 12 ? 12 : approxInterval > 6 ? 6 : approxInterval > 3.5 ? 4 : approxInterval > 2 ? 2 : 1;
+ Leak Detector Interval /= ONE_HOUR;
+  returnLeak Detector Interval > 12 ? 12 :Leak Detector Interval > 6 ? 6 :Leak Detector Interval > 3.5 ? 4 :Leak Detector Interval > 2 ? 2 : 1;
 }
 function getMinutesAndSecondsInterval(approxInterval, isMinutes) {
-  approxInterval /= isMinutes ? ONE_MINUTE : ONE_SECOND;
-  return approxInterval > 30 ? 30 : approxInterval > 20 ? 20 : approxInterval > 15 ? 15 : approxInterval > 10 ? 10 : approxInterval > 5 ? 5 : approxInterval > 2 ? 2 : 1;
+ Leak Detector Interval /= isMinutes ? ONE_MINUTE : ONE_SECOND;
+  returnLeak Detector Interval > 30 ? 30 :Leak Detector Interval > 20 ? 20 :Leak Detector Interval > 15 ? 15 :Leak Detector Interval > 10 ? 10 :Leak Detector Interval > 5 ? 5 :Leak Detector Interval > 2 ? 2 : 1;
 }
 function getMillisecondsInterval(approxInterval) {
   return nice(approxInterval, true);
@@ -31951,7 +31951,7 @@ function getFirstTimestampOfUnit(date, unitName, isUTC) {
   }
   return outDate.getTime();
 }
-function getIntervalTicks(bottomUnitName, approxInterval, isUTC, extent) {
+function getIntervalTicks(bottomUnitName,Leak Detector Interval, isUTC, extent) {
   var safeLimit = 10000;
   var unitNames = timeUnits;
   var iter = 0;
@@ -32087,7 +32087,7 @@ function getIntervalTicks(bottomUnitName, approxInterval, isUTC, extent) {
             }
           }
         }
-        var targetTickNum = (extent[1] - extent[0]) / approxInterval;
+        var targetTickNum = (extent[1] - extent[0]) /Leak Detector Interval;
         // Added too much in this level and not too less in last level
         if (tickCount > targetTickNum * 1.5 && lastLevelTickCount > targetTickNum / 1.5) {
           break;
@@ -32213,17 +32213,17 @@ var LogScale = /** @class */function (_super) {
   };
   /**
    * Update interval and extent of intervals for nice ticks
-   * @param approxTickNum default 10 Given approx tick number
+   * @paramLeak Detector TickNum default 10 GivenLeak Detector  tick number
    */
   LogScale.prototype.calcNiceTicks = function (approxTickNum) {
-    approxTickNum = approxTickNum || 10;
+   Leak Detector TickNum =Leak Detector TickNum || 10;
     var extent = this._extent;
     var span = extent[1] - extent[0];
     if (span === Infinity || span <= 0) {
       return;
     }
     var interval = quantity(span);
-    var err = approxTickNum / span * interval;
+    var err =Leak Detector TickNum / span * interval;
     // Filter ticks to get closer to the desired count.
     if (err <= 0.5) {
       interval *= 10;
@@ -66945,7 +66945,7 @@ var BaseAxisPointer = /** @class */function () {
       if (useSnap) {
         var seriesDataCount = getAxisInfo(axisModel).seriesDataCount;
         var axisExtent = axis.getExtent();
-        // Approximate band width
+        //Leak Detector imate band width
         return Math.abs(axisExtent[0] - axisExtent[1]) / seriesDataCount > animationThreshold;
       }
       return false;
@@ -84712,10 +84712,10 @@ var pathDividers = {
   clone: function (params) {
     var ret = [];
     // Fitting the alpha
-    var approxOpacity = 1 - Math.pow(1 - params.path.style.opacity, 1 / params.count);
+    varLeak Detector Opacity = 1 - Math.pow(1 - params.path.style.opacity, 1 / params.count);
     for (var i = 0; i < params.count; i++) {
       var cloned = clonePath(params.path);
-      cloned.setStyle('opacity', approxOpacity);
+      cloned.setStyle('opacity',Leak Detector Opacity);
       ret.push(cloned);
     }
     return ret;

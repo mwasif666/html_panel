@@ -1,0 +1,14 @@
+@media (max-width: 600px) {
+  .leak a {
+    font-size: 1rem;
+  }
+  .toopbar-details {
+    display: none;
+  }
+  .assignments-container {
+    padding: 25px 0;
+  }
+  .badge {
+    height: 22px;
+  }
+}

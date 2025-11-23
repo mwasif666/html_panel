@@ -1,161 +1,154 @@
 .closed-container {
-    padding: 25px;
+  padding: 25px;
 }
 
 .closed-topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .search-box {
-    padding: 10px 15px;
-    width: 220px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
+  padding: 10px 15px;
+  width: 220px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
 }
 
 .clear-filter {
-    color: #ff4d2e;
-    font-weight: 600;
-    margin: 10px 0;
-    display: inline-block;
-    cursor: pointer;
+  color: #ff4d2e;
+  font-weight: 600;
+  margin: 10px 0;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .closed-filters {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .closed-filters input,
 .closed-filters select {
-    padding: 9px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+  padding: 9px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .filter-btn {
-    background: #ff6600;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
+  background: #ff6600;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
 }
 
 .closed-table-wrapper {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 .closed-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
 }
 
 .closed-table thead {
-    background: #f3f6fb;
+  background: #f3f6fb;
 }
 
 .closed-table th {
-    padding: 12px;
-    font-size: 14px;
-    text-align: left;
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
 }
 
 .closed-table td {
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-    font-size: 14px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
 }
 
 .badge {
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
 }
 
 .badge.yes {
-    background: #66d49a;
+  background: #66d49a;
 }
 
 .badge.no {
-    background: #ff8a8a;
+  background: #ff8a8a;
 }
 
 .view-btn {
-    padding: 5px 15px;
-    border-radius: 6px;
-    border: 1px solid #a7b8d6;
-    background: #e8edf8;
-    color: #3b4a6b;
-    cursor: pointer;
-    font-size: 13px;
+  padding: 5px 15px;
+  border-radius: 6px;
+  border: 1px solid #a7b8d6;
+  background: #e8edf8;
+  color: #3b4a6b;
+  cursor: pointer;
+  font-size: 13px;
 }
 
 .reactivate-btn {
-    padding: 6px 15px;
-    border-radius: 6px;
-    background: #ff6600;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 13px;
-    margin-left: 6px;
+  padding: 6px 15px;
+  border-radius: 6px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  margin-left: 6px;
 }
 
 .pagination-info {
-    margin-top: 15px;
-    color: #666;
-    font-size: 14px;
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
 }
 
 .pagination {
-    margin-top: 8px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .page-btn {
-    padding: 6px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #333;
-    border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid #ddd;
 }
 
 .page-btn.active {
-    background: #ff6600;
-    color: white;
-    border: 1px solid #ff6600;
+  background: #ff6600;
+  color: white;
+  border: 1px solid #ff6600;
 }
 
-.leak a{
-    text-align: center;
-    font-family: poppins;
-    font-weight: 700;
-    font-size: 42px;
-    color: #16266F ;
-}
-.leak i{
-    color: #FE1519;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bolder;
+
+.leak i {
+  color: #fe1519;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bolder;
 }
 
-td{
-    border: 1px solid #eee;
+td {
+  border: 1px solid #eee;
 }
-
 
 @media (max-width: 768px) {
-    .closed-filters {
-        flex-direction: column;
-    }
+  .closed-filters {
+    flex-direction: column;
+  }
 }

@@ -1,27 +1,26 @@
 /**
- * Theme: Approx - Bootstrap 5 Responsive Admin Dashboard
+ * Theme:Leak Detector  - Bootstrap 5 Responsive Admin Dashboard
  * Author: Mannatthemes
  * Animation Js
  */
 
-
 function myFunction() {
-  const selector = document.querySelector('#animate-me');
+  const selector = document.querySelector("#animate-me");
   const effectButtons = document.querySelectorAll("[data-test]");
-  effectButtons.forEach(button => {
-      button.addEventListener('click', e => {
-          const button = e.target;
-          const effect = button.dataset.test;
-          selector.classList.add('magictime', effect);
-      });
+  effectButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const button = e.target;
+      const effect = button.dataset.test;
+      selector.classList.add("magictime", effect);
+    });
 
-      button.addEventListener('click', e => {
-          setTimeout(function () {                       
-              const button = e.target;
-              const effect = button.dataset.test;
-              selector.classList.remove('magictime', effect);
-          }, 1000);
-      });
+    button.addEventListener("click", (e) => {
+      setTimeout(function () {
+        const button = e.target;
+        const effect = button.dataset.test;
+        selector.classList.remove("magictime", effect);
+      }, 1000);
+    });
   });
 }
 myFunction();

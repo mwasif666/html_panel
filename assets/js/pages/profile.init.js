@@ -1,15 +1,15 @@
 /**
- * Theme: Approx - Bootstrap 5 Responsive Admin Dashboard
+ * Theme:Leak Detector  - Bootstrap 5 Responsive Admin Dashboard
  * Author: Mannatthemes
  * Profile Js
  */
 
 var options = {
-    series: [67],
-    chart: {
+  series: [67],
+  chart: {
     height: 170,
-    type: 'radialBar',
-    offsetY: -10
+    type: "radialBar",
+    offsetY: -10,
   },
   colors: ["var(--bs-primary)"],
   plotOptions: {
@@ -21,28 +21,27 @@ var options = {
       },
       dataLabels: {
         name: {
-          fontSize: '13px',
-          offsetY: 50
+          fontSize: "13px",
+          offsetY: 50,
         },
         value: {
           offsetY: 5,
-          fontSize: '15px',
+          fontSize: "15px",
           formatter: function (val) {
             return val + "%";
-          }
-        }
-      }
-    }
+          },
+        },
+      },
+    },
   },
-  
+
   stroke: {
-    dashArray: 2
+    dashArray: 2,
   },
-  labels: ['Compleation'],
-  };
+  labels: ["Compleation"],
+};
 
-  var chart = new ApexCharts(document.querySelector("#complete"), options);
-  chart.render();
+var chart = new ApexCharts(document.querySelector("#complete"), options);
+chart.render();
 
-
-  const tobii = new Tobii()
+const tobii = new Tobii();

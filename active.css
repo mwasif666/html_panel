@@ -1,121 +1,142 @@
 .assignments-container {
-    padding: 25px;
+  padding: 25px;
 }
 
 .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .top-bar input {
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    width: 220px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  width: 220px;
 }
 
 .clear-filter {
-    display: block;
-    margin: 10px 0;
-    color: #ff4a2b;
-    cursor: pointer;
-    font-weight: 600;
+  display: block;
+  margin: 10px 0;
+  color: #ff4a2b;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .filter-row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-.filter-row input, .filter-row select {
-    padding: 9px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+.filter-row input,
+.filter-row .form-select {
+  padding: 9px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+/* 1) Fit-content width */
+.filter-row .form-select {
+  width: auto !important;
+  display: inline-block !important;
+  min-width: max-content !important;
+  padding-right: 38px !important; /* space for custom icon */
+  background-position: right 6px center !important;
+  background-repeat: no-repeat !important;
+  background-size: 14px !important;
+}
+
+/* 2) Bootstrap default arrow remove */
+.filter-row .form-select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: none !important;
+}
+
+/* 3) Add custom SVG icon */
+.filter-row .form-select.custom-arrow {
+  background-image: url("./assets/images/dropdown.svg") !important;
 }
 
 .filter-btn {
-    background: #ff6600;
-    border: none;
-    padding: 10px 18px;
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
+  background: #ff6600;
+  border: none;
+  padding: 10px 18px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .table-wrapper {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
 }
 
 thead {
-    background: #f3f6fb;
+  background: #f3f6fb;
 }
 
 thead th {
-    padding: 12px;
-    font-size: 14px;
-    text-align: left;
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
 }
 
 tbody td {
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-    font-size: 14px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  vertical-align: top;
 }
 
 .badge {
-    padding: 4px 10px;
-    font-size: 12px;
-    border-radius: 4px;
-    color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  color: #fff;
+  width: 40px;
 }
 
-.badge.yes { background: #66d49a; }
-.badge.no { background: #ff8a8a; }
+.badge.yes {
+  background: #66d49a;
+}
+.badge.no {
+  background: #ff8a8a;
+}
 
 .status-col {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
 }
 
 .status-row {
-    display: flex;
-    justify-content: space-between;
-}
-.leak a{
-    text-align: center;
-    font-family: poppins;
-    font-weight: 700;
-    font-size: 42px;
-    color: #16266F ;
-}
-.leak i{
-    color: #FE1519;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
-td{
-    border: 1px solid #eee;
+.leak i {
+  color: #fe1519;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+td {
+  border: 1px solid #eee;
 }
 .closed-topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .filter-row {
-        flex-direction: column;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

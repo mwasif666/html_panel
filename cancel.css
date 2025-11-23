@@ -179,13 +179,7 @@ tbody tr:hover {
   font-size: 18px;
   cursor: pointer;
 }
-.leak a{
-    text-align: center;
-    font-family: poppins;
-    font-weight: 700;
-    font-size: 42px;
-    color: #16266F ;
-}
+
 .leak i{
     color: #FE1519;
     text-align: center;

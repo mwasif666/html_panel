@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap);
+
 .alert-dismissible .btn-close {
   font-size: 22px;
   padding: 1.5rem 1.5rem;
@@ -1553,7 +1554,7 @@ hr.hr-dashed {
   bottom: 0;
   left: 0;
   width: var(--bs-startbar-width);
-  background-color: #16266F !important;
+  background-color: #16266f !important;
   border-right: 1px solid var(--bs-startbar-e-border-color);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -1610,9 +1611,21 @@ hr.hr-dashed {
 .startbar .startbar-menu .navbar-nav .nav-item.active {
   border-radius: 0.4rem;
 }
+.startbar .startbar-menu .navbar-nav .nav-item.active .nav-link {
+  display: flex !important;
+  gap: 10px !important;
+}
 .startbar .startbar-menu .navbar-nav .nav-item.active .nav-link.active {
-  color: white;
-  background-color: #fe5e15;
+  color: #fe5e15;
+}
+.startbar
+  .startbar-menu
+  .navbar-nav
+  .nav-item.active
+  .nav-link.active
+  svg
+  path {
+  fill: #fe5e15;
 }
 .startbar
   .startbar-menu
@@ -1622,12 +1635,11 @@ hr.hr-dashed {
   .menu-icon {
   color: white;
   /* background-color: #fe5e15; */
-
 }
 .startbar .startbar-menu .navbar-nav .nav-item .nav-link {
   position: relative;
   /* color: var(--bs-menu-link-color); */
-  color: white ;
+  color: white;
   font-size: 13px;
   font-weight: 500;
   display: -webkit-box;
@@ -1643,8 +1655,10 @@ hr.hr-dashed {
   border: 1px solid transparent;
 }
 .startbar .startbar-menu .navbar-nav .nav-item .nav-link.active,
-.startbar .startbar-menu .navbar-nav .nav-item .nav-link:hover {
+.startbar .startbar-menu .navbar-nav .nav-item .nav-link:hover,
+.startbar .startbar-menu .navbar-nav .nav-item .nav-link:hover svg path {
   color: #fe5e15;
+  fill: #fe5e15;
 }
 .startbar .startbar-menu .navbar-nav .nav-item .nav-link.active i,
 .startbar .startbar-menu .navbar-nav .nav-item .nav-link:hover i {
@@ -1702,7 +1716,7 @@ hr.hr-dashed {
 .startbar .startbar-menu .navbar-nav .nav-item .nav {
   position: relative;
 }
-.startbar .startbar-menu .navbar-nav .nav-item .nav:before {
+/* .startbar .startbar-menu .navbar-nav .nav-item .nav:before {
   content: "";
   position: absolute;
   width: 0.125rem;
@@ -1710,12 +1724,14 @@ hr.hr-dashed {
   background: rgba(137, 151, 189, 0.2);
   top: 0;
   left: 26px;
-}
+} */
 .startbar .startbar-menu .navbar-nav .nav-item .nav .nav-item {
-  margin-left: 36px;
+  margin-left: 15px;
 }
 .startbar .startbar-menu .navbar-nav .nav-item .nav .nav-item .nav-link {
   padding: 6px 16px 6px 16px;
+  display: flex;
+  gap: 10px;
 }
 .startbar .startbar-menu .menu-icon {
   font-size: 20px;
@@ -2088,8 +2104,8 @@ html[data-startbar="dark"] .logo-dark {
   transition: 0.3s;
 }
 .topbar .topbar-custom .nav-link.nav-icon {
-  width: 36px;
-  height: 36px;
+  width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

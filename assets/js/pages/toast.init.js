@@ -1,21 +1,24 @@
 /**
- * Theme: Approx - Bootstrap 5 Responsive Admin Dashboard
+ * Theme:Leak Detector  - Bootstrap 5 Responsive Admin Dashboard
  * Author: Mannatthemes
  * Toast Js
  */
 
- var toastElList = [].slice.call(document.querySelectorAll('.toast'))
- var toastList = toastElList.map(function (toastEl) {
-     var toast = new bootstrap.Toast(toastEl, { autohide: false });
-     toast.show();
- });
+var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+var toastList = toastElList.map(function (toastEl) {
+  var toast = new bootstrap.Toast(toastEl, { autohide: false });
+  toast.show();
+});
 
- var toastPlacement = document.getElementById("toastPlacement");
- if (toastPlacement) {
-     document.getElementById("selectToastPlacement").addEventListener("change", function () {
-         if (!toastPlacement.dataset.originalClass) {
-             toastPlacement.dataset.originalClass = toastPlacement.className;
-         }
-         toastPlacement.className = toastPlacement.dataset.originalClass + " " + this.value;
-     });
- }
+var toastPlacement = document.getElementById("toastPlacement");
+if (toastPlacement) {
+  document
+    .getElementById("selectToastPlacement")
+    .addEventListener("change", function () {
+      if (!toastPlacement.dataset.originalClass) {
+        toastPlacement.dataset.originalClass = toastPlacement.className;
+      }
+      toastPlacement.className =
+        toastPlacement.dataset.originalClass + " " + this.value;
+    });
+}

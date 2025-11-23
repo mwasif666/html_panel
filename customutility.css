@@ -1,0 +1,24 @@
+:root {
+  --input-placeholder: #9ba2c1;
+}
+input::placeholder {
+  color: var(--input-placeholder);
+}
+select {
+  color: var(--input-placeholder) !important;
+  background-color: white;
+}
+select option {
+  color: var(--input-placeholder);
+}
+ul li {
+  list-style: none;
+}
+
+.leak a {
+  text-align: center;
+  font-family: poppins;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #16266f;
+}
