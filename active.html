@@ -12,7 +12,12 @@
   <!-- App favicon -->
   <link rel="shortcut icon" href="assets/images/favicon.ico" />
   <link href="assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+    integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- App css -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -20,14 +25,14 @@
   <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="active.css">
   <link rel="stylesheet" href="./create.css">
-  <link rel="stylesheet" href="./customutility.css">
   <link rel="stylesheet" href="./responsive.css">
+  <link rel="stylesheet" href="./customutility.css">
 </head>
 
 <body>
   <!-- Top Bar Start -->
   <div class="topbar d-print-none">
-    <div class="container-fluid">
+    <div class="container-fluid px-1">
       <nav class="topbar-custom d-flex justify-content-between " id="topbar-custom">
         <ul class="topbar-item mb-0 gap-3 align-items-center p-0">
           <li>
@@ -49,7 +54,7 @@
           <div class="dropdown topbar-item">
             <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
               aria-haspopup="false" aria-expanded="false" data-bs-offset="0,19">
-              <i class="iconoir-bell"></i>
+              <img src="./assets/images/notification.svg" alt="">
               <span class="alert-badge"></span>
             </a>
             <div class="dropdown-menu stop dropdown-menu-end dropdown-lg py-0">
@@ -519,15 +524,22 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid">
+      <div class="container-fluid px-1">
 
         <!--end row-->
-        <div class="row">
+        <div class="row d-none d-lg-block">
           <div class="assignments-container">
 
             <div class="top-bar">
-              <h2>Active Assignments (132)</h2>
-              <input type="text" id="searchInput" placeholder="Search...">
+              <div>
+                <h2>Active Assignments (132)</h2>
+              </div>
+              <div class="search-box">
+                <input type="text" placeholder="Search here" />
+                <span class="search-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+              </div>
             </div>
 
             <a class="clear-filter">✖ Clear Filter</a>
@@ -544,7 +556,7 @@
                   </div>
                 </div>
               </div>
-              <div class=" date-group" style="width: 120px;">
+              <div class="date-group" style="width: 120px;">
                 <div class="datepicker-wrapper position-relative">
                   <input type="text" id="dateLoss" class=" " placeholder="to" autocomplete="off" readonly>
                   <div class="datepicker-icon">
@@ -588,7 +600,7 @@
                 <option>Report Submit</option>
               </select>
 
-              <button class="filter-btn">Filter</button>
+              <button class="filters-btn btn justify-content-center">Filter</button>
             </div>
 
             <!-- Table -->
@@ -704,6 +716,342 @@
           </div>
 
         </div>
+        <div class="row d-block d-lg-none">
+          <div class="col-sm-12">
+            <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+              <div class="closed-topbar">
+                <h2 class="color">Active Assignments (32)</h2>
+
+              </div>
+
+            </div>
+            <!--end page-title-box-->
+          </div>
+          <!--end col-->
+        </div>
+        <div class="top-bar2 d-block d-lg-none">
+          <div class="d-flex  justify-content-between w-100">
+            <div class="search-box">
+              <input type="text" placeholder="Search here" />
+              <span class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+
+            <button class="filter-btn d-flex justify-content-between" id="filterToggle">
+              Filters
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+
+
+          <!-- FILTER DROPDOWN -->
+          <div class="filter-panel" id="filterPanel">
+
+            <div class="filter-header">
+              <span class="filter-title">Filters(02)</span>
+              <span class="clear-btn">✕ Clear</span>
+            </div>
+
+            <!-- FROM -->
+            <div class="filter-group">
+
+              <div class="date-group">
+                <div class="datepicker-wrapper">
+                  <input type="text" id="filterDate1" placeholder="From" readonly autocomplete="off">
+                  <div class="datepicker-icon" id="filtericon1">
+                    <img src="./assets/images/datepicker.svg" alt="calendar">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TO -->
+            <div class="filter-group">
+
+              <div class="date-group">
+                <div class="datepicker-wrapper">
+                  <input type="text" id="filterDate2" placeholder="To" readonly autocomplete="off">
+                  <div class="datepicker-icon" id="filtericon2">
+                    <img src="./assets/images/datepicker.svg" alt="calendar">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN ITEMS (IMAGE WALI SPACING SAME) -->
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>Insurance Company</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>State</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>Dispatch Status</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>Schedule</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>Inspected</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>Invoice Created</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>Billed Received</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>Billed Created</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>Billed Paid</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>Payment Received</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+
+              <select class="form-select custom-arrow">
+                <option>Report Submit</option>
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ASSIGNMENT CARD -->
+        <div class="assignment-card d-block d-lg-none">
+
+          <div class="ac-header">
+            <div>
+              <h3 class="ac-name">Alex Mark</h3>
+              <p class="ac-id">9999</p>
+            </div>
+            <button class="edit-btn">
+              <img src="/assets/images/pencil.svg" />
+            </button>
+          </div>
+
+          <div class="ac-info">
+
+
+
+            <div class="ac-row">
+              <span class="label">Date</span>
+              <span class="value">22-10-25</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Claim #</span>
+              <span class="value">124356</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Insurance Company</span>
+              <span class="value">ABC Insure</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Address</span>
+              <span class="value">Street 1, NY,123 US</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Inspector</span>
+              <span class="value">Mark Wood</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Dispatch</span>
+              <span class="value yes">Yes</span>
+            </div>
+
+          </div>
+
+          <h4 class="status-title">Assignment Status</h4>
+
+          <div class="status-grid">
+
+            <div class="status-item">
+              <h5>Schedule</h5>
+              <button class="yes">Yes</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Bill Created</h5>
+              <button class="no">NO</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Payment Received</h5>
+              <button class="no">NO</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Inspected</h5>
+              <button class="yes">Yes</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Bill Received</h5>
+              <button class="no">NO</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Report Submitted</h5>
+              <button class="no">NO</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Invoice Created</h5>
+              <button class="yes">Yes</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Bill Payed</h5>
+              <button class="no">NO</button>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="assignment-card d-block mb-5 d-lg-none">
+
+          <div class="ac-header">
+            <div>
+              <h3 class="ac-name">Alex Mark</h3>
+              <p class="ac-id">9999</p>
+            </div>
+            <button class="edit-btn">
+              <img src="/assets/images/pencil.svg" />
+            </button>
+          </div>
+
+          <div class="ac-info">
+
+
+
+            <div class="ac-row">
+              <span class="label">Date</span>
+              <span class="value">22-10-25</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Claim #</span>
+              <span class="value">124356</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Insurance Company</span>
+              <span class="value">ABC Insure</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Address</span>
+              <span class="value">Street 1, NY,123 US</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Inspector</span>
+              <span class="value">Mark Wood</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Dispatch</span>
+              <span class="value yes">Yes</span>
+            </div>
+
+          </div>
+
+          <h4 class="status-title">Assignment Status</h4>
+
+          <div class="status-grid">
+
+            <div class="status-item">
+              <h5>Schedule</h5>
+              <button class="yes">Yes</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Bill Created</h5>
+              <button class="no">NO</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Payment Received</h5>
+              <button class="no">NO</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Inspected</h5>
+              <button class="yes">Yes</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Bill Received</h5>
+              <button class="no">NO</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Report Submitted</h5>
+              <button class="no">NO</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Invoice Created</h5>
+              <button class="yes">Yes</button>
+            </div>
+
+            <div class="status-item">
+              <h5>Bill Payed</h5>
+              <button class="no">NO</button>
+            </div>
+
+          </div>
+
+        </div>
         <!--end table row-->
       </div>
       <!-- container -->
@@ -764,7 +1112,7 @@
 
       <!--Start Footer-->
 
-      <footer class="footer text-center text-sm-start d-print-none">
+      <!-- <footer class="footer text-center text-sm-start d-print-none">
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
@@ -784,7 +1132,7 @@
             </div>
           </div>
         </div>
-      </footer>
+      </footer> -->
 
       <!--end footer-->
     </div>
@@ -815,7 +1163,35 @@
         row.style.display = text.includes(filter) ? "" : "none";
       });
     });
+
   </script>
+  <script>
+    // Toggle filter panel
+    document.getElementById("filterToggle").onclick = function (e) {
+      e.stopPropagation(); // Isse toggle click pe outside-close fire nahi hoga
+      const panel = document.getElementById("filterPanel");
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    };
+
+    // Close when clicking outside
+    document.addEventListener("click", function (e) {
+      const panel = document.getElementById("filterPanel");
+      const toggleBtn = document.getElementById("filterToggle");
+
+      // Agar panel hidden hai to kuch mat karo
+      if (panel.style.display !== "block") return;
+
+      // Agar click panel ke andar ya toggle button par hai → ignore
+      if (panel.contains(e.target) || toggleBtn.contains(e.target)) {
+        return;
+      }
+
+      // Otherwise close panel
+      panel.style.display = "none";
+    });
+
+  </script>
+
 
 </body>
 <!--end body-->

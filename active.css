@@ -8,20 +8,20 @@
   align-items: center;
   flex-wrap: wrap;
 }
-
-.top-bar input {
-  padding: 10px 15px;
-  border: 1px solid #ddd;
-  border-radius: 25px;
-  width: 220px;
+.top-bar h2 {
+  font-size: 32px;
+  font-weight: 600;
 }
-
+.top-bar .search-box {
+  width: 300px !important;
+}
 .clear-filter {
   display: block;
   margin: 10px 0;
   color: #ff4a2b;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .filter-row {
@@ -61,10 +61,17 @@
   background-image: url("./assets/images/dropdown.svg") !important;
 }
 
-.filter-btn {
+.filter-row .form-select,
+.filter-row .date-group,
+.filter-row button {
+  margin-bottom: 10px;
+}
+
+.filters-btn {
   background: #ff6600;
   border: none;
   padding: 10px 18px;
+  width: 130px;
   color: #fff;
   border-radius: 6px;
   cursor: pointer;
@@ -106,10 +113,14 @@ tbody td {
 }
 
 .badge.yes {
-  background: #66d49a;
+  background: #cbeee0;
+  color: #0ead6b;
+  font-weight: 500;
 }
 .badge.no {
-  background: #ff8a8a;
+  background: #ffc7c8;
+  color: #e20004;
+  font-weight: 500;
 }
 
 .status-col {

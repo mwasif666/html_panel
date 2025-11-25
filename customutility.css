@@ -1,5 +1,7 @@
 :root {
   --input-placeholder: #9ba2c1;
+  --main-color: #fe5e15;
+  --border-color: #e3e3e3;
 }
 input::placeholder {
   color: var(--input-placeholder);
@@ -7,6 +9,7 @@ input::placeholder {
 select {
   color: var(--input-placeholder) !important;
   background-color: white;
+  border-color: var(--border-color) !important;
 }
 select option {
   color: var(--input-placeholder);
@@ -21,4 +24,7 @@ ul li {
   font-weight: 700;
   font-size: 2.2rem;
   color: #16266f;
+}
+.color {
+  color: var(--main-color);
 }

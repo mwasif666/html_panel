@@ -12,10 +12,8 @@
 }
 
 .assignment-form {
-  background: #fff;
-  padding: 30px;
+  padding: 0px 10px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .form-row {
@@ -45,7 +43,7 @@ label {
 input,
 .form-select,
 textarea {
-  padding: 12px !important;
+  padding: 09px !important;
   border: 1px solid #dcdcdc;
   border-radius: 6px;
   font-size: 14px;

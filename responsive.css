@@ -1,3 +1,7 @@
+body {
+  background-color: #fafbff;
+}
+
 @media (max-width: 600px) {
   .leak a {
     font-size: 1rem;
@@ -10,5 +14,273 @@
   }
   .badge {
     height: 22px;
+  }
+  .assignment-form {
+    background: none;
+    padding: 30px 10px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+  .page-wrapper .page-content .page-title-box {
+    padding-bottom: 0;
+  }
+  .closed-topbar h2.color {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 0px;
+    padding-top: 10px;
+  }
+  .button-row {
+    justify-content: center;
+  }
+  .button-row button {
+    width: 100%;
+  }
+  .button-row .cancel-btn {
+    width: 350px !important;
+  }
+}
+
+/* Cards amd filters */
+/* TOP FILTER BAR */
+.top-bar2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 20px !important;
+}
+
+.search-box {
+  width: 68% !important;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-box input {
+  border: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #e3e3e3;
+}
+.search-icon {
+  position: absolute;
+  right: 25px;
+}
+
+.filter-btn {
+  background: var(--main-color);
+  color: #fff;
+  border: 0;
+  padding: 8px 15px;
+  border-radius: 4px;
+  display: flex;
+  width: 100px;
+  align-items: center;
+  font-size: 14px;
+}
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+/* FILTER DROPDOWN */
+.filter-panel input,
+.filter-panel select,
+.filter-panel input::placeholder {
+  border: none !important;
+  color: #333333 !important;
+  font-size: 12px;
+}
+
+.filter-panel select {
+  width: auto !important;
+  display: inline-block !important;
+  min-width: max-content !important;
+  padding-right: 38px !important; /* space for custom icon */
+  background-position: right 6px center !important;
+  background-repeat: no-repeat !important;
+  background-size: 14px !important;
+}
+
+/* 2) Bootstrap default arrow remove */
+.filter-panel select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: none !important;
+}
+
+/* 3) Add custom SVG icon */
+.filter-panel select.custom-arrow {
+  background-image: url("./assets/images/dropdown.svg") !important;
+}
+
+.filter-panel select {
+  width: 100% !important;
+}
+.filter-panel .filter-group img {
+  width: 18px;
+  position: relative;
+  left: 08px;
+}
+
+.filter-panel .filter-group {
+  margin-bottom: 0px;
+}
+
+.filter-panel {
+  position: absolute;
+  top: 67px;
+  right: 0;
+  width: 240px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  display: none;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 99;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 600;
+  padding: 0px 10px;
+}
+
+.filter-group {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+/* ASSIGNMENT CARD */
+.assignment-card {
+  background: #fff;
+  border-radius: 12px;
+  margin-top: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.ac-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  padding-bottom: 0px !important;
+}
+
+.edit-btn {
+  border: 0;
+  background: #ffe7d8;
+  padding: 8px 10px;
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.ac-info {
+  position: relative;
+  padding: 15px;
+  padding-top: 10px !important;
+}
+.ac-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+}
+
+/* INFO ROW */
+.ac-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.ac-row .label {
+  font-size: 13px;
+  color: #667085;
+}
+
+.value.yes {
+  color: #2da771;
+  font-weight: 600;
+}
+.value.no {
+  color: #e34040;
+  font-weight: 600;
+}
+
+/* STATUS SECTION */
+
+.status-title {
+  font-size: 13px;
+  color: #667085;
+  padding: 10px 15px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0px 15px;
+  gap: 05px;
+}
+
+.status-item {
+  text-align: start;
+  display: block;
+}
+.status-item h5 {
+  font-size: 11px;
+  color: #667085;
+  line-height: 06px;
+}
+.status-item button {
+  width: 100% !important;
+  padding: 05px 30px;
+  border: none;
+  border-radius: 05px;
+  margin-bottom: 15px;
+}
+
+.status-item .yes {
+  background: #cbeee0;
+  color: #0ead6b;
+}
+
+.status-item .no {
+  background: #ffc7c8;
+  color: #e20004;
+}
+
+footer {
+  margin-top: 150px !important;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+  .search-box {
+    width: 64%;
   }
 }
