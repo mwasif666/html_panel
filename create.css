@@ -44,7 +44,8 @@ input,
 .form-select,
 textarea {
   padding: 09px !important;
-  border: 1px solid #dcdcdc;
+  border: 1px solid var(--border-color) !important;
+  outline: none !important;
   border-radius: 6px;
   font-size: 14px;
 }
