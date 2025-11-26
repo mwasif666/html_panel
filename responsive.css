@@ -39,6 +39,11 @@ body {
   .button-row .cancel-btn {
     width: 350px !important;
   }
+  input,
+  .form-select,
+  textarea {
+    font-size: 12px;
+  }
 }
 
 /* Cards amd filters */
