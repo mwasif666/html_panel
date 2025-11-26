@@ -28,3 +28,13 @@ ul li {
 .color {
   color: var(--main-color);
 }
+.logo h2 {
+  font-family: poppins;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #16266f;
+  margin-top: 08px;
+}
+.leak span i {
+  margin-top: 6px;
+}
