@@ -1,23 +1,39 @@
 :root {
   --input-placeholder: #9ba2c1;
   --main-color: #fe5e15;
-  --border-color: #e3e3e3;
+  --border-color: #d6d6d6;
 }
 input::placeholder {
   color: var(--input-placeholder);
+  font-size: 12px;
+  font-weight: 400;
+}
+input {
+  border-radius: 3px !important;
 }
 select {
   color: var(--input-placeholder) !important;
   background-color: white;
   border-color: var(--border-color) !important;
+  font-size: 12px;
+  font-weight: 400;
 }
 select option {
   color: var(--input-placeholder);
+  font-size: 12px;
+  font-weight: 400;
 }
 ul li {
   list-style: none;
 }
-
+button {
+  border-radius: 3px !important;
+}
+.form-select {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  border-radius: 3px !important;
+}
 .leak a {
   text-align: center;
   font-family: poppins;

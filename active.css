@@ -42,24 +42,24 @@
   width: auto !important;
   display: inline-block !important;
   min-width: max-content !important;
-  padding-right: 38px !important; /* space for custom icon */
+  padding-right: 38px !important;
   background-position: right 6px center !important;
   background-repeat: no-repeat !important;
   background-size: 14px !important;
 }
 
 /* 2) Bootstrap default arrow remove */
-.filter-row .form-select {
+/* .filter-row .form-select {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
   background-image: none !important;
-}
+} */
 
 /* 3) Add custom SVG icon */
-.filter-row .form-select.custom-arrow {
+/* .filter-row .form-select.custom-arrow {
   background-image: url("./assets/images/dropdown.svg") !important;
-}
+} */
 
 .filter-row .form-select,
 .filter-row .date-group,
@@ -107,7 +107,7 @@ tbody td {
 .badge {
   padding: 4px 10px;
   font-size: 12px;
-  border-radius: 4px;
+  border-radius: 2px;
   color: #fff;
   width: 40px;
 }
