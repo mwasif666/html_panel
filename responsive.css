@@ -116,16 +116,10 @@ body {
 }
 
 /* 2) Bootstrap default arrow remove */
-.filter-panel select {
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
-  background-image: none !important;
-}
 
 /* 3) Add custom SVG icon */
 .filter-panel select.custom-arrow {
-  background-image: url("./assets/images/dropdown.svg") !important;
+  /* background-image: url("./assets/images/dropdown.svg") !important; */
 }
 
 .filter-panel select {
@@ -134,7 +128,7 @@ body {
 .filter-panel .filter-group img {
   width: 18px;
   position: relative;
-  left: 08px;
+  left: 07px;
 }
 
 .filter-panel .filter-group {
@@ -154,6 +148,7 @@ body {
   max-height: 80vh;
   overflow-y: auto;
   z-index: 99;
+  overflow: inherit;
 }
 
 .filter-header {

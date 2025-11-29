@@ -23,8 +23,8 @@
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="active.css">
   <link rel="stylesheet" href="./create.css">
+  <link rel="stylesheet" href="active.css">
   <link rel="stylesheet" href="./responsive.css">
   <link rel="stylesheet" href="./customutility.css">
 </head>
@@ -32,7 +32,7 @@
 <body>
   <!-- Top Bar Start -->
   <div class="topbar d-print-none">
-    <div class="container-fluid px-1">
+    <div class="container-fluid">
       <nav class="topbar-custom d-flex justify-content-between " id="topbar-custom">
         <ul class="topbar-item mb-0 gap-3 align-items-center p-0">
           <li>
@@ -41,23 +41,25 @@
             </button>
           </li>
           <li class="logo">
-            <h2>Logo
+            <h2>
+              Logo
             </h2>
+
           </li>
           <li class="leak">
             <span>
               <i class="iconoir-search"></i></span>
           </li>
         </ul>
-        <div class="topbar-item gap-3 mb-0">
+        <div class="topbar-item gap-1 mb-0">
           <div class="dropdown topbar-item">
             <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
               aria-haspopup="false" aria-expanded="false" data-bs-offset="0,19">
-              <img src="./assets/images/notification.svg" alt="">
-              <span class="alert-badge"></span>
+              <i class="iconoir-bell" id="iconoir-bell-notify"></i>
+              <span class="alert-badge m-0 p-0"></span>
             </a>
             <div class="dropdown-menu stop dropdown-menu-end dropdown-lg py-0">
-              <h5 class="dropdown-item-text m-0 py-3 d-flex justify-content-between align-items-center">
+              <h5 class="dropdown-item-text m-0 py-2 d-flex justify-content-between align-items-center">
                 Notifications
                 <a href="#" class="badge text-body-tertiary badge-pill">
                   <i class="iconoir-plus-circle fs-4"></i>
@@ -278,7 +280,7 @@
           <div class="dropdown topbar-item">
             <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
               aria-haspopup="false" aria-expanded="false" data-bs-offset="0,19">
-              <div class="d-flex gap-2 py-2">
+              <div class="d-flex gap-2">
                 <div class="topbar-user">
                   <img src="assets/images/users/avatar-1.jpg" alt="" class="thumb-md rounded-circle" />
                 </div>
@@ -352,7 +354,7 @@
                 aria-expanded="false" aria-controls="sidebarTransactions">
 
                 <img src="./assets/images/create.svg" width="20px" alt="">
-                <span>Assignments</span>
+                <span class="assignment-nav">Assignments</span>
               </a>
               <div class="collapse" id="sidebarTransactions">
                 <ul class="nav flex-column">
@@ -530,9 +532,20 @@
           <div class="assignments-container">
 
             <div class="top-bar">
-              <div>
-                <h2>Active Assignments (132)</h2>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+                    <div class="closed-topbar">
+                      <h2 class="color d-lg-none d-block">Active Assignments (132)</h2>
+                      <h2 class="color-dark d-none d-lg-block">Active Assignments (132)</h2>
+                    </div>
+
+                  </div>
+                  <!--end page-title-box-->
+                </div>
+                <!--end col-->
               </div>
+
               <div class="search-box">
                 <input type="text" placeholder="Search here" />
                 <span class="search-icon">

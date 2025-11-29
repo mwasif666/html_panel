@@ -3,10 +3,24 @@
   --main-color: #fe5e15;
   --border-color: #d6d6d6;
 }
+
 input::placeholder {
   color: var(--input-placeholder);
   font-size: 12px;
   font-weight: 400;
+}
+.simplebar-content {
+  padding: 0px !important;
+}
+.nav-link[data-bs-toggle="collapse"][aria-expanded="true"] span {
+  font-weight: 500 !important;
+}
+.startbar .startbar-menu .navbar-nav .nav-item .nav .nav-item .nav-link {
+  font-weight: 400 !important;
+}
+.calendar-icon img {
+  /* margin-bottom:21px !important; */
+  margin-top: -10px;
 }
 input {
   border-radius: 3px !important;
@@ -53,4 +67,11 @@ button {
 }
 .leak span i {
   margin-top: 6px;
+}
+.startbar
+  .startbar-menu
+  .navbar-nav
+  .nav-item
+  .nav-link[data-bs-toggle="collapse"]::after {
+  margin-left: 0px !important;
 }
