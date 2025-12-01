@@ -75,3 +75,7 @@ button {
   .nav-link[data-bs-toggle="collapse"]::after {
   margin-left: 0px !important;
 }
+
+table tr th {
+  text-align: center !important;
+}

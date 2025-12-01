@@ -16,7 +16,7 @@
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="close.css">
+  <link rel="stylesheet" href="./Styles.css">
   <link rel="stylesheet" href="./customutility.css">
   <link rel="stylesheet" href="./responsive.css">
 </head>
@@ -26,16 +26,17 @@
   <div class="topbar d-print-none">
     <div class="container-fluid">
       <nav class="topbar-custom d-flex justify-content-between " id="topbar-custom">
-        <ul class="topbar-item mb-0 gap-1 align-items-center p-0">
+        <ul class="topbar-item mb-0 gap-3 align-items-center p-0">
           <li>
             <button class="nav-link mobile-menu-btn nav-icon" id="togglemenu">
               <i class="iconoir-menu"></i>
             </button>
           </li>
-          <li class="leak">
-            <a href="">Leak Detector
+          <li class="logo">
+            <h2>
+              Logo
+            </h2>
 
-            </a>
           </li>
           <li class="leak">
             <span>
@@ -46,11 +47,11 @@
           <div class="dropdown topbar-item">
             <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
               aria-haspopup="false" aria-expanded="false" data-bs-offset="0,19">
-              <i class="iconoir-bell"></i>
-              <span class="alert-badge"></span>
+              <i class="iconoir-bell" id="iconoir-bell-notify"></i>
+              <span class="alert-badge m-0 p-0"></span>
             </a>
             <div class="dropdown-menu stop dropdown-menu-end dropdown-lg py-0">
-              <h5 class="dropdown-item-text m-0 py-3 d-flex justify-content-between align-items-center">
+              <h5 class="dropdown-item-text m-0 py-2 d-flex justify-content-between align-items-center">
                 Notifications
                 <a href="#" class="badge text-body-tertiary badge-pill">
                   <i class="iconoir-plus-circle fs-4"></i>
@@ -271,7 +272,7 @@
           <div class="dropdown topbar-item">
             <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
               aria-haspopup="false" aria-expanded="false" data-bs-offset="0,19">
-              <div class="d-flex gap-2 py-2">
+              <div class="d-flex gap-2">
                 <div class="topbar-user">
                   <img src="assets/images/users/avatar-1.jpg" alt="" class="thumb-md rounded-circle" />
                 </div>
@@ -516,48 +517,80 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid">
+      <div class="container-fluid px-1">
 
-        <!--end row-->
-        <div class="row">
-          <div class="closed-container">
+        <!-- DESKTOP VERSION -->
+        <div class="row d-none d-lg-block">
+          <div class="assignments-container">
 
-            <!-- Top Bar -->
-            <div class="closed-topbar">
-              <h2>Closed Assignments (65)</h2>
+            <div class="top-bar">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+                    <div class="closed-topbar">
+                      <h2 class="color d-lg-none d-block">Closed Assignments (65)</h2>
+                      <h2 class="color-dark d-none d-lg-block">Closed Assignments (65)</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <input type="text" class="search-box" placeholder="Search..">
+              <div class="search-box">
+                <input type="text" placeholder="Search.." />
+                <span class="search-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+              </div>
             </div>
 
             <a class="clear-filter">✖ Clear Filter</a>
 
-            <!-- Filters -->
-            <div class="closed-filters">
-              <input type="date">
-              <input type="date">
+            <!-- Filter Row -->
+            <div class="filter-row">
+              <div class="date-group" style="width: 120px;">
+                <div class="datepicker-wrapper">
+                  <input type="text" id="closedFrom" class="" placeholder="From" autocomplete="off" readonly>
+                  <div class="datepicker-icon">
+                    <span class="calendar-icon" id="icon-closedFrom">
+                      <img src="/assets/images/datepicker.svg" alt="calendar">
+                    </span>
+                  </div>
+                </div>
+              </div>
 
-              <select>
+              <div class="date-group" style="width: 120px;">
+                <div class="datepicker-wrapper position-relative">
+                  <input type="text" id="closedTo" class="" placeholder="To" autocomplete="off" readonly>
+                  <div class="datepicker-icon">
+                    <span class="calendar-icon" id="icon-closedTo">
+                      <img src="/assets/images/datepicker.svg" alt="calendar">
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <select class="form-select custom-arrow">
                 <option>Inc Company</option>
               </select>
-              <select>
+              <select class="form-select custom-arrow">
                 <option>State</option>
               </select>
-              <select>
+              <select class="form-select custom-arrow">
                 <option>Dispatch Status</option>
               </select>
-              <select>
+              <select class="form-select custom-arrow">
                 <option>Schedule</option>
               </select>
-              <select>
+              <select class="form-select custom-arrow">
                 <option>Inspected</option>
               </select>
 
-              <button class="filter-btn">Filter</button>
+              <button class="filters-btn btn justify-content-center">Filter</button>
             </div>
 
             <!-- Table -->
-            <div class="closed-table-wrapper">
-              <table class="closed-table">
+            <div class="table-wrapper">
+              <table>
                 <thead>
                   <tr>
                     <th>ID</th>
@@ -574,8 +607,8 @@
                   </tr>
                 </thead>
 
-                <tbody>
-                  <!-- Row -->
+                <tbody id="closedAssignmentTable">
+                  <!-- ROW -->
                   <tr>
                     <td>9999</td>
                     <td>22-10-25</td>
@@ -587,9 +620,27 @@
                     <td><span class="badge yes">Yes</span></td>
                     <td><span class="badge no">No</span></td>
                     <td>22-10-25</td>
-                    <td>
-                      <button class="view-btn">View</button>
-                      <button class="reactivate-btn">Reactivate</button>
+                    <td class="action-col d-flex gap-2">
+                      <button type="button" class="table1-btn">View</button>
+                      <button type="submit" class="table2-btn">Reactivate</button>
+                    </td>
+                  </tr>
+
+                  <!-- DUPLICATE ROWS (sample) -->
+                  <tr>
+                    <td>9999</td>
+                    <td>22-10-25</td>
+                    <td>547897</td>
+                    <td>Alex Mark</td>
+                    <td>ABC Insure</td>
+                    <td>Street 1, NY,123 US</td>
+                    <td>Mark Wood</td>
+                    <td><span class="badge yes">Yes</span></td>
+                    <td><span class="badge no">No</span></td>
+                    <td>22-10-25</td>
+                    <td class="action-col d-flex gap-2">
+                      <button type="button" class="table1-btn">View</button>
+                      <button type="submit" class="table2-btn">Reactivate</button>
                     </td>
                   </tr>
 
@@ -604,40 +655,260 @@
                     <td><span class="badge yes">Yes</span></td>
                     <td><span class="badge no">No</span></td>
                     <td>22-10-25</td>
-                    <td>
-                      <button class="view-btn">View</button>
-                      <button class="reactivate-btn">Reactivate</button>
+                    <td class="action-col d-flex gap-2">
+                      <button type="button" class="table1-btn">View</button>
+                      <button type="submit" class="table2-btn">Reactivate</button>
                     </td>
                   </tr>
 
                 </tbody>
               </table>
+
+              <!-- TABLE FOOTER / PAGINATION -->
+              <div class="table-footer d-flex justify-content-between align-items-center">
+                <span class="table-info">Showing 1-100 from 660</span>
+                <div class="pagination">
+                  <button class="page-btn active">1</button>
+                  <button class="page-btn">2</button>
+                  <button class="page-btn">3</button>
+                  <button class="page-btn">4</button>
+                  <button class="page-btn">5</button>
+                  <button class="page-btn">…</button>
+                  <button class="page-btn">&rsaquo;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOBILE VERSION -->
+        <div class="row d-block d-lg-none">
+          <div class="col-sm-12">
+            <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+              <div class="closed-topbar">
+                <h2 class="color">Closed Assignments (65)</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-bar2 d-block d-lg-none">
+          <div class="d-flex justify-content-between w-100">
+            <div class="search-box">
+              <input type="text" placeholder="Search here" />
+              <span class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
             </div>
 
-            <!-- Pagination -->
-            <div class="pagination-info">Showing 1–100 from 660</div>
+            <button class="filter-btn d-flex justify-content-between" id="closedFilterToggle">
+              Filters
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
 
-            <div class="pagination">
-              <span class="page-btn">‹</span>
-              <span class="page-btn active">1</span>
-              <span class="page-btn">2</span>
-              <span class="page-btn">3</span>
-              <span class="page-btn">4</span>
-              <span class="page-btn">5</span>
-              <span class="page-btn">…</span>
-              <span class="page-btn">›</span>
+          <!-- FILTER DROPDOWN -->
+          <div class="filter-panel" id="closedFilterPanel">
+
+            <div class="filter-header">
+              <span class="filter-title">Filters(02)</span>
+              <span class="clear-btn">✕ Clear</span>
+            </div>
+
+            <!-- FROM -->
+            <div class="filter-group">
+              <div class="date-group">
+                <div class="datepicker-wrapper">
+                  <input type="text" id="closedFilterDate1" placeholder="From" readonly autocomplete="off">
+                  <div class="datepicker-icon" id="closedFilterIcon1">
+                    <img src="./assets/images/datepicker.svg" alt="calendar">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TO -->
+            <div class="filter-group">
+              <div class="date-group">
+                <div class="datepicker-wrapper">
+                  <input type="text" id="closedFilterDate2" placeholder="To" readonly autocomplete="off">
+                  <div class="datepicker-icon" id="closedFilterIcon2">
+                    <img src="./assets/images/datepicker.svg" alt="calendar">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWNS -->
+            <div class="filter-group">
+              <select class="form-select custom-arrow">
+                <option>Insurance Company</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <select class="form-select custom-arrow">
+                <option>State</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <select class="form-select custom-arrow">
+                <option>Dispatch Status</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <select class="form-select custom-arrow">
+                <option>Schedule</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <select class="form-select custom-arrow">
+                <option>Inspected</option>
+              </select>
             </div>
 
           </div>
-
-
         </div>
-        <!--end table row-->
-      </div>
-      <!-- container -->
 
-      <!--Start Rightbar-->
-      <!--Start Rightbar/offcanvas-->
+        <!-- ASSIGNMENT CARD (MOBILE) -->
+        <div class="assignment-card d-block d-lg-none mb-4">
+
+          <div class="ac-header">
+            <div>
+              <h3 class="ac-name">Alex Mark</h3>
+              <p class="ac-id">9999</p>
+            </div>
+            <button class="edit-btn">
+              <img src="/assets/images/pencil.svg" />
+            </button>
+          </div>
+
+          <div class="ac-info">
+            <div class="ac-row">
+              <span class="label">Date</span>
+              <span class="value">22-10-25</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Claim #</span>
+              <span class="value">547897</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Insurance Company</span>
+              <span class="value">ABC Insure</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Address</span>
+              <span class="value">Street 1, NY,123 US</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Inspector</span>
+              <span class="value">Mark Wood</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Scheduled</span>
+              <span class="value yes">Yes</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Inspected</span>
+              <span class="value no">No</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Closed Date</span>
+              <span class="value">22-10-25</span>
+            </div>
+          </div>
+
+          <h4 class="status-title">Action</h4>
+          <div class="status-grid">
+            <div class="status-item action-buttons w-100">
+              <div class="btn-wrap d-flex gap-2">
+                <button class="btn-view w-50">View</button>
+                <button class="btn-reactivate w-50">Reactivate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DUPLICATE MOBILE CARD (sample) -->
+        <div class="assignment-card d-block d-lg-none mb-5">
+
+          <div class="ac-header">
+            <div>
+              <h3 class="ac-name">Alex Mark</h3>
+              <p class="ac-id">9999</p>
+            </div>
+            <button class="edit-btn">
+              <img src="/assets/images/pencil.svg" />
+            </button>
+          </div>
+
+          <div class="ac-info">
+            <div class="ac-row">
+              <span class="label">Date</span>
+              <span class="value">22-10-25</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Claim #</span>
+              <span class="value">547897</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Insurance Company</span>
+              <span class="value">ABC Insure</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Address</span>
+              <span class="value">Street 1, NY,123 US</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Inspector</span>
+              <span class="value">Mark Wood</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Scheduled</span>
+              <span class="value yes">Yes</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Inspected</span>
+              <span class="value no">No</span>
+            </div>
+
+            <div class="ac-row">
+              <span class="label">Closed Date</span>
+              <span class="value">22-10-25</span>
+            </div>
+          </div>
+
+          <h4 class="status-title">Action</h4>
+          <div class="status-grid">
+            <div class="status-item action-buttons w-100">
+              <div class="btn-wrap d-flex gap-2">
+                <button class="btn-view w-50">View</button>
+                <button class="btn-reactivate w-50">Reactivate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- same rightbar / footer as tumhare active page -->
+        <!-- ... (Appearance offcanvas + footer etc. yahan same rakh sakte ho) -->
+
+      </div>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
         <div class="offcanvas-header border-bottom justify-content-between">
           <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
@@ -686,14 +957,9 @@
         </div>
         <!--end offcanvas-body-->
       </div>
-      <!--end Rightbar/offcanvas-->
-      <!--end Rightbar-->
-
-
-
     </div>
-    <!-- end page content -->
   </div>
+
   <!-- end page-wrapper -->
 
   <!-- Javascript  -->

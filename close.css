@@ -119,27 +119,6 @@
   font-size: 14px;
 }
 
-.pagination {
-  margin-top: 8px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.page-btn {
-  padding: 6px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  color: #333;
-  border: 1px solid #ddd;
-}
-
-.page-btn.active {
-  background: #ff6600;
-  color: white;
-  border: 1px solid #ff6600;
-}
-
 
 .leak i {
   color: #fe1519;
