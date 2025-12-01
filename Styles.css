@@ -178,6 +178,57 @@ textarea {
   background-color: white !important;
 }
 
+
+.startbar .startbar-menu .navbar-nav .nav-item .nav .nav-item{
+  display: flex;
+}
+
+/* add inspector choosen buttons */
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 10px 8px 4px 8px;
+  height: 40px;              /* tumhare input height jaisi */
+}
+
+.upload-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 3px;
+  border: 1px solid #c9d5ff;
+  background-color: #eef3ff; /* halka blue button */
+  color: #3b4bc5;
+  margin-right: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.upload-btn .file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-name {
+  font-size: 12px;
+  color: #9ca3af;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
 /* ---------------- Responsive ---------------- */
 
 @media (max-width: 768px) {

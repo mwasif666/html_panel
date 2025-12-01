@@ -12,11 +12,14 @@
   <!-- App favicon -->
   <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
+  <link href="assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
   <!-- App css -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="./Styles.css">
   <link rel="stylesheet" href="./customutility.css">
   <link rel="stylesheet" href="./responsive.css">
 </head>
@@ -317,7 +320,7 @@
     </div>
     <!--end brand-->
     <!--start startbar-menu-->
-       <div class="startbar-menu">
+      <div class="startbar-menu">
         <div class="startbar-collapse" id="startbarCollapse" data-simplebar>
           <div class="d-flex align-items-start flex-column w-100">
             <!-- Navigation -->
@@ -661,500 +664,129 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid px-1">
-
-        <!-- DESKTOP VIEW -->
-        <div class="row d-none d-lg-block">
-          <div class="assignments-container">
-
-            <div class="top-bar">
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
-                    <div class="closed-topbar">
-                      <h2 class="color d-lg-none d-block">Cancelled Assignments (12)</h2>
-                      <h2 class="color-dark d-none d-lg-block">Cancelled Assignments (12)</h2>
-                    </div>
-                  </div>
-                  <!--end page-title-box-->
-                </div>
-                <!--end col-->
-              </div>
-
-              <div class="search-box">
-                <input type="text" placeholder="Search.." />
-                <span class="search-icon">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </span>
-              </div>
-            </div>
-
-            <a class="clear-filter">✖ Clear Filter</a>
-
-            <!-- Filter Row -->
-            <div class="filter-row">
-              <div class="date-group" style="width: 120px;">
-                <div class="datepicker-wrapper">
-                  <input type="text" id="cancelledFrom" class="" placeholder="From" autocomplete="off" readonly>
-                  <div class="datepicker-icon">
-                    <span class="calendar-icon" id="icon-cancelledFrom">
-                      <img src="/assets/images/datepicker.svg" alt="calendar">
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="date-group" style="width: 120px;">
-                <div class="datepicker-wrapper position-relative">
-                  <input type="text" id="cancelledTo" class="" placeholder="To" autocomplete="off" readonly>
-                  <div class="datepicker-icon">
-                    <span class="calendar-icon" id="icon-cancelledTo">
-                      <img src="/assets/images/datepicker.svg" alt="calendar">
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <select class="form-select custom-arrow">
-                <option>Inc Company</option>
-              </select>
-              <select class="form-select custom-arrow">
-                <option>State</option>
-              </select>
-              <select class="form-select custom-arrow">
-                <option>Dispatch Status</option>
-              </select>
-              <select class="form-select custom-arrow">
-                <option>Schedule</option>
-              </select>
-              <select class="form-select custom-arrow">
-                <option>Inspected</option>
-              </select>
-
-              <button class="filters-btn btn justify-content-center">Filter</button>
-            </div>
-
-            <!-- Table -->
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Date</th>
-                    <th>Claim#</th>
-                    <th>Ins Name</th>
-                    <th>Ins Company</th>
-                    <th>Address</th>
-                    <th>Inspector</th>
-                    <th>Scheduled</th>
-                    <th>Inspected</th>
-                    <th>Closed Date</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-
-                <tbody id="cancelledAssignmentTable">
-
-                  <!-- ROW 1 -->
-                  <tr>
-                    <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
-                    <td>Alex Mark</td>
-                    <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
-                    <td><span class="badge yes">Yes</span></td>
-                    <td><span class="badge no">No</span></td>
-                    <td>22-10-25</td>
-                    <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
-                    </td>
-                  </tr>
-
-                  <!-- ROW 2 -->
-                  <tr>
-                    <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
-                    <td>Alex Mark</td>
-                    <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
-                    <td><span class="badge yes">Yes</span></td>
-                    <td><span class="badge no">No</span></td>
-                    <td>22-10-25</td>
-                    <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
-                    </td>
-                  </tr>
-
-                  <!-- ROW 3 -->
-                  <tr>
-                    <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
-                    <td>Alex Mark</td>
-                    <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
-                    <td><span class="badge yes">Yes</span></td>
-                    <td><span class="badge no">No</span></td>
-                    <td>22-10-25</td>
-                    <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
-                    </td>
-                  </tr>
-
-                  <!-- ROW 4 -->
-                  <tr>
-                    <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
-                    <td>Alex Mark</td>
-                    <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
-                    <td><span class="badge yes">Yes</span></td>
-                    <td><span class="badge no">No</span></td>
-                    <td>22-10-25</td>
-                    <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
-                    </td>
-                  </tr>
-
-                  <!-- ROW 5 -->
-                  <tr>
-                    <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
-                    <td>Alex Mark</td>
-                    <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
-                    <td><span class="badge yes">Yes</span></td>
-                    <td><span class="badge no">No</span></td>
-                    <td>22-10-25</td>
-                    <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
-                    </td>
-                  </tr>
-
-                  <!-- ROW 6 -->
-                  <tr>
-                    <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
-                    <td>Alex Mark</td>
-                    <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
-                    <td><span class="badge yes">Yes</span></td>
-                    <td><span class="badge no">No</span></td>
-                    <td>22-10-25</td>
-                    <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
-                    </td>
-                  </tr>
-
-                </tbody>
-              </table>
-
-              <!-- FOOTER + PAGINATION -->
-              <div class="table-footer d-flex justify-content-between align-items-center">
-                <span class="table-info">Showing 1-100 from 660</span>
-                <div class="pagination">
-                  <button class="page-btn active">1</button>
-                  <button class="page-btn">2</button>
-                  <button class="page-btn">3</button>
-                  <button class="page-btn">4</button>
-                  <button class="page-btn">5</button>
-                  <button class="page-btn">…</button>
-                  <button class="page-btn">&rsaquo;</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+        <div class="closed-topbar">
+          <h2 class="color d-lg-none d-block">Add Manager</h2>
+          <h2 class="color-dark d-none d-lg-block">Add Manager</h2>
         </div>
-
-        <!-- MOBILE VIEW -->
-        <div class="row d-block d-lg-none">
-          <div class="col-sm-12">
-            <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
-              <div class="closed-topbar">
-                <h2 class="color">Cancelled Assignments (12)</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="top-bar2 d-block d-lg-none">
-          <div class="d-flex  justify-content-between w-100">
-            <div class="search-box">
-              <input type="text" placeholder="Search here" />
-              <span class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </span>
-            </div>
-
-            <button class="filter-btn d-flex justify-content-between" id="cancelledFilterToggle">
-              Filters
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-
-          <!-- FILTER DROPDOWN -->
-          <div class="filter-panel" id="cancelledFilterPanel">
-
-            <div class="filter-header">
-              <span class="filter-title">Filters(02)</span>
-              <span class="clear-btn">✕ Clear</span>
-            </div>
-
-            <!-- FROM -->
-            <div class="filter-group">
-              <div class="date-group">
-                <div class="datepicker-wrapper">
-                  <input type="text" id="cancelledFilterDate1" placeholder="From" readonly autocomplete="off">
-                  <div class="datepicker-icon" id="cancelledFilterIcon1">
-                    <img src="./assets/images/datepicker.svg" alt="calendar">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- TO -->
-            <div class="filter-group">
-              <div class="date-group">
-                <div class="datepicker-wrapper">
-                  <input type="text" id="cancelledFilterDate2" placeholder="To" readonly autocomplete="off">
-                  <div class="datepicker-icon" id="cancelledFilterIcon2">
-                    <img src="./assets/images/datepicker.svg" alt="calendar">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- DROPDOWN ITEMS -->
-            <div class="filter-group">
-              <select class="form-select custom-arrow">
-                <option>Insurance Company</option>
-              </select>
-            </div>
-
-            <div class="filter-group">
-              <select class="form-select custom-arrow">
-                <option>State</option>
-              </select>
-            </div>
-
-            <div class="filter-group">
-              <select class="form-select custom-arrow">
-                <option>Dispatch Status</option>
-              </select>
-            </div>
-
-            <div class="filter-group">
-              <select class="form-select custom-arrow">
-                <option>Schedule</option>
-              </select>
-            </div>
-
-            <div class="filter-group">
-              <select class="form-select custom-arrow">
-                <option>Inspected</option>
-              </select>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- MOBILE CARDS -->
-        <div class="assignment-card d-block d-lg-none">
-
-          <div class="ac-header">
-            <div>
-              <h3 class="ac-name">Alex Mark</h3>
-              <p class="ac-id">9999</p>
-            </div>
-            <button class="edit-btn">
-              <img src="/assets/images/pencil.svg" />
-            </button>
-          </div>
-
-          <div class="ac-info">
-            <div class="ac-row">
-              <span class="label">Date</span>
-              <span class="value">22-10-25</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Claim #</span>
-              <span class="value">547897</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Insurance Company</span>
-              <span class="value">ABC Insure</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Address</span>
-              <span class="value">Street 1, NY,123 US</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Inspector</span>
-              <span class="value">Mark Wood</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Scheduled</span>
-              <span class="value yes">Yes</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Inspected</span>
-              <span class="value no">No</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Closed Date</span>
-              <span class="value">22-10-25</span>
-            </div>
-          </div>
-
-          <h4 class="status-title">Action</h4>
-          <div class="status-grid">
-            <div class="status-item action-buttons w-100">
-              <td class="action-col">
-                <button type="button" class="table1-btn">View</button>
-                <button type="submit" class="table2-btn">Reactivate</button>
-              </td>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="assignment-card d-block mb-5 d-lg-none">
-
-          <div class="ac-header">
-            <div>
-              <h3 class="ac-name">Alex Mark</h3>
-              <p class="ac-id">9999</p>
-            </div>
-            <button class="edit-btn">
-              <img src="/assets/images/pencil.svg" />
-            </button>
-          </div>
-
-          <div class="ac-info">
-            <div class="ac-row">
-              <span class="label">Date</span>
-              <span class="value">22-10-25</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Claim #</span>
-              <span class="value">547897</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Insurance Company</span>
-              <span class="value">ABC Insure</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Address</span>
-              <span class="value">Street 1, NY,123 US</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Inspector</span>
-              <span class="value">Mark Wood</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Scheduled</span>
-              <span class="value yes">Yes</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Inspected</span>
-              <span class="value no">No</span>
-            </div>
-
-            <div class="ac-row">
-              <span class="label">Closed Date</span>
-              <span class="value">22-10-25</span>
-            </div>
-          </div>
-
-          <h4 class="status-title">Action</h4>
-          <div class="status-grid">
-            <div class="status-item action-buttons w-100">
-              <div class="btn-wrap d-flex gap-2">
-                <button type="button" class="table1-btn">View</button>
-                <button type="submit" class="table2-btn">Reactivate</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- SAME RIGHTBAR & FOOTER AS BEFORE -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
-          <div class="offcanvas-header border-bottom justify-content-between">
-            <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
-            <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <h6>Account Settings</h6>
-            <div class="p-2 text-start mt-3">
-              <div class="form-check form-switch mb-2">
-                <input class="form-check-input" type="checkbox" id="settings-switch1" />
-                <label class="form-check-label" for="settings-switch1">Auto updates</label>
-              </div>
-              <div class="form-check form-switch mb-2">
-                <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
-                <label class="form-check-label" for="settings-switch2">Location Permission</label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="settings-switch3" />
-                <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
-              </div>
-            </div>
-            <h6>General Settings</h6>
-            <div class="p-2 text-start mt-3">
-              <div class="form-check form-switch mb-2">
-                <input class="form-check-input" type="checkbox" id="settings-switch4" />
-                <label class="form-check-label" for="settings-switch4">Show me Online</label>
-              </div>
-              <div class="form-check form-switch mb-2">
-                <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
-                <label class="form-check-label" for="settings-switch5">Status visible to all</label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="settings-switch6" />
-                <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
-      <!-- end page content -->
     </div>
   </div>
+  <!--end row-->
 
+  <div class="row">
+    <form class="assignment-form w-100">
+      <div class="row">
+        <!-- Name -->
+        <div class="col-md-6 col-12 mb-3">
+          <div class="form-group">
+            <label>Name <span class="starColor">*</span></label>
+            <input type="text" class="" placeholder="Enter Name">
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6 col-12 mb-3">
+          <div class="form-group">
+            <label>Email <span class="starColor">*</span></label>
+            <input type="email" class="" placeholder="Enter Email">
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="col-md-6 col-12 mb-3">
+          <div class="form-group">
+            <label>Phone <span class="starColor">*</span></label>
+            <input type="text" class="" placeholder="Enter Phone">
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="col-md-6 col-12 mb-3">
+          <div class="form-group">
+            <label>Password <span class="starColor">*</span></label>
+            <input type="password" class="" placeholder="Enter Password">
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="button-row mt-3">
+        <button type="button" class="cancel-btn">Cancel</button>
+        <button type="submit" class="create-btn">Add Inspector</button>
+      </div>
+    </form>
+  </div>
+  <!--end row-->
+</div>
+
+
+
+
+      <!-- container -->
+
+      <!--Start Rightbar-->
+      <!--Start Rightbar/offcanvas-->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+        <div class="offcanvas-header border-bottom justify-content-between">
+          <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+          <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <h6>Account Settings</h6>
+          <div class="p-2 text-start mt-3">
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch1" />
+              <label class="form-check-label" for="settings-switch1">Auto updates</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
+              <label class="form-check-label" for="settings-switch2">Location Permission</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="settings-switch3" />
+              <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+            </div>
+            <!--end form-switch-->
+          </div>
+          <!--end /div-->
+          <h6>General Settings</h6>
+          <div class="p-2 text-start mt-3">
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch4" />
+              <label class="form-check-label" for="settings-switch4">Show me Online</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
+              <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="settings-switch6" />
+              <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+            </div>
+            <!--end form-switch-->
+          </div>
+          <!--end /div-->
+        </div>
+        <!--end offcanvas-body-->
+      </div>
+      <!--end Rightbar/offcanvas-->
+      <!--end Rightbar-->
+      <!--Start Footer-->
+
+
+      <!--end footer-->
+    </div>
+    <!-- end page content -->
+  </div>
   <!-- end page-wrapper -->
 
   <!-- Javascript  -->
@@ -1162,117 +794,14 @@
 
   <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/libs/simplebar/simplebar.min.js"></script>
-
-  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-  <script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
-  <script src="assets/js/pages/index.init.js"></script>
-  <script src="assets/js/DynamicSelect.js"></script>
+  <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
+  <script src="assets/libs/huebee/huebee.pkgd.min.js"></script>
+  <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+  <script src="assets/js/moment.js"></script>
+  <script src="assets/libs/imask/imask.min.js"></script>
+  <script src="assets/js/pages/forms-advanced.js"></script>
+  <script src="assets/js/datepicker.js"></script>
   <script src="assets/js/app.js"></script>
-
-  <script>
-    modalContent.innerHTML = `
-<p><strong>ID:</strong> ${row.id}</p>
-<p><strong>Claim#:</strong> ${row.claim}</p>
-<p><strong>Insured:</strong> ${row.insName} — ${row.insCompany}</p>
-<p><strong>Address:</strong> ${row.address}</p>
-<p><strong>Inspector:</strong> ${row.inspector}</p>
-<p><strong>Scheduled:</strong> ${row.scheduled}</p>
-<p><strong>Inspected:</strong> ${row.inspected}</p>
-<p><strong>Closed Date:</strong> ${row.closedDate}</p>
-`
-    modalBackdrop.style.display = 'flex'
-
-    function closeModal() { modalBackdrop.style.display = 'none' }
-
-
-    // Reactivate (simply removes from filtered and shows a toast)
-    function reactivateRow(row) {
-      const idx = filtered.indexOf(row)
-      if (idx > -1) {
-        filtered.splice(idx, 1)
-        // show quick toast
-        showToast('Assignment reactivated')
-        // if page emptied, go back one
-        const totalPages = Math.max(1, Math.ceil(filtered.length / rowsPerPage))
-        if (currentPage > totalPages) currentPage = totalPages
-        renderTable()
-      }
-    }
-
-
-    // Filter logic
-    function applyFilters() {
-      const q = document.getElementById('search').value.trim().toLowerCase()
-      const from = document.getElementById('fromDate').value
-      const to = document.getElementById('toDate').value
-      const company = document.getElementById('company').value
-      const state = document.getElementById('state').value
-      const inspected = document.getElementById('inspected').value
-
-
-      filtered = sample.filter(s => {
-        if (q) {
-          const hay = [s.id, s.date, s.claim, s.insName, s.insCompany, s.address, s.inspector].join(' ').toLowerCase();
-          if (!hay.includes(q)) return false
-        }
-        if (company && s.insCompany !== company) return false
-        if (inspected && ((inspected === 'yes') !== (s.inspected === 'Yes'))) return false
-        // date filters (dates in dd-mm-yy) convert to ISO
-        if (from) {
-          const parts = s.date.split('-') // dd-mm-yy
-          const iso = '20' + parts[2] + '-' + parts[1] + '-' + parts[0]
-          if (new Date(iso) < new Date(from)) return false
-        }
-        if (to) {
-          const parts = s.date.split('-')
-          const iso = '20' + parts[2] + '-' + parts[1] + '-' + parts[0]
-          if (new Date(iso) > new Date(to)) return false
-        }
-        return true
-      })
-      currentPage = 1
-      renderTable()
-    }
-
-
-    document.getElementById('filterBtn').addEventListener('click', applyFilters)
-    document.getElementById('clearFilter').addEventListener('click', () => {
-      document.getElementById('fromDate').value = ''
-      document.getElementById('toDate').value = ''
-      document.getElementById('company').value = ''
-      document.getElementById('state').value = ''
-      document.getElementById('inspected').value = ''
-      document.getElementById('search').value = ''
-      filtered = sample.slice()
-      currentPage = 1
-      renderTable()
-    })
-
-
-    // search enter
-    document.getElementById('search').addEventListener('keyup', (e) => { if (e.key === 'Enter') applyFilters() })
-
-
-    // simple toast
-    function showToast(msg) {
-      const t = document.createElement('div')
-      t.textContent = msg
-      t.style.position = 'fixed'
-      t.style.right = '20px'
-      t.style.bottom = '20px'
-      t.style.padding = '10px 14px'
-      t.style.background = 'rgba(0,0,0,0.8)'
-      t.style.color = '#fff'
-      t.style.borderRadius = '8px'
-      document.body.appendChild(t)
-      setTimeout(() => { t.style.transition = 'all .3s'; t.style.opacity = 0; t.style.transform = 'translateY(10px)'; }, 1400)
-      setTimeout(() => t.remove(), 1800)
-    }
-
-
-    // initial render
-    renderTable()
-  </script>
 
 </body>
 <!--end body-->

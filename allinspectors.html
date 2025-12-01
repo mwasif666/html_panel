@@ -12,11 +12,14 @@
   <!-- App favicon -->
   <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
+  <link href="assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
   <!-- App css -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="./Styles.css">
   <link rel="stylesheet" href="./customutility.css">
   <link rel="stylesheet" href="./responsive.css">
 </head>
@@ -661,7 +664,7 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid px-1">
+     <div class="container-fluid px-1">
 
         <!-- DESKTOP VIEW -->
         <div class="row d-none d-lg-block">
@@ -672,8 +675,8 @@
                 <div class="col-sm-12">
                   <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
                     <div class="closed-topbar">
-                      <h2 class="color d-lg-none d-block">Cancelled Assignments (12)</h2>
-                      <h2 class="color-dark d-none d-lg-block">Cancelled Assignments (12)</h2>
+                      <h2 class="color d-lg-none d-block">All Inspectors (12)  </h2>
+                      <h2 class="color-dark d-none d-lg-block">All Inspectors (12)  </h2>
                     </div>
                   </div>
                   <!--end page-title-box-->
@@ -889,7 +892,7 @@
           <div class="col-sm-12">
             <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
               <div class="closed-topbar">
-                <h2 class="color">Cancelled Assignments (12)</h2>
+                <h2 class="color">All Inspectors (12)  </h2>
               </div>
             </div>
           </div>
@@ -1151,10 +1154,68 @@
         </div>
 
       </div>
-      <!-- end page content -->
-    </div>
-  </div>
 
+      <!-- container -->
+
+      <!--Start Rightbar-->
+      <!--Start Rightbar/offcanvas-->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+        <div class="offcanvas-header border-bottom justify-content-between">
+          <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+          <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <h6>Account Settings</h6>
+          <div class="p-2 text-start mt-3">
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch1" />
+              <label class="form-check-label" for="settings-switch1">Auto updates</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
+              <label class="form-check-label" for="settings-switch2">Location Permission</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="settings-switch3" />
+              <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+            </div>
+            <!--end form-switch-->
+          </div>
+          <!--end /div-->
+          <h6>General Settings</h6>
+          <div class="p-2 text-start mt-3">
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch4" />
+              <label class="form-check-label" for="settings-switch4">Show me Online</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
+              <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="settings-switch6" />
+              <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+            </div>
+            <!--end form-switch-->
+          </div>
+          <!--end /div-->
+        </div>
+        <!--end offcanvas-body-->
+      </div>
+      <!--end Rightbar/offcanvas-->
+      <!--end Rightbar-->
+      <!--Start Footer-->
+
+
+      <!--end footer-->
+    </div>
+    <!-- end page content -->
+  </div>
   <!-- end page-wrapper -->
 
   <!-- Javascript  -->
@@ -1162,117 +1223,14 @@
 
   <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/libs/simplebar/simplebar.min.js"></script>
-
-  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-  <script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
-  <script src="assets/js/pages/index.init.js"></script>
-  <script src="assets/js/DynamicSelect.js"></script>
+  <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
+  <script src="assets/libs/huebee/huebee.pkgd.min.js"></script>
+  <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+  <script src="assets/js/moment.js"></script>
+  <script src="assets/libs/imask/imask.min.js"></script>
+  <script src="assets/js/pages/forms-advanced.js"></script>
+  <script src="assets/js/datepicker.js"></script>
   <script src="assets/js/app.js"></script>
-
-  <script>
-    modalContent.innerHTML = `
-<p><strong>ID:</strong> ${row.id}</p>
-<p><strong>Claim#:</strong> ${row.claim}</p>
-<p><strong>Insured:</strong> ${row.insName} — ${row.insCompany}</p>
-<p><strong>Address:</strong> ${row.address}</p>
-<p><strong>Inspector:</strong> ${row.inspector}</p>
-<p><strong>Scheduled:</strong> ${row.scheduled}</p>
-<p><strong>Inspected:</strong> ${row.inspected}</p>
-<p><strong>Closed Date:</strong> ${row.closedDate}</p>
-`
-    modalBackdrop.style.display = 'flex'
-
-    function closeModal() { modalBackdrop.style.display = 'none' }
-
-
-    // Reactivate (simply removes from filtered and shows a toast)
-    function reactivateRow(row) {
-      const idx = filtered.indexOf(row)
-      if (idx > -1) {
-        filtered.splice(idx, 1)
-        // show quick toast
-        showToast('Assignment reactivated')
-        // if page emptied, go back one
-        const totalPages = Math.max(1, Math.ceil(filtered.length / rowsPerPage))
-        if (currentPage > totalPages) currentPage = totalPages
-        renderTable()
-      }
-    }
-
-
-    // Filter logic
-    function applyFilters() {
-      const q = document.getElementById('search').value.trim().toLowerCase()
-      const from = document.getElementById('fromDate').value
-      const to = document.getElementById('toDate').value
-      const company = document.getElementById('company').value
-      const state = document.getElementById('state').value
-      const inspected = document.getElementById('inspected').value
-
-
-      filtered = sample.filter(s => {
-        if (q) {
-          const hay = [s.id, s.date, s.claim, s.insName, s.insCompany, s.address, s.inspector].join(' ').toLowerCase();
-          if (!hay.includes(q)) return false
-        }
-        if (company && s.insCompany !== company) return false
-        if (inspected && ((inspected === 'yes') !== (s.inspected === 'Yes'))) return false
-        // date filters (dates in dd-mm-yy) convert to ISO
-        if (from) {
-          const parts = s.date.split('-') // dd-mm-yy
-          const iso = '20' + parts[2] + '-' + parts[1] + '-' + parts[0]
-          if (new Date(iso) < new Date(from)) return false
-        }
-        if (to) {
-          const parts = s.date.split('-')
-          const iso = '20' + parts[2] + '-' + parts[1] + '-' + parts[0]
-          if (new Date(iso) > new Date(to)) return false
-        }
-        return true
-      })
-      currentPage = 1
-      renderTable()
-    }
-
-
-    document.getElementById('filterBtn').addEventListener('click', applyFilters)
-    document.getElementById('clearFilter').addEventListener('click', () => {
-      document.getElementById('fromDate').value = ''
-      document.getElementById('toDate').value = ''
-      document.getElementById('company').value = ''
-      document.getElementById('state').value = ''
-      document.getElementById('inspected').value = ''
-      document.getElementById('search').value = ''
-      filtered = sample.slice()
-      currentPage = 1
-      renderTable()
-    })
-
-
-    // search enter
-    document.getElementById('search').addEventListener('keyup', (e) => { if (e.key === 'Enter') applyFilters() })
-
-
-    // simple toast
-    function showToast(msg) {
-      const t = document.createElement('div')
-      t.textContent = msg
-      t.style.position = 'fixed'
-      t.style.right = '20px'
-      t.style.bottom = '20px'
-      t.style.padding = '10px 14px'
-      t.style.background = 'rgba(0,0,0,0.8)'
-      t.style.color = '#fff'
-      t.style.borderRadius = '8px'
-      document.body.appendChild(t)
-      setTimeout(() => { t.style.transition = 'all .3s'; t.style.opacity = 0; t.style.transform = 'translateY(10px)'; }, 1400)
-      setTimeout(() => t.remove(), 1800)
-    }
-
-
-    // initial render
-    renderTable()
-  </script>
 
 </body>
 <!--end body-->
