@@ -672,173 +672,444 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
-              <div class="closed-topbar">
-                <h2 class="color d-lg-none d-block">Create Assignments</h2>
-                <h2 class="color-dark d-none d-lg-block">Create Assignments</h2>
+     <div class="container-fluid px-1 leak-report-page">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="leak-report-title">Leak Report PDF Generation</h2>
+    </div>
+  </div>
 
-              </div>
-
+  <form class="leak-report-form">
+    <!-- TOP 2-COLUMN GRID -->
+    <div class="row">
+      <!-- LEFT COLUMN -->
+      <div class="col-md-6 col-12">
+        <!-- Date -->
+        <div class="form-group mb-3">
+          <label>Date</label>
+          <div class="datepicker-wrapper w-100">
+            <input
+              type="text"
+              id="lr_date"
+              class="leak-input"
+              placeholder="12/04/2025"
+              autocomplete="off"
+              readonly
+            />
+            <div class="datepicker-icon" data-target="lr_date">
+              <span class="calendar-icon">
+                <img src="/assets/images/datepicker.svg" alt="calendar" />
+              </span>
             </div>
-            <!--end page-title-box-->
           </div>
-          <!--end col-->
-        </div>
-        <!--end row-->
-
-        <div class="row">
-          <form class="assignment-form">
-
-            <!-- ROW 1 -->
-            <div class="row">
-              <!-- Date of Assignment -->
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group date-group">
-                  <label>Date of Assignment <span class="starColor">*</span></label>
-                  <div class="datepicker-wrapper w-100">
-                    <input type="text" id="dateAssignment" class=" " placeholder="mm/dd/yyyy" autocomplete="off"
-                      readonly>
-                    <div class="datepicker-icon">
-                      <span class="calendar-icon" id="icon-dateAssignment">
-                        <img src="/assets/images/datepicker.svg" alt="calendar">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- Claim Number -->
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group">
-                  <label>Claim Number <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Claim Number">
-                </div>
-              </div>
-
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group">
-                  <label>Insured Name <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Name">
-                </div>
-              </div>
-
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group">
-                  <label>Insurance Company <span class="starColor">*</span></label>
-                  <select class="form-select">
-                    <option>Select Company</option>
-                  </select>
-                </div>
-              </div>
-              <!-- Date of Loss -->
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group date-group">
-                  <label>Date of Loss <span class="starColor">*</span></label>
-                  <div class="datepicker-wrapper position-relative">
-                    <input type="text" id="dateLoss" class=" " placeholder="mm/dd/yyyy" autocomplete="off" readonly>
-                    <div class="datepicker-icon">
-                      <span class="calendar-icon" id="icon-dateLoss">
-                        <img src="/assets/images/datepicker.svg" alt="calendar">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group">
-                  <label>Phone Number 1 <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Number">
-                </div>
-              </div>
-
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group">
-                  <label>Phone Number 2</label>
-                  <input type="text" class="" placeholder="Enter Number">
-                </div>
-              </div>
-
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group">
-                  <label>Address <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Address">
-                </div>
-              </div>
-
-              <div class="col-md-4 col-6 mb-3">
-                <div class="form-group">
-                  <label>State <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter State">
-                </div>
-              </div>
-
-              <div class="col-md-4 col-6 mb-3">
-                <div class="form-group">
-                  <label>City <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter City">
-                </div>
-              </div>
-
-              <div class="col-md-4 col-12 mb-3">
-                <div class="form-group">
-                  <label>Zip Code <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Zip">
-                </div>
-              </div>
-
-              <div class="col-md-12 col-12 mb-3">
-                <div class="form-group full">
-                  <label>Loss Description <span class="starColor">*</span></label>
-                  <textarea class="" rows="3" placeholder="Write here..."></textarea>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group">
-                  <label>Adjuster Name</label>
-                  <input type="text" class="" placeholder="Enter Name">
-                </div>
-              </div>
-
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group">
-                  <label>Adjuster Phone</label>
-                  <input type="text" class="" placeholder="Enter Phone">
-                </div>
-              </div>
-
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group">
-                  <label>Adjuster Email</label>
-                  <input type="email" class="" placeholder="Enter Email">
-                </div>
-              </div>
-
-              <div class="col-md-6 col-6 mb-3">
-                <div class="form-group">
-                  <label>Assigned Inspector</label>
-                  <select class="form-select">
-                    <option>Select Inspector</option>
-                  </select>
-                </div>
-              </div>
-
-            </div>
-            <!-- Buttons -->
-            <div class="button-row mt-3">
-              <button type="button" class="cancel-btn">Cancel</button> <button type="submit" class="create-btn">Create
-                Assignment</button>
-            </div>
-
-          </form>
         </div>
 
-        <!--end row-->
+        <!-- Insured Name -->
+        <div class="form-group mb-3">
+          <label>Insured Name</label>
+          <input
+            type="text"
+            id="lr_insured_name"
+            class="leak-input"
+            placeholder="Alex Mark"
+          />
+        </div>
+
+        <!-- Date of Loss -->
+        <div class="form-group mb-3">
+          <label>Date of Loss</label>
+          <input
+            type="text"
+            id="lr_date_loss"
+            class="leak-input"
+            placeholder="12/04/2025"
+          />
+        </div>
+
+        <!-- City -->
+        <div class="form-group mb-3">
+          <label>City</label>
+          <input
+            type="text"
+            id="lr_city"
+            class="leak-input"
+            placeholder="123456789"
+          />
+        </div>
+
+        <!-- Zip Code -->
+        <div class="form-group mb-3">
+          <label>Zip Code</label>
+          <input
+            type="text"
+            id="lr_zip"
+            class="leak-input"
+            placeholder="32456"
+          />
+        </div>
       </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="col-md-6 col-12">
+        <!-- Claim Number -->
+        <div class="form-group mb-3">
+          <label>Claim Number</label>
+          <input
+            type="text"
+            id="lr_claim_number"
+            class="leak-input"
+            placeholder="143256"
+          />
+        </div>
+
+        <!-- Insurance Company -->
+        <div class="form-group mb-3">
+          <label>Insurance Company</label>
+          <input
+            type="text"
+            id="lr_ins_company"
+            class="leak-input"
+            placeholder="ABC Company"
+          />
+        </div>
+
+        <!-- Address -->
+        <div class="form-group mb-3">
+          <label>Address</label>
+          <input
+            type="text"
+            id="lr_address"
+            class="leak-input"
+            placeholder="123456789"
+          />
+        </div>
+
+        <!-- State -->
+        <div class="form-group mb-3">
+          <label>State</label>
+          <input
+            type="text"
+            id="lr_state"
+            class="leak-input"
+            placeholder="XYZ"
+          />
+        </div>
+
+        <!-- Inspector -->
+        <div class="form-group mb-3">
+          <label>Inspector</label>
+          <input
+            type="text"
+            id="lr_inspector"
+            class="leak-input"
+            placeholder="Alex John"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- FOR MANAGER SECTION -->
+    <div class="row mt-2">
+      <div class="col-12">
+        <h4 class="leak-section-heading">For Manager</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- LEFT BLOCK -->
+      <div class="col-md-6 col-12">
+        <!-- Leak detection conducted on -->
+        <div class="form-group mb-3">
+          <label>Leak detection conducted on:</label>
+          <div class="leak-checkbox-group">
+            <label class="leak-checkbox">
+              <input type="checkbox" name="lr_lines" value="Freshwater lines" />
+              <span>Freshwater lines</span>
+            </label>
+            <label class="leak-checkbox">
+              <input type="checkbox" name="lr_lines" value="Drain lines" />
+              <span>Drain lines</span>
+            </label>
+            <label class="leak-checkbox">
+              <input type="checkbox" name="lr_lines" value="Other" />
+              <span>Other</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Type of leak -->
+        <div class="form-group mb-3">
+          <label>Type of leak</label>
+          <input
+            type="text"
+            id="lr_type_of_leak"
+            class="leak-input"
+            placeholder="pipe"
+          />
+        </div>
+
+        <!-- Duration -->
+        <div class="form-group mb-3">
+          <label>Duration of the leak</label>
+          <div class="leak-checkbox-group">
+            <label class="leak-checkbox">
+              <input type="checkbox" name="lr_duration" value="Less than 2 weeks" />
+              <span>Less than 2 weeks</span>
+            </label>
+            <label class="leak-checkbox">
+              <input type="checkbox" name="lr_duration" value="Greater than 2 weeks" />
+              <span>Greater than 2 weeks</span>
+            </label>
+            <label class="leak-checkbox">
+              <input type="checkbox" name="lr_duration" value="Not applicable" />
+              <span>Not applicable</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT BLOCK -->
+      <div class="col-md-6 col-12">
+        <!-- Is leak active... -->
+        <div class="form-group mb-3">
+          <label>Is leak active all the time, intermittent, or only when a fixture is used?</label>
+          <div class="leak-checkbox-group">
+            <label class="leak-checkbox">
+              <input type="checkbox" name="lr_active" value="All the time" />
+              <span>All the time</span>
+            </label>
+            <label class="leak-checkbox">
+              <input type="checkbox" name="lr_active" value="Intermittent" />
+              <span>Intermittent</span>
+            </label>
+            <label class="leak-checkbox">
+              <input type="checkbox" name="lr_active" value="Only when a fixture is used" />
+              <span>Only when a fixture is used</span>
+            </label>
+            <label class="leak-checkbox">
+              <input type="checkbox" name="lr_active" value="Not Applicable" />
+              <span>Not Applicable</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Cause of leak -->
+        <div class="form-group mb-3">
+          <label>Cause of leak</label>
+          <input
+            type="text"
+            id="lr_cause_of_leak"
+            class="leak-input"
+            placeholder="Breakdown"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional details -->
+    <div class="row mt-2">
+      <div class="col-12">
+        <div class="form-group mb-3">
+          <label>Additional details</label>
+          <textarea
+            id="lr_additional_details"
+            class="leak-textarea"
+            rows="3"
+            placeholder="Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommended repair -->
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group mb-3">
+          <label>Recommended repair <span class="starColor">*</span></label>
+          <textarea
+            id="lr_recommended_repair"
+            class="leak-textarea"
+            rows="3"
+            placeholder="Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="row mt-3">
+      <div class="col-12 d-flex justify-content-end gap-2 leak-btn-row">
+        <button type="button" id="lr_generate_pdf" class="leak-btn-outline">
+          <i class="fa-regular fa-file-pdf me-1"></i>
+          Generate &amp; Download PDF
+        </button>
+        <button type="button" class="leak-btn-primary">
+          Update Data
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<style>
+    /* page wrapper */
+.leak-report-page {
+  padding-top: 8px;
+  padding-bottom: 24px;
+}
+
+.leak-report-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+/* form basics */
+.leak-report-form label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.leak-input,
+.leak-textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  padding: 8px 10px;
+  font-size: 13px;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.leak-input::placeholder,
+.leak-textarea::placeholder {
+  color: #9ca3af;
+  font-weight: 300;
+}
+
+.leak-input:focus,
+.leak-textarea:focus {
+  border-color: #ff7d1f;
+  box-shadow: 0 0 0 1px rgba(255, 125, 31, 0.2);
+}
+
+/* datepicker wrapper */
+.leak-report-page .datepicker-wrapper {
+  position: relative;
+}
+
+.leak-report-page .datepicker-wrapper .leak-input {
+  padding-right: 38px;
+}
+
+.leak-report-page .datepicker-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.leak-report-page .datepicker-icon img {
+  width: 18px;
+  height: 18px;
+}
+
+/* section heading */
+.leak-section-heading {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin: 4px 0 10px;
+}
+
+/* checkbox groups */
+.leak-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.leak-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.leak-checkbox input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid #d1d5db;
+  accent-color: #ff7d1f;
+}
+
+/* textareas */
+.leak-textarea {
+  resize: vertical;
+}
+
+/* buttons */
+.leak-btn-row {
+  gap: 10px;
+}
+
+.leak-btn-outline,
+.leak-btn-primary {
+  border-radius: 6px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+}
+
+.leak-btn-outline {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  color: #374151;
+}
+
+.leak-btn-outline:hover {
+  background: #f3f4f6;
+}
+
+.leak-btn-primary {
+  background: #ff7d1f;
+  color: #ffffff;
+  border-color: #ff7d1f;
+}
+
+.leak-btn-primary:hover {
+  background: #ff6c00;
+}
+
+/* small star color you already use */
+.starColor {
+  color: #ef4444;
+}
+
+/* responsive tweaks */
+@media (max-width: 767.98px) {
+  .leak-btn-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .leak-btn-outline,
+  .leak-btn-primary {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+</style>
       <!-- container -->
 
       <!--Start Rightbar-->
@@ -915,6 +1186,79 @@
   <script src="assets/js/pages/forms-advanced.js"></script>
   <script src="assets/js/datepicker.js"></script>
   <script src="assets/js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        integrity="sha512-YkqKqXW2qBVnH8U9Y0f3a3RpccLV1dCYi4lUKt57yfL5fADoI5lUuZ8aAkaI0s5momkGLumZ5qX6nNIP3vS0Kw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  (function () {
+    // calendar icon -> focus input (phir tumhara datepicker plugin open ho sakta hai)
+    document
+      .querySelectorAll(".leak-report-page .datepicker-icon")
+      .forEach(function (icon) {
+        icon.addEventListener("click", function () {
+          const targetId = this.getAttribute("data-target");
+          const input = document.getElementById(targetId);
+          if (input) input.focus();
+        });
+      });
+
+    // Generate & Download PDF
+    const pdfBtn = document.getElementById("lr_generate_pdf");
+    if (!pdfBtn) return;
+
+    pdfBtn.addEventListener("click", function () {
+      if (!window.jspdf) {
+        alert("PDF library not loaded.");
+        return;
+      }
+
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      // basic layout
+      doc.setFontSize(16);
+      doc.text("Leak Report", 14, 18);
+
+      doc.setFontSize(11);
+      let y = 30;
+
+      function addLine(label, value) {
+        doc.text(label + ": " + (value || "-"), 14, y);
+        y += 7;
+      }
+
+      addLine("Date", document.getElementById("lr_date").value);
+      addLine("Claim Number", document.getElementById("lr_claim_number").value);
+      addLine("Insured Name", document.getElementById("lr_insured_name").value);
+      addLine("Insurance Company", document.getElementById("lr_ins_company").value);
+      addLine("Address", document.getElementById("lr_address").value);
+      addLine("City", document.getElementById("lr_city").value);
+      addLine("State", document.getElementById("lr_state").value);
+      addLine("Zip Code", document.getElementById("lr_zip").value);
+      addLine("Inspector", document.getElementById("lr_inspector").value);
+      addLine("Date of Loss", document.getElementById("lr_date_loss").value);
+
+      // Manager info (short summary)
+      const typeOfLeak = document.getElementById("lr_type_of_leak").value;
+      const causeOfLeak = document.getElementById("lr_cause_of_leak").value;
+      const recommended = document.getElementById("lr_recommended_repair").value;
+
+      y += 3;
+      doc.text("Type of leak: " + (typeOfLeak || "-"), 14, y);
+      y += 7;
+      doc.text("Cause of leak: " + (causeOfLeak || "-"), 14, y);
+      y += 7;
+
+      // Recommended repair – multi-line
+      doc.text("Recommended repair:", 14, y);
+      y += 6;
+      const split = doc.splitTextToSize(recommended || "-", 180);
+      doc.text(split, 14, y);
+
+      doc.save("leak-report.pdf");
+    });
+  })();
+</script>
 
 </body>
 <!--end body-->

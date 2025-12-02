@@ -11,10 +11,14 @@
 
   <!-- App favicon -->
   <link rel="shortcut icon" href="assets/images/favicon.ico" />
-
-  <link href="assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+    integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- App css -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -594,215 +598,490 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid px-1">
-        <div class="top-bar">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
-                <div class="closed-topbar">
-                  <h2 class="color d-lg-none d-block">All Companies</h2>
-                  <h2 class="color-dark d-none d-lg-block">All Companies</h2>
-                </div>
+     <div class="container-fluid px-1 notifications-page">
+  <!-- TITLE + SEARCH -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+        <div class="closed-topbar">
+          <h2 class="color-dark mb-0">All Notifications</h2>
+        </div>
 
-              </div>
-              <!--end page-title-box-->
+        <!-- Search -->
+        <div class="search-box">
+          <input type="text" id="notifSearch" placeholder="Search.." />
+          <span class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end title row-->
+
+  <!-- CLEAR FILTER -->
+  <div class="row mb-2 mt-2">
+    <div class="col-12">
+      <button type="button" class="clear-filter-btn" id="clearNotifFilter">
+        <span class="clear-icon">✕</span>
+        <span class="clear-text">Clear Filter</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- FILTER ROW -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <div class="filter-row notifications-filter-row">
+        <!-- Start Date -->
+        <div class="date-group notif-date-group">
+          <div class="datepicker-wrapper w-100">
+            <input
+              type="text"
+              id="notifStartDate"
+              placeholder="Start Date"
+              autocomplete="off"
+              readonly
+            />
+            <div class="datepicker-icon" data-target="notifStartDate">
+              <span class="calendar-icon">
+                <img src="/assets/images/datepicker.svg" alt="calendar" />
+              </span>
             </div>
-            <!--end col-->
           </div>
+        </div>
 
-          <div class="search-box">
-            <input type="text" placeholder="Search here" />
-            <span class="search-icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
+        <!-- End Date -->
+        <div class="date-group notif-date-group">
+          <div class="datepicker-wrapper w-100">
+            <input
+              type="text"
+              id="notifEndDate"
+              placeholder="End Date"
+              autocomplete="off"
+              readonly
+            />
+            <div class="datepicker-icon" data-target="notifEndDate">
+              <span class="calendar-icon">
+                <img src="/assets/images/datepicker.svg" alt="calendar" />
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Manager -->
+        <select class="form-select custom-arrow notif-select" id="notifManager">
+          <option value="">Manager</option>
+          <option value="Garrett">Garrett</option>
+          <option value="Alex">Alex</option>
+        </select>
+
+        <!-- Status -->
+        <select class="form-select custom-arrow notif-select" id="notifStatus">
+          <option value="">Status</option>
+          <option value="read">Read</option>
+          <option value="unread">Unread</option>
+        </select>
+
+        <!-- Filter Button -->
+        <button class="filters-btn btn justify-content-center" id="applyNotifFilter">
+          Filter
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIFICATIONS LIST -->
+  <div class="row">
+    <div class="col-12">
+      <div class="notifications-list" id="notificationsList">
+
+        <!-- SINGLE NOTIFICATION ROW (repeat as needed) -->
+        <div class="notification-row unread" data-manager="Garrett">
+          <div class="notif-left">
+            <span class="notif-icon">
+              <i class="fa-regular fa-bell"></i>
             </span>
+            <div class="notif-content">
+              <p class="notif-text">
+                We had great experience in this assignment.
+              </p>
+              <span class="notif-meta">
+                Garrett • 21–Oct–2025 10:15 PM
+              </span>
+            </div>
           </div>
+          <button class="notif-view-btn" type="button" title="Mark as read">
+            <i class="fa-regular fa-eye"></i>
+          </button>
         </div>
 
-        <!-- Table -->
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Ins Company</th>
-                <th>Active Assignments</th>
-                <th>Closed Assignments</th>
-                <th>Cancelled Assignments</th>
-                <th>Action</th>
-              </tr>
-            </thead>
+        <div class="notification-row unread" data-manager="Garrett">
+          <div class="notif-left">
+            <span class="notif-icon">
+              <i class="fa-regular fa-bell"></i>
+            </span>
+            <div class="notif-content">
+              <p class="notif-text">
+                We had great experience in this assignment.
+              </p>
+              <span class="notif-meta">
+                Garrett • 21–Oct–2025 10:15 PM
+              </span>
+            </div>
+          </div>
+          <button class="notif-view-btn" type="button" title="Mark as read">
+            <i class="fa-regular fa-eye"></i>
+          </button>
+        </div>
 
-            <tbody id="companiesTable">
-              <!-- ROW 1 -->
-              <tr>
-                <td>9999</td>
-                <td>ABC Insure</td>
-                <td>2134</td>
-                <td>4356</td>
-                <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
-                </td>
-              </tr>
+        <div class="notification-row unread" data-manager="Alex">
+          <div class="notif-left">
+            <span class="notif-icon">
+              <i class="fa-regular fa-bell"></i>
+            </span>
+            <div class="notif-content">
+              <p class="notif-text">
+                Another notification message for testing layout.
+              </p>
+              <span class="notif-meta">
+                Alex • 22–Oct–2025 09:00 AM
+              </span>
+            </div>
+          </div>
+          <button class="notif-view-btn" type="button" title="Mark as read">
+            <i class="fa-regular fa-eye"></i>
+          </button>
+        </div>
 
-              <!-- SAMPLE DUPLICATE ROWS -->
-              <tr>
-                <td>9999</td>
-                <td>ABC Insure</td>
-                <td>2134</td>
-                <td>4356</td>
-                <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
-                </td>
-              </tr>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+    /* page background ko thoda light feel dena */
+.notifications-page {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
 
-              <tr>
-                <td>9999</td>
-                <td>ABC Insure</td>
-                <td>2134</td>
-                <td>4356</td>
-                <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
-                </td>
-              </tr>
+/* search box top-right */
+.notifications-page .search-box {
+  position: relative;
+  width: 220px;
+}
 
-              <tr>
-                <td>9999</td>
-                <td>ABC Insure</td>
-                <td>2134</td>
-                <td>4356</td>
-                <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
-                </td>
-              </tr>
+.notifications-page .search-box input {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 8px 34px 8px 14px;
+  font-size: 12px;
+  background: #f9fafb;
+  outline: none;
+}
 
-              <tr>
-                <td>9999</td>
-                <td>ABC Insure</td>
-                <td>2134</td>
-                <td>4356</td>
-                <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
-                </td>
-              </tr>
+.notifications-page .search-box input::placeholder {
+  color: #9ca3af;
+}
 
-              <tr>
-                <td>9999</td>
-                <td>ABC Insure</td>
-                <td>2134</td>
-                <td>4356</td>
-                <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
-                </td>
-              </tr>
+.notifications-page .search-box input:focus {
+  border-color: #ff7d1f;
+  box-shadow: 0 0 0 1px rgba(255, 125, 31, 0.25);
+  background: #ffffff;
+}
 
-              <tr>
-                <td>9999</td>
-                <td>ABC Insure</td>
-                <td>2134</td>
-                <td>4356</td>
-                <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+.notifications-page .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #9ca3af;
+}
 
-          <!-- FOOTER + PAGINATION -->
-          <div class="table-footer d-flex justify-content-between align-items-center">
-            <span class="table-info">Showing 1-100 from 660</span>
-            <div class="pagination">
-              <button class="page-btn">&lsaquo;</button>
-              <button class="page-btn active">1</button>
-              <button class="page-btn">2</button>
-              <button class="page-btn">3</button>
-              <button class="page-btn">4</button>
-              <button class="page-btn">5</button>
-              <button class="page-btn">…</button>
-              <button class="page-btn">&rsaquo;</button>
+/* clear filter link-button */
+.clear-filter-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 13px;
+  color: #f97316;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.clear-filter-btn .clear-icon {
+  font-size: 14px;
+}
+
+/* filter row */
+.notifications-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.notif-date-group {
+  width: 150px;
+}
+
+.notifications-page .datepicker-wrapper {
+  position: relative;
+}
+
+.notifications-page .datepicker-wrapper input {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  padding: 8px 34px 8px 10px;
+  font-size: 12px;
+  background: #ffffff;
+  outline: none;
+}
+
+.notifications-page .datepicker-wrapper input::placeholder {
+  color: #9ca3af;
+}
+
+.notifications-page .datepicker-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.notifications-page .datepicker-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+/* selects */
+.notif-select {
+  font-size: 12px;
+  width: 150px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  padding: 8px 10px;
+  background-color: #ffffff;
+}
+
+/* orange filter button */
+.filters-btn {
+  background: #ff7d1f;
+  color: #ffffff;
+  border-radius: 6px;
+  border: none;
+  padding: 8px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.filters-btn:hover {
+  background: #ff6c00;
+}
+
+/* notifications list */
+.notifications-list {
+  border-radius: 8px;
+  border: 1px solid #edf0f7;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* single row */
+.notification-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 14px;
+  font-size: 13px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.15s ease;
+
+}
+
+.notification-row:last-child {
+  border-bottom: none;
+}
+
+.notification-row:hover {
+  background: #f9fafb;
+}
+
+.notification-row.read {
+  background: #f3f4f6;
+  opacity: 0.8;
+}
+
+/* left side */
+.notif-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notif-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid #ffddb8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff7d1f;
+  background: #fff7ed;
+  font-size: 14px;
+}
+
+.notif-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.notif-text {
+  margin: 0 0 2px;
+  color: #111827;
+}
+
+.notif-meta {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* eye button on right */
+.notif-view-btn {
+  border: none;
+  background: transparent;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.notif-view-btn:hover {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .notifications-page .search-box {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .notifications-filter-row {
+    align-items: stretch;
+  }
+
+  .filters-btn {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .notification-row {
+    align-items: flex-start;
+  }
+}
+
+</style>
+
+      <!-- container -->
+
+      <!--Start Rightbar-->
+      <!--Start Rightbar/offcanvas-->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+        <div class="offcanvas-header border-bottom justify-content-between">
+          <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+          <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <h6>Account Settings</h6>
+          <div class="p-2 text-start mt-3">
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch1" />
+              <label class="form-check-label" for="settings-switch1">Auto updates</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
+              <label class="form-check-label" for="settings-switch2">Location Permission</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="settings-switch3" />
+              <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+            </div>
+            <!--end form-switch-->
+          </div>
+          <!--end /div-->
+          <h6>General Settings</h6>
+          <div class="p-2 text-start mt-3">
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch4" />
+              <label class="form-check-label" for="settings-switch4">Show me Online</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
+              <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="settings-switch6" />
+              <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+            </div>
+            <!--end form-switch-->
+          </div>
+          <!--end /div-->
+        </div>
+        <!--end offcanvas-body-->
+      </div>
+      <!--end Rightbar/offcanvas-->
+      <!--end Rightbar-->
+
+
+      <!--Start Footer-->
+
+      <!-- <footer class="footer text-center text-sm-start d-print-none">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="card mb-0 rounded-bottom-0">
+                <div class="card-body">
+                  <p class="text-muted mb-0">
+                    ©
+                    <script>
+                      document.write(new Date().getFullYear());
+                    </script>
+                    Leak Detector
+                    <span class="text-muted d-none d-sm-inline-block float-end">
+                      Develop by innovationpixel</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </footer> -->
+
+      <!--end footer-->
     </div>
-    <!--end row-->
-  </div>
-
-
-
-  <!-- container -->
-
-  <!--Start Rightbar-->
-  <!--Start Rightbar/offcanvas-->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
-    <div class="offcanvas-header border-bottom justify-content-between">
-      <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
-      <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
-        aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <h6>Account Settings</h6>
-      <div class="p-2 text-start mt-3">
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch1" />
-          <label class="form-check-label" for="settings-switch1">Auto updates</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
-          <label class="form-check-label" for="settings-switch2">Location Permission</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="settings-switch3" />
-          <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
-        </div>
-        <!--end form-switch-->
-      </div>
-      <!--end /div-->
-      <h6>General Settings</h6>
-      <div class="p-2 text-start mt-3">
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch4" />
-          <label class="form-check-label" for="settings-switch4">Show me Online</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
-          <label class="form-check-label" for="settings-switch5">Status visible to all</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="settings-switch6" />
-          <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
-        </div>
-        <!--end form-switch-->
-      </div>
-      <!--end /div-->
-    </div>
-    <!--end offcanvas-body-->
-  </div>
-  <!--end Rightbar/offcanvas-->
-  <!--end Rightbar-->
-  <!--Start Footer-->
-
-
-  <!--end footer-->
-  </div>
-  <!-- end page content -->
+    <!-- end page content -->
   </div>
   <!-- end page-wrapper -->
 
@@ -811,14 +1090,150 @@
 
   <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/libs/simplebar/simplebar.min.js"></script>
-  <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
-  <script src="assets/libs/huebee/huebee.pkgd.min.js"></script>
   <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
-  <script src="assets/js/moment.js"></script>
-  <script src="assets/libs/imask/imask.min.js"></script>
-  <script src="assets/js/pages/forms-advanced.js"></script>
+  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+  <script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
+  <script src="assets/js/pages/index.init.js"></script>
+  <script src="assets/js/DynamicSelect.js"></script>
   <script src="assets/js/datepicker.js"></script>
   <script src="assets/js/app.js"></script>
+
+  <script>
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+      let filter = this.value.toLowerCase();
+      let rows = document.querySelectorAll("#assignmentTable tr");
+
+      rows.forEach(row => {
+        let text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+
+  </script>
+  <script>
+    // Toggle filter panel
+    document.getElementById("filterToggle").onclick = function (e) {
+      e.stopPropagation(); // Isse toggle click pe outside-close fire nahi hoga
+      const panel = document.getElementById("filterPanel");
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    };
+
+    // Close when clicking outside
+    document.addEventListener("click", function (e) {
+      const panel = document.getElementById("filterPanel");
+      const toggleBtn = document.getElementById("filterToggle");
+
+      // Agar panel hidden hai to kuch mat karo
+      if (panel.style.display !== "block") return;
+
+      // Agar click panel ke andar ya toggle button par hai → ignore
+      if (panel.contains(e.target) || toggleBtn.contains(e.target)) {
+        return;
+      }
+
+      // Otherwise close panel
+      panel.style.display = "none";
+    });
+
+  </script>
+
+
+
+<script>
+  (function () {
+    const notifSearch = document.getElementById("notifSearch");
+    const list = document.getElementById("notificationsList");
+    const managerSelect = document.getElementById("notifManager");
+    const statusSelect = document.getElementById("notifStatus");
+    const clearBtn = document.getElementById("clearNotifFilter");
+    const filterBtn = document.getElementById("applyNotifFilter");
+    const startDateInput = document.getElementById("notifStartDate");
+    const endDateInput = document.getElementById("notifEndDate");
+
+    function filterNotifications() {
+      const searchValue = notifSearch.value.toLowerCase();
+      const managerVal = managerSelect.value;
+      const statusVal = statusSelect.value; // "read" / "unread" / ""
+
+      const rows = list.querySelectorAll(".notification-row");
+
+      rows.forEach((row) => {
+        const text =
+          row.querySelector(".notif-text").textContent.toLowerCase() +
+          " " +
+          row.querySelector(".notif-meta").textContent.toLowerCase();
+
+        const manager = row.getAttribute("data-manager");
+        const isRead = row.classList.contains("read");
+        const isUnread = row.classList.contains("unread");
+
+        let visible = true;
+
+        // search match
+        if (searchValue && !text.includes(searchValue)) {
+          visible = false;
+        }
+
+        // manager filter
+        if (visible && managerVal && manager !== managerVal) {
+          visible = false;
+        }
+
+        // status filter
+        if (visible && statusVal === "read" && !isRead) visible = false;
+        if (visible && statusVal === "unread" && !isUnread) visible = false;
+
+        row.style.display = visible ? "flex" : "none";
+      });
+    }
+
+    // live search
+    notifSearch && notifSearch.addEventListener("input", filterNotifications);
+
+    // filter button
+    filterBtn && filterBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      filterNotifications();
+    });
+
+    // clear filter
+    clearBtn &&
+      clearBtn.addEventListener("click", function () {
+        startDateInput.value = "";
+        endDateInput.value = "";
+        managerSelect.value = "";
+        statusSelect.value = "";
+        notifSearch.value = "";
+        filterNotifications();
+      });
+
+    // mark read/unread on eye click
+    list.addEventListener("click", function (e) {
+      const btn = e.target.closest(".notif-view-btn");
+      if (!btn) return;
+
+      const row = btn.closest(".notification-row");
+      if (!row) return;
+
+      // toggle
+      row.classList.toggle("read");
+      row.classList.toggle("unread");
+      filterNotifications(); // so status filter respects new state
+    });
+
+    // calendar icon -> focus related input (then your datepicker will open)
+    document
+      .querySelectorAll(".notifications-page .datepicker-icon")
+      .forEach((icon) => {
+        icon.addEventListener("click", function () {
+          const id = this.getAttribute("data-target");
+          const input = document.getElementById(id);
+          if (input) input.focus();
+        });
+      });
+  })();
+</script>
+
 
 </body>
 <!--end body-->
