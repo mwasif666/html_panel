@@ -288,8 +288,7 @@
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-end py-0">
-              <a class="dropdown-item" href="profile.html"><i
-                  class="las la-user fs-18 me-1 align-text-bottom"></i>
+              <a class="dropdown-item" href="profile.html"><i class="las la-user fs-18 me-1 align-text-bottom"></i>
                 Update Profile</a>
               <div class="dropdown-divider mb-0"></div>
               <a class="dropdown-item text-danger" href="auth-login.html"><i
@@ -325,6 +324,14 @@
         <div class="d-flex align-items-start flex-column w-100">
           <!-- Navigation -->
           <ul class="navbar-nav mb-auto w-100">
+            <li class="nav-item">
+              <a class="nav-link d-flex gap-2" href="./dashboard.html" role="button" aria-controls="sidebarDashboard">
+                <img src="./assets/images/chart-pie-alt.svg" width="20px" alt="" />
+                <span>Statistics</span>
+              </a>
+
+            </li>
+            <!-- Static -->
             <li class="nav-item">
               <a class="nav-link d-flex gap-2" href="#sidebarTransactions" data-bs-toggle="collapse" role="button"
                 aria-expanded="false" aria-controls="sidebarTransactions">
@@ -528,12 +535,12 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link d-flex gap-2" href="login.html" role="button"
-                aria-expanded="false" aria-controls="sidebarLogout">
+              <a class="nav-link d-flex gap-2" href="login.html" role="button" aria-expanded="false"
+                aria-controls="sidebarLogout">
                 <img src="./assets/images/sign-out-alt 1.svg" width="20px" alt="" />
                 <span>Logout</span>
               </a>
-            
+
             </li>
 
             <!-- <li class="nav-item">
@@ -595,637 +602,638 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-    <div class="container-fluid px-1">
-  <div class="dashboard-wrapper">
+      <div class="container-fluid px-1">
+        <div class="dashboard-wrapper">
 
-    <!-- WELCOME -->
-    <div class="row mb-3">
-      <div class="col-12">
-        <h3 class="dashboard-title">Welcome Here,</h3>
-        <p class="dashboard-subtitle">Garrett</p>
-      </div>
-    </div>
+          <!-- WELCOME -->
+          <div class="row mb-3">
+            <div class="col-12">
+              <h3 class="dashboard-title">Welcome Here,</h3>
+              <p class="dashboard-subtitle">Garrett</p>
+            </div>
+          </div>
 
-    <!-- TOP CARDS ROW 1 -->
-    <div class="row mb-3">
-      <!-- Today -->
-      <div class="col-md-6 mb-3">
-        <div class="stats-card stats-card-lg stats-today">
-          <div class="stats-card-header">
-            <div class="icon-wrap icon-green">
-              <i class="fa-regular fa-calendar-check"></i>
-            </div>
-            <h5 class="stats-title">Today's Assignments</h5>
-          </div>
-          <div class="stats-body">
-            <div>
-              <span class="stats-label">Scheduled</span>
-              <div class="stats-value">32</div>
-            </div>
-            <div>
-              <span class="stats-label">Inspected</span>
-              <div class="stats-value">44</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tomorrow -->
-      <div class="col-md-6 mb-3">
-        <div class="stats-card stats-card-lg stats-tomorrow">
-          <div class="stats-card-header">
-            <div class="icon-wrap icon-orange">
-              <i class="fa-regular fa-calendar-days"></i>
-            </div>
-            <h5 class="stats-title">Tomorrow's Assignments</h5>
-          </div>
-          <div class="stats-body">
-            <div>
-              <span class="stats-label">Scheduled</span>
-              <div class="stats-value">32</div>
-            </div>
-            <div>
-              <span class="stats-label">Inspected</span>
-              <div class="stats-value">44</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOP CARDS ROW 2 -->
-    <div class="row mb-3">
-      <div class="col-sm-6 col-lg-3 mb-3">
-        <div class="stats-card stats-small">
-          <div class="stats-card-header">
-            <div class="icon-wrap icon-blue">
-              <i class="fa-regular fa-clipboard"></i>
-            </div>
-            <h6 class="stats-title">Total Assignment</h6>
-          </div>
-          <div class="stats-body single">
-            <div class="stats-value">100</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-lg-3 mb-3">
-        <div class="stats-card stats-small">
-          <div class="stats-card-header">
-            <div class="icon-wrap icon-green">
-              <i class="fa-regular fa-clipboard"></i>
-            </div>
-            <h6 class="stats-title">Active Assignment</h6>
-          </div>
-          <div class="stats-body single">
-            <div class="stats-value">60</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-lg-3 mb-3">
-        <div class="stats-card stats-small">
-          <div class="stats-card-header">
-            <div class="icon-wrap icon-orange">
-              <i class="fa-regular fa-clipboard"></i>
-            </div>
-            <h6 class="stats-title">Closed Assignment</h6>
-          </div>
-          <div class="stats-body single">
-            <div class="stats-value">40</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-lg-3 mb-3">
-        <div class="stats-card stats-small">
-          <div class="stats-card-header">
-            <div class="icon-wrap icon-red">
-              <i class="fa-regular fa-clipboard"></i>
-            </div>
-            <h6 class="stats-title">Average Per Day</h6>
-          </div>
-          <div class="stats-body single">
-            <div class="stats-value">50</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ASSIGNMENTS CHART -->
-    <div class="row mb-3">
-      <div class="col-12">
-        <div class="card chart-card">
-          <div class="chart-header d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="icon-wrap icon-blue me-2">
-                <i class="fa-regular fa-clipboard"></i>
-              </div>
-              <div class="d-flex align-items-center">
-                <h6 class="chart-title mb-0 me-2">Assignments</h6>
-                <span class="badge-count">400</span>
+          <!-- TOP CARDS ROW 1 -->
+          <div class="row mb-3">
+            <!-- Today -->
+            <div class="col-md-6 mb-3">
+              <div class="stats-card stats-card-lg stats-today">
+                <div class="stats-card-header">
+                  <div class="icon-wrap icon-green">
+                    <i class="fa-regular fa-calendar-check"></i>
+                  </div>
+                  <h5 class="stats-title">Today's Assignments</h5>
+                </div>
+                <div class="stats-body">
+                  <div>
+                    <span class="stats-label">Scheduled</span>
+                    <div class="stats-value">32</div>
+                  </div>
+                  <div>
+                    <span class="stats-label">Inspected</span>
+                    <div class="stats-value">44</div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="d-flex align-items-center chart-legend">
-              <div class="legend-item">
-                <span class="legend-dot legend-active"></span> Active
+            <!-- Tomorrow -->
+            <div class="col-md-6 mb-3">
+              <div class="stats-card stats-card-lg stats-tomorrow">
+                <div class="stats-card-header">
+                  <div class="icon-wrap icon-orange">
+                    <i class="fa-regular fa-calendar-days"></i>
+                  </div>
+                  <h5 class="stats-title">Tomorrow's Assignments</h5>
+                </div>
+                <div class="stats-body">
+                  <div>
+                    <span class="stats-label">Scheduled</span>
+                    <div class="stats-value">32</div>
+                  </div>
+                  <div>
+                    <span class="stats-label">Inspected</span>
+                    <div class="stats-value">44</div>
+                  </div>
+                </div>
               </div>
-              <div class="legend-item">
-                <span class="legend-dot legend-closed"></span> Closed
-              </div>
-
-              <button type="button" class="view-toggle">
-                <span id="viewToggleLabel">Weekly</span>
-                <i class="fa-solid fa-chevron-down ms-1"></i>
-              </button>
             </div>
           </div>
 
-          <div class="chart-body">
-            <canvas id="assignmentsChart" height="130"></canvas>
+          <!-- TOP CARDS ROW 2 -->
+          <div class="row mb-3">
+            <div class="col-sm-6 col-lg-3 mb-3">
+              <div class="stats-card stats-small">
+                <div class="stats-card-header">
+                  <div class="icon-wrap icon-blue">
+                    <i class="fa-regular fa-clipboard"></i>
+                  </div>
+                  <h6 class="stats-title">Total Assignment</h6>
+                </div>
+                <div class="stats-body single">
+                  <div class="stats-value">100</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mb-3">
+              <div class="stats-card stats-small">
+                <div class="stats-card-header">
+                  <div class="icon-wrap icon-green">
+                    <i class="fa-regular fa-clipboard"></i>
+                  </div>
+                  <h6 class="stats-title">Active Assignment</h6>
+                </div>
+                <div class="stats-body single">
+                  <div class="stats-value">60</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mb-3">
+              <div class="stats-card stats-small">
+                <div class="stats-card-header">
+                  <div class="icon-wrap icon-orange">
+                    <i class="fa-regular fa-clipboard"></i>
+                  </div>
+                  <h6 class="stats-title">Closed Assignment</h6>
+                </div>
+                <div class="stats-body single">
+                  <div class="stats-value">40</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mb-3">
+              <div class="stats-card stats-small">
+                <div class="stats-card-header">
+                  <div class="icon-wrap icon-red">
+                    <i class="fa-regular fa-clipboard"></i>
+                  </div>
+                  <h6 class="stats-title">Average Per Day</h6>
+                </div>
+                <div class="stats-body single">
+                  <div class="stats-value">50</div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- ASSIGNMENTS CHART -->
+          <div class="row mb-3">
+            <div class="col-12">
+              <div class="card chart-card">
+                <div class="chart-header d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <div class="icon-wrap icon-blue me-2">
+                      <i class="fa-regular fa-clipboard"></i>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h6 class="chart-title mb-0 me-2">Assignments</h6>
+                      <span class="badge-count">400</span>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center chart-legend">
+                    <div class="legend-item">
+                      <span class="legend-dot legend-active"></span> Active
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-dot legend-closed"></span> Closed
+                    </div>
+
+                    <button type="button" class="view-toggle">
+                      <span id="viewToggleLabel">Weekly</span>
+                      <i class="fa-solid fa-chevron-down ms-1"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="chart-body">
+                  <canvas id="assignmentsChart" height="130"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOTTOM 3 CARDS -->
+          <div class="row mb-3">
+            <!-- Top 10 States -->
+            <div class="col-md-4 mb-3">
+              <div class="card list-card">
+                <div class="list-header">
+                  <h6>Top 10 States</h6>
+                </div>
+                <ul class="list-body">
+                  <li>
+                    <span>1. State Name</span>
+                    <span class="list-count">12</span>
+                  </li>
+                  <li>
+                    <span>2. State Name</span>
+                    <span class="list-count">12</span>
+                  </li>
+                  <li>
+                    <span>3. State Name</span>
+                    <span class="list-count">12</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Top 10 Cities -->
+            <div class="col-md-4 mb-3">
+              <div class="card list-card">
+                <div class="list-header">
+                  <h6>Top 10 Cities</h6>
+                </div>
+                <ul class="list-body">
+                  <li>
+                    <span>1. City Name</span>
+                    <span class="list-count">12</span>
+                  </li>
+                  <li>
+                    <span>2. City Name</span>
+                    <span class="list-count">12</span>
+                  </li>
+                  <li>
+                    <span>3. City Name</span>
+                    <span class="list-count">12</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Top 10 Inspectors -->
+            <div class="col-md-4 mb-3">
+              <div class="card list-card">
+                <div class="list-header">
+                  <h6>Top 10 Inspectors</h6>
+                </div>
+                <ul class="list-body">
+                  <li>
+                    <span>1. Inspector Name</span>
+                    <span class="list-count">12</span>
+                  </li>
+                  <li>
+                    <span>2. Inspector Name</span>
+                    <span class="list-count">12</span>
+                  </li>
+                  <li>
+                    <span>3. Inspector Name</span>
+                    <span class="list-count">12</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
 
-    <!-- BOTTOM 3 CARDS -->
-    <div class="row mb-3">
-      <!-- Top 10 States -->
-      <div class="col-md-4 mb-3">
-        <div class="card list-card">
-          <div class="list-header">
-            <h6>Top 10 States</h6>
-          </div>
-          <ul class="list-body">
-            <li>
-              <span>1. State Name</span>
-              <span class="list-count">12</span>
-            </li>
-            <li>
-              <span>2. State Name</span>
-              <span class="list-count">12</span>
-            </li>
-            <li>
-              <span>3. State Name</span>
-              <span class="list-count">12</span>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <!-- ===== STYLES (dashboard specific) ===== -->
+      <style>
+        .dashboard-wrapper {
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
 
-      <!-- Top 10 Cities -->
-      <div class="col-md-4 mb-3">
-        <div class="card list-card">
-          <div class="list-header">
-            <h6>Top 10 Cities</h6>
-          </div>
-          <ul class="list-body">
-            <li>
-              <span>1. City Name</span>
-              <span class="list-count">12</span>
-            </li>
-            <li>
-              <span>2. City Name</span>
-              <span class="list-count">12</span>
-            </li>
-            <li>
-              <span>3. City Name</span>
-              <span class="list-count">12</span>
-            </li>
-          </ul>
-        </div>
-      </div>
+        .dashboard-title {
+          font-size: 22px;
+          font-weight: 600;
+          color: #212121;
+          margin-bottom: 2px;
+        }
 
-      <!-- Top 10 Inspectors -->
-      <div class="col-md-4 mb-3">
-        <div class="card list-card">
-          <div class="list-header">
-            <h6>Top 10 Inspectors</h6>
-          </div>
-          <ul class="list-body">
-            <li>
-              <span>1. Inspector Name</span>
-              <span class="list-count">12</span>
-            </li>
-            <li>
-              <span>2. Inspector Name</span>
-              <span class="list-count">12</span>
-            </li>
-            <li>
-              <span>3. Inspector Name</span>
-              <span class="list-count">12</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+        .dashboard-subtitle {
+          font-size: 13px;
+          color: #9ca3af;
+          margin-bottom: 10px;
+        }
 
-  </div>
-</div>
+        .stats-card {
+          background: #ffffff;
+          border-radius: 8px;
+          border: 1px solid #edf0f7;
+          padding: 14px 18px;
+        }
 
-<!-- ===== STYLES (dashboard specific) ===== -->
-<style>
-  .dashboard-wrapper {
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
+        .stats-card-lg {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 120px;
+        }
 
-  .dashboard-title {
-    font-size: 22px;
-    font-weight: 600;
-    color: #212121;
-    margin-bottom: 2px;
-  }
+        .stats-today {
+          background: #e9f9f2;
+          border-color: #e0f3ec;
+        }
 
-  .dashboard-subtitle {
-    font-size: 13px;
-    color: #9ca3af;
-    margin-bottom: 10px;
-  }
+        .stats-tomorrow {
+          background: #ffe9dd;
+          border-color: #ffd9c5;
+        }
 
-  .stats-card {
-    background: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #edf0f7;
-    padding: 14px 18px;
-  }
+        .stats-small {
+          min-height: 100px;
+        }
 
-  .stats-card-lg {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 120px;
-  }
+        .stats-card-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 8px;
+        }
 
-  .stats-today {
-    background: #e9f9f2;
-    border-color: #e0f3ec;
-  }
+        .stats-title {
+          font-size: 13px;
+          font-weight: 600;
+          color: #111827;
+          margin: 0;
+        }
 
-  .stats-tomorrow {
-    background: #ffe9dd;
-    border-color: #ffd9c5;
-  }
+        .icon-wrap {
+          width: 32px;
+          height: 32px;
+          border-radius: 999px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+        }
 
-  .stats-small {
-    min-height: 100px;
-  }
+        .icon-green {
+          background: #d2f5e5;
+          color: #1d9c68;
+        }
 
-  .stats-card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
+        .icon-orange {
+          background: #ffe2cd;
+          color: #ff7d2a;
+        }
 
-  .stats-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: #111827;
-    margin: 0;
-  }
+        .icon-blue {
+          background: #dde7ff;
+          color: #1e3a8a;
+        }
 
-  .icon-wrap {
-    width: 32px;
-    height: 32px;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-  }
+        .icon-red {
+          background: #ffe0e0;
+          color: #f04438;
+        }
 
-  .icon-green {
-    background: #d2f5e5;
-    color: #1d9c68;
-  }
+        .stats-body {
+          display: flex;
+          justify-content: flex-start;
+          gap: 40px;
+        }
 
-  .icon-orange {
-    background: #ffe2cd;
-    color: #ff7d2a;
-  }
+        .stats-body.single {
+          justify-content: flex-start;
+          gap: 0;
+        }
 
-  .icon-blue {
-    background: #dde7ff;
-    color: #1e3a8a;
-  }
+        .stats-label {
+          font-size: 11px;
+          color: #9ca3af;
+        }
 
-  .icon-red {
-    background: #ffe0e0;
-    color: #f04438;
-  }
+        .stats-value {
+          font-size: 22px;
+          font-weight: 600;
+          color: #111827;
+          margin-top: 4px;
+        }
 
-  .stats-body {
-    display: flex;
-    justify-content: flex-start;
-    gap: 40px;
-  }
+        /* Chart card */
+        .chart-card {
+          border-radius: 8px;
+          border: 1px solid #edf0f7;
+          padding: 16px 18px 10px;
+        }
 
-  .stats-body.single {
-    justify-content: flex-start;
-    gap: 0;
-  }
+        .chart-header {
+          margin-bottom: 10px;
+        }
 
-  .stats-label {
-    font-size: 11px;
-    color: #9ca3af;
-  }
+        .chart-title {
+          font-size: 14px;
+          font-weight: 600;
+          color: #111827;
+        }
 
-  .stats-value {
-    font-size: 22px;
-    font-weight: 600;
-    color: #111827;
-    margin-top: 4px;
-  }
+        .badge-count {
+          background: #1f3a8a;
+          color: #fff;
+          border-radius: 999px;
+          padding: 3px 10px;
+          font-size: 11px;
+          font-weight: 500;
+        }
 
-  /* Chart card */
-  .chart-card {
-    border-radius: 8px;
-    border: 1px solid #edf0f7;
-    padding: 16px 18px 10px;
-  }
+        .chart-legend .legend-item {
+          font-size: 11px;
+          color: #6b7280;
+          margin-right: 14px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
 
-  .chart-header {
-    margin-bottom: 10px;
-  }
+        .legend-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 999px;
+          display: inline-block;
+        }
 
-  .chart-title {
-    font-size: 14px;
-    font-weight: 600;
-    color: #111827;
-  }
+        .legend-active {
+          background: #1f3a8a;
+        }
 
-  .badge-count {
-    background: #1f3a8a;
-    color: #fff;
-    border-radius: 999px;
-    padding: 3px 10px;
-    font-size: 11px;
-    font-weight: 500;
-  }
+        .legend-closed {
+          background: #ff7d2a;
+        }
 
-  .chart-legend .legend-item {
-    font-size: 11px;
-    color: #6b7280;
-    margin-right: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+        .view-toggle {
+          border-radius: 999px;
+          border: 1px solid #e5e7eb;
+          background: #ffffff;
+          padding: 4px 10px;
+          font-size: 11px;
+          color: #6b7280;
+          display: inline-flex;
+          align-items: center;
+          cursor: pointer;
+        }
 
-  .legend-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    display: inline-block;
-  }
+        .chart-body {
+          padding-top: 4px;
+        }
 
-  .legend-active {
-    background: #1f3a8a;
-  }
+        /* bottom list cards */
+        .list-card {
+          border-radius: 8px;
+          border: 1px solid #edf0f7;
+        }
 
-  .legend-closed {
-    background: #ff7d2a;
-  }
+        .list-header {
+          padding: 12px 16px 6px;
+        }
 
-  .view-toggle {
-    border-radius: 999px;
-    border: 1px solid #e5e7eb;
-    background: #ffffff;
-    padding: 4px 10px;
-    font-size: 11px;
-    color: #6b7280;
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-  }
+        .list-header h6 {
+          font-size: 13px;
+          font-weight: 600;
+          margin: 0;
+          color: #111827;
+        }
 
-  .chart-body {
-    padding-top: 4px;
-  }
+        .list-body {
+          list-style: none;
+          margin: 0;
+          padding: 4px 16px 12px;
+        }
 
-  /* bottom list cards */
-  .list-card {
-    border-radius: 8px;
-    border: 1px solid #edf0f7;
-  }
+        .list-body li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 12px;
+          padding: 6px 0;
+          border-bottom: 1px solid #f3f4f6;
+        }
 
-  .list-header {
-    padding: 12px 16px 6px;
-  }
+        .list-body li:last-child {
+          border-bottom: none;
+        }
 
-  .list-header h6 {
-    font-size: 13px;
-    font-weight: 600;
-    margin: 0;
-    color: #111827;
-  }
-
-  .list-body {
-    list-style: none;
-    margin: 0;
-    padding: 4px 16px 12px;
-  }
-
-  .list-body li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    padding: 6px 0;
-    border-bottom: 1px solid #f3f4f6;
-  }
-
-  .list-body li:last-child {
-    border-bottom: none;
-  }
-
-  .list-count {
-    font-weight: 600;
-    color: #111827;
-  }
+        .list-count {
+          font-weight: 600;
+          color: #111827;
+        }
 
 
-  /* OUTER CARDS */
-.list-card {
-  border-radius: 10px;
-  border: 1px solid #edf0f7;
-  background: #ffffff;
-  padding: 14px 18px 16px;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-}
+        /* OUTER CARDS */
+        .list-card {
+          border-radius: 10px;
+          border: 1px solid #edf0f7;
+          background: #ffffff;
+          padding: 14px 18px 16px;
+          transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+        }
 
-.list-card:hover {
-  border-color: #d4d9e6;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-  transform: translateY(-2px);
-}
+        .list-card:hover {
+          border-color: #d4d9e6;
+          box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+          transform: translateY(-2px);
+        }
 
-/* TITLE */
-.list-header {
-  padding-bottom: 8px;
-}
+        /* TITLE */
+        .list-header {
+          padding-bottom: 8px;
+        }
 
-.list-header h6 {
-  font-size: 14px;
-  font-weight: 600;
-  color: #111827;
-  margin: 0;
-}
+        .list-header h6 {
+          font-size: 14px;
+          font-weight: 600;
+          color: #111827;
+          margin: 0;
+        }
 
-/* LIST ROWS */
-.list-body {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+        /* LIST ROWS */
+        .list-body {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
 
-.list-body li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  color: #111827;
-  padding: 8px 14px;
-  border-radius: 4px;
-  background: #f4f4f5;          /* light grey block jaisa screenshot */
-}
+        .list-body li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 13px;
+          color: #111827;
+          padding: 8px 14px;
+          border-radius: 4px;
+          background: #f4f4f5;
+          /* light grey block jaisa screenshot */
+        }
 
-.list-body li span:first-child {
-  /* "1. State Name" side */
-  white-space: nowrap;
-}
+        .list-body li span:first-child {
+          /* "1. State Name" side */
+          white-space: nowrap;
+        }
 
-.list-count {
-  font-weight: 600;
-  color: #111827;
-}
+        .list-count {
+          font-weight: 600;
+          color: #111827;
+        }
 
 
-  /* Responsive tweaks */
-  @media (max-width: 767.98px) {
-    .stats-body {
-      gap: 24px;
-    }
-
-    .chart-header {
-      flex-direction: column;
-      align-items: flex-start !important;
-      gap: 8px;
-    }
-
-    .chart-legend {
-      width: 100%;
-      justify-content: space-between;
-    }
-  }
-</style>
-
-<!-- ===== SCRIPTS (Chart.js) ===== -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  (function () {
-    const ctx = document.getElementById('assignmentsChart').getContext('2d');
-
-    // Weekly data (as screenshot vibe)
-    const weeklyLabels = ['Mon', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
-    const weeklyActive = [20, 35, 20, 35, 20, 30, 40];
-    const weeklyClosed = [12, 18, 50, 12, 48, 20, 55];
-
-    // Example monthly data (for toggle)
-    const monthlyLabels = ['W1', 'W2', 'W3', 'W4'];
-    const monthlyActive = [70, 90, 85, 95];
-    const monthlyClosed = [60, 80, 75, 88];
-
-    let currentView = 'weekly';
-
-    const chartConfig = {
-      type: 'bar',
-      data: {
-        labels: weeklyLabels,
-        datasets: [
-          {
-            label: 'Active',
-            data: weeklyActive,
-            backgroundColor: '#1f3a8a',
-            borderRadius: 4,
-            barPercentage: 0.5,
-            categoryPercentage: 0.5
-          },
-          {
-            label: 'Closed',
-            data: weeklyClosed,
-            backgroundColor: '#ff7d2a',
-            borderRadius: 4,
-            barPercentage: 0.5,
-            categoryPercentage: 0.5
+        /* Responsive tweaks */
+        @media (max-width: 767.98px) {
+          .stats-body {
+            gap: 24px;
           }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: '#111827',
-            titleColor: '#fff',
-            bodyColor: '#f9fafb'
+
+          .chart-header {
+            flex-direction: column;
+            align-items: flex-start !important;
+            gap: 8px;
           }
-        },
-        scales: {
-          x: {
-            grid: { display: false },
-            ticks: {
-              font: { size: 10 }
-            }
-          },
-          y: {
-            grid: {
-              color: '#e5e7eb'
+
+          .chart-legend {
+            width: 100%;
+            justify-content: space-between;
+          }
+        }
+      </style>
+
+      <!-- ===== SCRIPTS (Chart.js) ===== -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        (function () {
+          const ctx = document.getElementById('assignmentsChart').getContext('2d');
+
+          // Weekly data (as screenshot vibe)
+          const weeklyLabels = ['Mon', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+          const weeklyActive = [20, 35, 20, 35, 20, 30, 40];
+          const weeklyClosed = [12, 18, 50, 12, 48, 20, 55];
+
+          // Example monthly data (for toggle)
+          const monthlyLabels = ['W1', 'W2', 'W3', 'W4'];
+          const monthlyActive = [70, 90, 85, 95];
+          const monthlyClosed = [60, 80, 75, 88];
+
+          let currentView = 'weekly';
+
+          const chartConfig = {
+            type: 'bar',
+            data: {
+              labels: weeklyLabels,
+              datasets: [
+                {
+                  label: 'Active',
+                  data: weeklyActive,
+                  backgroundColor: '#1f3a8a',
+                  borderRadius: 4,
+                  barPercentage: 0.5,
+                  categoryPercentage: 0.5
+                },
+                {
+                  label: 'Closed',
+                  data: weeklyClosed,
+                  backgroundColor: '#ff7d2a',
+                  borderRadius: 4,
+                  barPercentage: 0.5,
+                  categoryPercentage: 0.5
+                }
+              ]
             },
-            beginAtZero: true,
-            ticks: {
-              stepSize: 10,
-              font: { size: 10 }
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  backgroundColor: '#111827',
+                  titleColor: '#fff',
+                  bodyColor: '#f9fafb'
+                }
+              },
+              scales: {
+                x: {
+                  grid: { display: false },
+                  ticks: {
+                    font: { size: 10 }
+                  }
+                },
+                y: {
+                  grid: {
+                    color: '#e5e7eb'
+                  },
+                  beginAtZero: true,
+                  ticks: {
+                    stepSize: 10,
+                    font: { size: 10 }
+                  }
+                }
+              }
             }
+          };
+
+          const assignmentsChart = new Chart(ctx, chartConfig);
+
+          // Toggle Weekly / Monthly
+          const toggleBtn = document.querySelector('.view-toggle');
+          const toggleLabel = document.getElementById('viewToggleLabel');
+
+          if (toggleBtn) {
+            toggleBtn.addEventListener('click', function () {
+              if (currentView === 'weekly') {
+                // Switch to monthly
+                assignmentsChart.data.labels = monthlyLabels;
+                assignmentsChart.data.datasets[0].data = monthlyActive;
+                assignmentsChart.data.datasets[1].data = monthlyClosed;
+                currentView = 'monthly';
+                toggleLabel.textContent = 'Monthly';
+              } else {
+                // Back to weekly
+                assignmentsChart.data.labels = weeklyLabels;
+                assignmentsChart.data.datasets[0].data = weeklyActive;
+                assignmentsChart.data.datasets[1].data = weeklyClosed;
+                currentView = 'weekly';
+                toggleLabel.textContent = 'Weekly';
+              }
+              assignmentsChart.update();
+            });
           }
-        }
-      }
-    };
-
-    const assignmentsChart = new Chart(ctx, chartConfig);
-
-    // Toggle Weekly / Monthly
-    const toggleBtn = document.querySelector('.view-toggle');
-    const toggleLabel = document.getElementById('viewToggleLabel');
-
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', function () {
-        if (currentView === 'weekly') {
-          // Switch to monthly
-          assignmentsChart.data.labels = monthlyLabels;
-          assignmentsChart.data.datasets[0].data = monthlyActive;
-          assignmentsChart.data.datasets[1].data = monthlyClosed;
-          currentView = 'monthly';
-          toggleLabel.textContent = 'Monthly';
-        } else {
-          // Back to weekly
-          assignmentsChart.data.labels = weeklyLabels;
-          assignmentsChart.data.datasets[0].data = weeklyActive;
-          assignmentsChart.data.datasets[1].data = weeklyClosed;
-          currentView = 'weekly';
-          toggleLabel.textContent = 'Weekly';
-        }
-        assignmentsChart.update();
-      });
-    }
-  })();
-</script>
+        })();
+      </script>
 
     </div>
     <!--end row-->

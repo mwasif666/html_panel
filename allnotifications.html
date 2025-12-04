@@ -292,8 +292,7 @@
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-end py-0">
-              <a class="dropdown-item" href="profile.html"><i
-                  class="las la-user fs-18 me-1 align-text-bottom"></i>
+              <a class="dropdown-item" href="profile.html"><i class="las la-user fs-18 me-1 align-text-bottom"></i>
                 Update Profile</a>
               <div class="dropdown-divider mb-0"></div>
               <a class="dropdown-item text-danger" href="auth-login.html"><i
@@ -329,6 +328,14 @@
         <div class="d-flex align-items-start flex-column w-100">
           <!-- Navigation -->
           <ul class="navbar-nav mb-auto w-100">
+            <li class="nav-item">
+              <a class="nav-link d-flex gap-2" href="./dashboard.html" role="button" aria-controls="sidebarDashboard">
+                <img src="./assets/images/chart-pie-alt.svg" width="20px" alt="" />
+                <span>Statistics</span>
+              </a>
+
+            </li>
+            <!-- Static -->
             <li class="nav-item">
               <a class="nav-link d-flex gap-2" href="#sidebarTransactions" data-bs-toggle="collapse" role="button"
                 aria-expanded="false" aria-controls="sidebarTransactions">
@@ -531,12 +538,12 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex gap-2" href="login.html" role="button"
-                aria-expanded="false" aria-controls="sidebarLogout">
+              <a class="nav-link d-flex gap-2" href="login.html" role="button" aria-expanded="false"
+                aria-controls="sidebarLogout">
                 <img src="./assets/images/sign-out-alt 1.svg" width="20px" alt="" />
                 <span>Logout</span>
               </a>
-            
+
             </li>
 
             <!-- <li class="nav-item">
@@ -598,406 +605,414 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-     <div class="container-fluid px-1 notifications-page">
-  <!-- TITLE + SEARCH -->
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
-        <div class="closed-topbar">
-          <h2 class="color-dark mb-0">All Notifications</h2>
+      <div class="container-fluid px-1 notifications-page">
+        <!-- TITLE + SEARCH -->
+        <div class="top-bar">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+                <div class="closed-topbar">
+                  <h2 class="color d-lg-none d-block">All Notifications
+                  </h2>
+                  <h2 class="color-dark d-none d-lg-block">All Notifications</h2>
+                </div>
+
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+
+          <div class="search-box">
+            <input type="text" placeholder="Search here" />
+            <span class="search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+          </div>
         </div>
 
-        <!-- Search -->
-        <div class="search-box">
-          <input type="text" id="notifSearch" placeholder="Search.." />
-          <span class="search-icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </span>
+
+
+
+
+        <!-- FILTER ROW -->
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="filter-row notifications-filter-row">
+              <!-- Start Date -->
+              <!-- Start Date -->
+              <div class="date-group notif-date-group">
+                <div class="datepicker-wrapper w-100">
+                  <input type="text" id="notifStartDate" placeholder="Start Date" autocomplete="off" readonly />
+                  <div class="datepicker-icon" id="icon-notifStartDate">
+                    <span class="calendar-icon">
+                      <img src="/assets/images/datepicker.svg" alt="calendar" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End Date -->
+              <div class="date-group notif-date-group">
+                <div class="datepicker-wrapper w-100">
+                  <input type="text" id="notifEndDate" placeholder="End Date" autocomplete="off" readonly />
+                  <div class="datepicker-icon" id="icon-notifEndDate">
+                    <span class="calendar-icon">
+                      <img src="/assets/images/datepicker.svg" alt="calendar" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Manager -->
+              <select class="form-select custom-arrow notif-select" id="notifManager">
+                <option value="">Manager</option>
+                <option value="Garrett">Garrett</option>
+                <option value="Alex">Alex</option>
+              </select>
+
+              <!-- Status -->
+              <select class="form-select custom-arrow notif-select" id="notifStatus">
+                <option value="">Status</option>
+                <option value="read">Read</option>
+                <option value="unread">Unread</option>
+              </select>
+
+              <!-- Filter Button -->
+              <button class="filters-btn btn justify-content-center" id="applyNotifFilter">
+                Filter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- NOTIFICATIONS LIST -->
+        <div class="row">
+          <div class="col-12">
+            <div class="notifications-list" id="notificationsList">
+
+              <!-- SINGLE NOTIFICATION ROW (repeat as needed) -->
+              <div class="notification-row unread" data-manager="Garrett">
+                <div class="notif-left">
+                  <span class="notif-icon">
+                    <i class="fa-regular fa-bell"></i>
+                  </span>
+                  <div class="notif-content">
+                    <p class="notif-text">
+                      We had great experience in this assignment.
+                    </p>
+                    <span class="notif-meta">
+                      Garrett • 21–Oct–2025 10:15 PM
+                    </span>
+                  </div>
+                </div>
+                <button class="notif-view-btn" type="button" title="Mark as read">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+
+              <div class="notification-row unread" data-manager="Garrett">
+                <div class="notif-left">
+                  <span class="notif-icon">
+                    <i class="fa-regular fa-bell"></i>
+                  </span>
+                  <div class="notif-content">
+                    <p class="notif-text">
+                      We had great experience in this assignment.
+                    </p>
+                    <span class="notif-meta">
+                      Garrett • 21–Oct–2025 10:15 PM
+                    </span>
+                  </div>
+                </div>
+                <button class="notif-view-btn" type="button" title="Mark as read">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+
+              <div class="notification-row unread" data-manager="Alex">
+                <div class="notif-left">
+                  <span class="notif-icon">
+                    <i class="fa-regular fa-bell"></i>
+                  </span>
+                  <div class="notif-content">
+                    <p class="notif-text">
+                      Another notification message for testing layout.
+                    </p>
+                    <span class="notif-meta">
+                      Alex • 22–Oct–2025 09:00 AM
+                    </span>
+                  </div>
+                </div>
+                <button class="notif-view-btn" type="button" title="Mark as read">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!--end title row-->
+      <style>
+        /* page background ko thoda light feel dena */
+        .notifications-page {
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
 
-  <!-- CLEAR FILTER -->
-  <div class="row mb-2 mt-2">
-    <div class="col-12">
-      <button type="button" class="clear-filter-btn" id="clearNotifFilter">
-        <span class="clear-icon">✕</span>
-        <span class="clear-text">Clear Filter</span>
-      </button>
-    </div>
-  </div>
+        /* search box top-right */
+        .notifications-page .search-box {
+          position: relative;
+          width: 220px;
+        }
 
-  <!-- FILTER ROW -->
-  <div class="row mb-3">
-    <div class="col-12">
-      <div class="filter-row notifications-filter-row">
-        <!-- Start Date -->
-        <div class="date-group notif-date-group">
-          <div class="datepicker-wrapper w-100">
-            <input
-              type="text"
-              id="notifStartDate"
-              placeholder="Start Date"
-              autocomplete="off"
-              readonly
-            />
-            <div class="datepicker-icon" data-target="notifStartDate">
-              <span class="calendar-icon">
-                <img src="/assets/images/datepicker.svg" alt="calendar" />
-              </span>
-            </div>
-          </div>
-        </div>
+        .notifications-page .search-box input {
+          width: 100%;
+          border-radius: 999px;
+          border: 1px solid #e5e7eb;
+          padding: 8px 34px 8px 14px;
+          font-size: 12px;
+          background: #f9fafb;
+          outline: none;
+        }
 
-        <!-- End Date -->
-        <div class="date-group notif-date-group">
-          <div class="datepicker-wrapper w-100">
-            <input
-              type="text"
-              id="notifEndDate"
-              placeholder="End Date"
-              autocomplete="off"
-              readonly
-            />
-            <div class="datepicker-icon" data-target="notifEndDate">
-              <span class="calendar-icon">
-                <img src="/assets/images/datepicker.svg" alt="calendar" />
-              </span>
-            </div>
-          </div>
-        </div>
+        .notifications-page .search-box input::placeholder {
+          color: #9ca3af;
+        }
 
-        <!-- Manager -->
-        <select class="form-select custom-arrow notif-select" id="notifManager">
-          <option value="">Manager</option>
-          <option value="Garrett">Garrett</option>
-          <option value="Alex">Alex</option>
-        </select>
+        .notifications-page .search-box input:focus {
+          border-color: #ff7d1f;
+          box-shadow: 0 0 0 1px rgba(255, 125, 31, 0.25);
+          background: #ffffff;
+        }
 
-        <!-- Status -->
-        <select class="form-select custom-arrow notif-select" id="notifStatus">
-          <option value="">Status</option>
-          <option value="read">Read</option>
-          <option value="unread">Unread</option>
-        </select>
+        .notifications-page .search-icon {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 13px;
+          color: #9ca3af;
+        }
 
-        <!-- Filter Button -->
-        <button class="filters-btn btn justify-content-center" id="applyNotifFilter">
-          Filter
-        </button>
-      </div>
-    </div>
-  </div>
+        /* clear filter link-button */
+        .clear-filter-btn {
+          border: none;
+          background: transparent;
+          padding: 0;
+          font-size: 13px;
+          color: #f97316;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          cursor: pointer;
+        }
 
-  <!-- NOTIFICATIONS LIST -->
-  <div class="row">
-    <div class="col-12">
-      <div class="notifications-list" id="notificationsList">
+        .clear-filter-btn .clear-icon {
+          font-size: 14px;
+        }
 
-        <!-- SINGLE NOTIFICATION ROW (repeat as needed) -->
-        <div class="notification-row unread" data-manager="Garrett">
-          <div class="notif-left">
-            <span class="notif-icon">
-              <i class="fa-regular fa-bell"></i>
-            </span>
-            <div class="notif-content">
-              <p class="notif-text">
-                We had great experience in this assignment.
-              </p>
-              <span class="notif-meta">
-                Garrett • 21–Oct–2025 10:15 PM
-              </span>
-            </div>
-          </div>
-          <button class="notif-view-btn" type="button" title="Mark as read">
-            <i class="fa-regular fa-eye"></i>
-          </button>
-        </div>
+        /* filter row */
+        .notifications-filter-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          align-items: center;
+        }
 
-        <div class="notification-row unread" data-manager="Garrett">
-          <div class="notif-left">
-            <span class="notif-icon">
-              <i class="fa-regular fa-bell"></i>
-            </span>
-            <div class="notif-content">
-              <p class="notif-text">
-                We had great experience in this assignment.
-              </p>
-              <span class="notif-meta">
-                Garrett • 21–Oct–2025 10:15 PM
-              </span>
-            </div>
-          </div>
-          <button class="notif-view-btn" type="button" title="Mark as read">
-            <i class="fa-regular fa-eye"></i>
-          </button>
-        </div>
+        .notif-date-group {
+          width: 150px;
+        }
 
-        <div class="notification-row unread" data-manager="Alex">
-          <div class="notif-left">
-            <span class="notif-icon">
-              <i class="fa-regular fa-bell"></i>
-            </span>
-            <div class="notif-content">
-              <p class="notif-text">
-                Another notification message for testing layout.
-              </p>
-              <span class="notif-meta">
-                Alex • 22–Oct–2025 09:00 AM
-              </span>
-            </div>
-          </div>
-          <button class="notif-view-btn" type="button" title="Mark as read">
-            <i class="fa-regular fa-eye"></i>
-          </button>
-        </div>
+        .notifications-page .datepicker-wrapper {
+          position: relative;
+        }
 
-      </div>
-    </div>
-  </div>
-</div>
-<style>
-    /* page background ko thoda light feel dena */
-.notifications-page {
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
+        .notifications-page .datepicker-wrapper input {
+          width: 100%;
+          border-radius: 6px;
+          border: 1px solid #e5e7eb;
+          padding: 8px 34px 8px 10px;
+          font-size: 12px;
+          background: #ffffff;
+          outline: none;
+        }
 
-/* search box top-right */
-.notifications-page .search-box {
-  position: relative;
-  width: 220px;
-}
+        .notifications-page .datepicker-wrapper input::placeholder {
+          color: #9ca3af;
+        }
 
-.notifications-page .search-box input {
-  width: 100%;
-  border-radius: 999px;
-  border: 1px solid #e5e7eb;
-  padding: 8px 34px 8px 14px;
-  font-size: 12px;
-  background: #f9fafb;
-  outline: none;
-}
+        .notifications-page .datepicker-icon {
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+        }
 
-.notifications-page .search-box input::placeholder {
-  color: #9ca3af;
-}
+        .notifications-page .datepicker-icon img {
+          width: 16px;
+          height: 16px;
+          margin-top: 1px;
+        }
 
-.notifications-page .search-box input:focus {
-  border-color: #ff7d1f;
-  box-shadow: 0 0 0 1px rgba(255, 125, 31, 0.25);
-  background: #ffffff;
-}
+        /* selects */
+        .notif-select {
+          font-size: 12px;
+          width: 150px;
+          border-radius: 6px;
+          border: 1px solid #e5e7eb;
+          padding: 8px 10px;
+          background-color: #ffffff;
+        }
 
-.notifications-page .search-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 13px;
-  color: #9ca3af;
-}
+        /* orange filter button */
+        .filters-btn {
+          background: #ff7d1f;
+          color: #ffffff;
+          border-radius: 6px;
+          border: none;
+          padding: 8px 22px;
+          font-size: 13px;
+          font-weight: 500;
+          /* margin-left: auto; */
+        }
 
-/* clear filter link-button */
-.clear-filter-btn {
-  border: none;
-  background: transparent;
-  padding: 0;
-  font-size: 13px;
-  color: #f97316;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-}
+        .filters-btn:hover {
+          background: #ff6c00;
+        }
 
-.clear-filter-btn .clear-icon {
-  font-size: 14px;
-}
+        /* notifications list */
+        .notifications-list {
+          border-radius: 8px;
 
-/* filter row */
-.notifications-filter-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-}
+          background: #ffffff;
+          overflow: hidden;
+        }
 
-.notif-date-group {
-  width: 150px;
-}
+        /* single row */
+        .notification-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 9px 14px;
+          font-size: 13px;
+          border-bottom: 1px solid #f3f4f6;
+          transition: background 0.15s ease;
 
-.notifications-page .datepicker-wrapper {
-  position: relative;
-}
+        }
 
-.notifications-page .datepicker-wrapper input {
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid #e5e7eb;
-  padding: 8px 34px 8px 10px;
-  font-size: 12px;
-  background: #ffffff;
-  outline: none;
-}
+        .notifications-list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          /* <- yahi picture wala gap create karega */
+          margin-top: 10px;
+          background-color: transparent;
+        }
 
-.notifications-page .datepicker-wrapper input::placeholder {
-  color: #9ca3af;
-}
+        .notification-row {
+          background: #fff;
+          padding: 12px 16px;
+          border-radius: 8px;
+          border: 1px solid #eee;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
 
-.notifications-page .datepicker-icon {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
+        .notification-row:last-child {
+          border-bottom: none;
+        }
 
-.notifications-page .datepicker-icon img {
-  width: 16px;
-  height: 16px;
-}
+        .notification-row:hover {
+          background: #f9fafb;
+        }
 
-/* selects */
-.notif-select {
-  font-size: 12px;
-  width: 150px;
-  border-radius: 6px;
-  border: 1px solid #e5e7eb;
-  padding: 8px 10px;
-  background-color: #ffffff;
-}
+        .notification-row.read {
+          background: #f3f4f6;
+          opacity: 0.8;
+        }
 
-/* orange filter button */
-.filters-btn {
-  background: #ff7d1f;
-  color: #ffffff;
-  border-radius: 6px;
-  border: none;
-  padding: 8px 22px;
-  font-size: 13px;
-  font-weight: 500;
-  margin-left: auto;
-}
+        /* left side */
+        .notif-left {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
 
-.filters-btn:hover {
-  background: #ff6c00;
-}
+        .notif-icon {
+          width: 26px;
+          height: 26px;
+          border-radius: 999px;
+          border: 1px solid #ffddb8;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: #ff7d1f;
+          background: #fff7ed;
+          font-size: 14px;
+        }
 
-/* notifications list */
-.notifications-list {
-  border-radius: 8px;
-  border: 1px solid #edf0f7;
-  background: #ffffff;
-  overflow: hidden;
-}
+        .notif-content {
+          display: flex;
+          flex-direction: column;
+        }
 
-/* single row */
-.notification-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 9px 14px;
-  font-size: 13px;
-  border-bottom: 1px solid #f3f4f6;
-  transition: background 0.15s ease;
+        .notif-text {
+          margin: 0 0 2px;
+          color: #111827;
+        }
 
-}
+        .notif-meta {
+          font-size: 11px;
+          color: #6b7280;
+        }
 
-.notification-row:last-child {
-  border-bottom: none;
-}
+        /* eye button on right */
+        .notif-view-btn {
+          border: none;
+          background: transparent;
+          width: 26px;
+          height: 26px;
+          border-radius: 999px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 13px;
+          color: #6b7280;
+          cursor: pointer;
+          transition: background 0.15s ease, color 0.15s ease;
+        }
 
-.notification-row:hover {
-  background: #f9fafb;
-}
+        .notif-view-btn:hover {
+          background: #e5e7eb;
+          color: #111827;
+        }
 
-.notification-row.read {
-  background: #f3f4f6;
-  opacity: 0.8;
-}
+        /* responsive */
+        @media (max-width: 768px) {
+          .notifications-page .search-box {
+            width: 100%;
+            margin-top: 10px;
+          }
 
-/* left side */
-.notif-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+          .notifications-filter-row {
+            align-items: stretch;
+          }
 
-.notif-icon {
-  width: 26px;
-  height: 26px;
-  border-radius: 999px;
-  border: 1px solid #ffddb8;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #ff7d1f;
-  background: #fff7ed;
-  font-size: 14px;
-}
+          .filters-btn {
+            margin-left: 0;
+            width: 100%;
+            margin-top: 4px;
+          }
 
-.notif-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.notif-text {
-  margin: 0 0 2px;
-  color: #111827;
-}
-
-.notif-meta {
-  font-size: 11px;
-  color: #6b7280;
-}
-
-/* eye button on right */
-.notif-view-btn {
-  border: none;
-  background: transparent;
-  width: 26px;
-  height: 26px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  color: #6b7280;
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.notif-view-btn:hover {
-  background: #e5e7eb;
-  color: #111827;
-}
-
-/* responsive */
-@media (max-width: 768px) {
-  .notifications-page .search-box {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .notifications-filter-row {
-    align-items: stretch;
-  }
-
-  .filters-btn {
-    margin-left: 0;
-    width: 100%;
-    margin-top: 4px;
-  }
-
-  .notification-row {
-    align-items: flex-start;
-  }
-}
-
-</style>
+          .notification-row {
+            align-items: flex-start;
+          }
+        }
+      </style>
 
       <!-- container -->
 
@@ -1139,100 +1154,100 @@
 
 
 
-<script>
-  (function () {
-    const notifSearch = document.getElementById("notifSearch");
-    const list = document.getElementById("notificationsList");
-    const managerSelect = document.getElementById("notifManager");
-    const statusSelect = document.getElementById("notifStatus");
-    const clearBtn = document.getElementById("clearNotifFilter");
-    const filterBtn = document.getElementById("applyNotifFilter");
-    const startDateInput = document.getElementById("notifStartDate");
-    const endDateInput = document.getElementById("notifEndDate");
+  <script>
+    (function () {
+      const notifSearch = document.getElementById("notifSearch");
+      const list = document.getElementById("notificationsList");
+      const managerSelect = document.getElementById("notifManager");
+      const statusSelect = document.getElementById("notifStatus");
+      const clearBtn = document.getElementById("clearNotifFilter");
+      const filterBtn = document.getElementById("applyNotifFilter");
+      const startDateInput = document.getElementById("notifStartDate");
+      const endDateInput = document.getElementById("notifEndDate");
 
-    function filterNotifications() {
-      const searchValue = notifSearch.value.toLowerCase();
-      const managerVal = managerSelect.value;
-      const statusVal = statusSelect.value; // "read" / "unread" / ""
+      function filterNotifications() {
+        const searchValue = notifSearch.value.toLowerCase();
+        const managerVal = managerSelect.value;
+        const statusVal = statusSelect.value; // "read" / "unread" / ""
 
-      const rows = list.querySelectorAll(".notification-row");
+        const rows = list.querySelectorAll(".notification-row");
 
-      rows.forEach((row) => {
-        const text =
-          row.querySelector(".notif-text").textContent.toLowerCase() +
-          " " +
-          row.querySelector(".notif-meta").textContent.toLowerCase();
+        rows.forEach((row) => {
+          const text =
+            row.querySelector(".notif-text").textContent.toLowerCase() +
+            " " +
+            row.querySelector(".notif-meta").textContent.toLowerCase();
 
-        const manager = row.getAttribute("data-manager");
-        const isRead = row.classList.contains("read");
-        const isUnread = row.classList.contains("unread");
+          const manager = row.getAttribute("data-manager");
+          const isRead = row.classList.contains("read");
+          const isUnread = row.classList.contains("unread");
 
-        let visible = true;
+          let visible = true;
 
-        // search match
-        if (searchValue && !text.includes(searchValue)) {
-          visible = false;
-        }
+          // search match
+          if (searchValue && !text.includes(searchValue)) {
+            visible = false;
+          }
 
-        // manager filter
-        if (visible && managerVal && manager !== managerVal) {
-          visible = false;
-        }
+          // manager filter
+          if (visible && managerVal && manager !== managerVal) {
+            visible = false;
+          }
 
-        // status filter
-        if (visible && statusVal === "read" && !isRead) visible = false;
-        if (visible && statusVal === "unread" && !isUnread) visible = false;
+          // status filter
+          if (visible && statusVal === "read" && !isRead) visible = false;
+          if (visible && statusVal === "unread" && !isUnread) visible = false;
 
-        row.style.display = visible ? "flex" : "none";
-      });
-    }
+          row.style.display = visible ? "flex" : "none";
+        });
+      }
 
-    // live search
-    notifSearch && notifSearch.addEventListener("input", filterNotifications);
+      // live search
+      notifSearch && notifSearch.addEventListener("input", filterNotifications);
 
-    // filter button
-    filterBtn && filterBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      filterNotifications();
-    });
-
-    // clear filter
-    clearBtn &&
-      clearBtn.addEventListener("click", function () {
-        startDateInput.value = "";
-        endDateInput.value = "";
-        managerSelect.value = "";
-        statusSelect.value = "";
-        notifSearch.value = "";
+      // filter button
+      filterBtn && filterBtn.addEventListener("click", function (e) {
+        e.preventDefault();
         filterNotifications();
       });
 
-    // mark read/unread on eye click
-    list.addEventListener("click", function (e) {
-      const btn = e.target.closest(".notif-view-btn");
-      if (!btn) return;
-
-      const row = btn.closest(".notification-row");
-      if (!row) return;
-
-      // toggle
-      row.classList.toggle("read");
-      row.classList.toggle("unread");
-      filterNotifications(); // so status filter respects new state
-    });
-
-    // calendar icon -> focus related input (then your datepicker will open)
-    document
-      .querySelectorAll(".notifications-page .datepicker-icon")
-      .forEach((icon) => {
-        icon.addEventListener("click", function () {
-          const id = this.getAttribute("data-target");
-          const input = document.getElementById(id);
-          if (input) input.focus();
+      // clear filter
+      clearBtn &&
+        clearBtn.addEventListener("click", function () {
+          startDateInput.value = "";
+          endDateInput.value = "";
+          managerSelect.value = "";
+          statusSelect.value = "";
+          notifSearch.value = "";
+          filterNotifications();
         });
+
+      // mark read/unread on eye click
+      list.addEventListener("click", function (e) {
+        const btn = e.target.closest(".notif-view-btn");
+        if (!btn) return;
+
+        const row = btn.closest(".notification-row");
+        if (!row) return;
+
+        // toggle
+        row.classList.toggle("read");
+        row.classList.toggle("unread");
+        filterNotifications(); // so status filter respects new state
       });
-  })();
-</script>
+
+      // calendar icon -> focus related input (then your datepicker will open)
+      document
+        .querySelectorAll(".notifications-page .datepicker-icon")
+        .forEach((icon) => {
+          icon.addEventListener("click", function () {
+            const id = this.getAttribute("data-target");
+            const input = document.getElementById(id);
+            if (input) input.focus();
+          });
+        });
+    })();
+  </script>
 
 
 </body>

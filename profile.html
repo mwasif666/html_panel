@@ -288,8 +288,7 @@
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-end py-0">
-              <a class="dropdown-item" href="profile.html"><i
-                  class="las la-user fs-18 me-1 align-text-bottom"></i>
+              <a class="dropdown-item" href="profile.html"><i class="las la-user fs-18 me-1 align-text-bottom"></i>
                 Update Profile</a>
               <div class="dropdown-divider mb-0"></div>
               <a class="dropdown-item text-danger" href="auth-login.html"><i
@@ -325,6 +324,14 @@
         <div class="d-flex align-items-start flex-column w-100">
           <!-- Navigation -->
           <ul class="navbar-nav mb-auto w-100">
+            <li class="nav-item">
+              <a class="nav-link d-flex gap-2" href="./dashboard.html" role="button" aria-controls="sidebarDashboard">
+                <img src="./assets/images/chart-pie-alt.svg" width="20px" alt="" />
+                <span>Statistics</span>
+              </a>
+
+            </li>
+            <!-- Static -->
             <li class="nav-item">
               <a class="nav-link d-flex gap-2" href="#sidebarTransactions" data-bs-toggle="collapse" role="button"
                 aria-expanded="false" aria-controls="sidebarTransactions">
@@ -528,12 +535,12 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link d-flex gap-2" href="login.html" role="button"
-                aria-expanded="false" aria-controls="sidebarLogout">
+              <a class="nav-link d-flex gap-2" href="login.html" role="button" aria-expanded="false"
+                aria-controls="sidebarLogout">
                 <img src="./assets/images/sign-out-alt 1.svg" width="20px" alt="" />
                 <span>Logout</span>
               </a>
-            
+
             </li>
 
             <!-- <li class="nav-item">
@@ -595,534 +602,535 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-    <div class="container-fluid px-1">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
-        <div class="closed-topbar">
-          <h2 class="color d-lg-none d-block">Manage Profile</h2>
-          <h2 class="color-dark d-none d-lg-block">Manage Profile</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--end title row-->
-
-  <div class="row">
-    <form class="assignment-form w-100">
-
-      <div class="row">
-        <!-- Name -->
-        <div class="col-md-6 col-12 mb-3">
-          <div class="form-group">
-            <label>Name <span class="starColor">*</span></label>
-            <input type="text" class="" placeholder="Enter Name">
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="col-md-6 col-12 mb-3">
-          <div class="form-group">
-            <label>Email <span class="starColor">*</span></label>
-            <input type="email" class="" placeholder="Enter Email">
-          </div>
-        </div>
-
-        <!-- Phone -->
-        <div class="col-md-6 col-12 mb-3">
-          <div class="form-group">
-            <label>Phone <span class="starColor">*</span></label>
-            <input type="text" class="" placeholder="Enter Phone">
-          </div>
-        </div>
-
-        <!-- Password -->
-        <div class="col-md-6 col-12 mb-3">
-          <div class="form-group">
-            <label>Password <span class="starColor">*</span></label>
-            <input type="password" class="" placeholder="Enter Password">
-          </div>
-        </div>
-
-        <!-- Company Name -->
-        <div class="col-md-6 col-12 mb-3">
-          <div class="form-group">
-            <label>Company Name <span class="starColor">*</span></label>
-            <input type="text" class="" placeholder="Enter Name">
-          </div>
-        </div>
-
-        <!-- Company Email -->
-        <div class="col-md-6 col-12 mb-3">
-          <div class="form-group">
-            <label>Company Email <span class="starColor">*</span></label>
-            <input type="email" class="" placeholder="Enter Email">
-          </div>
-        </div>
-
-        <!-- Company Phone -->
-        <div class="col-md-6 col-12 mb-3">
-          <div class="form-group">
-            <label>Company Phone <span class="starColor">*</span></label>
-            <input type="text" class="" placeholder="Enter Phone">
-          </div>
-        </div>
-
-        <!-- Time Zone -->
-        <div class="col-md-6 col-12 mb-3">
-          <div class="form-group">
-            <label>Time Zone <span class="starColor">*</span></label>
-            <select class="form-select">
-              <option>Select Time Zone</option>
-              <option>(UTC -05:00) Eastern Time</option>
-              <option>(UTC -06:00) Central Time</option>
-              <option>(UTC -08:00) Pacific Time</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Company Logo -->
-        <div class="col-md-6 col-12 mb-3">
-          <div class="form-group">
-            <label>Company Logo <span class="starColor">*</span></label>
-            <div class="file-upload">
-              <label class="upload-btn">
-                Chosen File
-                <input type="file" class="file-input d-none">
-              </label>
-              <span class="file-name">No Chosen File</span>
+      <div class="container-fluid px-1">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+              <div class="closed-topbar">
+                <h2 class="color d-lg-none d-block">Manage Profile</h2>
+                <h2 class="color-dark d-none d-lg-block">Manage Profile</h2>
+              </div>
             </div>
           </div>
         </div>
+        <!--end title row-->
 
-        <!-- Company Icon -->
-        <div class="col-md-6 col-12 mb-3">
-          <div class="form-group">
-            <label>Company Icon <span class="starColor">*</span></label>
-            <div class="file-upload">
-              <label class="upload-btn">
-                Chosen File
-                <input type="file" class="file-input d-none">
-              </label>
-              <span class="file-name">No Chosen File</span>
+        <div class="row">
+          <form class="assignment-form w-100">
+
+            <div class="row">
+              <!-- Name -->
+              <div class="col-md-6 col-12 mb-3">
+                <div class="form-group">
+                  <label>Name <span class="starColor">*</span></label>
+                  <input type="text" class="" placeholder="Enter Name">
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-6 col-12 mb-3">
+                <div class="form-group">
+                  <label>Email <span class="starColor">*</span></label>
+                  <input type="email" class="" placeholder="Enter Email">
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="col-md-6 col-12 mb-3">
+                <div class="form-group">
+                  <label>Phone <span class="starColor">*</span></label>
+                  <input type="text" class="" placeholder="Enter Phone">
+                </div>
+              </div>
+
+              <!-- Password -->
+              <div class="col-md-6 col-12 mb-3">
+                <div class="form-group">
+                  <label>Password <span class="starColor">*</span></label>
+                  <input type="password" class="" placeholder="Enter Password">
+                </div>
+              </div>
+
+              <!-- Company Name -->
+              <div class="col-md-6 col-12 mb-3">
+                <div class="form-group">
+                  <label>Company Name <span class="starColor">*</span></label>
+                  <input type="text" class="" placeholder="Enter Name">
+                </div>
+              </div>
+
+              <!-- Company Email -->
+              <div class="col-md-6 col-12 mb-3">
+                <div class="form-group">
+                  <label>Company Email <span class="starColor">*</span></label>
+                  <input type="email" class="" placeholder="Enter Email">
+                </div>
+              </div>
+
+              <!-- Company Phone -->
+              <div class="col-md-6 col-12 mb-3">
+                <div class="form-group">
+                  <label>Company Phone <span class="starColor">*</span></label>
+                  <input type="text" class="" placeholder="Enter Phone">
+                </div>
+              </div>
+
+              <!-- Time Zone -->
+              <div class="col-md-6 col-12 mb-3">
+                <div class="form-group">
+                  <label>Time Zone <span class="starColor">*</span></label>
+                  <select class="form-select">
+                    <option>Select Time Zone</option>
+                    <option>(UTC -05:00) Eastern Time</option>
+                    <option>(UTC -06:00) Central Time</option>
+                    <option>(UTC -08:00) Pacific Time</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Company Logo -->
+              <div class="col-md-6 col-12 mb-3">
+                <div class="form-group">
+                  <label>Company Logo <span class="starColor">*</span></label>
+                  <div class="file-upload">
+                    <label class="upload-btn">
+                      Chosen File
+                      <input type="file" class="file-input d-none">
+                    </label>
+                    <span class="file-name">No Chosen File</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Company Icon -->
+              <div class="col-md-6 col-12 mb-3">
+                <div class="form-group">
+                  <label>Company Icon <span class="starColor">*</span></label>
+                  <div class="file-upload">
+                    <label class="upload-btn">
+                      Chosen File
+                      <input type="file" class="file-input d-none">
+                    </label>
+                    <span class="file-name">No Chosen File</span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+
+            <!-- Buttons row -->
+            <div class="button-row mt-3 d-flex justify-content-end">
+              <button type="button" class="cancel-btn me-2">Cancel</button>
+              <button type="submit" class="create-btn">Update Profile</button>
+            </div>
+
+          </form>
         </div>
       </div>
 
-      <!-- Buttons row -->
-      <div class="button-row mt-3 d-flex justify-content-end">
-        <button type="button" class="cancel-btn me-2">Cancel</button>
-        <button type="submit" class="create-btn">Update Profile</button>
-      </div>
 
-    </form>
-  </div>
-</div>
+      <!-- ===== STYLES (dashboard specific) ===== -->
+      <style>
+        .dashboard-wrapper {
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
 
+        .dashboard-title {
+          font-size: 22px;
+          font-weight: 600;
+          color: #212121;
+          margin-bottom: 2px;
+        }
 
-<!-- ===== STYLES (dashboard specific) ===== -->
-<style>
-  .dashboard-wrapper {
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
+        .dashboard-subtitle {
+          font-size: 13px;
+          color: #9ca3af;
+          margin-bottom: 10px;
+        }
 
-  .dashboard-title {
-    font-size: 22px;
-    font-weight: 600;
-    color: #212121;
-    margin-bottom: 2px;
-  }
+        .stats-card {
+          background: #ffffff;
+          border-radius: 8px;
+          border: 1px solid #edf0f7;
+          padding: 14px 18px;
+        }
 
-  .dashboard-subtitle {
-    font-size: 13px;
-    color: #9ca3af;
-    margin-bottom: 10px;
-  }
+        .stats-card-lg {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 120px;
+        }
 
-  .stats-card {
-    background: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #edf0f7;
-    padding: 14px 18px;
-  }
+        .stats-today {
+          background: #e9f9f2;
+          border-color: #e0f3ec;
+        }
 
-  .stats-card-lg {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 120px;
-  }
+        .stats-tomorrow {
+          background: #ffe9dd;
+          border-color: #ffd9c5;
+        }
 
-  .stats-today {
-    background: #e9f9f2;
-    border-color: #e0f3ec;
-  }
+        .stats-small {
+          min-height: 100px;
+        }
 
-  .stats-tomorrow {
-    background: #ffe9dd;
-    border-color: #ffd9c5;
-  }
+        .stats-card-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 8px;
+        }
 
-  .stats-small {
-    min-height: 100px;
-  }
+        .stats-title {
+          font-size: 13px;
+          font-weight: 600;
+          color: #111827;
+          margin: 0;
+        }
 
-  .stats-card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
+        .icon-wrap {
+          width: 32px;
+          height: 32px;
+          border-radius: 999px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+        }
 
-  .stats-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: #111827;
-    margin: 0;
-  }
+        .icon-green {
+          background: #d2f5e5;
+          color: #1d9c68;
+        }
 
-  .icon-wrap {
-    width: 32px;
-    height: 32px;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-  }
+        .icon-orange {
+          background: #ffe2cd;
+          color: #ff7d2a;
+        }
 
-  .icon-green {
-    background: #d2f5e5;
-    color: #1d9c68;
-  }
+        .icon-blue {
+          background: #dde7ff;
+          color: #1e3a8a;
+        }
 
-  .icon-orange {
-    background: #ffe2cd;
-    color: #ff7d2a;
-  }
+        .icon-red {
+          background: #ffe0e0;
+          color: #f04438;
+        }
 
-  .icon-blue {
-    background: #dde7ff;
-    color: #1e3a8a;
-  }
+        .stats-body {
+          display: flex;
+          justify-content: flex-start;
+          gap: 40px;
+        }
 
-  .icon-red {
-    background: #ffe0e0;
-    color: #f04438;
-  }
+        .stats-body.single {
+          justify-content: flex-start;
+          gap: 0;
+        }
 
-  .stats-body {
-    display: flex;
-    justify-content: flex-start;
-    gap: 40px;
-  }
+        .stats-label {
+          font-size: 11px;
+          color: #9ca3af;
+        }
 
-  .stats-body.single {
-    justify-content: flex-start;
-    gap: 0;
-  }
+        .stats-value {
+          font-size: 22px;
+          font-weight: 600;
+          color: #111827;
+          margin-top: 4px;
+        }
 
-  .stats-label {
-    font-size: 11px;
-    color: #9ca3af;
-  }
+        /* Chart card */
+        .chart-card {
+          border-radius: 8px;
+          border: 1px solid #edf0f7;
+          padding: 16px 18px 10px;
+        }
 
-  .stats-value {
-    font-size: 22px;
-    font-weight: 600;
-    color: #111827;
-    margin-top: 4px;
-  }
+        .chart-header {
+          margin-bottom: 10px;
+        }
 
-  /* Chart card */
-  .chart-card {
-    border-radius: 8px;
-    border: 1px solid #edf0f7;
-    padding: 16px 18px 10px;
-  }
+        .chart-title {
+          font-size: 14px;
+          font-weight: 600;
+          color: #111827;
+        }
 
-  .chart-header {
-    margin-bottom: 10px;
-  }
+        .badge-count {
+          background: #1f3a8a;
+          color: #fff;
+          border-radius: 999px;
+          padding: 3px 10px;
+          font-size: 11px;
+          font-weight: 500;
+        }
 
-  .chart-title {
-    font-size: 14px;
-    font-weight: 600;
-    color: #111827;
-  }
+        .chart-legend .legend-item {
+          font-size: 11px;
+          color: #6b7280;
+          margin-right: 14px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
 
-  .badge-count {
-    background: #1f3a8a;
-    color: #fff;
-    border-radius: 999px;
-    padding: 3px 10px;
-    font-size: 11px;
-    font-weight: 500;
-  }
+        .legend-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 999px;
+          display: inline-block;
+        }
 
-  .chart-legend .legend-item {
-    font-size: 11px;
-    color: #6b7280;
-    margin-right: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+        .legend-active {
+          background: #1f3a8a;
+        }
 
-  .legend-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    display: inline-block;
-  }
+        .legend-closed {
+          background: #ff7d2a;
+        }
 
-  .legend-active {
-    background: #1f3a8a;
-  }
+        .view-toggle {
+          border-radius: 999px;
+          border: 1px solid #e5e7eb;
+          background: #ffffff;
+          padding: 4px 10px;
+          font-size: 11px;
+          color: #6b7280;
+          display: inline-flex;
+          align-items: center;
+          cursor: pointer;
+        }
 
-  .legend-closed {
-    background: #ff7d2a;
-  }
+        .chart-body {
+          padding-top: 4px;
+        }
 
-  .view-toggle {
-    border-radius: 999px;
-    border: 1px solid #e5e7eb;
-    background: #ffffff;
-    padding: 4px 10px;
-    font-size: 11px;
-    color: #6b7280;
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-  }
+        /* bottom list cards */
+        .list-card {
+          border-radius: 8px;
+          border: 1px solid #edf0f7;
+        }
 
-  .chart-body {
-    padding-top: 4px;
-  }
+        .list-header {
+          padding: 12px 16px 6px;
+        }
 
-  /* bottom list cards */
-  .list-card {
-    border-radius: 8px;
-    border: 1px solid #edf0f7;
-  }
+        .list-header h6 {
+          font-size: 13px;
+          font-weight: 600;
+          margin: 0;
+          color: #111827;
+        }
 
-  .list-header {
-    padding: 12px 16px 6px;
-  }
+        .list-body {
+          list-style: none;
+          margin: 0;
+          padding: 4px 16px 12px;
+        }
 
-  .list-header h6 {
-    font-size: 13px;
-    font-weight: 600;
-    margin: 0;
-    color: #111827;
-  }
+        .list-body li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 12px;
+          padding: 6px 0;
+          border-bottom: 1px solid #f3f4f6;
+        }
 
-  .list-body {
-    list-style: none;
-    margin: 0;
-    padding: 4px 16px 12px;
-  }
+        .list-body li:last-child {
+          border-bottom: none;
+        }
 
-  .list-body li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    padding: 6px 0;
-    border-bottom: 1px solid #f3f4f6;
-  }
-
-  .list-body li:last-child {
-    border-bottom: none;
-  }
-
-  .list-count {
-    font-weight: 600;
-    color: #111827;
-  }
+        .list-count {
+          font-weight: 600;
+          color: #111827;
+        }
 
 
-  /* OUTER CARDS */
-.list-card {
-  border-radius: 10px;
-  border: 1px solid #edf0f7;
-  background: #ffffff;
-  padding: 14px 18px 16px;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-}
+        /* OUTER CARDS */
+        .list-card {
+          border-radius: 10px;
+          border: 1px solid #edf0f7;
+          background: #ffffff;
+          padding: 14px 18px 16px;
+          transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+        }
 
-.list-card:hover {
-  border-color: #d4d9e6;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-  transform: translateY(-2px);
-}
+        .list-card:hover {
+          border-color: #d4d9e6;
+          box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+          transform: translateY(-2px);
+        }
 
-/* TITLE */
-.list-header {
-  padding-bottom: 8px;
-}
+        /* TITLE */
+        .list-header {
+          padding-bottom: 8px;
+        }
 
-.list-header h6 {
-  font-size: 14px;
-  font-weight: 600;
-  color: #111827;
-  margin: 0;
-}
+        .list-header h6 {
+          font-size: 14px;
+          font-weight: 600;
+          color: #111827;
+          margin: 0;
+        }
 
-/* LIST ROWS */
-.list-body {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+        /* LIST ROWS */
+        .list-body {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
 
-.list-body li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  color: #111827;
-  padding: 8px 14px;
-  border-radius: 4px;
-  background: #f4f4f5;          /* light grey block jaisa screenshot */
-}
+        .list-body li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 13px;
+          color: #111827;
+          padding: 8px 14px;
+          border-radius: 4px;
+          background: #f4f4f5;
+          /* light grey block jaisa screenshot */
+        }
 
-.list-body li span:first-child {
-  /* "1. State Name" side */
-  white-space: nowrap;
-}
+        .list-body li span:first-child {
+          /* "1. State Name" side */
+          white-space: nowrap;
+        }
 
-.list-count {
-  font-weight: 600;
-  color: #111827;
-}
+        .list-count {
+          font-weight: 600;
+          color: #111827;
+        }
 
 
-  /* Responsive tweaks */
-  @media (max-width: 767.98px) {
-    .stats-body {
-      gap: 24px;
-    }
-
-    .chart-header {
-      flex-direction: column;
-      align-items: flex-start !important;
-      gap: 8px;
-    }
-
-    .chart-legend {
-      width: 100%;
-      justify-content: space-between;
-    }
-  }
-</style>
-
-<!-- ===== SCRIPTS (Chart.js) ===== -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  (function () {
-    const ctx = document.getElementById('assignmentsChart').getContext('2d');
-
-    // Weekly data (as screenshot vibe)
-    const weeklyLabels = ['Mon', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
-    const weeklyActive = [20, 35, 20, 35, 20, 30, 40];
-    const weeklyClosed = [12, 18, 50, 12, 48, 20, 55];
-
-    // Example monthly data (for toggle)
-    const monthlyLabels = ['W1', 'W2', 'W3', 'W4'];
-    const monthlyActive = [70, 90, 85, 95];
-    const monthlyClosed = [60, 80, 75, 88];
-
-    let currentView = 'weekly';
-
-    const chartConfig = {
-      type: 'bar',
-      data: {
-        labels: weeklyLabels,
-        datasets: [
-          {
-            label: 'Active',
-            data: weeklyActive,
-            backgroundColor: '#1f3a8a',
-            borderRadius: 4,
-            barPercentage: 0.5,
-            categoryPercentage: 0.5
-          },
-          {
-            label: 'Closed',
-            data: weeklyClosed,
-            backgroundColor: '#ff7d2a',
-            borderRadius: 4,
-            barPercentage: 0.5,
-            categoryPercentage: 0.5
+        /* Responsive tweaks */
+        @media (max-width: 767.98px) {
+          .stats-body {
+            gap: 24px;
           }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: '#111827',
-            titleColor: '#fff',
-            bodyColor: '#f9fafb'
+
+          .chart-header {
+            flex-direction: column;
+            align-items: flex-start !important;
+            gap: 8px;
           }
-        },
-        scales: {
-          x: {
-            grid: { display: false },
-            ticks: {
-              font: { size: 10 }
-            }
-          },
-          y: {
-            grid: {
-              color: '#e5e7eb'
+
+          .chart-legend {
+            width: 100%;
+            justify-content: space-between;
+          }
+        }
+      </style>
+
+      <!-- ===== SCRIPTS (Chart.js) ===== -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        (function () {
+          const ctx = document.getElementById('assignmentsChart').getContext('2d');
+
+          // Weekly data (as screenshot vibe)
+          const weeklyLabels = ['Mon', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+          const weeklyActive = [20, 35, 20, 35, 20, 30, 40];
+          const weeklyClosed = [12, 18, 50, 12, 48, 20, 55];
+
+          // Example monthly data (for toggle)
+          const monthlyLabels = ['W1', 'W2', 'W3', 'W4'];
+          const monthlyActive = [70, 90, 85, 95];
+          const monthlyClosed = [60, 80, 75, 88];
+
+          let currentView = 'weekly';
+
+          const chartConfig = {
+            type: 'bar',
+            data: {
+              labels: weeklyLabels,
+              datasets: [
+                {
+                  label: 'Active',
+                  data: weeklyActive,
+                  backgroundColor: '#1f3a8a',
+                  borderRadius: 4,
+                  barPercentage: 0.5,
+                  categoryPercentage: 0.5
+                },
+                {
+                  label: 'Closed',
+                  data: weeklyClosed,
+                  backgroundColor: '#ff7d2a',
+                  borderRadius: 4,
+                  barPercentage: 0.5,
+                  categoryPercentage: 0.5
+                }
+              ]
             },
-            beginAtZero: true,
-            ticks: {
-              stepSize: 10,
-              font: { size: 10 }
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  backgroundColor: '#111827',
+                  titleColor: '#fff',
+                  bodyColor: '#f9fafb'
+                }
+              },
+              scales: {
+                x: {
+                  grid: { display: false },
+                  ticks: {
+                    font: { size: 10 }
+                  }
+                },
+                y: {
+                  grid: {
+                    color: '#e5e7eb'
+                  },
+                  beginAtZero: true,
+                  ticks: {
+                    stepSize: 10,
+                    font: { size: 10 }
+                  }
+                }
+              }
             }
+          };
+
+          const assignmentsChart = new Chart(ctx, chartConfig);
+
+          // Toggle Weekly / Monthly
+          const toggleBtn = document.querySelector('.view-toggle');
+          const toggleLabel = document.getElementById('viewToggleLabel');
+
+          if (toggleBtn) {
+            toggleBtn.addEventListener('click', function () {
+              if (currentView === 'weekly') {
+                // Switch to monthly
+                assignmentsChart.data.labels = monthlyLabels;
+                assignmentsChart.data.datasets[0].data = monthlyActive;
+                assignmentsChart.data.datasets[1].data = monthlyClosed;
+                currentView = 'monthly';
+                toggleLabel.textContent = 'Monthly';
+              } else {
+                // Back to weekly
+                assignmentsChart.data.labels = weeklyLabels;
+                assignmentsChart.data.datasets[0].data = weeklyActive;
+                assignmentsChart.data.datasets[1].data = weeklyClosed;
+                currentView = 'weekly';
+                toggleLabel.textContent = 'Weekly';
+              }
+              assignmentsChart.update();
+            });
           }
-        }
-      }
-    };
-
-    const assignmentsChart = new Chart(ctx, chartConfig);
-
-    // Toggle Weekly / Monthly
-    const toggleBtn = document.querySelector('.view-toggle');
-    const toggleLabel = document.getElementById('viewToggleLabel');
-
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', function () {
-        if (currentView === 'weekly') {
-          // Switch to monthly
-          assignmentsChart.data.labels = monthlyLabels;
-          assignmentsChart.data.datasets[0].data = monthlyActive;
-          assignmentsChart.data.datasets[1].data = monthlyClosed;
-          currentView = 'monthly';
-          toggleLabel.textContent = 'Monthly';
-        } else {
-          // Back to weekly
-          assignmentsChart.data.labels = weeklyLabels;
-          assignmentsChart.data.datasets[0].data = weeklyActive;
-          assignmentsChart.data.datasets[1].data = weeklyClosed;
-          currentView = 'weekly';
-          toggleLabel.textContent = 'Weekly';
-        }
-        assignmentsChart.update();
-      });
-    }
-  })();
-</script>
+        })();
+      </script>
 
     </div>
     <!--end row-->

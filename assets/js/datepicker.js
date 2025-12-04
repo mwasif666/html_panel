@@ -34,6 +34,10 @@ const dateLoss = multiDatepicker("dateLoss", "icon-dateLoss");
 const filter1 = multiDatepicker("filterDate1", "filtericon1");
 const filter2 = multiDatepicker("filterDate2", "filtericon2");
 
+const notifStartDate = multiDatepicker("notifStartDate", "icon-notifStartDate");
+const notifEndDate = multiDatepicker("notifEndDate", "icon-notifEndDate");
+
+
 // Single Inputs
 // const filter1 = singleDatepicker("filterDate1");
 // const filter2 = singleDatepicker("filterDate2");
