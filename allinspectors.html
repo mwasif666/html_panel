@@ -601,7 +601,7 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid px-1">
+      <div class="container-fluid">
 
         <!-- DESKTOP VIEW -->
         <div class="row d-none d-lg-block">
@@ -692,152 +692,159 @@
               </button>
             </div>
 
+
             <!-- Table -->
-            <div class="table-wrapper">
-              <table>
+            <div class="table-wrapper delete">
+              <table class="inspector-table">
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Date</th>
-                    <th>Claim#</th>
-                    <th>Ins Name</th>
-                    <th>Ins Company</th>
-                    <th>Address</th>
-                    <th>Inspector</th>
-                    <th>Scheduled</th>
-                    <th>Inspected</th>
-                    <th>Closed Date</th>
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>W9-From</th>
+                    <th>Ins Certificate</th>
+                    <th>Expiry Date</th>
                     <th>Action</th>
                   </tr>
                 </thead>
 
-                <tbody id="cancelledAssignmentTable">
-
+                <tbody id="allInspectorsTable">
                   <!-- ROW 1 -->
                   <tr>
                     <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
                     <td>Alex Mark</td>
                     <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
+                    <td>+123456789</td>
+                    <td>gareet@gmail.com</td>
+                    <td>NY</td>
+                    <td>New York</td>
                     <td><span class="badge yes">Yes</span></td>
                     <td><span class="badge no">No</span></td>
                     <td>22-10-25</td>
                     <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
+                      <!-- classes same, sirf text change -->
+                      <button type="button" class="table1-btn">Edit</button>
+                      <button type="submit" class="table2-btn">Delete</button>
                     </td>
                   </tr>
 
                   <!-- ROW 2 -->
                   <tr>
                     <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
                     <td>Alex Mark</td>
                     <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
+                    <td>+123456789</td>
+                    <td>gareet@gmail.com</td>
+                    <td>NY</td>
+                    <td>New York</td>
                     <td><span class="badge yes">Yes</span></td>
                     <td><span class="badge no">No</span></td>
                     <td>22-10-25</td>
                     <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
+                      <!-- classes same, sirf text change -->
+                      <button type="button" class="table1-btn">Edit</button>
+                      <button type="submit" class="table2-btn">Delete</button>
                     </td>
                   </tr>
 
                   <!-- ROW 3 -->
                   <tr>
                     <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
                     <td>Alex Mark</td>
                     <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
+                    <td>+123456789</td>
+                    <td>gareet@gmail.com</td>
+                    <td>NY</td>
+                    <td>New York</td>
                     <td><span class="badge yes">Yes</span></td>
                     <td><span class="badge no">No</span></td>
                     <td>22-10-25</td>
                     <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
+                      <!-- classes same, sirf text change -->
+                      <button type="button" class="table1-btn">Edit</button>
+                      <button type="submit" class="table2-btn">Delete</button>
                     </td>
                   </tr>
 
                   <!-- ROW 4 -->
                   <tr>
                     <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
                     <td>Alex Mark</td>
                     <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
+                    <td>+123456789</td>
+                    <td>gareet@gmail.com</td>
+                    <td>NY</td>
+                    <td>New York</td>
                     <td><span class="badge yes">Yes</span></td>
                     <td><span class="badge no">No</span></td>
                     <td>22-10-25</td>
                     <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
+                      <!-- classes same, sirf text change -->
+                      <button type="button" class="table1-btn">Edit</button>
+                      <button type="submit" class="table2-btn">Delete</button>
                     </td>
                   </tr>
 
                   <!-- ROW 5 -->
                   <tr>
                     <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
                     <td>Alex Mark</td>
                     <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
+                    <td>+123456789</td>
+                    <td>gareet@gmail.com</td>
+                    <td>NY</td>
+                    <td>New York</td>
                     <td><span class="badge yes">Yes</span></td>
                     <td><span class="badge no">No</span></td>
                     <td>22-10-25</td>
                     <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
+                      <!-- classes same, sirf text change -->
+                      <button type="button" class="table1-btn">Edit</button>
+                      <button type="submit" class="table2-btn">Delete</button>
                     </td>
                   </tr>
 
                   <!-- ROW 6 -->
                   <tr>
                     <td>9999</td>
-                    <td>22-10-25</td>
-                    <td>547897</td>
                     <td>Alex Mark</td>
                     <td>ABC Insure</td>
-                    <td>Street 1, NY,123 US</td>
-                    <td>Mark Wood</td>
+                    <td>+123456789</td>
+                    <td>gareet@gmail.com</td>
+                    <td>NY</td>
+                    <td>New York</td>
                     <td><span class="badge yes">Yes</span></td>
                     <td><span class="badge no">No</span></td>
                     <td>22-10-25</td>
                     <td class="action-col d-flex gap-2">
-                      <button type="button" class="table1-btn">View</button>
-                      <button type="submit" class="table2-btn">Reactivate</button>
+                      <!-- classes same, sirf text change -->
+                      <button type="button" class="table1-btn">Edit</button>
+                      <button type="submit" class="table2-btn">Delete</button>
                     </td>
                   </tr>
-
                 </tbody>
               </table>
 
-              <!-- FOOTER + PAGINATION -->
+              <!-- FOOTER + PAGINATION (same as your existing one) -->
               <div class="table-footer d-flex justify-content-between align-items-center">
                 <span class="table-info">Showing 1-100 from 660</span>
                 <div class="pagination">
+                  <button class="page-btn page-btn-navigator">&lsaquo;</button>
                   <button class="page-btn active">1</button>
                   <button class="page-btn">2</button>
                   <button class="page-btn">3</button>
                   <button class="page-btn">4</button>
                   <button class="page-btn">5</button>
                   <button class="page-btn">…</button>
-                  <button class="page-btn">&rsaquo;</button>
+                  <button class="page-btn page-btn-navigator">&rsaquo;</button>
                 </div>
               </div>
             </div>
+
 
           </div>
         </div>

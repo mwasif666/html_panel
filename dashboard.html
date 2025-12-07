@@ -95,7 +95,8 @@
                           <h6 class="my-0 fw-normal text-dark fs-13">
                             Your order is placed
                           </h6>
-                          <small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+                          <small class="text-muted mb-0">Dummy text of the printing and
+                            industry.</small>
                         </div>
                         <!--end media-body-->
                       </div>
@@ -335,7 +336,7 @@
             <li class="nav-item">
               <a class="nav-link d-flex gap-2" href="#sidebarTransactions" data-bs-toggle="collapse" role="button"
                 aria-expanded="false" aria-controls="sidebarTransactions">
-                <img src="./assets/images/create.svg" width="20px" alt="" />
+                <img class="assignment-img" src="./assets/images/create.svg" width="20px" alt="" />
                 <span>Assignments</span>
               </a>
               <div class="collapse" id="sidebarTransactions">
@@ -602,232 +603,293 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid px-1">
+      <div class="container-fluid">
         <div class="dashboard-wrapper">
-
-          <!-- WELCOME -->
-          <div class="row mb-3">
-            <div class="col-12">
-              <h3 class="dashboard-title">Welcome Here,</h3>
-              <p class="dashboard-subtitle">Garrett</p>
-            </div>
-          </div>
-
-          <!-- TOP CARDS ROW 1 -->
-          <div class="row mb-3">
-            <!-- Today -->
-            <div class="col-md-6 mb-3">
-              <div class="stats-card stats-card-lg stats-today">
-                <div class="stats-card-header">
-                  <div class="icon-wrap icon-green">
-                    <i class="fa-regular fa-calendar-check"></i>
-                  </div>
-                  <h5 class="stats-title">Today's Assignments</h5>
-                </div>
-                <div class="stats-body">
-                  <div>
-                    <span class="stats-label">Scheduled</span>
-                    <div class="stats-value">32</div>
-                  </div>
-                  <div>
-                    <span class="stats-label">Inspected</span>
-                    <div class="stats-value">44</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tomorrow -->
-            <div class="col-md-6 mb-3">
-              <div class="stats-card stats-card-lg stats-tomorrow">
-                <div class="stats-card-header">
-                  <div class="icon-wrap icon-orange">
-                    <i class="fa-regular fa-calendar-days"></i>
-                  </div>
-                  <h5 class="stats-title">Tomorrow's Assignments</h5>
-                </div>
-                <div class="stats-body">
-                  <div>
-                    <span class="stats-label">Scheduled</span>
-                    <div class="stats-value">32</div>
-                  </div>
-                  <div>
-                    <span class="stats-label">Inspected</span>
-                    <div class="stats-value">44</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- TOP CARDS ROW 2 -->
-          <div class="row mb-3">
-            <div class="col-sm-6 col-lg-3 mb-3">
-              <div class="stats-card stats-small">
-                <div class="stats-card-header">
-                  <div class="icon-wrap icon-blue">
-                    <i class="fa-regular fa-clipboard"></i>
-                  </div>
-                  <h6 class="stats-title">Total Assignment</h6>
-                </div>
-                <div class="stats-body single">
-                  <div class="stats-value">100</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3 mb-3">
-              <div class="stats-card stats-small">
-                <div class="stats-card-header">
-                  <div class="icon-wrap icon-green">
-                    <i class="fa-regular fa-clipboard"></i>
-                  </div>
-                  <h6 class="stats-title">Active Assignment</h6>
-                </div>
-                <div class="stats-body single">
-                  <div class="stats-value">60</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3 mb-3">
-              <div class="stats-card stats-small">
-                <div class="stats-card-header">
-                  <div class="icon-wrap icon-orange">
-                    <i class="fa-regular fa-clipboard"></i>
-                  </div>
-                  <h6 class="stats-title">Closed Assignment</h6>
-                </div>
-                <div class="stats-body single">
-                  <div class="stats-value">40</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3 mb-3">
-              <div class="stats-card stats-small">
-                <div class="stats-card-header">
-                  <div class="icon-wrap icon-red">
-                    <i class="fa-regular fa-clipboard"></i>
-                  </div>
-                  <h6 class="stats-title">Average Per Day</h6>
-                </div>
-                <div class="stats-body single">
-                  <div class="stats-value">50</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ASSIGNMENTS CHART -->
-          <div class="row mb-3">
-            <div class="col-12">
-              <div class="card chart-card">
-                <div class="chart-header d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center">
-                    <div class="icon-wrap icon-blue me-2">
-                      <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h6 class="chart-title mb-0 me-2">Assignments</h6>
-                      <span class="badge-count">400</span>
-                    </div>
-                  </div>
-
-                  <div class="d-flex align-items-center chart-legend">
-                    <div class="legend-item">
-                      <span class="legend-dot legend-active"></span> Active
-                    </div>
-                    <div class="legend-item">
-                      <span class="legend-dot legend-closed"></span> Closed
+          <div class="assignments-container">
+            <!-- WELCOME -->
+            <div class="top-bar">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+                    <div class="closed-topbar d-block dashboard-topbar">
+                      <h2 class="color d-lg-none d-block">Welcome Here,</h2>
+                      <h4 class="d-lg-none d-block" style="color: #89868d;">Garret</h4>
+                      <h2 class="color-dark d-none d-lg-block">Welcome Here,</h2>
+                      <h4 class="color-dark d-none d-lg-block" style="color: #89868d;">Garret</h4>
                     </div>
 
-                    <button type="button" class="view-toggle">
-                      <span id="viewToggleLabel">Weekly</span>
-                      <i class="fa-solid fa-chevron-down ms-1"></i>
-                    </button>
+                  </div>
+                  <!--end page-title-box-->
+                </div>
+                <!--end col-->
+
+              </div>
+
+
+            </div>
+
+            <!-- TOP CARDS ROW 1 -->
+            <div class="row mb-3">
+              <!-- Today -->
+              <div class="col-md-6 mb-3">
+                <div class="stats-card stats-card-lg stats-today p-3">
+                  <div class="stats-card-header">
+                    <div class="icon-wrap icon-green">
+                      <img class="assignment-img" src="./assets/images/create.svg" alt="">
+                    </div>
+                    <h5 class="stats-title">Today's Assignments</h5>
+                  </div>
+                  <div class="row stats-body pt-2">
+                    <div class="col-2">
+                      <span class="stats-label">Scheduled</span>
+                      <div class="label-value">32</div>
+                    </div>
+                    <div class="col-2">
+                      <span class="stats-label">Inspected</span>
+                      <div class="label-value">44</div>
+                    </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="chart-body">
-                  <canvas id="assignmentsChart" height="130"></canvas>
+              <!-- Tomorrow -->
+              <div class="col-md-6 mb-3">
+                <div class="stats-card stats-card-lg stats-tomorrow p-3">
+                  <div class="stats-card-header">
+                    <div class="icon-wrap icon-orange">
+                                            <img class="assignment-img" src="./assets/images/create.svg" alt="">
+
+                    </div>
+                    <h5 class="stats-title">Tomorrow's Assignments</h5>
+                  </div>
+                  <div class="row stats-body pt-2">
+                    <div class="col-2">
+                      <span class="stats-label">Scheduled</span>
+                      <div class="label-value">32</div>
+                    </div>
+                    <div class="col-2">
+                      <span class="stats-label">Inspected</span>
+                      <div class="label-value">44</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TOP CARDS ROW 2 -->
+            <div class="row mb-3">
+              <div class="col-sm-6 col-lg-3 mb-3">
+                <div class="stats-card stats-small">
+                  <div class="stats-card-header stats-detail-card-header">
+                    <div class="icon-wrap icon-blue">
+                                            <img class="assignment-img" src="./assets/images/create.svg" alt="">
+                    </div>
+                    <h6 class="stats-title">Total Assignment</h6>
+                  </div>
+                  <div class="stats-body single">
+                    <div class="stats-value">100</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-3 mb-3">
+                <div class="stats-card stats-small">
+                  <div class="stats-card-header stats-detail-card-header">
+                    <div class="icon-wrap icon-green">
+  <svg width="20" height="20" viewBox="0 0 23 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12.8798 12.8424C13.1511 12.5937 13.5724 12.6116 13.8212 12.8827C14.0699 13.154 14.052 13.5753 13.7808 13.8241L10.872 16.4908C10.6171 16.7244 10.2258 16.7244 9.97094 16.4908L8.8798 15.4908C8.60866 15.242 8.59073 14.8207 8.83943 14.5494C9.08826 14.2783 9.50952 14.2603 9.78084 14.509L10.4202 15.095L12.8798 12.8424Z"
+                          fill="white" />
+                        <path
+                          d="M13.9987 3.33399C13.9987 2.38557 13.7934 2.15721 13.7279 2.10483C13.6309 2.02728 13.4742 2.00066 12.9987 2.00066H9.66536C9.18985 2.00066 9.03313 2.02728 8.9362 2.10483C8.87071 2.15721 8.66536 2.38557 8.66536 3.33399C8.66536 4.28242 8.87071 4.51077 8.9362 4.56316C9.03313 4.6407 9.18985 4.66733 9.66536 4.66733H12.9987C13.6959 4.66733 13.8267 4.46935 13.8737 4.38477C13.9181 4.30473 13.9556 4.18306 13.9766 3.99415C13.9977 3.80326 13.9987 3.59155 13.9987 3.33399ZM15.332 3.33399C15.332 3.57618 15.3329 3.86488 15.3021 4.14259C15.271 4.42219 15.2041 4.73846 15.0404 5.03321C14.6707 5.69855 13.9681 6.00066 12.9987 6.00066H9.66536C9.30754 6.00066 8.63093 6.02728 8.10286 5.60483C7.54335 5.15721 7.33203 4.38557 7.33203 3.33399C7.33203 2.28242 7.54335 1.51077 8.10286 1.06316C8.63093 0.640704 9.30754 0.667326 9.66536 0.667326H12.9987C13.3565 0.667326 14.0331 0.640704 14.5612 1.06316C15.1207 1.51077 15.332 2.28242 15.332 3.33399Z"
+                          fill="white" />
+                        <path
+                          d="M2 16.437V10.2079C2.00001 7.79521 2.40402 6.08688 3.36589 4.96437C4.34591 3.821 5.77635 3.43127 7.44271 3.33416C7.81018 3.31274 8.12558 3.59303 8.14714 3.96046C8.16854 4.32783 7.88812 4.64317 7.52083 4.66489C5.98075 4.75464 5.00331 5.10264 4.3776 5.83286C3.73396 6.58433 3.33334 7.88686 3.33333 10.2079V16.437C3.33333 18.507 3.58549 19.8471 4.26823 20.6883C4.92004 21.4914 6.10706 21.9995 8.44401 21.9995H14.2227C16.5596 21.9995 17.7466 21.4914 18.3984 20.6883C19.0812 19.8471 19.3333 18.507 19.3333 16.437V10.2079C19.3333 7.88087 18.9324 6.57879 18.2891 5.82895C17.6638 5.10023 16.6871 4.75471 15.1458 4.66489C14.7785 4.64317 14.4981 4.32783 14.5195 3.96046C14.5411 3.59303 14.8565 3.31274 15.224 3.33416C16.8893 3.43121 18.3203 3.81794 19.3008 4.96046C20.2631 6.08196 20.6667 7.79045 20.6667 10.2079V16.437C20.6667 18.5198 20.4373 20.2943 19.4349 21.5295C18.4016 22.8026 16.7 23.3328 14.2227 23.3329H8.44401C5.96668 23.3328 4.26504 22.8026 3.23177 21.5295C2.22933 20.2943 2 18.5198 2 16.437Z"
+                          fill="white" />
+                      </svg>                 </div>
+                    <div>
+                      <h6 class="stats-title">Active Assignment</h6>
+                    </div>
+                  </div>
+                  <div class="stats-body single">
+                    <div class="stats-value">60</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-3 mb-3">
+                <div class="stats-card stats-small">
+                  <div class="stats-card-header stats-detail-card-header">
+                    <div class="icon-wrap icon-orange">
+<svg width="20" height="20" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.9987 3.33302C13.9987 2.38459 13.7934 2.15624 13.7279 2.10385C13.6309 2.0263 13.4742 1.99968 12.9987 1.99968H9.66536C9.18985 1.99968 9.03313 2.0263 8.9362 2.10385C8.87071 2.15624 8.66536 2.38459 8.66536 3.33302C8.66536 4.28144 8.87071 4.50979 8.9362 4.56218C9.03313 4.63973 9.18985 4.66635 9.66536 4.66635H12.9987C13.6959 4.66635 13.8267 4.46838 13.8737 4.3838C13.9181 4.30375 13.9556 4.18209 13.9766 3.99317C13.9977 3.80228 13.9987 3.59057 13.9987 3.33302ZM15.332 3.33302C15.332 3.5752 15.3329 3.8639 15.3021 4.14161C15.271 4.42122 15.2041 4.73748 15.0404 5.03223C14.6707 5.69758 13.9681 5.99968 12.9987 5.99968H9.66536C9.30754 5.99968 8.63093 6.0263 8.10286 5.60385C7.54335 5.15624 7.33203 4.38459 7.33203 3.33302C7.33203 2.28144 7.54335 1.50979 8.10286 1.06218C8.63093 0.639727 9.30754 0.666349 9.66536 0.666349H12.9987C13.3565 0.666349 14.0331 0.639727 14.5612 1.06218C15.1207 1.50979 15.332 2.28144 15.332 3.33302Z"
+                          fill="white" />
+                        <path
+                          d="M2 16.437V10.2079C2.00001 7.79521 2.40402 6.08688 3.36589 4.96437C4.34591 3.821 5.77635 3.43127 7.44271 3.33416C7.81018 3.31274 8.12558 3.59303 8.14714 3.96046C8.16854 4.32783 7.88812 4.64317 7.52083 4.66489C5.98075 4.75464 5.00331 5.10264 4.3776 5.83286C3.73396 6.58433 3.33334 7.88686 3.33333 10.2079V16.437C3.33333 18.507 3.58549 19.8471 4.26823 20.6883C4.92004 21.4914 6.10706 21.9995 8.44401 21.9995H14.2227C16.5596 21.9995 17.7466 21.4914 18.3984 20.6883C19.0812 19.8471 19.3333 18.507 19.3333 16.437V10.2079C19.3333 7.88087 18.9324 6.57879 18.2891 5.82895C17.6638 5.10023 16.6871 4.75471 15.1458 4.66489C14.7785 4.64317 14.4981 4.32783 14.5195 3.96046C14.5411 3.59303 14.8565 3.31274 15.224 3.33416C16.8893 3.43121 18.3203 3.81794 19.3008 4.96046C20.2631 6.08196 20.6667 7.79045 20.6667 10.2079V16.437C20.6667 18.5198 20.4373 20.2943 19.4349 21.5295C18.4016 22.8026 16.7 23.3328 14.2227 23.3329H8.44401C5.96668 23.3328 4.26504 22.8026 3.23177 21.5295C2.22933 20.2943 2 18.5198 2 16.437Z"
+                          fill="white" />
+                        <path
+                          d="M14.3268 13C14.879 13.0001 15.3268 13.4478 15.3268 14C15.3268 14.5522 14.879 14.9999 14.3268 15H8C7.44772 15 7 14.5523 7 14C7 13.4477 7.44772 13 8 13H14.3268Z"
+                          fill="white" />
+                      </svg>
+                                     </div>
+                    <h6 class="stats-title">Closed Assignment</h6>
+                  </div>
+                  <div class="stats-body single">
+                    <div class="stats-value">40</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-3 mb-3">
+                <div class="stats-card stats-small">
+                  <div class="stats-card-header stats-detail-card-header">
+                    <div class="icon-wrap icon-red">
+<img class="assignment-img" src="./assets/images/create.svg" alt="">                    </div>
+                    <h6 class="stats-title">Average Per Day</h6>
+                  </div>
+                  <div class="stats-body single">
+                    <div class="stats-value">50</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ASSIGNMENTS CHART -->
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card chart-card">
+                  <div class="chart-header d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="icon-wrap icon-blue me-2">
+<img class="assignment-img" src="./assets/images/create.svg" alt="">                       </div>
+                      <div class="d-flex align-items-center">
+                        <h6 class="chart-title mb-0 me-2">Assignments</h6>
+                        <span class="badge-count">400</span>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-center chart-legend">
+                      <div class="legend-item">
+                        <span class="legend-dot legend-active"></span> Active
+                      </div>
+                      <div class="legend-item">
+                        <span class="legend-dot legend-closed"></span> Closed
+                      </div>
+
+                      <button type="button" class="view-toggle">
+                        <span id="viewToggleLabel">Weekly</span>
+                        <i class="fa-solid fa-chevron-down ms-1"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="chart-body">
+                    <canvas id="assignmentsChart" height="330"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BOTTOM 3 CARDS -->
+            <div class="row mb-3">
+              <!-- Top 10 States -->
+              <div class="col-md-4 mb-3">
+                <div class="card list-card">
+                  <div class="list-header">
+                    <h6>Top 10 States</h6>
+                  </div>
+                  <ul class="list-body">
+                    <li>
+                      <div class="list-body-li-card-text">
+                        <span>1. </span>
+                      <span>State Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                        <div class="list-body-li-card-text">
+                        <span>2. </span>
+                      <span>State Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                       <div class="list-body-li-card-text">
+                        <span>3. </span>
+                      <span>State Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Top 10 Cities -->
+              <div class="col-md-4 mb-3">
+                <div class="card list-card">
+                  <div class="list-header">
+                    <h6>Top 10 Cities</h6>
+                  </div>
+                  <ul class="list-body">
+                    <li>
+                      <div class="list-body-li-card-text">
+                        <span>1. </span>
+                      <span>City Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                      <div class="list-body-li-card-text">
+                        <span>2. </span>
+                      <span>City Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                       <div class="list-body-li-card-text">
+                        <span>3. </span>
+                      <span>City Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Top 10 Inspectors -->
+              <div class="col-md-4 mb-3">
+                <div class="card list-card">
+                  <div class="list-header">
+                    <h6>Top 10 Inspectors</h6>
+                  </div>
+                  <ul class="list-body">
+                    <li>
+                      <div class="list-body-li-card-text">
+                        <span>1. </span>
+                      <span>Inspector Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                         <div class="list-body-li-card-text">
+                        <span>2. </span>
+                      <span>Inspector Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                         <div class="list-body-li-card-text">
+                        <span>3. </span>
+                      <span>Inspector Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- BOTTOM 3 CARDS -->
-          <div class="row mb-3">
-            <!-- Top 10 States -->
-            <div class="col-md-4 mb-3">
-              <div class="card list-card">
-                <div class="list-header">
-                  <h6>Top 10 States</h6>
-                </div>
-                <ul class="list-body">
-                  <li>
-                    <span>1. State Name</span>
-                    <span class="list-count">12</span>
-                  </li>
-                  <li>
-                    <span>2. State Name</span>
-                    <span class="list-count">12</span>
-                  </li>
-                  <li>
-                    <span>3. State Name</span>
-                    <span class="list-count">12</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Top 10 Cities -->
-            <div class="col-md-4 mb-3">
-              <div class="card list-card">
-                <div class="list-header">
-                  <h6>Top 10 Cities</h6>
-                </div>
-                <ul class="list-body">
-                  <li>
-                    <span>1. City Name</span>
-                    <span class="list-count">12</span>
-                  </li>
-                  <li>
-                    <span>2. City Name</span>
-                    <span class="list-count">12</span>
-                  </li>
-                  <li>
-                    <span>3. City Name</span>
-                    <span class="list-count">12</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Top 10 Inspectors -->
-            <div class="col-md-4 mb-3">
-              <div class="card list-card">
-                <div class="list-header">
-                  <h6>Top 10 Inspectors</h6>
-                </div>
-                <ul class="list-body">
-                  <li>
-                    <span>1. Inspector Name</span>
-                    <span class="list-count">12</span>
-                  </li>
-                  <li>
-                    <span>2. Inspector Name</span>
-                    <span class="list-count">12</span>
-                  </li>
-                  <li>
-                    <span>3. Inspector Name</span>
-                    <span class="list-count">12</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
 
@@ -894,9 +956,9 @@
         }
 
         .icon-wrap {
-          width: 32px;
-          height: 32px;
-          border-radius: 999px;
+          width: 40px;
+          height: 40px;
+          border-radius: 08px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -904,8 +966,14 @@
         }
 
         .icon-green {
-          background: #d2f5e5;
-          color: #1d9c68;
+          background: #14b371;
+
+        }
+
+
+        .icon-green img {
+          width: 22px;
+          height: 22px;
         }
 
         .icon-orange {
@@ -936,7 +1004,7 @@
 
         .stats-label {
           font-size: 11px;
-          color: #9ca3af;
+          color: #444444;
         }
 
         .stats-value {
@@ -958,7 +1026,7 @@
         }
 
         .chart-title {
-          font-size: 14px;
+          font-size: 20px;
           font-weight: 600;
           color: #111827;
         }
@@ -966,24 +1034,25 @@
         .badge-count {
           background: #1f3a8a;
           color: #fff;
-          border-radius: 999px;
-          padding: 3px 10px;
-          font-size: 11px;
+          border-radius: 5px;
+          padding: 3px 20px;
+          font-size: 17px;
           font-weight: 500;
         }
 
         .chart-legend .legend-item {
-          font-size: 11px;
+          font-size: 15px;
           color: #6b7280;
           margin-right: 14px;
           display: flex;
           align-items: center;
+          font-weight: lighter;
           gap: 5px;
         }
 
         .legend-dot {
-          width: 8px;
-          height: 8px;
+          width: 12px;
+          height: 12px;
           border-radius: 999px;
           display: inline-block;
         }
@@ -998,10 +1067,10 @@
 
         .view-toggle {
           border-radius: 999px;
-          border: 1px solid #e5e7eb;
+          border: none;
           background: #ffffff;
           padding: 4px 10px;
-          font-size: 11px;
+          font-size: 15px;
           color: #6b7280;
           display: inline-flex;
           align-items: center;
@@ -1023,7 +1092,7 @@
         }
 
         .list-header h6 {
-          font-size: 13px;
+          font-size: 20px !important;
           font-weight: 600;
           margin: 0;
           color: #111827;
@@ -1031,17 +1100,23 @@
 
         .list-body {
           list-style: none;
-          margin: 0;
+          margin: 10px 0 0 0 !important;
           padding: 4px 16px 12px;
+gap: 15px !important;
         }
-
+.list-body-li-card-text{
+  display: flex;
+gap: 30px !important;
+}
         .list-body li {
           display: flex;
-          justify-content: space-between;
+          /* justify-content: space-between; */
           align-items: center;
-          font-size: 12px;
+          font-size: 17px !important;
           padding: 6px 0;
+          font-weight: lighter !important;
           border-bottom: 1px solid #f3f4f6;
+          gap: 20px !important;
         }
 
         .list-body li:last-child {
@@ -1049,7 +1124,7 @@
         }
 
         .list-count {
-          font-weight: 600;
+          font-weight: 500  !important;
           color: #111827;
         }
 

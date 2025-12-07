@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Font Awesome (icons for mail/lock) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7qYNroNMXyBigDKZ5xg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     * {
@@ -54,10 +52,9 @@
       max-width: 480px;
       background: #ffffff;
       border-radius: 12px;
-      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
       padding: 30px 40px 32px;
       text-align: left;
-      border: 1px solid #eef1f7;
+      border: 1px solid #e3e3e3;
     }
 
     .login-card-header {
@@ -94,11 +91,15 @@
 
     .input-icon {
       position: absolute;
-      top: 50%;
-      left: 12px;
+      top: 61%;
+      left: 9px;
       transform: translateY(-50%);
       font-size: 14px;
       color: #9ca3af;
+    }
+
+    .input-icon svg {
+      fill: #a0a3bd;
     }
 
     .form-control {
@@ -148,7 +149,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      color: #6b7280;
+      color: #a0a3bd !important;
     }
 
     .remember-left input {
@@ -221,6 +222,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="login-wrapper">
     <div class="login-logo"><img src="./assets/images/logo-dark.png" alt="" srcset=""></div>
@@ -237,15 +239,12 @@
           <label class="form-label" for="email">Email</label>
           <div class="input-wrapper">
             <span class="input-icon">
-              <i class="fa-regular fa-envelope"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+              </svg>
             </span>
-            <input
-              type="email"
-              id="email"
-              class="form-control"
-              placeholder="Enter your email"
-              required
-            />
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" required />
           </div>
         </div>
 
@@ -254,15 +253,12 @@
           <label class="form-label" for="password">Password</label>
           <div class="input-wrapper">
             <span class="input-icon">
-              <i class="fa-solid fa-lock"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-lock" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4M4.5 7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7zM8 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3" />
+              </svg>
             </span>
-            <input
-              type="password"
-              id="password"
-              class="form-control"
-              placeholder="••••••••••"
-              required
-            />
+            <input type="password" id="password" class="form-control" placeholder="••••••••••" required />
             <span class="password-toggle" id="togglePassword">Show</span>
           </div>
         </div>
@@ -278,9 +274,9 @@
 
         <!-- Login Button -->
         <button type="submit" class="btn-login">Login</button>
-    </form>
-    <a href="signup.html"><button class="btn-login2">Signup</button></a>
-</div>
+      </form>
+      <!-- <a href="signup.html"><button class="btn-login2">Signup</button></a> -->
+    </div>
   </div>
 
   <script>
@@ -295,4 +291,5 @@
     });
   </script>
 </body>
+
 </html>

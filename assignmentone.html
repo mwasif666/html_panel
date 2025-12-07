@@ -11,24 +11,33 @@
 
   <!-- App favicon -->
   <link rel="shortcut icon" href="assets/images/favicon.ico" />
-
-  <link href="assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+    integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- swiper  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <!-- App css -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="./Styles.css">
-  <link rel="stylesheet" href="./customutility.css">
-  <link rel="stylesheet" href="./responsive.css">
+  <link rel="stylesheet" href="./Styles.css" />
+  <link rel="stylesheet" href="./customutility.css" />
+  <link rel="stylesheet" href="./responsive.css" />
 </head>
 
 <body>
   <!-- Top Bar Start -->
   <div class="topbar d-print-none">
     <div class="container-fluid">
-      <nav class="topbar-custom d-flex justify-content-between " id="topbar-custom">
+      <nav class="topbar-custom d-flex justify-content-between" id="topbar-custom">
         <ul class="topbar-item mb-0 gap-3 align-items-center p-0">
           <li>
             <button class="nav-link mobile-menu-btn nav-icon" id="togglemenu">
@@ -36,14 +45,10 @@
             </button>
           </li>
           <li class="logo">
-            <h2>
-              Logo
-            </h2>
-
+            <h2>Logo</h2>
           </li>
           <li class="leak">
-            <span>
-              <i class="iconoir-search"></i></span>
+            <span> <i class="iconoir-search"></i></span>
           </li>
         </ul>
         <div class="topbar-item gap-1 mb-0">
@@ -325,11 +330,11 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-auto w-100">
             <li class="nav-item">
-              <a class="nav-link d-flex gap-2" href="./dashboard.html" role="button" aria-controls="sidebarDashboard">
+              <a class="nav-link d-flex gap-2" href="dashboard.html" role="button" aria-expanded="false"
+                aria-controls="sidebarDashboard">
                 <img src="./assets/images/chart-pie-alt.svg" width="20px" alt="" />
                 <span>Statistics</span>
               </a>
-
             </li>
             <!-- Static -->
             <li class="nav-item">
@@ -527,20 +532,17 @@
                           fill="white" />
                       </svg>
 
-
                       All Managers</a>
                   </li>
                 </ul>
               </div>
             </li>
-
             <li class="nav-item">
               <a class="nav-link d-flex gap-2" href="login.html" role="button" aria-expanded="false"
                 aria-controls="sidebarLogout">
                 <img src="./assets/images/sign-out-alt 1.svg" width="20px" alt="" />
                 <span>Logout</span>
               </a>
-
             </li>
 
             <!-- <li class="nav-item">
@@ -602,602 +604,708 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
-              <div class="closed-topbar">
-                <h2 class="color d-lg-none d-block">Manage Profile</h2>
-                <h2 class="color-dark d-none d-lg-block">Manage Profile</h2>
+      <div class="container-fluid assignment-detail-page">
+        <div class="row mt-3">
+          <div class="col-12">
+            <!-- TOP BAR -->
+            <div class="assignment-detail-header d-flex justify-content-between align-items-center mb-3">
+              <h3 class="ad-title mb-0">Assignment# (12)</h3>
+
+              <div class="d-flex gap-2">
+                <button type="button" id="btnLeakPdf" class="btn ad-btn ad-btn-blue d-flex align-items-center gap-2">
+                  <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M26.6003 7.38667L21.947 2.73333C20.187 0.973333 17.8403 0 15.347 0H9.33366C5.65366 0 2.66699 2.98667 2.66699 6.66667V25.3333C2.66699 29.0133 5.65366 32 9.33366 32H22.667C26.347 32 29.3337 29.0133 29.3337 25.3333V13.9867C29.3337 11.4933 28.3603 9.14667 26.6003 7.38667ZM24.7203 9.26667C25.147 9.69333 25.507 10.16 25.8003 10.6667H20.0137C19.2803 10.6667 18.6803 10.0667 18.6803 9.33333V3.54667C19.187 3.84 19.6537 4.2 20.0803 4.62667L24.7337 9.28L24.7203 9.26667ZM26.667 25.3333C26.667 27.5333 24.867 29.3333 22.667 29.3333H9.33366C7.13366 29.3333 5.33366 27.5333 5.33366 25.3333V6.66667C5.33366 4.46667 7.13366 2.66667 9.33366 2.66667H15.347C15.5603 2.66667 15.787 2.66667 16.0003 2.69333V9.33333C16.0003 11.5333 17.8003 13.3333 20.0003 13.3333H26.6403C26.667 13.5467 26.667 13.76 26.667 13.9867V25.3333ZM9.45366 17.3333H8.00033C7.26699 17.3333 6.66699 17.9333 6.66699 18.6667V24.5867C6.66699 25.0533 7.04033 25.4133 7.49366 25.4133C7.94699 25.4133 8.32033 25.04 8.32033 24.5867V22.96H9.44033C11.0137 22.96 12.2937 21.6933 12.2937 20.1467C12.2937 18.6 11.0137 17.3333 9.44033 17.3333H9.45366ZM9.45366 21.2933H8.34699V19H9.46699C10.107 19 10.6537 19.52 10.6537 20.1467C10.6537 20.7733 10.107 21.2933 9.46699 21.2933H9.45366ZM25.3603 18.1733C25.3603 18.64 24.987 19 24.5337 19H22.2803V20.52H23.9337C24.4003 20.52 24.7603 20.8933 24.7603 21.3467C24.7603 21.8 24.387 22.1733 23.9337 22.1733H22.2803V24.5733C22.2803 25.04 21.907 25.4 21.4537 25.4C21.0003 25.4 20.627 25.0267 20.627 24.5733V18.16C20.627 17.6933 21.0003 17.3333 21.4537 17.3333H24.5337C25.0003 17.3333 25.3603 17.7067 25.3603 18.16V18.1733ZM16.1203 17.3467H14.667C13.9337 17.3467 13.3337 17.9467 13.3337 18.68V24.6C13.3337 25.0667 13.707 25.3467 14.1603 25.3467C14.6137 25.3467 16.107 25.3467 16.107 25.3467C17.6803 25.3467 18.9603 24.08 18.9603 22.5333V20.16C18.9603 18.6133 17.6803 17.3467 16.107 17.3467H16.1203ZM17.307 22.5333C17.307 23.16 16.7603 23.68 16.1203 23.68H15.0137V19.0133H16.1337C16.7737 19.0133 17.3203 19.5333 17.3203 20.16V22.5333H17.307Z"
+                      fill="white" />
+                  </svg>
+
+                  <!-- <i class="fa-regular fa-file-pdf"></i> -->
+                  <span>Generate Leak Report PDF</span>
+                </button>
+
+                <button type="button" id="btnInvoicePdf"
+                  class="btn ad-btn ad-btn-orange d-flex align-items-center gap-2">
+                  <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M26.6003 7.38667L21.947 2.73333C20.187 0.973333 17.8403 0 15.347 0H9.33366C5.65366 0 2.66699 2.98667 2.66699 6.66667V25.3333C2.66699 29.0133 5.65366 32 9.33366 32H22.667C26.347 32 29.3337 29.0133 29.3337 25.3333V13.9867C29.3337 11.4933 28.3603 9.14667 26.6003 7.38667ZM24.7203 9.26667C25.147 9.69333 25.507 10.16 25.8003 10.6667H20.0137C19.2803 10.6667 18.6803 10.0667 18.6803 9.33333V3.54667C19.187 3.84 19.6537 4.2 20.0803 4.62667L24.7337 9.28L24.7203 9.26667ZM26.667 25.3333C26.667 27.5333 24.867 29.3333 22.667 29.3333H9.33366C7.13366 29.3333 5.33366 27.5333 5.33366 25.3333V6.66667C5.33366 4.46667 7.13366 2.66667 9.33366 2.66667H15.347C15.5603 2.66667 15.787 2.66667 16.0003 2.69333V9.33333C16.0003 11.5333 17.8003 13.3333 20.0003 13.3333H26.6403C26.667 13.5467 26.667 13.76 26.667 13.9867V25.3333ZM9.45366 17.3333H8.00033C7.26699 17.3333 6.66699 17.9333 6.66699 18.6667V24.5867C6.66699 25.0533 7.04033 25.4133 7.49366 25.4133C7.94699 25.4133 8.32033 25.04 8.32033 24.5867V22.96H9.44033C11.0137 22.96 12.2937 21.6933 12.2937 20.1467C12.2937 18.6 11.0137 17.3333 9.44033 17.3333H9.45366ZM9.45366 21.2933H8.34699V19H9.46699C10.107 19 10.6537 19.52 10.6537 20.1467C10.6537 20.7733 10.107 21.2933 9.46699 21.2933H9.45366ZM25.3603 18.1733C25.3603 18.64 24.987 19 24.5337 19H22.2803V20.52H23.9337C24.4003 20.52 24.7603 20.8933 24.7603 21.3467C24.7603 21.8 24.387 22.1733 23.9337 22.1733H22.2803V24.5733C22.2803 25.04 21.907 25.4 21.4537 25.4C21.0003 25.4 20.627 25.0267 20.627 24.5733V18.16C20.627 17.6933 21.0003 17.3333 21.4537 17.3333H24.5337C25.0003 17.3333 25.3603 17.7067 25.3603 18.16V18.1733ZM16.1203 17.3467H14.667C13.9337 17.3467 13.3337 17.9467 13.3337 18.68V24.6C13.3337 25.0667 13.707 25.3467 14.1603 25.3467C14.6137 25.3467 16.107 25.3467 16.107 25.3467C17.6803 25.3467 18.9603 24.08 18.9603 22.5333V20.16C18.9603 18.6133 17.6803 17.3467 16.107 17.3467H16.1203ZM17.307 22.5333C17.307 23.16 16.7603 23.68 16.1203 23.68H15.0137V19.0133H16.1337C16.7737 19.0133 17.3203 19.5333 17.3203 20.16V22.5333H17.307Z"
+                      fill="white" />
+                  </svg>
+                  <!-- <i class="fa-regular fa-file-lines"></i> -->
+                  <span>Generate Invoice PDF</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="assignment-detail-card">
+              <form id="assignmentForm">
+                <div class="row g-3">
+                  <!-- Row 1 -->
+                  <div class="col-md-6">
+                    <div class="form-group date-group">
+                      <label>Date of Assignment <span class="starColor">*</span></label>
+                      <div class="datepicker-wrapper w-100">
+                        <input type="text" id="dateAssignment" class=" " placeholder="mm/dd/yyyy" autocomplete="off"
+                          readonly>
+                        <div class="datepicker-icon">
+                          <span class="calendar-icon" id="icon-dateAssignment">
+                            <img src="/assets/images/datepicker.svg" alt="calendar">
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Claim Number <span class="required">*</span></label>
+                    <input type="text" class="form-control" name="claimNumber" value="" placeholder="143256" />
+                  </div>
+
+                  <!-- Row 2 -->
+                  <div class="col-md-6">
+                    <label class="form-label">Insured Name <span class="required">*</span></label>
+                    <input type="text" class="form-control" name="insuredName" value="" placeholder="Alex Mark" />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Insurance Company
+                      <span class="required">*</span></label>
+                    <input type="text" class="form-control" name="insuranceCompany" value=""
+                      placeholder="ABC Company" />
+                  </div>
+
+                  <!-- Row 3 -->
+                  <div class="col-md-6">
+                    <div class="form-group date-group">
+                      <label>Date of Loss <span class="starColor">*</span></label>
+                      <div class="datepicker-wrapper w-100">
+                        <input type="text" id="dateLoss" class=" " placeholder="mm/dd/yyyy" autocomplete="off" readonly>
+                        <div class="datepicker-icon">
+                          <span class="calendar-icon" id="icon-dateLoss">
+                            <img src="/assets/images/datepicker.svg" alt="calendar">
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Phone Number 1 <span class="required">*</span></label>
+                    <input type="text" class="form-control" name="phone1" value="" placeholder="123456789" />
+                  </div>
+
+                  <!-- Row 4 -->
+                  <div class="col-md-6">
+                    <label class="form-label">Phone Number 2</label>
+                    <input type="text" class="form-control" name="phone2" value="" placeholder="123456789" />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Address <span class="required">*</span></label>
+                    <input type="text" class="form-control" name="address" value="" placeholder="xyz" />
+                  </div>
+
+                  <!-- Row 5 -->
+                  <div class="col-md-4">
+                    <label class="form-label">State <span class="required">*</span></label>
+                    <input type="text" class="form-control" name="state" value="" placeholder="NY" />
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label">City <span class="required">*</span></label>
+                    <input type="text" class="form-control" name="city" value="" placeholder="New York" />
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label">Zip Code <span class="required">*</span></label>
+                    <input type="text" class="form-control" name="zip" value="" placeholder="456789" />
+                  </div>
+
+                  <!-- Row 6 – textarea -->
+                  <div class="col-12">
+                    <label class="form-label">Loss Description <span class="required">*</span></label>
+                    <textarea class="form-control" rows="4" name="lossDescription">
+Reference site about Lorem ipsum, giving information on its origins, as well as a random Lipsum generator.
+              </textarea>
+                  </div>
+
+                  <!-- Row 7 -->
+                  <div class="col-md-6">
+                    <label class="form-label">Adjuster Name</label>
+                    <input type="text" class="form-control" name="adjusterName" value="" placeholder="James Albert" />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Adjuster Phone</label>
+                    <input type="text" class="form-control" name="adjusterPhone" value="" placeholder="123456789" />
+                  </div>
+
+                  <!-- Row 8 -->
+                  <div class="col-md-6">
+                    <label class="form-label">Adjuster Email</label>
+                    <input type="email" class="form-control" name="adjusterEmail" value=""
+                      placeholder="James@gmail.com" />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Assigned Inspector</label>
+                    <select class="form-select" name="inspector">
+                      <option>Gerret</option>
+                      <option>John Doe</option>
+                      <option>Alex Mark</option>
+                    </select>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="col-12 d-flex justify-content-center mt-3">
+                    <button type="button" id="btnUpdateData" class="btn ad-btn-update">
+                      Update Data
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRACKING AREA CARD -->
+        <div class="tracking-area-card mt-4">
+          <h4 class="ta-title mb-3">Tracking Area</h4>
+
+          <!-- Dispatch Row -->
+          <div class="d-flex flex-wrap flex-column justify-content-center gap-3 mb-3">
+            <button type="button" id="btnDispatch" class="btn ta-dispatch-btn">
+              Dispatch
+            </button>
+            <p class="mb-0 ta-status-text">
+              <span class="ta-status-danger">Never Dispatched!</span>
+              <span class="mx-1">OR</span>
+              <span class="ta-status-muted">
+                Previously dispatched by Alex to XYX Inspector at 20-Oct-2025
+                11:10 pm
+              </span>
+            </p>
+          </div>
+
+          <!-- Estimated / Total Invoice -->
+          <div class="row g-3 align-items-end mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Estimated Inspector</label>
+              <div class="ta-input-save">
+                <input type="text" class="form-control" value="" placeholder="$1242" />
+                <button type="button" class="btn ta-save-btn">Save</button>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Total Invoice</label>
+              <div class="ta-input-save">
+                <input type="text" class="form-control" value="" placeholder="$1242" />
+                <button type="button" class="btn ta-save-btn">Save</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Invoice Notice -->
+          <div class="row g-3 mb-3">
+            <div class="col-12 ">
+              <label class="form-label">Invoice Notice</label>
+              <div class="ta-textarea-save d-flex gap-2">
+                <textarea class="form-control" rows="3">
+Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
+        </textarea>
+                <button type="button" class="btn ta-save-btn ta-save-right">
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scheduled / Inspected -->
+          <div class="row g-3 align-items-end mb-4">
+            <div class="col-md-6">
+              <label class="form-label">Scheduled</label>
+              <div class="ta-input-save">
+                <div class="form-group date-group">
+                  <!-- <label>Date of Assignment <span class="starColor">*</span></label> -->
+                  <div class="datepicker-wrapper w-100">
+                    <input type="text" id="schedule" class=" " placeholder="mm/dd/yyyy" autocomplete="off" readonly>
+                    <div class="datepicker-icon">
+                      <span class="calendar-icon" id="icon-schedule">
+                        <img src="/assets/images/datepicker.svg" alt="calendar">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn ta-save-btn">Save</button>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Inspected</label>
+              <div class="ta-input-save">
+                <div class="ad-input-with-icon flex-grow-1">
+                  <div class="datepicker-wrapper w-100">
+                    <input type="text" id="inspected" class=" " placeholder="mm/dd/yyyy" autocomplete="off" readonly>
+                    <div class="datepicker-icon">
+                      <span class="calendar-icon" id="icon-inspected">
+                        <img src="/assets/images/datepicker.svg" alt="calendar">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn ta-save-btn">Save</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Status Radio Groups -->
+          <div class="row g-4 mb-4">
+            <!-- LEFT COLUMN -->
+            <div class="col-md-6">
+              <!-- Report Completed -->
+              <div class="ta-status-group">
+                <div class="ta-status-left">
+                  <p class="ta-status-label mb-1">
+                    Report Completed &amp; Submitted
+                  </p>
+                  <div class="ta-radio-wrap">
+                    <label class="me-3">
+                      <input type="radio" name="reportCompleted" checked />
+                      <span class="ta-radio-no">NO</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="reportCompleted" />
+                      <span class="ta-radio-yes">Yes</span>
+                    </label>
+                  </div>
+                </div>
+                <button type="button" class="btn ta-save-btn">Save</button>
+              </div>
+
+              <!-- Bill Created -->
+              <div class="ta-status-group">
+                <div class="ta-status-left">
+                  <p class="ta-status-label mb-1">Bill Created</p>
+                  <div class="ta-radio-wrap">
+                    <label class="me-3">
+                      <input type="radio" name="billCreated" checked />
+                      <span class="ta-radio-no">NO</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="billCreated" />
+                      <span class="ta-radio-yes">Yes</span>
+                    </label>
+                  </div>
+                </div>
+                <button type="button" class="btn ta-save-btn">Save</button>
+              </div>
+
+              <!-- Bill Paid -->
+              <div class="ta-status-group">
+                <div class="ta-status-left">
+                  <p class="ta-status-label mb-1">Bill Paid</p>
+                  <div class="ta-radio-wrap">
+                    <label class="me-3">
+                      <input type="radio" name="billPaid" checked />
+                      <span class="ta-radio-no">NO</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="billPaid" />
+                      <span class="ta-radio-yes">Yes</span>
+                    </label>
+                  </div>
+                </div>
+                <button type="button" class="btn ta-save-btn">Save</button>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="col-md-6">
+              <!-- Invoice Created -->
+              <div class="ta-status-group">
+                <div class="ta-status-left">
+                  <p class="ta-status-label mb-1">Invoice Created</p>
+                  <div class="ta-radio-wrap">
+                    <label class="me-3">
+                      <input type="radio" name="invoiceCreated" />
+                      <span class="ta-radio-no">NO</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="invoiceCreated" checked />
+                      <span class="ta-radio-yes">Yes</span>
+                    </label>
+                  </div>
+                </div>
+                <button type="button" class="btn ta-save-btn">Save</button>
+              </div>
+
+              <!-- Bill Received -->
+              <div class="ta-status-group">
+                <div class="ta-status-left">
+                  <p class="ta-status-label mb-1">Bill Received</p>
+                  <div class="ta-radio-wrap">
+                    <label class="me-3">
+                      <input type="radio" name="billReceived" checked />
+                      <span class="ta-radio-no">NO</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="billReceived" />
+                      <span class="ta-radio-yes">Yes</span>
+                    </label>
+                  </div>
+                </div>
+                <button type="button" class="btn ta-save-btn">Save</button>
+              </div>
+
+              <!-- Payment Received -->
+              <div class="ta-status-group">
+                <div class="ta-status-left">
+                  <p class="ta-status-label mb-1">Payment Received</p>
+                  <div class="ta-radio-wrap">
+                    <label class="me-3">
+                      <input type="radio" name="paymentReceived" checked />
+                      <span class="ta-radio-no">NO</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="paymentReceived" />
+                      <span class="ta-radio-yes">Yes</span>
+                    </label>
+                  </div>
+                </div>
+                <button type="button" class="btn ta-save-btn">Save</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Buttons -->
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <button type="button" id="btnCloseAssignment" class="btn ta-bottom-btn ta-bottom-green">
+              Close Assignment
+            </button>
+            <button type="button" id="btnCancelAssignment" class="btn ta-bottom-btn ta-bottom-red">
+              Cancel Assignmnent
+            </button>
+          </div>
+        </div>
+
+        <!-- FINDINGS SECTION -->
+        <div class="findings-card mt-4">
+          <h4 class="fd-title">Findings</h4>
+
+          <label class="form-label mt-3">Invoice Notice</label>
+          <textarea class="form-control fd-textarea" rows="3">
+Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
+  </textarea>
+
+          <div class="d-flex justify-content-end mt-3">
+            <button type="button" class="btn fd-update-btn" id="btnUpdateFindings">
+              Update
+            </button>
+          </div>
+        </div>
+
+        <!-- DOCUMENTS SECTION -->
+        <div class="documents-section mt-4">
+          <h4 class="docs-title">Documents# (12)</h4>
+
+          <div class="documents-grid">
+            <!-- DOC CARD 1 -->
+            <div class="doc-card">
+              <div class="doc-preview">
+                <img src="/assets/images/pdf.png" alt="pdf" class="doc-icon" />
+                <i class="fa-regular fa-eye doc-eye"></i>
+              </div>
+              <p class="doc-name">Leak Report 1 .pdf</p>
+
+              <div class="doc-actions">
+                <button class="btn doc-delete">Delete</button>
+                <button class="btn doc-download">Download</button>
+              </div>
+            </div>
+
+            <!-- DOC CARD 2 -->
+            <div class="doc-card">
+              <div class="doc-preview">
+                <img src="/assets/images/pdf.png" alt="pdf" class="doc-icon" />
+                <i class="fa-regular fa-eye doc-eye"></i>
+              </div>
+              <p class="doc-name">Leak Report 1 .pdf</p>
+
+              <div class="doc-actions">
+                <button class="btn doc-delete">Delete</button>
+                <button class="btn doc-download">Download</button>
+              </div>
+            </div>
+
+            <!-- DOC CARD 3 -->
+            <div class="doc-card">
+              <div class="doc-preview">
+                <img src="/assets/images/pdf.png" alt="pdf" class="doc-icon" />
+                <i class="fa-regular fa-eye doc-eye"></i>
+              </div>
+              <p class="doc-name">Leak Report 1 .pdf</p>
+
+              <div class="doc-actions">
+                <button class="btn doc-delete">Delete</button>
+                <button class="btn doc-download">Download</button>
+              </div>
+            </div>
+
+            <!-- ADD NEW -->
+            <div class="doc-card doc-add" id="docAddBtn">
+              <span class="doc-add-plus">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#000" class="bi bi-plus-lg"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- INSPECTION PHOTOS SECTION -->
+        <div class="inspection-section mt-5">
+          <h4 class="inspect-title">
+            Inspection Photos From Inspector# (12)
+          </h4>
+
+          <!-- SWIPER SLIDER -->
+          <div class="swiper mySwiper mt-3">
+            <div class="swiper-wrapper">
+              <!-- PHOTO CARD 1 -->
+              <div class="swiper-slide">
+                <div class="inspect-card">
+                  <button class="inspect-delete">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+
+                  <img src="/assets/images/water.png" class="inspect-img" />
+
+                  <label class="form-label mt-2">Title</label>
+                  <input type="text" class="form-control" value="" placeholder="Leaked pipe" />
+
+                  <label class="form-label mt-2">Description</label>
+                  <textarea class="form-control" rows="3">
+The pipe was damaged by someone.</textarea>
+
+                  <button class="btn inspect-update-btn mt-3">Update</button>
+                </div>
+              </div>
+
+              <!-- Repeat SAME SLIDE for all photos -->
+              <div class="swiper-slide">
+                <div class="inspect-card">
+                  <button class="inspect-delete">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                  <img src="/assets/images/water.png" class="inspect-img" />
+                  <label class="form-label mt-2">Title</label>
+                  <input type="text" class="form-control" value="" placeholder="Leaked pipe" />
+                  <label class="form-label mt-2">Description</label>
+                  <textarea class="form-control" rows="3">
+The pipe was damaged by someone.</textarea>
+                  <button class="btn inspect-update-btn mt-3">Update</button>
+                </div>
+              </div>
+
+              <!-- ADD as many slides as needed -->
+            </div>
+
+            <!-- PAGINATION DOTS -->
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- Bottom Buttons -->
+          <div class="inspect-buttons-container mt-4">
+            <button class="btn inspect-upload-btn">
+              <svg width="20" height="20" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2484_703)">
+                  <path
+                    d="M21.375 0H5.625C4.13371 0.00198482 2.704 0.661102 1.6495 1.83277C0.594992 3.00445 0.00178634 4.59301 0 6.25L0 23.75C0.00178634 25.407 0.594992 26.9956 1.6495 28.1672C2.704 29.3389 4.13371 29.998 5.625 30H21.375C22.8663 29.998 24.296 29.3389 25.3505 28.1672C26.405 26.9956 26.9982 25.407 27 23.75V6.25C26.9982 4.59301 26.405 3.00445 25.3505 1.83277C24.296 0.661102 22.8663 0.00198482 21.375 0ZM5.625 2.5H21.375C22.2701 2.5 23.1286 2.89509 23.7615 3.59835C24.3944 4.30161 24.75 5.25544 24.75 6.25V23.75C24.7481 24.3069 24.6327 24.856 24.4125 25.3563L14.1041 13.9025C13.5818 13.322 12.9616 12.8614 12.2791 12.5472C11.5965 12.2331 10.8649 12.0713 10.1261 12.0713C9.38731 12.0713 8.65574 12.2331 7.97319 12.5472C7.29064 12.8614 6.67047 13.322 6.14813 13.9025L2.25 18.2325V6.25C2.25 5.25544 2.60558 4.30161 3.23851 3.59835C3.87145 2.89509 4.72989 2.5 5.625 2.5ZM5.625 27.5C4.72989 27.5 3.87145 27.1049 3.23851 26.4017C2.60558 25.6984 2.25 24.7446 2.25 23.75V21.7675L7.73775 15.67C8.05118 15.3215 8.42333 15.0451 8.83294 14.8565C9.24256 14.6679 9.68161 14.5708 10.125 14.5708C10.5684 14.5708 11.0074 14.6679 11.4171 14.8565C11.8267 15.0451 12.1988 15.3215 12.5122 15.67L22.8206 27.125C22.3704 27.3696 21.8762 27.4978 21.375 27.5H5.625Z"
+                    fill="black" />
+                  <path
+                    d="M18 13.125C18.7788 13.125 19.54 12.8684 20.1876 12.3877C20.8351 11.907 21.3398 11.2237 21.6378 10.4242C21.9358 9.62481 22.0138 8.74515 21.8618 7.89648C21.7099 7.04782 21.3349 6.26826 20.7842 5.65641C20.2336 5.04456 19.532 4.62788 18.7682 4.45907C18.0044 4.29026 17.2127 4.3769 16.4932 4.70803C15.7737 5.03916 15.1587 5.59992 14.7261 6.31938C14.2934 7.03885 14.0625 7.88471 14.0625 8.75C14.0625 9.91032 14.4773 11.0231 15.2158 11.8436C15.9542 12.6641 16.9557 13.125 18 13.125ZM18 6.875C18.3338 6.875 18.66 6.98497 18.9375 7.191C19.215 7.39702 19.4313 7.68986 19.559 8.03247C19.6868 8.37508 19.7202 8.75208 19.6551 9.1158C19.59 9.47951 19.4292 9.8136 19.1932 10.0758C18.9572 10.3381 18.6566 10.5166 18.3292 10.589C18.0019 10.6613 17.6626 10.6242 17.3542 10.4823C17.0459 10.3404 16.7823 10.1 16.5969 9.7917C16.4115 9.48335 16.3125 9.12084 16.3125 8.75C16.3125 8.25272 16.4903 7.77581 16.8068 7.42418C17.1232 7.07255 17.5524 6.875 18 6.875Z"
+                    fill="black" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2484_703">
+                    <rect width="27" height="30" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg> Upload Inspection
+              Photos
+            </button>
+
+            <button class="btn inspect-generate-btn">
+              <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M26.6003 7.38667L21.947 2.73333C20.187 0.973333 17.8403 0 15.347 0H9.33366C5.65366 0 2.66699 2.98667 2.66699 6.66667V25.3333C2.66699 29.0133 5.65366 32 9.33366 32H22.667C26.347 32 29.3337 29.0133 29.3337 25.3333V13.9867C29.3337 11.4933 28.3603 9.14667 26.6003 7.38667ZM24.7203 9.26667C25.147 9.69333 25.507 10.16 25.8003 10.6667H20.0137C19.2803 10.6667 18.6803 10.0667 18.6803 9.33333V3.54667C19.187 3.84 19.6537 4.2 20.0803 4.62667L24.7337 9.28L24.7203 9.26667ZM26.667 25.3333C26.667 27.5333 24.867 29.3333 22.667 29.3333H9.33366C7.13366 29.3333 5.33366 27.5333 5.33366 25.3333V6.66667C5.33366 4.46667 7.13366 2.66667 9.33366 2.66667H15.347C15.5603 2.66667 15.787 2.66667 16.0003 2.69333V9.33333C16.0003 11.5333 17.8003 13.3333 20.0003 13.3333H26.6403C26.667 13.5467 26.667 13.76 26.667 13.9867V25.3333ZM9.45366 17.3333H8.00033C7.26699 17.3333 6.66699 17.9333 6.66699 18.6667V24.5867C6.66699 25.0533 7.04033 25.4133 7.49366 25.4133C7.94699 25.4133 8.32033 25.04 8.32033 24.5867V22.96H9.44033C11.0137 22.96 12.2937 21.6933 12.2937 20.1467C12.2937 18.6 11.0137 17.3333 9.44033 17.3333H9.45366ZM9.45366 21.2933H8.34699V19H9.46699C10.107 19 10.6537 19.52 10.6537 20.1467C10.6537 20.7733 10.107 21.2933 9.46699 21.2933H9.45366ZM25.3603 18.1733C25.3603 18.64 24.987 19 24.5337 19H22.2803V20.52H23.9337C24.4003 20.52 24.7603 20.8933 24.7603 21.3467C24.7603 21.8 24.387 22.1733 23.9337 22.1733H22.2803V24.5733C22.2803 25.04 21.907 25.4 21.4537 25.4C21.0003 25.4 20.627 25.0267 20.627 24.5733V18.16C20.627 17.6933 21.0003 17.3333 21.4537 17.3333H24.5337C25.0003 17.3333 25.3603 17.7067 25.3603 18.16V18.1733ZM16.1203 17.3467H14.667C13.9337 17.3467 13.3337 17.9467 13.3337 18.68V24.6C13.3337 25.0667 13.707 25.3467 14.1603 25.3467C14.6137 25.3467 16.107 25.3467 16.107 25.3467C17.6803 25.3467 18.9603 24.08 18.9603 22.5333V20.16C18.9603 18.6133 17.6803 17.3467 16.107 17.3467H16.1203ZM17.307 22.5333C17.307 23.16 16.7603 23.68 16.1203 23.68H15.0137V19.0133H16.1337C16.7737 19.0133 17.3203 19.5333 17.3203 20.16V22.5333H17.307Z"
+                  fill="white" />
+              </svg> Generate Photo PDF
+            </button>
+          </div>
+        </div>
+        <!-- NOTES & LOGS SECTION -->
+        <div class="notes-logs-section mt-5">
+          <!-- NOTES BLOCK -->
+          <div class="notes-block">
+            <h4 class="nl-title">Notes</h4>
+            <p class="nl-subtitle">Notes leaved by all Managers</p>
+
+            <!-- Notes List -->
+            <div id="notesList" class="nl-list">
+              <div class="nl-item">
+                <span class="nl-text">We had great experience in this assignment.</span>
+                <span class="nl-meta">Garrett&nbsp;&nbsp;21–Oct–2025 10:15 PM</span>
+              </div>
+              <div class="nl-item">
+                <span class="nl-text">We had great experience in this assignment.</span>
+                <span class="nl-meta">Garrett&nbsp;&nbsp;21–Oct–2025 10:15 PM</span>
+              </div>
+              <div class="nl-item">
+                <span class="nl-text">We had great experience in this assignment.</span>
+                <span class="nl-meta">Garrett&nbsp;&nbsp;21–Oct–2025 10:15 PM</span>
+              </div>
+            </div>
+
+            <!-- Leave Note -->
+            <div class="mt-3">
+              <label class="form-label">Leave Note</label>
+              <textarea id="noteTextarea" class="form-control nl-textarea" rows="3">
+Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</textarea>
+            </div>
+
+            <!-- Email To -->
+            <div class="mt-3">
+              <label class="form-label mb-1">Email to</label>
+              <div class="nl-email-group">
+                <label class="nl-email-option">
+                  <input type="radio" name="emailTo" value="Alex" checked />
+                  <span class="nl-radio-label">Alex</span>
+                </label>
+
+                <label class="nl-email-option">
+                  <input type="radio" name="emailTo" value="Mark" />
+                  <span class="nl-radio-label">Mark</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-flex justify-content-center mt-4">
+              <button id="btnLeaveNote" type="button" class="btn nl-submit-btn">
+                Leave Note
+              </button>
+            </div>
+          </div>
+
+          <!-- LOGS BLOCK -->
+          <div class="logs-block mt-5">
+            <h4 class="nl-title">Logs</h4>
+            <p class="nl-subtitle">All systems logs</p>
+
+            <div id="logsList" class="nl-list">
+              <div class="nl-item">
+                <span class="nl-text">We had great experience in this assignment.</span>
+                <span class="nl-meta">Garrett&nbsp;&nbsp;21–Oct–2025 10:15 PM</span>
+              </div>
+              <div class="nl-item">
+                <span class="nl-text">We had great experience in this assignment.</span>
+                <span class="nl-meta">Garrett&nbsp;&nbsp;21–Oct–2025 10:15 PM</span>
+              </div>
+              <div class="nl-item">
+                <span class="nl-text">We had great experience in this assignment.</span>
+                <span class="nl-meta">Garrett&nbsp;&nbsp;21–Oct–2025 10:15 PM</span>
               </div>
             </div>
           </div>
         </div>
-        <!--end title row-->
+      </div>
 
-        <div class="row">
-          <form class="assignment-form w-100">
+      <!-- container -->
 
-            <div class="row">
-              <!-- Name -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Name <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Name">
-                </div>
-              </div>
+      <!--Start Rightbar-->
+      <!--Start Rightbar/offcanvas-->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+        <div class="offcanvas-header border-bottom justify-content-between">
+          <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+          <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <h6>Account Settings</h6>
+          <div class="p-2 text-start mt-3">
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch1" />
+              <label class="form-check-label" for="settings-switch1">Auto updates</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
+              <label class="form-check-label" for="settings-switch2">Location Permission</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="settings-switch3" />
+              <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+            </div>
+            <!--end form-switch-->
+          </div>
+          <!--end /div-->
+          <h6>General Settings</h6>
+          <div class="p-2 text-start mt-3">
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch4" />
+              <label class="form-check-label" for="settings-switch4">Show me Online</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
+              <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="settings-switch6" />
+              <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+            </div>
+            <!--end form-switch-->
+          </div>
+          <!--end /div-->
+        </div>
+        <!--end offcanvas-body-->
+      </div>
+      <!--end Rightbar/offcanvas-->
+      <!--end Rightbar-->
 
-              <!-- Email -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Email <span class="starColor">*</span></label>
-                  <input type="email" class="" placeholder="Enter Email">
-                </div>
-              </div>
+      <!--Start Footer-->
 
-              <!-- Phone -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Phone <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Phone">
-                </div>
-              </div>
-
-              <!-- Password -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Password <span class="starColor">*</span></label>
-                  <input type="password" class="" placeholder="Enter Password">
-                </div>
-              </div>
-
-              <!-- Company Name -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Company Name <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Name">
-                </div>
-              </div>
-
-              <!-- Company Email -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Company Email <span class="starColor">*</span></label>
-                  <input type="email" class="" placeholder="Enter Email">
-                </div>
-              </div>
-
-              <!-- Company Phone -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Company Phone <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Phone">
-                </div>
-              </div>
-
-              <!-- Time Zone -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Time Zone <span class="starColor">*</span></label>
-                  <select class="form-select">
-                    <option>Select Time Zone</option>
-                    <option>(UTC -05:00) Eastern Time</option>
-                    <option>(UTC -06:00) Central Time</option>
-                    <option>(UTC -08:00) Pacific Time</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Company Logo -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Company Logo <span class="starColor">*</span></label>
-                  <div class="file-upload">
-                    <label class="upload-btn">
-                      Chosen File
-                      <input type="file" class="file-input d-none">
-                    </label>
-                    <span class="file-name">No Chosen File</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Company Icon -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Company Icon <span class="starColor">*</span></label>
-                  <div class="file-upload">
-                    <label class="upload-btn">
-                      Chosen File
-                      <input type="file" class="file-input d-none">
-                    </label>
-                    <span class="file-name">No Chosen File</span>
-                  </div>
+      <!-- <footer class="footer text-center text-sm-start d-print-none">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="card mb-0 rounded-bottom-0">
+                <div class="card-body">
+                  <p class="text-muted mb-0">
+                    ©
+                    <script>
+                      document.write(new Date().getFullYear());
+                    </script>
+                    Leak Detector
+                    <span class="text-muted d-none d-sm-inline-block float-end">
+                      Develop by innovationpixel</span>
+                  </p>
                 </div>
               </div>
             </div>
-
-            <!-- Buttons row -->
-            <div class="button-row mt-3 d-flex justify-content-end">
-              <button type="button" class="cancel-btn me-2">Cancel</button>
-              <button type="submit" class="create-btn">Update Profile</button>
-            </div>
-
-          </form>
+          </div>
         </div>
-      </div>
+      </footer> -->
 
-
-      <!-- ===== STYLES (dashboard specific) ===== -->
-      <style>
-        .dashboard-wrapper {
-          padding-top: 10px;
-          padding-bottom: 20px;
-        }
-
-        .dashboard-title {
-          font-size: 22px;
-          font-weight: 600;
-          color: #212121;
-          margin-bottom: 2px;
-        }
-
-        .dashboard-subtitle {
-          font-size: 13px;
-          color: #9ca3af;
-          margin-bottom: 10px;
-        }
-
-        .stats-card {
-          background: #ffffff;
-          border-radius: 8px;
-          border: 1px solid #edf0f7;
-          padding: 14px 18px;
-        }
-
-        .stats-card-lg {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          min-height: 120px;
-        }
-
-        .stats-today {
-          background: #e9f9f2;
-          border-color: #e0f3ec;
-        }
-
-        .stats-tomorrow {
-          background: #ffe9dd;
-          border-color: #ffd9c5;
-        }
-
-        .stats-small {
-          min-height: 100px;
-        }
-
-        .stats-card-header {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-bottom: 8px;
-        }
-
-        .stats-title {
-          font-size: 13px;
-          font-weight: 600;
-          color: #111827;
-          margin: 0;
-        }
-
-        .icon-wrap {
-          width: 32px;
-          height: 32px;
-          border-radius: 999px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 14px;
-        }
-
-        .icon-green {
-          background: #d2f5e5;
-          color: #1d9c68;
-        }
-
-        .icon-orange {
-          background: #ffe2cd;
-          color: #ff7d2a;
-        }
-
-        .icon-blue {
-          background: #dde7ff;
-          color: #1e3a8a;
-        }
-
-        .icon-red {
-          background: #ffe0e0;
-          color: #f04438;
-        }
-
-        .stats-body {
-          display: flex;
-          justify-content: flex-start;
-          gap: 40px;
-        }
-
-        .stats-body.single {
-          justify-content: flex-start;
-          gap: 0;
-        }
-
-        .stats-label {
-          font-size: 11px;
-          color: #9ca3af;
-        }
-
-        .stats-value {
-          font-size: 22px;
-          font-weight: 600;
-          color: #111827;
-          margin-top: 4px;
-        }
-
-        /* Chart card */
-        .chart-card {
-          border-radius: 8px;
-          border: 1px solid #edf0f7;
-          padding: 16px 18px 10px;
-        }
-
-        .chart-header {
-          margin-bottom: 10px;
-        }
-
-        .chart-title {
-          font-size: 14px;
-          font-weight: 600;
-          color: #111827;
-        }
-
-        .badge-count {
-          background: #1f3a8a;
-          color: #fff;
-          border-radius: 999px;
-          padding: 3px 10px;
-          font-size: 11px;
-          font-weight: 500;
-        }
-
-        .chart-legend .legend-item {
-          font-size: 11px;
-          color: #6b7280;
-          margin-right: 14px;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-        }
-
-        .legend-dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 999px;
-          display: inline-block;
-        }
-
-        .legend-active {
-          background: #1f3a8a;
-        }
-
-        .legend-closed {
-          background: #ff7d2a;
-        }
-
-        .view-toggle {
-          border-radius: 999px;
-          border: 1px solid #e5e7eb;
-          background: #ffffff;
-          padding: 4px 10px;
-          font-size: 11px;
-          color: #6b7280;
-          display: inline-flex;
-          align-items: center;
-          cursor: pointer;
-        }
-
-        .chart-body {
-          padding-top: 4px;
-        }
-
-        /* bottom list cards */
-        .list-card {
-          border-radius: 8px;
-          border: 1px solid #edf0f7;
-        }
-
-        .list-header {
-          padding: 12px 16px 6px;
-        }
-
-        .list-header h6 {
-          font-size: 13px;
-          font-weight: 600;
-          margin: 0;
-          color: #111827;
-        }
-
-        .list-body {
-          list-style: none;
-          margin: 0;
-          padding: 4px 16px 12px;
-        }
-
-        .list-body li {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 12px;
-          padding: 6px 0;
-          border-bottom: 1px solid #f3f4f6;
-        }
-
-        .list-body li:last-child {
-          border-bottom: none;
-        }
-
-        .list-count {
-          font-weight: 600;
-          color: #111827;
-        }
-
-
-        /* OUTER CARDS */
-        .list-card {
-          border-radius: 10px;
-          border: 1px solid #edf0f7;
-          background: #ffffff;
-          padding: 14px 18px 16px;
-          transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-        }
-
-        .list-card:hover {
-          border-color: #d4d9e6;
-          box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-          transform: translateY(-2px);
-        }
-
-        /* TITLE */
-        .list-header {
-          padding-bottom: 8px;
-        }
-
-        .list-header h6 {
-          font-size: 14px;
-          font-weight: 600;
-          color: #111827;
-          margin: 0;
-        }
-
-        /* LIST ROWS */
-        .list-body {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
-
-        .list-body li {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 13px;
-          color: #111827;
-          padding: 8px 14px;
-          border-radius: 4px;
-          background: #f4f4f5;
-          /* light grey block jaisa screenshot */
-        }
-
-        .list-body li span:first-child {
-          /* "1. State Name" side */
-          white-space: nowrap;
-        }
-
-        .list-count {
-          font-weight: 600;
-          color: #111827;
-        }
-
-
-        /* Responsive tweaks */
-        @media (max-width: 767.98px) {
-          .stats-body {
-            gap: 24px;
-          }
-
-          .chart-header {
-            flex-direction: column;
-            align-items: flex-start !important;
-            gap: 8px;
-          }
-
-          .chart-legend {
-            width: 100%;
-            justify-content: space-between;
-          }
-        }
-      </style>
-
-      <!-- ===== SCRIPTS (Chart.js) ===== -->
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script>
-        (function () {
-          const ctx = document.getElementById('assignmentsChart').getContext('2d');
-
-          // Weekly data (as screenshot vibe)
-          const weeklyLabels = ['Mon', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
-          const weeklyActive = [20, 35, 20, 35, 20, 30, 40];
-          const weeklyClosed = [12, 18, 50, 12, 48, 20, 55];
-
-          // Example monthly data (for toggle)
-          const monthlyLabels = ['W1', 'W2', 'W3', 'W4'];
-          const monthlyActive = [70, 90, 85, 95];
-          const monthlyClosed = [60, 80, 75, 88];
-
-          let currentView = 'weekly';
-
-          const chartConfig = {
-            type: 'bar',
-            data: {
-              labels: weeklyLabels,
-              datasets: [
-                {
-                  label: 'Active',
-                  data: weeklyActive,
-                  backgroundColor: '#1f3a8a',
-                  borderRadius: 4,
-                  barPercentage: 0.5,
-                  categoryPercentage: 0.5
-                },
-                {
-                  label: 'Closed',
-                  data: weeklyClosed,
-                  backgroundColor: '#ff7d2a',
-                  borderRadius: 4,
-                  barPercentage: 0.5,
-                  categoryPercentage: 0.5
-                }
-              ]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              plugins: {
-                legend: { display: false },
-                tooltip: {
-                  backgroundColor: '#111827',
-                  titleColor: '#fff',
-                  bodyColor: '#f9fafb'
-                }
-              },
-              scales: {
-                x: {
-                  grid: { display: false },
-                  ticks: {
-                    font: { size: 10 }
-                  }
-                },
-                y: {
-                  grid: {
-                    color: '#e5e7eb'
-                  },
-                  beginAtZero: true,
-                  ticks: {
-                    stepSize: 10,
-                    font: { size: 10 }
-                  }
-                }
-              }
-            }
-          };
-
-          const assignmentsChart = new Chart(ctx, chartConfig);
-
-          // Toggle Weekly / Monthly
-          const toggleBtn = document.querySelector('.view-toggle');
-          const toggleLabel = document.getElementById('viewToggleLabel');
-
-          if (toggleBtn) {
-            toggleBtn.addEventListener('click', function () {
-              if (currentView === 'weekly') {
-                // Switch to monthly
-                assignmentsChart.data.labels = monthlyLabels;
-                assignmentsChart.data.datasets[0].data = monthlyActive;
-                assignmentsChart.data.datasets[1].data = monthlyClosed;
-                currentView = 'monthly';
-                toggleLabel.textContent = 'Monthly';
-              } else {
-                // Back to weekly
-                assignmentsChart.data.labels = weeklyLabels;
-                assignmentsChart.data.datasets[0].data = weeklyActive;
-                assignmentsChart.data.datasets[1].data = weeklyClosed;
-                currentView = 'weekly';
-                toggleLabel.textContent = 'Weekly';
-              }
-              assignmentsChart.update();
-            });
-          }
-        })();
-      </script>
-
+      <!--end footer-->
     </div>
-    <!--end row-->
-  </div>
-
-
-
-  <!-- container -->
-
-  <!--Start Rightbar-->
-  <!--Start Rightbar/offcanvas-->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
-    <div class="offcanvas-header border-bottom justify-content-between">
-      <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
-      <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
-        aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <h6>Account Settings</h6>
-      <div class="p-2 text-start mt-3">
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch1" />
-          <label class="form-check-label" for="settings-switch1">Auto updates</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
-          <label class="form-check-label" for="settings-switch2">Location Permission</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="settings-switch3" />
-          <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
-        </div>
-        <!--end form-switch-->
-      </div>
-      <!--end /div-->
-      <h6>General Settings</h6>
-      <div class="p-2 text-start mt-3">
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch4" />
-          <label class="form-check-label" for="settings-switch4">Show me Online</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
-          <label class="form-check-label" for="settings-switch5">Status visible to all</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="settings-switch6" />
-          <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
-        </div>
-        <!--end form-switch-->
-      </div>
-      <!--end /div-->
-    </div>
-    <!--end offcanvas-body-->
-  </div>
-  <!--end Rightbar/offcanvas-->
-  <!--end Rightbar-->
-  <!--Start Footer-->
-
-
-  <!--end footer-->
-  </div>
-  <!-- end page content -->
+    <!-- end page content -->
   </div>
   <!-- end page-wrapper -->
 
@@ -1206,15 +1314,280 @@
 
   <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/libs/simplebar/simplebar.min.js"></script>
-  <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
-  <script src="assets/libs/huebee/huebee.pkgd.min.js"></script>
   <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
-  <script src="assets/js/moment.js"></script>
-  <script src="assets/libs/imask/imask.min.js"></script>
-  <script src="assets/js/pages/forms-advanced.js"></script>
+  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+  <script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
+  <script src="assets/js/pages/index.init.js"></script>
+  <script src="assets/js/DynamicSelect.js"></script>
   <script src="assets/js/datepicker.js"></script>
   <script src="assets/js/app.js"></script>
 
+  <script>
+    document
+      .getElementById("searchInput")
+      .addEventListener("keyup", function () {
+        let filter = this.value.toLowerCase();
+        let rows = document.querySelectorAll("#assignmentTable tr");
+
+        rows.forEach((row) => {
+          let text = row.innerText.toLowerCase();
+          row.style.display = text.includes(filter) ? "" : "none";
+        });
+      });
+  </script>
+  <script>
+    // Toggle filter panel
+    document.getElementById("filterToggle").onclick = function (e) {
+      e.stopPropagation(); // Isse toggle click pe outside-close fire nahi hoga
+      const panel = document.getElementById("filterPanel");
+      panel.style.display =
+        panel.style.display === "block" ? "none" : "block";
+    };
+
+    // Close when clicking outside
+    document.addEventListener("click", function (e) {
+      const panel = document.getElementById("filterPanel");
+      const toggleBtn = document.getElementById("filterToggle");
+
+      // Agar panel hidden hai to kuch mat karo
+      if (panel.style.display !== "block") return;
+
+      // Agar click panel ke andar ya toggle button par hai → ignore
+      if (panel.contains(e.target) || toggleBtn.contains(e.target)) {
+        return;
+      }
+
+      // Otherwise close panel
+      panel.style.display = "none";
+    });
+  </script>
+
+  <script>
+    // helper: form data log
+    function getFormData() {
+      const form = document.getElementById("assignmentForm");
+      const data = new FormData(form);
+      const obj = {};
+      data.forEach((value, key) => (obj[key] = value));
+      return obj;
+    }
+
+    document
+      .getElementById("btnLeakPdf")
+      .addEventListener("click", function () {
+        const data = getFormData();
+        console.log("Generate Leak Report PDF with data:", data);
+        alert("Leak Report PDF generation logic yahan lagegi.");
+        // yahan apni actual PDF API call / window.open(...) laga dena
+      });
+
+    document
+      .getElementById("btnInvoicePdf")
+      .addEventListener("click", function () {
+        const data = getFormData();
+        console.log("Generate Invoice PDF with data:", data);
+        alert("Invoice PDF generation logic yahan lagegi.");
+      });
+
+    document
+      .getElementById("btnUpdateData")
+      .addEventListener("click", function () {
+        const data = getFormData();
+        console.log("Update Data payload:", data);
+        alert("Data updated (demo). Yahan apni API call lagani hai.");
+        // example:
+        // fetch("/api/assignments/12", { method: "PUT", body: JSON.stringify(data), headers: { "Content-Type": "application/json" } })
+      });
+  </script>
+
+  <script>
+    // Dispatch + bottom buttons
+    document
+      .getElementById("btnDispatch")
+      .addEventListener("click", function () {
+        alert("Dispatch clicked – yahan apni dispatch logic lagao.");
+      });
+
+    document
+      .getElementById("btnCloseAssignment")
+      .addEventListener("click", function () {
+        alert("Close Assignment clicked – yahan close API call karein.");
+      });
+
+    document
+      .getElementById("btnCancelAssignment")
+      .addEventListener("click", function () {
+        alert("Cancel Assignment clicked – yahan cancel logic karein.");
+      });
+
+    // Saare Save buttons (Tracking Area)
+    document.querySelectorAll(".ta-save-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        // yahan particular field ka data collect karke API call kar sakte ho
+        console.log(
+          "Tracking field saved:",
+          btn.closest(".ta-status-group") || btn.closest(".ta-input-save")
+        );
+        // demo alert:
+        // alert("Saved!");
+      });
+    });
+  </script>
+  <script>
+    // UPDATE Findings
+    document
+      .getElementById("btnUpdateFindings")
+      .addEventListener("click", function () {
+        const text = document.querySelector(".fd-textarea").value;
+        alert("Updated Findings:\n" + text);
+
+        // TODO: your API call here
+        // fetch("/api/updateFindings", { method: "POST", body: JSON.stringify({ text }) });
+      });
+
+    // VIEW PDF (eye icon)
+    document.querySelectorAll(".doc-eye").forEach(function (eye, index) {
+      eye.addEventListener("click", function () {
+        alert("Preview PDF # " + (index + 1));
+        // TODO: open PDF preview modal
+      });
+    });
+
+    // DELETE PDF
+    document.querySelectorAll(".doc-delete").forEach(function (btn, index) {
+      btn.addEventListener("click", function () {
+        alert("Delete Document # " + (index + 1));
+        // TODO: API call for delete
+      });
+    });
+
+    // DOWNLOAD PDF
+    document.querySelectorAll(".doc-download").forEach(function (btn, index) {
+      btn.addEventListener("click", function () {
+        alert("Downloading Document # " + (index + 1));
+        // TODO: actual file download logic
+      });
+    });
+
+    // ADD NEW DOCUMENT
+    document
+      .getElementById("docAddBtn")
+      .addEventListener("click", function () {
+        alert("Add New Document clicked!");
+        // TODO: trigger file upload input
+      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    // Initialize Slider
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 18,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1400: { slidesPerView: 4 },
+        992: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
+        0: { slidesPerView: 1 },
+      },
+    });
+
+    // DELETE PHOTO
+    document.querySelectorAll(".inspect-delete").forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        alert("Delete photo " + (index + 1));
+        // TODO: API call for delete
+      });
+    });
+
+    // UPDATE PHOTO INFO
+    document.querySelectorAll(".inspect-update-btn").forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        alert("Updated card " + (index + 1));
+        // TODO: API call for update
+      });
+    });
+
+    // UPLOAD BUTTON
+    document
+      .querySelector(".inspect-upload-btn")
+      .addEventListener("click", () => {
+        alert("Upload Photos clicked!");
+        // TODO: open file picker
+      });
+
+    // GENERATE PHOTO PDF
+    document
+      .querySelector(".inspect-generate-btn")
+      .addEventListener("click", () => {
+        alert("Generate Photo PDF clicked!");
+        // TODO: API call for PDF generation
+      });
+  </script>
+  <script>
+    document
+      .getElementById("btnLeaveNote")
+      .addEventListener("click", function () {
+        const textarea = document.getElementById("noteTextarea");
+        const text = textarea.value.trim();
+        if (!text) {
+          alert("Please type a note first.");
+          return;
+        }
+
+        const emailTo = document.querySelector(
+          'input[name="emailTo"]:checked'
+        ).value;
+
+        // Fake current time for demo (you can replace with backend timestamp)
+        const now = new Date();
+        const dateStr = now.toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "short",
+          year: "numeric",
+        });
+        const timeStr = now.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+        const meta = emailTo + "  " + dateStr + " " + timeStr;
+
+        // Create new note row
+        function createRow(text, meta) {
+          const div = document.createElement("div");
+          div.className = "nl-item";
+
+          const spanText = document.createElement("span");
+          spanText.className = "nl-text";
+          spanText.textContent = text;
+
+          const spanMeta = document.createElement("span");
+          spanMeta.className = "nl-meta";
+          spanMeta.textContent = meta;
+
+          div.appendChild(spanText);
+          div.appendChild(spanMeta);
+          return div;
+        }
+
+        const notesList = document.getElementById("notesList");
+        const logsList = document.getElementById("logsList");
+
+        notesList.prepend(createRow(text, meta));
+        logsList.prepend(createRow(text, meta));
+
+        // Demo: send to console as "email"
+        console.log("Sending note email to:", emailTo, "text:", text);
+
+        // Optional: clear textarea
+        textarea.value = "";
+      });
+  </script>
 </body>
 <!--end body-->
 

@@ -2,574 +2,549 @@
 <html lang="en" dir="ltr" data-startbar="dark" data-bs-theme="light">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Admin Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="" name="author" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+  <meta content="" name="author" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
-    <link href="assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
-    <!-- App css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="./Styles.css">
-    <link rel="stylesheet" href="./customutility.css">
-    <link rel="stylesheet" href="./responsive.css">
+  <link href="assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+  <!-- App css -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./Styles.css">
+  <link rel="stylesheet" href="./customutility.css">
+  <link rel="stylesheet" href="./responsive.css">
 </head>
 
 <body>
-    <!-- Top Bar Start -->
-    <div class="topbar d-print-none">
-        <div class="container-fluid">
-            <nav class="topbar-custom d-flex justify-content-between " id="topbar-custom">
-                <ul class="topbar-item mb-0 gap-3 align-items-center p-0">
-                    <li>
-                        <button class="nav-link mobile-menu-btn nav-icon" id="togglemenu">
-                            <i class="iconoir-menu"></i>
-                        </button>
-                    </li>
-                    <li class="logo">
-                        <h2>
-                            Logo
-                        </h2>
+  <!-- Top Bar Start -->
+  <div class="topbar d-print-none">
+    <div class="container-fluid">
+      <nav class="topbar-custom d-flex justify-content-between " id="topbar-custom">
+        <ul class="topbar-item mb-0 gap-3 align-items-center p-0">
+          <li>
+            <button class="nav-link mobile-menu-btn nav-icon" id="togglemenu">
+              <i class="iconoir-menu"></i>
+            </button>
+          </li>
+          <li class="logo">
+            <h2>
+              Logo
+            </h2>
 
-                    </li>
-                    <li class="leak">
-                        <span>
-                            <i class="iconoir-search"></i></span>
-                    </li>
-                </ul>
-                <div class="topbar-item gap-1 mb-0">
-                    <div class="dropdown topbar-item">
-                        <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false" data-bs-offset="0,19">
-                            <i class="iconoir-bell" id="iconoir-bell-notify"></i>
-                            <span class="alert-badge m-0 p-0"></span>
-                        </a>
-                        <div class="dropdown-menu stop dropdown-menu-end dropdown-lg py-0">
-                            <h5 class="dropdown-item-text m-0 py-2 d-flex justify-content-between align-items-center">
-                                Notifications
-                                <a href="#" class="badge text-body-tertiary badge-pill">
-                                    <i class="iconoir-plus-circle fs-4"></i>
-                                </a>
-                            </h5>
-                            <ul class="nav nav-tabs nav-tabs-custom nav-success nav-justified mb-1" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link mx-0 active" data-bs-toggle="tab" href="#All" role="tab"
-                                        aria-selected="true">
-                                        All
-                                        <span class="badge bg-primary-subtle text-primary badge-pill ms-1">24</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link mx-0" data-bs-toggle="tab" href="#Projects" role="tab"
-                                        aria-selected="false" tabindex="-1">
-                                        Projects
-                                    </a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link mx-0" data-bs-toggle="tab" href="#Teams" role="tab"
-                                        aria-selected="false" tabindex="-1">
-                                        Team
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="ms-0" style="max-height: 230px" data-simplebar>
-                                <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="All" role="tabpanel"
-                                        aria-labelledby="all-tab" tabindex="0">
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">2 min ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-wolf fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">
-                                                        Your order is placed
-                                                    </h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing and
-                                                        industry.</small>
-                                                </div>
-                                                <!--end media-body-->
-                                            </div>
-                                            <!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">10 min ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-apple-swift fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">
-                                                        Meeting with designers
-                                                    </h6>
-                                                    <small class="text-muted mb-0">It is a long established fact that a
-                                                        reader.</small>
-                                                </div>
-                                                <!--end media-body-->
-                                            </div>
-                                            <!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">40 min ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-birthday-cake fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">
-                                                        UX 3 Task complete.
-                                                    </h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                                </div>
-                                                <!--end media-body-->
-                                            </div>
-                                            <!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">1 hr ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-drone fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">
-                                                        Your order is placed
-                                                    </h6>
-                                                    <small class="text-muted mb-0">It is a long established fact that a
-                                                        reader.</small>
-                                                </div>
-                                                <!--end media-body-->
-                                            </div>
-                                            <!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">2 hrs ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-user fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">
-                                                        Payment Successfull
-                                                    </h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                                </div>
-                                                <!--end media-body-->
-                                            </div>
-                                            <!--end media-->
-                                        </a><!--end-item-->
-                                    </div>
-                                    <div class="tab-pane fade" id="Projects" role="tabpanel"
-                                        aria-labelledby="projects-tab" tabindex="0">
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">40 min ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-birthday-cake fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">
-                                                        UX 3 Task complete.
-                                                    </h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                                </div>
-                                                <!--end media-body-->
-                                            </div>
-                                            <!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">1 hr ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-drone fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">
-                                                        Your order is placed
-                                                    </h6>
-                                                    <small class="text-muted mb-0">It is a long established fact that a
-                                                        reader.</small>
-                                                </div>
-                                                <!--end media-body-->
-                                            </div>
-                                            <!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">2 hrs ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-user fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">
-                                                        Payment Successfull
-                                                    </h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                                </div>
-                                                <!--end media-body-->
-                                            </div>
-                                            <!--end media-->
-                                        </a><!--end-item-->
-                                    </div>
-                                    <div class="tab-pane fade" id="Teams" role="tabpanel" aria-labelledby="teams-tab"
-                                        tabindex="0">
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">1 hr ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-drone fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">
-                                                        Your order is placed
-                                                    </h6>
-                                                    <small class="text-muted mb-0">It is a long established fact that a
-                                                        reader.</small>
-                                                </div>
-                                                <!--end media-body-->
-                                            </div>
-                                            <!--end media-->
-                                        </a><!--end-item-->
-                                        <!-- item-->
-                                        <a href="#" class="dropdown-item py-3">
-                                            <small class="float-end text-muted ps-2">2 hrs ago</small>
-                                            <div class="d-flex align-items-center">
-                                                <div
-                                                    class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
-                                                    <i class="iconoir-user fs-4"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 text-truncate">
-                                                    <h6 class="my-0 fw-normal text-dark fs-13">
-                                                        Payment Successfull
-                                                    </h6>
-                                                    <small class="text-muted mb-0">Dummy text of the printing.</small>
-                                                </div>
-                                                <!--end media-body-->
-                                            </div>
-                                            <!--end media-->
-                                        </a><!--end-item-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- All-->
-                            <a href="allnotifications.html" class="dropdown-item text-center text-dark fs-13 py-2">
-                                View All <i class="fi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="dropdown topbar-item">
-                        <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false" data-bs-offset="0,19">
-                            <div class="d-flex gap-2">
-                                <div class="topbar-user">
-                                    <img src="assets/images/users/avatar-1.jpg" alt=""
-                                        class="thumb-md rounded-circle" />
-                                </div>
-                                <div class="toopbar-details">
-                                    <h6 class="my-0 fw-medium text-dark fs-13">
-                                        William Martin
-                                    </h6>
-                                    <small class="text-muted mb-0">Garrett@gmail.com</small>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end py-0">
-                            <a class="dropdown-item" href="profile.html"><i
-                                    class="las la-user fs-18 me-1 align-text-bottom"></i>
-                                Update Profile</a>
-                            <div class="dropdown-divider mb-0"></div>
-                            <a class="dropdown-item text-danger" href="auth-login.html"><i
-                                    class="las la-power-off fs-18 me-1 align-text-bottom"></i>
-                                Logout</a>
-                        </div>
-                    </div>
-                </div>
-                <!--end topbar-nav-->
-            </nav>
-            <!-- end navbar-->
-        </div>
-    </div>
-    <!-- Top Bar End -->
-    <!-- leftbar-tab-menu -->
-    <div class="startbar d-print-none">
-        <!--start brand-->
-        <div class="brand">
-            <a href="dashboard.html" class="logo">
-                <span>
-                    <img src="assets/images/logo-sm.png" alt="logo-small" class="logo-sm" />
-                </span>
-                <span class="">
-                    <img src="assets/images/logo-light.png" alt="logo-large" class="logo-lg logo-light" />
-                    <img src="assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark" />
-                </span>
+          </li>
+          <li class="leak">
+            <span>
+              <i class="iconoir-search"></i></span>
+          </li>
+        </ul>
+        <div class="topbar-item gap-1 mb-0">
+          <div class="dropdown topbar-item">
+            <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false" data-bs-offset="0,19">
+              <i class="iconoir-bell" id="iconoir-bell-notify"></i>
+              <span class="alert-badge m-0 p-0"></span>
             </a>
+            <div class="dropdown-menu stop dropdown-menu-end dropdown-lg py-0">
+              <h5 class="dropdown-item-text m-0 py-2 d-flex justify-content-between align-items-center">
+                Notifications
+                <a href="#" class="badge text-body-tertiary badge-pill">
+                  <i class="iconoir-plus-circle fs-4"></i>
+                </a>
+              </h5>
+              <ul class="nav nav-tabs nav-tabs-custom nav-success nav-justified mb-1" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link mx-0 active" data-bs-toggle="tab" href="#All" role="tab" aria-selected="true">
+                    All
+                    <span class="badge bg-primary-subtle text-primary badge-pill ms-1">24</span>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link mx-0" data-bs-toggle="tab" href="#Projects" role="tab" aria-selected="false"
+                    tabindex="-1">
+                    Projects
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link mx-0" data-bs-toggle="tab" href="#Teams" role="tab" aria-selected="false"
+                    tabindex="-1">
+                    Team
+                  </a>
+                </li>
+              </ul>
+              <div class="ms-0" style="max-height: 230px" data-simplebar>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="All" role="tabpanel" aria-labelledby="all-tab"
+                    tabindex="0">
+                    <!-- item-->
+                    <a href="#" class="dropdown-item py-3">
+                      <small class="float-end text-muted ps-2">2 min ago</small>
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
+                          <i class="iconoir-wolf fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-2 text-truncate">
+                          <h6 class="my-0 fw-normal text-dark fs-13">
+                            Your order is placed
+                          </h6>
+                          <small class="text-muted mb-0">Dummy text of the printing and
+                            industry.</small>
+                        </div>
+                        <!--end media-body-->
+                      </div>
+                      <!--end media-->
+                    </a><!--end-item-->
+                    <!-- item-->
+                    <a href="#" class="dropdown-item py-3">
+                      <small class="float-end text-muted ps-2">10 min ago</small>
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
+                          <i class="iconoir-apple-swift fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-2 text-truncate">
+                          <h6 class="my-0 fw-normal text-dark fs-13">
+                            Meeting with designers
+                          </h6>
+                          <small class="text-muted mb-0">It is a long established fact that a
+                            reader.</small>
+                        </div>
+                        <!--end media-body-->
+                      </div>
+                      <!--end media-->
+                    </a><!--end-item-->
+                    <!-- item-->
+                    <a href="#" class="dropdown-item py-3">
+                      <small class="float-end text-muted ps-2">40 min ago</small>
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
+                          <i class="iconoir-birthday-cake fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-2 text-truncate">
+                          <h6 class="my-0 fw-normal text-dark fs-13">
+                            UX 3 Task complete.
+                          </h6>
+                          <small class="text-muted mb-0">Dummy text of the printing.</small>
+                        </div>
+                        <!--end media-body-->
+                      </div>
+                      <!--end media-->
+                    </a><!--end-item-->
+                    <!-- item-->
+                    <a href="#" class="dropdown-item py-3">
+                      <small class="float-end text-muted ps-2">1 hr ago</small>
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
+                          <i class="iconoir-drone fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-2 text-truncate">
+                          <h6 class="my-0 fw-normal text-dark fs-13">
+                            Your order is placed
+                          </h6>
+                          <small class="text-muted mb-0">It is a long established fact that a
+                            reader.</small>
+                        </div>
+                        <!--end media-body-->
+                      </div>
+                      <!--end media-->
+                    </a><!--end-item-->
+                    <!-- item-->
+                    <a href="#" class="dropdown-item py-3">
+                      <small class="float-end text-muted ps-2">2 hrs ago</small>
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
+                          <i class="iconoir-user fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-2 text-truncate">
+                          <h6 class="my-0 fw-normal text-dark fs-13">
+                            Payment Successfull
+                          </h6>
+                          <small class="text-muted mb-0">Dummy text of the printing.</small>
+                        </div>
+                        <!--end media-body-->
+                      </div>
+                      <!--end media-->
+                    </a><!--end-item-->
+                  </div>
+                  <div class="tab-pane fade" id="Projects" role="tabpanel" aria-labelledby="projects-tab" tabindex="0">
+                    <!-- item-->
+                    <a href="#" class="dropdown-item py-3">
+                      <small class="float-end text-muted ps-2">40 min ago</small>
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
+                          <i class="iconoir-birthday-cake fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-2 text-truncate">
+                          <h6 class="my-0 fw-normal text-dark fs-13">
+                            UX 3 Task complete.
+                          </h6>
+                          <small class="text-muted mb-0">Dummy text of the printing.</small>
+                        </div>
+                        <!--end media-body-->
+                      </div>
+                      <!--end media-->
+                    </a><!--end-item-->
+                    <!-- item-->
+                    <a href="#" class="dropdown-item py-3">
+                      <small class="float-end text-muted ps-2">1 hr ago</small>
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
+                          <i class="iconoir-drone fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-2 text-truncate">
+                          <h6 class="my-0 fw-normal text-dark fs-13">
+                            Your order is placed
+                          </h6>
+                          <small class="text-muted mb-0">It is a long established fact that a
+                            reader.</small>
+                        </div>
+                        <!--end media-body-->
+                      </div>
+                      <!--end media-->
+                    </a><!--end-item-->
+                    <!-- item-->
+                    <a href="#" class="dropdown-item py-3">
+                      <small class="float-end text-muted ps-2">2 hrs ago</small>
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
+                          <i class="iconoir-user fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-2 text-truncate">
+                          <h6 class="my-0 fw-normal text-dark fs-13">
+                            Payment Successfull
+                          </h6>
+                          <small class="text-muted mb-0">Dummy text of the printing.</small>
+                        </div>
+                        <!--end media-body-->
+                      </div>
+                      <!--end media-->
+                    </a><!--end-item-->
+                  </div>
+                  <div class="tab-pane fade" id="Teams" role="tabpanel" aria-labelledby="teams-tab" tabindex="0">
+                    <!-- item-->
+                    <a href="#" class="dropdown-item py-3">
+                      <small class="float-end text-muted ps-2">1 hr ago</small>
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
+                          <i class="iconoir-drone fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-2 text-truncate">
+                          <h6 class="my-0 fw-normal text-dark fs-13">
+                            Your order is placed
+                          </h6>
+                          <small class="text-muted mb-0">It is a long established fact that a
+                            reader.</small>
+                        </div>
+                        <!--end media-body-->
+                      </div>
+                      <!--end media-->
+                    </a><!--end-item-->
+                    <!-- item-->
+                    <a href="#" class="dropdown-item py-3">
+                      <small class="float-end text-muted ps-2">2 hrs ago</small>
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 bg-primary-subtle text-primary thumb-md rounded-circle">
+                          <i class="iconoir-user fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-2 text-truncate">
+                          <h6 class="my-0 fw-normal text-dark fs-13">
+                            Payment Successfull
+                          </h6>
+                          <small class="text-muted mb-0">Dummy text of the printing.</small>
+                        </div>
+                        <!--end media-body-->
+                      </div>
+                      <!--end media-->
+                    </a><!--end-item-->
+                  </div>
+                </div>
+              </div>
+              <!-- All-->
+              <a href="allnotifications.html" class="dropdown-item text-center text-dark fs-13 py-2">
+                View All <i class="fi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="dropdown topbar-item">
+            <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false" data-bs-offset="0,19">
+              <div class="d-flex gap-2">
+                <div class="topbar-user">
+                  <img src="assets/images/users/avatar-1.jpg" alt="" class="thumb-md rounded-circle" />
+                </div>
+                <div class="toopbar-details">
+                  <h6 class="my-0 fw-medium text-dark fs-13">
+                    William Martin
+                  </h6>
+                  <small class="text-muted mb-0">Garrett@gmail.com</small>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end py-0">
+              <a class="dropdown-item" href="profile.html"><i class="las la-user fs-18 me-1 align-text-bottom"></i>
+                Update Profile</a>
+              <div class="dropdown-divider mb-0"></div>
+              <a class="dropdown-item text-danger" href="auth-login.html"><i
+                  class="las la-power-off fs-18 me-1 align-text-bottom"></i>
+                Logout</a>
+            </div>
+          </div>
         </div>
-        <!--end brand-->
-        <!--start startbar-menu-->
-        <div class="startbar-menu">
-            <div class="startbar-collapse" id="startbarCollapse" data-simplebar>
-                <div class="d-flex align-items-start flex-column w-100">
-                    <!-- Navigation -->
-                    <ul class="navbar-nav mb-auto w-100">
-                        <li class="nav-item">
-                            <a class="nav-link d-flex gap-2" href="dashboard.html" role="button"
-                                aria-controls="sidebarDashboard">
-                                <img src="./assets/images/chart-pie-alt.svg" width="20px" alt="" />
-                                <span>Statistics</span>
-                            </a>
+        <!--end topbar-nav-->
+      </nav>
+      <!-- end navbar-->
+    </div>
+  </div>
+  <!-- Top Bar End -->
+  <!-- leftbar-tab-menu -->
+  <div class="startbar d-print-none">
+    <!--start brand-->
+    <div class="brand">
+      <a href="dashboard.html" class="logo">
+        <span>
+          <img src="assets/images/logo-sm.png" alt="logo-small" class="logo-sm" />
+        </span>
+        <span class="">
+          <img src="assets/images/logo-light.png" alt="logo-large" class="logo-lg logo-light" />
+          <img src="assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark" />
+        </span>
+      </a>
+    </div>
+    <!--end brand-->
+    <!--start startbar-menu-->
+    <div class="startbar-menu">
+      <div class="startbar-collapse" id="startbarCollapse" data-simplebar>
+        <div class="d-flex align-items-start flex-column w-100">
+          <!-- Navigation -->
+          <ul class="navbar-nav mb-auto w-100">
+            <li class="nav-item">
+              <a class="nav-link d-flex gap-2" href="./dashboard.html" role="button" aria-controls="sidebarDashboard">
+                <img src="./assets/images/chart-pie-alt.svg" width="20px" alt="" />
+                <span>Statistics</span>
+              </a>
 
-                        </li>
-                        <!-- Static -->
-                        <li class="nav-item">
-                            <a class="nav-link d-flex gap-2" href="#sidebarTransactions" data-bs-toggle="collapse"
-                                role="button" aria-expanded="false" aria-controls="sidebarTransactions">
-                                <img src="./assets/images/create.svg" width="20px" alt="" />
-                                <span>Assignments</span>
-                            </a>
-                            <div class="collapse" id="sidebarTransactions">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="create.html"><svg width="20" height="20"
-                                                viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M13.9987 3.33399C13.9987 2.38557 13.7934 2.15721 13.7279 2.10483C13.6309 2.02728 13.4742 2.00066 12.9987 2.00066H9.66536C9.18985 2.00066 9.03313 2.02728 8.9362 2.10483C8.87071 2.15721 8.66536 2.38557 8.66536 3.33399C8.66536 4.28242 8.87071 4.51077 8.9362 4.56316C9.03313 4.6407 9.18985 4.66733 9.66536 4.66733H12.9987C13.6959 4.66733 13.8267 4.46935 13.8737 4.38477C13.9181 4.30473 13.9556 4.18306 13.9766 3.99415C13.9977 3.80326 13.9987 3.59155 13.9987 3.33399ZM15.332 3.33399C15.332 3.57618 15.3329 3.86488 15.3021 4.14259C15.271 4.42219 15.2041 4.73846 15.0404 5.03321C14.6707 5.69855 13.9681 6.00066 12.9987 6.00066H9.66536C9.30754 6.00066 8.63093 6.02728 8.10286 5.60483C7.54335 5.15721 7.33203 4.38557 7.33203 3.33399C7.33203 2.28242 7.54335 1.51077 8.10286 1.06316C8.63093 0.640704 9.30754 0.667326 9.66536 0.667326H12.9987C13.3565 0.667326 14.0331 0.640704 14.5612 1.06316C15.1207 1.51077 15.332 2.28242 15.332 3.33399Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M2 16.438V10.2088C2.00001 7.79618 2.40402 6.08786 3.36589 4.96534C4.34591 3.82198 5.77635 3.43224 7.44271 3.33513C7.81018 3.31372 8.12558 3.594 8.14714 3.96144C8.16854 4.32881 7.88812 4.64415 7.52083 4.66586C5.98075 4.75561 5.00331 5.10362 4.3776 5.83383C3.73396 6.58531 3.33334 7.88784 3.33333 10.2088V16.438C3.33333 18.5079 3.58549 19.8481 4.26823 20.6893C4.92004 21.4924 6.10706 22.0004 8.44401 22.0005H14.2227C16.5596 22.0004 17.7466 21.4924 18.3984 20.6893C19.0812 19.8481 19.3333 18.5079 19.3333 16.438V10.2088C19.3333 7.88185 18.9324 6.57977 18.2891 5.82993C17.6638 5.10121 16.6871 4.75568 15.1458 4.66586C14.7785 4.64415 14.4981 4.32881 14.5195 3.96144C14.5411 3.594 14.8565 3.31372 15.224 3.33513C16.8893 3.43219 18.3203 3.81891 19.3008 4.96144C20.2631 6.08293 20.6667 7.79143 20.6667 10.2088V16.438C20.6667 18.5208 20.4373 20.2953 19.4349 21.5304C18.4016 22.8036 16.7 23.3338 14.2227 23.3338H8.44401C5.96668 23.3338 4.26504 22.8036 3.23177 21.5304C2.22933 20.2953 2 18.5208 2 16.438Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M13.4018 9.01403C13.957 8.94563 14.5294 9.12569 15.1245 9.58955L15.381 9.8057C16.0692 10.4328 16.3734 11.0598 16.3276 11.6911C16.2831 12.3029 15.9143 12.8258 15.4826 13.2653L10.6922 18.1521L10.6909 18.1508C10.5661 18.2813 10.3963 18.3952 10.2313 18.4802C10.0634 18.5666 9.87288 18.6391 9.69871 18.669H9.69611L7.8185 18.9776C7.39518 19.0479 6.99485 18.9458 6.71043 18.6859C6.425 18.4247 6.29329 18.0375 6.34194 17.6156V17.6143L6.55809 15.7927V15.7862C6.58188 15.6146 6.64853 15.4258 6.72866 15.2601C6.80886 15.0944 6.91743 14.9222 7.04116 14.7953L11.8315 9.90856C12.2656 9.46673 12.7833 9.09026 13.4018 9.01403ZM13.4839 9.67549C13.0872 9.72437 12.7025 9.97452 12.3081 10.376L7.51772 15.2614C7.46065 15.3201 7.39005 15.4242 7.32892 15.5505C7.26929 15.6738 7.23173 15.7912 7.21954 15.8721L7.0034 17.6937C6.97677 17.9283 7.05184 18.0939 7.16095 18.1937C7.27184 18.2951 7.4556 18.3621 7.70913 18.32L9.58673 18.0114L9.74168 17.9685C9.79977 17.9476 9.86312 17.9204 9.92658 17.8877C10.0543 17.8219 10.1561 17.7473 10.2117 17.6885L10.2156 17.6846L15.006 12.7992L15.1466 12.6481C15.4571 12.3001 15.6384 11.9693 15.6623 11.6429C15.6879 11.2889 15.533 10.8471 14.9318 10.2992V10.2979C14.3362 9.75829 13.8645 9.62875 13.4839 9.67549Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M11.2848 10.5602C11.4668 10.5336 11.6356 10.6594 11.6624 10.8414C11.8874 12.369 13.0542 13.5174 14.4788 13.6696C14.6617 13.6891 14.7948 13.8526 14.7757 14.0355C14.7562 14.2185 14.5916 14.3518 14.4085 14.3323C12.6597 14.1458 11.2695 12.7444 11.0036 10.9378C10.9769 10.7558 11.1028 10.587 11.2848 10.5602Z"
-                                                    fill="white" />
-                                            </svg>
-                                            Create Assignment</a>
-                                    </li>
-                                    <!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="active.html">
-                                            <svg width="20" height="20" viewBox="0 0 23 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8798 12.8424C13.1511 12.5937 13.5724 12.6116 13.8212 12.8827C14.0699 13.154 14.052 13.5753 13.7808 13.8241L10.872 16.4908C10.6171 16.7244 10.2258 16.7244 9.97094 16.4908L8.8798 15.4908C8.60866 15.242 8.59073 14.8207 8.83943 14.5494C9.08826 14.2783 9.50952 14.2603 9.78084 14.509L10.4202 15.095L12.8798 12.8424Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M13.9987 3.33399C13.9987 2.38557 13.7934 2.15721 13.7279 2.10483C13.6309 2.02728 13.4742 2.00066 12.9987 2.00066H9.66536C9.18985 2.00066 9.03313 2.02728 8.9362 2.10483C8.87071 2.15721 8.66536 2.38557 8.66536 3.33399C8.66536 4.28242 8.87071 4.51077 8.9362 4.56316C9.03313 4.6407 9.18985 4.66733 9.66536 4.66733H12.9987C13.6959 4.66733 13.8267 4.46935 13.8737 4.38477C13.9181 4.30473 13.9556 4.18306 13.9766 3.99415C13.9977 3.80326 13.9987 3.59155 13.9987 3.33399ZM15.332 3.33399C15.332 3.57618 15.3329 3.86488 15.3021 4.14259C15.271 4.42219 15.2041 4.73846 15.0404 5.03321C14.6707 5.69855 13.9681 6.00066 12.9987 6.00066H9.66536C9.30754 6.00066 8.63093 6.02728 8.10286 5.60483C7.54335 5.15721 7.33203 4.38557 7.33203 3.33399C7.33203 2.28242 7.54335 1.51077 8.10286 1.06316C8.63093 0.640704 9.30754 0.667326 9.66536 0.667326H12.9987C13.3565 0.667326 14.0331 0.640704 14.5612 1.06316C15.1207 1.51077 15.332 2.28242 15.332 3.33399Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M2 16.437V10.2079C2.00001 7.79521 2.40402 6.08688 3.36589 4.96437C4.34591 3.821 5.77635 3.43127 7.44271 3.33416C7.81018 3.31274 8.12558 3.59303 8.14714 3.96046C8.16854 4.32783 7.88812 4.64317 7.52083 4.66489C5.98075 4.75464 5.00331 5.10264 4.3776 5.83286C3.73396 6.58433 3.33334 7.88686 3.33333 10.2079V16.437C3.33333 18.507 3.58549 19.8471 4.26823 20.6883C4.92004 21.4914 6.10706 21.9995 8.44401 21.9995H14.2227C16.5596 21.9995 17.7466 21.4914 18.3984 20.6883C19.0812 19.8471 19.3333 18.507 19.3333 16.437V10.2079C19.3333 7.88087 18.9324 6.57879 18.2891 5.82895C17.6638 5.10023 16.6871 4.75471 15.1458 4.66489C14.7785 4.64317 14.4981 4.32783 14.5195 3.96046C14.5411 3.59303 14.8565 3.31274 15.224 3.33416C16.8893 3.43121 18.3203 3.81794 19.3008 4.96046C20.2631 6.08196 20.6667 7.79045 20.6667 10.2079V16.437C20.6667 18.5198 20.4373 20.2943 19.4349 21.5295C18.4016 22.8026 16.7 23.3328 14.2227 23.3329H8.44401C5.96668 23.3328 4.26504 22.8026 3.23177 21.5295C2.22933 20.2943 2 18.5198 2 16.437Z"
-                                                    fill="white" />
-                                            </svg>
+            </li>
+            <!-- Static -->
+            <li class="nav-item">
+              <a class="nav-link d-flex gap-2" href="#sidebarTransactions" data-bs-toggle="collapse" role="button"
+                aria-expanded="false" aria-controls="sidebarTransactions">
+                <img class="assignment-img" src="./assets/images/create.svg" width="20px" alt="" />
+                <span>Assignments</span>
+              </a>
+              <div class="collapse" id="sidebarTransactions">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="create.html"><svg width="20" height="20" viewBox="0 0 23 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.9987 3.33399C13.9987 2.38557 13.7934 2.15721 13.7279 2.10483C13.6309 2.02728 13.4742 2.00066 12.9987 2.00066H9.66536C9.18985 2.00066 9.03313 2.02728 8.9362 2.10483C8.87071 2.15721 8.66536 2.38557 8.66536 3.33399C8.66536 4.28242 8.87071 4.51077 8.9362 4.56316C9.03313 4.6407 9.18985 4.66733 9.66536 4.66733H12.9987C13.6959 4.66733 13.8267 4.46935 13.8737 4.38477C13.9181 4.30473 13.9556 4.18306 13.9766 3.99415C13.9977 3.80326 13.9987 3.59155 13.9987 3.33399ZM15.332 3.33399C15.332 3.57618 15.3329 3.86488 15.3021 4.14259C15.271 4.42219 15.2041 4.73846 15.0404 5.03321C14.6707 5.69855 13.9681 6.00066 12.9987 6.00066H9.66536C9.30754 6.00066 8.63093 6.02728 8.10286 5.60483C7.54335 5.15721 7.33203 4.38557 7.33203 3.33399C7.33203 2.28242 7.54335 1.51077 8.10286 1.06316C8.63093 0.640704 9.30754 0.667326 9.66536 0.667326H12.9987C13.3565 0.667326 14.0331 0.640704 14.5612 1.06316C15.1207 1.51077 15.332 2.28242 15.332 3.33399Z"
+                          fill="white" />
+                        <path
+                          d="M2 16.438V10.2088C2.00001 7.79618 2.40402 6.08786 3.36589 4.96534C4.34591 3.82198 5.77635 3.43224 7.44271 3.33513C7.81018 3.31372 8.12558 3.594 8.14714 3.96144C8.16854 4.32881 7.88812 4.64415 7.52083 4.66586C5.98075 4.75561 5.00331 5.10362 4.3776 5.83383C3.73396 6.58531 3.33334 7.88784 3.33333 10.2088V16.438C3.33333 18.5079 3.58549 19.8481 4.26823 20.6893C4.92004 21.4924 6.10706 22.0004 8.44401 22.0005H14.2227C16.5596 22.0004 17.7466 21.4924 18.3984 20.6893C19.0812 19.8481 19.3333 18.5079 19.3333 16.438V10.2088C19.3333 7.88185 18.9324 6.57977 18.2891 5.82993C17.6638 5.10121 16.6871 4.75568 15.1458 4.66586C14.7785 4.64415 14.4981 4.32881 14.5195 3.96144C14.5411 3.594 14.8565 3.31372 15.224 3.33513C16.8893 3.43219 18.3203 3.81891 19.3008 4.96144C20.2631 6.08293 20.6667 7.79143 20.6667 10.2088V16.438C20.6667 18.5208 20.4373 20.2953 19.4349 21.5304C18.4016 22.8036 16.7 23.3338 14.2227 23.3338H8.44401C5.96668 23.3338 4.26504 22.8036 3.23177 21.5304C2.22933 20.2953 2 18.5208 2 16.438Z"
+                          fill="white" />
+                        <path
+                          d="M13.4018 9.01403C13.957 8.94563 14.5294 9.12569 15.1245 9.58955L15.381 9.8057C16.0692 10.4328 16.3734 11.0598 16.3276 11.6911C16.2831 12.3029 15.9143 12.8258 15.4826 13.2653L10.6922 18.1521L10.6909 18.1508C10.5661 18.2813 10.3963 18.3952 10.2313 18.4802C10.0634 18.5666 9.87288 18.6391 9.69871 18.669H9.69611L7.8185 18.9776C7.39518 19.0479 6.99485 18.9458 6.71043 18.6859C6.425 18.4247 6.29329 18.0375 6.34194 17.6156V17.6143L6.55809 15.7927V15.7862C6.58188 15.6146 6.64853 15.4258 6.72866 15.2601C6.80886 15.0944 6.91743 14.9222 7.04116 14.7953L11.8315 9.90856C12.2656 9.46673 12.7833 9.09026 13.4018 9.01403ZM13.4839 9.67549C13.0872 9.72437 12.7025 9.97452 12.3081 10.376L7.51772 15.2614C7.46065 15.3201 7.39005 15.4242 7.32892 15.5505C7.26929 15.6738 7.23173 15.7912 7.21954 15.8721L7.0034 17.6937C6.97677 17.9283 7.05184 18.0939 7.16095 18.1937C7.27184 18.2951 7.4556 18.3621 7.70913 18.32L9.58673 18.0114L9.74168 17.9685C9.79977 17.9476 9.86312 17.9204 9.92658 17.8877C10.0543 17.8219 10.1561 17.7473 10.2117 17.6885L10.2156 17.6846L15.006 12.7992L15.1466 12.6481C15.4571 12.3001 15.6384 11.9693 15.6623 11.6429C15.6879 11.2889 15.533 10.8471 14.9318 10.2992V10.2979C14.3362 9.75829 13.8645 9.62875 13.4839 9.67549Z"
+                          fill="white" />
+                        <path
+                          d="M11.2848 10.5602C11.4668 10.5336 11.6356 10.6594 11.6624 10.8414C11.8874 12.369 13.0542 13.5174 14.4788 13.6696C14.6617 13.6891 14.7948 13.8526 14.7757 14.0355C14.7562 14.2185 14.5916 14.3518 14.4085 14.3323C12.6597 14.1458 11.2695 12.7444 11.0036 10.9378C10.9769 10.7558 11.1028 10.587 11.2848 10.5602Z"
+                          fill="white" />
+                      </svg>
+                      Create Assignment</a>
+                  </li>
+                  <!--end nav-item-->
+                  <li class="nav-item">
+                    <a class="nav-link" href="active.html">
+                      <svg width="20" height="20" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12.8798 12.8424C13.1511 12.5937 13.5724 12.6116 13.8212 12.8827C14.0699 13.154 14.052 13.5753 13.7808 13.8241L10.872 16.4908C10.6171 16.7244 10.2258 16.7244 9.97094 16.4908L8.8798 15.4908C8.60866 15.242 8.59073 14.8207 8.83943 14.5494C9.08826 14.2783 9.50952 14.2603 9.78084 14.509L10.4202 15.095L12.8798 12.8424Z"
+                          fill="white" />
+                        <path
+                          d="M13.9987 3.33399C13.9987 2.38557 13.7934 2.15721 13.7279 2.10483C13.6309 2.02728 13.4742 2.00066 12.9987 2.00066H9.66536C9.18985 2.00066 9.03313 2.02728 8.9362 2.10483C8.87071 2.15721 8.66536 2.38557 8.66536 3.33399C8.66536 4.28242 8.87071 4.51077 8.9362 4.56316C9.03313 4.6407 9.18985 4.66733 9.66536 4.66733H12.9987C13.6959 4.66733 13.8267 4.46935 13.8737 4.38477C13.9181 4.30473 13.9556 4.18306 13.9766 3.99415C13.9977 3.80326 13.9987 3.59155 13.9987 3.33399ZM15.332 3.33399C15.332 3.57618 15.3329 3.86488 15.3021 4.14259C15.271 4.42219 15.2041 4.73846 15.0404 5.03321C14.6707 5.69855 13.9681 6.00066 12.9987 6.00066H9.66536C9.30754 6.00066 8.63093 6.02728 8.10286 5.60483C7.54335 5.15721 7.33203 4.38557 7.33203 3.33399C7.33203 2.28242 7.54335 1.51077 8.10286 1.06316C8.63093 0.640704 9.30754 0.667326 9.66536 0.667326H12.9987C13.3565 0.667326 14.0331 0.640704 14.5612 1.06316C15.1207 1.51077 15.332 2.28242 15.332 3.33399Z"
+                          fill="white" />
+                        <path
+                          d="M2 16.437V10.2079C2.00001 7.79521 2.40402 6.08688 3.36589 4.96437C4.34591 3.821 5.77635 3.43127 7.44271 3.33416C7.81018 3.31274 8.12558 3.59303 8.14714 3.96046C8.16854 4.32783 7.88812 4.64317 7.52083 4.66489C5.98075 4.75464 5.00331 5.10264 4.3776 5.83286C3.73396 6.58433 3.33334 7.88686 3.33333 10.2079V16.437C3.33333 18.507 3.58549 19.8471 4.26823 20.6883C4.92004 21.4914 6.10706 21.9995 8.44401 21.9995H14.2227C16.5596 21.9995 17.7466 21.4914 18.3984 20.6883C19.0812 19.8471 19.3333 18.507 19.3333 16.437V10.2079C19.3333 7.88087 18.9324 6.57879 18.2891 5.82895C17.6638 5.10023 16.6871 4.75471 15.1458 4.66489C14.7785 4.64317 14.4981 4.32783 14.5195 3.96046C14.5411 3.59303 14.8565 3.31274 15.224 3.33416C16.8893 3.43121 18.3203 3.81794 19.3008 4.96046C20.2631 6.08196 20.6667 7.79045 20.6667 10.2079V16.437C20.6667 18.5198 20.4373 20.2943 19.4349 21.5295C18.4016 22.8026 16.7 23.3328 14.2227 23.3329H8.44401C5.96668 23.3328 4.26504 22.8026 3.23177 21.5295C2.22933 20.2943 2 18.5198 2 16.437Z"
+                          fill="white" />
+                      </svg>
 
-                                            Active Assignments</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="close.html">
-                                            <svg width="20" height="20" viewBox="0 0 23 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M13.9987 3.33302C13.9987 2.38459 13.7934 2.15624 13.7279 2.10385C13.6309 2.0263 13.4742 1.99968 12.9987 1.99968H9.66536C9.18985 1.99968 9.03313 2.0263 8.9362 2.10385C8.87071 2.15624 8.66536 2.38459 8.66536 3.33302C8.66536 4.28144 8.87071 4.50979 8.9362 4.56218C9.03313 4.63973 9.18985 4.66635 9.66536 4.66635H12.9987C13.6959 4.66635 13.8267 4.46838 13.8737 4.3838C13.9181 4.30375 13.9556 4.18209 13.9766 3.99317C13.9977 3.80228 13.9987 3.59057 13.9987 3.33302ZM15.332 3.33302C15.332 3.5752 15.3329 3.8639 15.3021 4.14161C15.271 4.42122 15.2041 4.73748 15.0404 5.03223C14.6707 5.69758 13.9681 5.99968 12.9987 5.99968H9.66536C9.30754 5.99968 8.63093 6.0263 8.10286 5.60385C7.54335 5.15624 7.33203 4.38459 7.33203 3.33302C7.33203 2.28144 7.54335 1.50979 8.10286 1.06218C8.63093 0.639727 9.30754 0.666349 9.66536 0.666349H12.9987C13.3565 0.666349 14.0331 0.639727 14.5612 1.06218C15.1207 1.50979 15.332 2.28144 15.332 3.33302Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M2 16.437V10.2079C2.00001 7.79521 2.40402 6.08688 3.36589 4.96437C4.34591 3.821 5.77635 3.43127 7.44271 3.33416C7.81018 3.31274 8.12558 3.59303 8.14714 3.96046C8.16854 4.32783 7.88812 4.64317 7.52083 4.66489C5.98075 4.75464 5.00331 5.10264 4.3776 5.83286C3.73396 6.58433 3.33334 7.88686 3.33333 10.2079V16.437C3.33333 18.507 3.58549 19.8471 4.26823 20.6883C4.92004 21.4914 6.10706 21.9995 8.44401 21.9995H14.2227C16.5596 21.9995 17.7466 21.4914 18.3984 20.6883C19.0812 19.8471 19.3333 18.507 19.3333 16.437V10.2079C19.3333 7.88087 18.9324 6.57879 18.2891 5.82895C17.6638 5.10023 16.6871 4.75471 15.1458 4.66489C14.7785 4.64317 14.4981 4.32783 14.5195 3.96046C14.5411 3.59303 14.8565 3.31274 15.224 3.33416C16.8893 3.43121 18.3203 3.81794 19.3008 4.96046C20.2631 6.08196 20.6667 7.79045 20.6667 10.2079V16.437C20.6667 18.5198 20.4373 20.2943 19.4349 21.5295C18.4016 22.8026 16.7 23.3328 14.2227 23.3329H8.44401C5.96668 23.3328 4.26504 22.8026 3.23177 21.5295C2.22933 20.2943 2 18.5198 2 16.437Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M14.3268 13C14.879 13.0001 15.3268 13.4478 15.3268 14C15.3268 14.5522 14.879 14.9999 14.3268 15H8C7.44772 15 7 14.5523 7 14C7 13.4477 7.44772 13 8 13H14.3268Z"
-                                                    fill="white" />
-                                            </svg>
+                      Active Assignments</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="close.html">
+                      <svg width="20" height="20" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.9987 3.33302C13.9987 2.38459 13.7934 2.15624 13.7279 2.10385C13.6309 2.0263 13.4742 1.99968 12.9987 1.99968H9.66536C9.18985 1.99968 9.03313 2.0263 8.9362 2.10385C8.87071 2.15624 8.66536 2.38459 8.66536 3.33302C8.66536 4.28144 8.87071 4.50979 8.9362 4.56218C9.03313 4.63973 9.18985 4.66635 9.66536 4.66635H12.9987C13.6959 4.66635 13.8267 4.46838 13.8737 4.3838C13.9181 4.30375 13.9556 4.18209 13.9766 3.99317C13.9977 3.80228 13.9987 3.59057 13.9987 3.33302ZM15.332 3.33302C15.332 3.5752 15.3329 3.8639 15.3021 4.14161C15.271 4.42122 15.2041 4.73748 15.0404 5.03223C14.6707 5.69758 13.9681 5.99968 12.9987 5.99968H9.66536C9.30754 5.99968 8.63093 6.0263 8.10286 5.60385C7.54335 5.15624 7.33203 4.38459 7.33203 3.33302C7.33203 2.28144 7.54335 1.50979 8.10286 1.06218C8.63093 0.639727 9.30754 0.666349 9.66536 0.666349H12.9987C13.3565 0.666349 14.0331 0.639727 14.5612 1.06218C15.1207 1.50979 15.332 2.28144 15.332 3.33302Z"
+                          fill="white" />
+                        <path
+                          d="M2 16.437V10.2079C2.00001 7.79521 2.40402 6.08688 3.36589 4.96437C4.34591 3.821 5.77635 3.43127 7.44271 3.33416C7.81018 3.31274 8.12558 3.59303 8.14714 3.96046C8.16854 4.32783 7.88812 4.64317 7.52083 4.66489C5.98075 4.75464 5.00331 5.10264 4.3776 5.83286C3.73396 6.58433 3.33334 7.88686 3.33333 10.2079V16.437C3.33333 18.507 3.58549 19.8471 4.26823 20.6883C4.92004 21.4914 6.10706 21.9995 8.44401 21.9995H14.2227C16.5596 21.9995 17.7466 21.4914 18.3984 20.6883C19.0812 19.8471 19.3333 18.507 19.3333 16.437V10.2079C19.3333 7.88087 18.9324 6.57879 18.2891 5.82895C17.6638 5.10023 16.6871 4.75471 15.1458 4.66489C14.7785 4.64317 14.4981 4.32783 14.5195 3.96046C14.5411 3.59303 14.8565 3.31274 15.224 3.33416C16.8893 3.43121 18.3203 3.81794 19.3008 4.96046C20.2631 6.08196 20.6667 7.79045 20.6667 10.2079V16.437C20.6667 18.5198 20.4373 20.2943 19.4349 21.5295C18.4016 22.8026 16.7 23.3328 14.2227 23.3329H8.44401C5.96668 23.3328 4.26504 22.8026 3.23177 21.5295C2.22933 20.2943 2 18.5198 2 16.437Z"
+                          fill="white" />
+                        <path
+                          d="M14.3268 13C14.879 13.0001 15.3268 13.4478 15.3268 14C15.3268 14.5522 14.879 14.9999 14.3268 15H8C7.44772 15 7 14.5523 7 14C7 13.4477 7.44772 13 8 13H14.3268Z"
+                          fill="white" />
+                      </svg>
 
-                                            Closed Assignments</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="cancel.html">
-                                            <svg width="20" height="20" viewBox="0 0 23 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M13.9987 3.33399C13.9987 2.38557 13.7934 2.15721 13.7279 2.10483C13.6309 2.02728 13.4742 2.00066 12.9987 2.00066H9.66536C9.18985 2.00066 9.03313 2.02728 8.9362 2.10483C8.87071 2.15721 8.66536 2.38557 8.66536 3.33399C8.66536 4.28242 8.87071 4.51077 8.9362 4.56316C9.03313 4.6407 9.18985 4.66733 9.66536 4.66733H12.9987C13.6959 4.66733 13.8267 4.46935 13.8737 4.38477C13.9181 4.30473 13.9556 4.18306 13.9766 3.99415C13.9977 3.80326 13.9987 3.59155 13.9987 3.33399ZM15.332 3.33399C15.332 3.57618 15.3329 3.86488 15.3021 4.14259C15.271 4.42219 15.2041 4.73846 15.0404 5.03321C14.6707 5.69855 13.9681 6.00066 12.9987 6.00066H9.66536C9.30754 6.00066 8.63093 6.02728 8.10286 5.60483C7.54335 5.15721 7.33203 4.38557 7.33203 3.33399C7.33203 2.28242 7.54335 1.51077 8.10286 1.06316C8.63093 0.640704 9.30754 0.667326 9.66536 0.667326H12.9987C13.3565 0.667326 14.0331 0.640704 14.5612 1.06316C15.1207 1.51077 15.332 2.28242 15.332 3.33399Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M2 16.437V10.2079C2.00001 7.79521 2.40402 6.08688 3.36589 4.96437C4.34591 3.821 5.77635 3.43127 7.44271 3.33416C7.81018 3.31274 8.12558 3.59303 8.14714 3.96046C8.16854 4.32783 7.88812 4.64317 7.52083 4.66489C5.98075 4.75464 5.00331 5.10264 4.3776 5.83286C3.73396 6.58433 3.33334 7.88686 3.33333 10.2079V16.437C3.33333 18.507 3.58549 19.8471 4.26823 20.6883C4.92004 21.4914 6.10706 21.9995 8.44401 21.9995H14.2227C16.5596 21.9995 17.7466 21.4914 18.3984 20.6883C19.0812 19.8471 19.3333 18.507 19.3333 16.437V10.2079C19.3333 7.88087 18.9324 6.57879 18.2891 5.82895C17.6638 5.10023 16.6871 4.75471 15.1458 4.66489C14.7785 4.64317 14.4981 4.32783 14.5195 3.96046C14.5411 3.59303 14.8565 3.31274 15.224 3.33416C16.8893 3.43121 18.3203 3.81794 19.3008 4.96046C20.2631 6.08196 20.6667 7.79045 20.6667 10.2079V16.437C20.6667 18.5198 20.4373 20.2943 19.4349 21.5295C18.4016 22.8026 16.7 23.3328 14.2227 23.3329H8.44401C5.96668 23.3328 4.26504 22.8026 3.23177 21.5295C2.22933 20.2943 2 18.5198 2 16.437Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M8.9062 11.5283C9.16655 11.2679 9.58856 11.2679 9.84891 11.5283L14.2486 15.928C14.509 16.1884 14.509 16.6104 14.2486 16.8707C13.9883 17.1311 13.5663 17.1311 13.3059 16.8707L8.9062 12.471C8.64585 12.2106 8.64585 11.7886 8.9062 11.5283Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M13.259 11.5731C13.5193 11.3128 13.9413 11.3129 14.2017 11.5731C14.4621 11.8335 14.4621 12.2555 14.2017 12.5158L9.80197 16.9156C9.54162 17.1759 9.11961 17.1759 8.85926 16.9156C8.59904 16.6552 8.59895 16.2332 8.85926 15.9729L13.259 11.5731Z"
-                                                    fill="white" />
-                                            </svg>
+                      Closed Assignments</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cancel.html">
+                      <svg width="20" height="20" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.9987 3.33399C13.9987 2.38557 13.7934 2.15721 13.7279 2.10483C13.6309 2.02728 13.4742 2.00066 12.9987 2.00066H9.66536C9.18985 2.00066 9.03313 2.02728 8.9362 2.10483C8.87071 2.15721 8.66536 2.38557 8.66536 3.33399C8.66536 4.28242 8.87071 4.51077 8.9362 4.56316C9.03313 4.6407 9.18985 4.66733 9.66536 4.66733H12.9987C13.6959 4.66733 13.8267 4.46935 13.8737 4.38477C13.9181 4.30473 13.9556 4.18306 13.9766 3.99415C13.9977 3.80326 13.9987 3.59155 13.9987 3.33399ZM15.332 3.33399C15.332 3.57618 15.3329 3.86488 15.3021 4.14259C15.271 4.42219 15.2041 4.73846 15.0404 5.03321C14.6707 5.69855 13.9681 6.00066 12.9987 6.00066H9.66536C9.30754 6.00066 8.63093 6.02728 8.10286 5.60483C7.54335 5.15721 7.33203 4.38557 7.33203 3.33399C7.33203 2.28242 7.54335 1.51077 8.10286 1.06316C8.63093 0.640704 9.30754 0.667326 9.66536 0.667326H12.9987C13.3565 0.667326 14.0331 0.640704 14.5612 1.06316C15.1207 1.51077 15.332 2.28242 15.332 3.33399Z"
+                          fill="white" />
+                        <path
+                          d="M2 16.437V10.2079C2.00001 7.79521 2.40402 6.08688 3.36589 4.96437C4.34591 3.821 5.77635 3.43127 7.44271 3.33416C7.81018 3.31274 8.12558 3.59303 8.14714 3.96046C8.16854 4.32783 7.88812 4.64317 7.52083 4.66489C5.98075 4.75464 5.00331 5.10264 4.3776 5.83286C3.73396 6.58433 3.33334 7.88686 3.33333 10.2079V16.437C3.33333 18.507 3.58549 19.8471 4.26823 20.6883C4.92004 21.4914 6.10706 21.9995 8.44401 21.9995H14.2227C16.5596 21.9995 17.7466 21.4914 18.3984 20.6883C19.0812 19.8471 19.3333 18.507 19.3333 16.437V10.2079C19.3333 7.88087 18.9324 6.57879 18.2891 5.82895C17.6638 5.10023 16.6871 4.75471 15.1458 4.66489C14.7785 4.64317 14.4981 4.32783 14.5195 3.96046C14.5411 3.59303 14.8565 3.31274 15.224 3.33416C16.8893 3.43121 18.3203 3.81794 19.3008 4.96046C20.2631 6.08196 20.6667 7.79045 20.6667 10.2079V16.437C20.6667 18.5198 20.4373 20.2943 19.4349 21.5295C18.4016 22.8026 16.7 23.3328 14.2227 23.3329H8.44401C5.96668 23.3328 4.26504 22.8026 3.23177 21.5295C2.22933 20.2943 2 18.5198 2 16.437Z"
+                          fill="white" />
+                        <path
+                          d="M8.9062 11.5283C9.16655 11.2679 9.58856 11.2679 9.84891 11.5283L14.2486 15.928C14.509 16.1884 14.509 16.6104 14.2486 16.8707C13.9883 17.1311 13.5663 17.1311 13.3059 16.8707L8.9062 12.471C8.64585 12.2106 8.64585 11.7886 8.9062 11.5283Z"
+                          fill="white" />
+                        <path
+                          d="M13.259 11.5731C13.5193 11.3128 13.9413 11.3129 14.2017 11.5731C14.4621 11.8335 14.4621 12.2555 14.2017 12.5158L9.80197 16.9156C9.54162 17.1759 9.11961 17.1759 8.85926 16.9156C8.59904 16.6552 8.59895 16.2332 8.85926 15.9729L13.259 11.5731Z"
+                          fill="white" />
+                      </svg>
 
-                                            Cancelled Assignments</a>
-                                    </li>
-                                    <!--end nav-item-->
-                                </ul>
-                                <!--end nav-->
-                            </div>
-                            <!--end Assignment startbarTables-->
-                        </li>
-                        <!--end Assignment nav-item-->
+                      Cancelled Assignments</a>
+                  </li>
+                  <!--end nav-item-->
+                </ul>
+                <!--end nav-->
+              </div>
+              <!--end Assignment startbarTables-->
+            </li>
+            <!--end Assignment nav-item-->
 
-                        <li class="nav-item">
-                            <a class="nav-link d-flex gap-2" href="#sidebarInspector" data-bs-toggle="collapse"
-                                role="button" aria-expanded="false" aria-controls="sidebarInspector">
-                                <img src="./assets/images/user.svg" width="20px" alt="" />
-                                <span>Inspectors</span>
-                            </a>
-                            <div class="collapse" id="sidebarInspector">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="addinspector.html">
-                                            <svg width="20" height="20" viewBox="0 0 34 34" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M16.6658 17.7076C12.263 17.7076 8.67969 14.1242 8.67969 9.72146C8.67969 5.31869 12.263 1.73535 16.6658 1.73535C21.0686 1.73535 24.6519 5.31869 24.6519 9.72146C24.6519 14.1242 21.0686 17.7076 16.6658 17.7076ZM16.6658 3.81869C13.4158 3.81869 10.763 6.47146 10.763 9.72146C10.763 12.9715 13.4158 15.6242 16.6658 15.6242C19.9158 15.6242 22.5686 12.9715 22.5686 9.72146C22.5686 6.47146 19.9158 3.81869 16.6658 3.81869Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M28.5981 31.5975C28.0286 31.5975 27.5564 31.1253 27.5564 30.5559C27.5564 25.7642 22.6675 21.8753 16.6675 21.8753C10.6675 21.8753 5.77865 25.7642 5.77865 30.5559C5.77865 31.1253 5.30642 31.5975 4.73698 31.5975C4.16753 31.5975 3.69531 31.1253 3.69531 30.5559C3.69531 24.6253 9.51475 19.792 16.6675 19.792C23.8203 19.792 29.6397 24.6253 29.6397 30.5559C29.6397 31.1253 29.1675 31.5975 28.5981 31.5975Z"
-                                                    fill="white" />
-                                            </svg>
-                                            Add Inspector</a>
-                                    </li>
-                                    <!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="allinspectors.html">
-                                            <svg width="20" height="20" viewBox="0 0 19 20" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.76823 0C9.38257 0 11.5062 2.12272 11.5065 4.73698V4.74089C11.4956 7.29709 9.4802 9.38068 6.9375 9.46615C6.90805 9.46711 6.87827 9.46517 6.84896 9.46224C6.8033 9.4577 6.73583 9.45785 6.67318 9.46354C6.64592 9.46601 6.6185 9.46704 6.59115 9.46615C4.04878 9.38069 2.03125 7.29605 2.03125 4.73698C2.0316 2.12392 4.14405 0.000351077 6.76823 0ZM3.36458 4.73698C3.36458 6.5763 4.8093 8.06625 6.6276 8.13151C6.7182 8.12625 6.81209 8.12616 6.90234 8.13151C8.71883 8.0656 10.1644 6.57751 10.1732 4.73698L10.1549 4.38932C9.98012 2.67439 8.52881 1.33333 6.76823 1.33333C4.88238 1.33368 3.36493 2.85834 3.36458 4.73698Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M16.0998 5.70833C16.0998 4.30589 14.9672 3.16569 13.5582 3.16536C13.19 3.16536 12.8915 2.86689 12.8915 2.4987C12.8915 2.13051 13.19 1.83203 13.5582 1.83203C15.7061 1.83235 17.4332 3.572 17.4332 5.70833C17.4329 7.8014 15.7721 9.50582 13.7014 9.58333C13.6657 9.58465 13.63 9.58253 13.5946 9.57812C13.5792 9.57619 13.5491 9.57541 13.5126 9.57943C13.1468 9.62007 12.8165 9.35664 12.7756 8.99089C12.735 8.62513 12.9985 8.29483 13.3642 8.25391C13.4626 8.24296 13.5658 8.24215 13.6675 8.2487C15.0183 8.18982 16.0996 7.07528 16.0998 5.70833Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M6.92708 10.2559C8.69073 10.2559 10.4876 10.699 11.8763 11.6257H11.8776C13.1262 12.4563 13.8398 13.62 13.8398 14.8691C13.8396 16.1174 13.1272 17.2816 11.8802 18.1165H11.8789C10.4856 19.0487 8.68475 19.4954 6.91927 19.4954C5.15403 19.4954 3.3541 19.0486 1.96094 18.1165V18.1178C0.712736 17.2872 7.99512e-05 16.1245 0 14.8757C0 13.627 0.712258 12.4621 1.95964 11.627L1.96224 11.6257C3.35948 10.6992 5.16211 10.2559 6.92708 10.2559ZM6.92708 11.5892C5.36479 11.5892 3.83366 11.9832 2.70052 12.7337C1.72934 13.3839 1.33333 14.1738 1.33333 14.8757C1.33341 15.5771 1.73037 16.363 2.70052 17.0085H2.70182C3.82977 17.7632 5.35672 18.162 6.91927 18.1621C8.48201 18.1621 10.0099 17.7633 11.138 17.0085L11.3138 16.8861C12.1575 16.2613 12.5063 15.5271 12.5065 14.8691C12.5065 14.1676 12.1096 13.3818 11.1393 12.7363L11.138 12.735C10.015 11.9852 8.49023 11.5893 6.92708 11.5892Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M15.5069 11.0184C16.2272 11.1808 16.9334 11.4699 17.529 11.9234L17.6866 12.0471C18.4476 12.6805 18.8689 13.5257 18.8689 14.4143C18.8689 15.3621 18.3888 16.2603 17.529 16.9052L17.5277 16.9039C16.9248 17.365 16.2086 17.6675 15.4678 17.8218C15.1075 17.8966 14.7551 17.6652 14.6801 17.3049C14.6053 16.9446 14.8367 16.5922 15.197 16.5171C15.7736 16.3969 16.3005 16.1671 16.723 15.8427L16.7295 15.8387C17.3001 15.4108 17.5355 14.8875 17.5355 14.4143C17.5355 13.941 17.3001 13.4177 16.7295 12.9898L16.7243 12.9872C16.3127 12.6728 15.7932 12.4485 15.2139 12.3179C14.8547 12.237 14.6291 11.8802 14.71 11.521C14.7912 11.1622 15.1479 10.9375 15.5069 11.0184Z"
-                                                    fill="white" />
-                                            </svg>
+            <li class="nav-item">
+              <a class="nav-link d-flex gap-2" href="#sidebarInspector" data-bs-toggle="collapse" role="button"
+                aria-expanded="false" aria-controls="sidebarInspector">
+                <img src="./assets/images/user.svg" width="20px" alt="" />
+                <span>Inspectors</span>
+              </a>
+              <div class="collapse" id="sidebarInspector">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="addinspector.html">
+                      <svg width="20" height="20" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M16.6658 17.7076C12.263 17.7076 8.67969 14.1242 8.67969 9.72146C8.67969 5.31869 12.263 1.73535 16.6658 1.73535C21.0686 1.73535 24.6519 5.31869 24.6519 9.72146C24.6519 14.1242 21.0686 17.7076 16.6658 17.7076ZM16.6658 3.81869C13.4158 3.81869 10.763 6.47146 10.763 9.72146C10.763 12.9715 13.4158 15.6242 16.6658 15.6242C19.9158 15.6242 22.5686 12.9715 22.5686 9.72146C22.5686 6.47146 19.9158 3.81869 16.6658 3.81869Z"
+                          fill="white" />
+                        <path
+                          d="M28.5981 31.5975C28.0286 31.5975 27.5564 31.1253 27.5564 30.5559C27.5564 25.7642 22.6675 21.8753 16.6675 21.8753C10.6675 21.8753 5.77865 25.7642 5.77865 30.5559C5.77865 31.1253 5.30642 31.5975 4.73698 31.5975C4.16753 31.5975 3.69531 31.1253 3.69531 30.5559C3.69531 24.6253 9.51475 19.792 16.6675 19.792C23.8203 19.792 29.6397 24.6253 29.6397 30.5559C29.6397 31.1253 29.1675 31.5975 28.5981 31.5975Z"
+                          fill="white" />
+                      </svg>
+                      Add Inspector</a>
+                  </li>
+                  <!--end nav-item-->
+                  <li class="nav-item">
+                    <a class="nav-link" href="allinspectors.html">
+                      <svg width="20" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.76823 0C9.38257 0 11.5062 2.12272 11.5065 4.73698V4.74089C11.4956 7.29709 9.4802 9.38068 6.9375 9.46615C6.90805 9.46711 6.87827 9.46517 6.84896 9.46224C6.8033 9.4577 6.73583 9.45785 6.67318 9.46354C6.64592 9.46601 6.6185 9.46704 6.59115 9.46615C4.04878 9.38069 2.03125 7.29605 2.03125 4.73698C2.0316 2.12392 4.14405 0.000351077 6.76823 0ZM3.36458 4.73698C3.36458 6.5763 4.8093 8.06625 6.6276 8.13151C6.7182 8.12625 6.81209 8.12616 6.90234 8.13151C8.71883 8.0656 10.1644 6.57751 10.1732 4.73698L10.1549 4.38932C9.98012 2.67439 8.52881 1.33333 6.76823 1.33333C4.88238 1.33368 3.36493 2.85834 3.36458 4.73698Z"
+                          fill="white" />
+                        <path
+                          d="M16.0998 5.70833C16.0998 4.30589 14.9672 3.16569 13.5582 3.16536C13.19 3.16536 12.8915 2.86689 12.8915 2.4987C12.8915 2.13051 13.19 1.83203 13.5582 1.83203C15.7061 1.83235 17.4332 3.572 17.4332 5.70833C17.4329 7.8014 15.7721 9.50582 13.7014 9.58333C13.6657 9.58465 13.63 9.58253 13.5946 9.57812C13.5792 9.57619 13.5491 9.57541 13.5126 9.57943C13.1468 9.62007 12.8165 9.35664 12.7756 8.99089C12.735 8.62513 12.9985 8.29483 13.3642 8.25391C13.4626 8.24296 13.5658 8.24215 13.6675 8.2487C15.0183 8.18982 16.0996 7.07528 16.0998 5.70833Z"
+                          fill="white" />
+                        <path
+                          d="M6.92708 10.2559C8.69073 10.2559 10.4876 10.699 11.8763 11.6257H11.8776C13.1262 12.4563 13.8398 13.62 13.8398 14.8691C13.8396 16.1174 13.1272 17.2816 11.8802 18.1165H11.8789C10.4856 19.0487 8.68475 19.4954 6.91927 19.4954C5.15403 19.4954 3.3541 19.0486 1.96094 18.1165V18.1178C0.712736 17.2872 7.99512e-05 16.1245 0 14.8757C0 13.627 0.712258 12.4621 1.95964 11.627L1.96224 11.6257C3.35948 10.6992 5.16211 10.2559 6.92708 10.2559ZM6.92708 11.5892C5.36479 11.5892 3.83366 11.9832 2.70052 12.7337C1.72934 13.3839 1.33333 14.1738 1.33333 14.8757C1.33341 15.5771 1.73037 16.363 2.70052 17.0085H2.70182C3.82977 17.7632 5.35672 18.162 6.91927 18.1621C8.48201 18.1621 10.0099 17.7633 11.138 17.0085L11.3138 16.8861C12.1575 16.2613 12.5063 15.5271 12.5065 14.8691C12.5065 14.1676 12.1096 13.3818 11.1393 12.7363L11.138 12.735C10.015 11.9852 8.49023 11.5893 6.92708 11.5892Z"
+                          fill="white" />
+                        <path
+                          d="M15.5069 11.0184C16.2272 11.1808 16.9334 11.4699 17.529 11.9234L17.6866 12.0471C18.4476 12.6805 18.8689 13.5257 18.8689 14.4143C18.8689 15.3621 18.3888 16.2603 17.529 16.9052L17.5277 16.9039C16.9248 17.365 16.2086 17.6675 15.4678 17.8218C15.1075 17.8966 14.7551 17.6652 14.6801 17.3049C14.6053 16.9446 14.8367 16.5922 15.197 16.5171C15.7736 16.3969 16.3005 16.1671 16.723 15.8427L16.7295 15.8387C17.3001 15.4108 17.5355 14.8875 17.5355 14.4143C17.5355 13.941 17.3001 13.4177 16.7295 12.9898L16.7243 12.9872C16.3127 12.6728 15.7932 12.4485 15.2139 12.3179C14.8547 12.237 14.6291 11.8802 14.71 11.521C14.7912 11.1622 15.1479 10.9375 15.5069 11.0184Z"
+                          fill="white" />
+                      </svg>
 
-                                            All Inspectors</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                      All Inspectors</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link d-flex gap-2" href="#sidebarCompany" data-bs-toggle="collapse"
-                                role="button" aria-expanded="false" aria-controls="sidebarCompany">
-                                <img src="./assets/images/Vector (3).svg" width="20px" alt="" />
-                                <span>Insurance Companies</span>
-                            </a>
-                            <div class="collapse" id="sidebarCompany">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="addcompany.html">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M19.7534 14.555L14.9176 19.3458C14.4801 19.78 13.9034 19.9967 13.3284 19.9967C12.7534 19.9967 12.1834 19.7825 11.7467 19.3542L9.41505 17.0542C9.08754 16.7308 9.08421 16.2033 9.40671 15.8758C9.73005 15.5483 10.2575 15.545 10.5851 15.8675L12.9151 18.1658C13.1434 18.39 13.5159 18.3908 13.7442 18.1625L18.5801 13.3717C18.9084 13.0467 19.4351 13.0492 19.7584 13.3767C20.0826 13.7042 20.0801 14.2308 19.7534 14.555ZM8.33337 18.3333H4.16669C2.78835 18.3333 1.66667 17.2117 1.66667 15.8333V4.16667C1.66667 2.78833 2.78835 1.66667 4.16669 1.66667H9.16671C10.5451 1.66667 11.6667 2.78833 11.6667 4.16667V14.1667C11.6667 14.6275 12.0392 15 12.5001 15C12.9609 15 13.3334 14.6275 13.3334 14.1667V4.16667C13.3334 1.86917 11.4642 0 9.16671 0H4.16669C1.86918 0 0 1.86917 0 4.16667V15.8333C0 18.1308 1.86918 20 4.16669 20H8.33337C8.79338 20 9.16671 19.6275 9.16671 19.1667C9.16671 18.7058 8.79338 18.3333 8.33337 18.3333ZM5.00002 10.8333H4.16669C3.70668 10.8333 3.33335 11.2058 3.33335 11.6667C3.33335 12.1275 3.70668 12.5 4.16669 12.5H5.00002C5.46003 12.5 5.83336 12.1275 5.83336 11.6667C5.83336 11.2058 5.46003 10.8333 5.00002 10.8333ZM10 11.6667C10 11.2058 9.62671 10.8333 9.16671 10.8333H8.33337C7.87337 10.8333 7.50004 11.2058 7.50004 11.6667C7.50004 12.1275 7.87337 12.5 8.33337 12.5H9.16671C9.62671 12.5 10 12.1275 10 11.6667ZM5.00002 14.1667H4.16669C3.70668 14.1667 3.33335 14.5392 3.33335 15C3.33335 15.4608 3.70668 15.8333 4.16669 15.8333H5.00002C5.46003 15.8333 5.83336 15.4608 5.83336 15C5.83336 14.5392 5.46003 14.1667 5.00002 14.1667ZM5.00002 4.16667H4.16669C3.70668 4.16667 3.33335 4.53917 3.33335 5C3.33335 5.46083 3.70668 5.83333 4.16669 5.83333H5.00002C5.46003 5.83333 5.83336 5.46083 5.83336 5C5.83336 4.53917 5.46003 4.16667 5.00002 4.16667ZM9.16671 4.16667H8.33337C7.87337 4.16667 7.50004 4.53917 7.50004 5C7.50004 5.46083 7.87337 5.83333 8.33337 5.83333H9.16671C9.62671 5.83333 10 5.46083 10 5C10 4.53917 9.62671 4.16667 9.16671 4.16667ZM5.00002 7.5H4.16669C3.70668 7.5 3.33335 7.8725 3.33335 8.33333C3.33335 8.79417 3.70668 9.16667 4.16669 9.16667H5.00002C5.46003 9.16667 5.83336 8.79417 5.83336 8.33333C5.83336 7.8725 5.46003 7.5 5.00002 7.5ZM9.16671 7.5H8.33337C7.87337 7.5 7.50004 7.8725 7.50004 8.33333C7.50004 8.79417 7.87337 9.16667 8.33337 9.16667H9.16671C9.62671 9.16667 10 8.79417 10 8.33333C10 7.8725 9.62671 7.5 9.16671 7.5Z"
-                                                    fill="white" />
-                                            </svg>
+            <li class="nav-item">
+              <a class="nav-link d-flex gap-2" href="#sidebarCompany" data-bs-toggle="collapse" role="button"
+                aria-expanded="false" aria-controls="sidebarCompany">
+                <img src="./assets/images/Vector (3).svg" width="20px" alt="" />
+                <span>Insurance Companies</span>
+              </a>
+              <div class="collapse" id="sidebarCompany">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="addcompany.html">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M19.7534 14.555L14.9176 19.3458C14.4801 19.78 13.9034 19.9967 13.3284 19.9967C12.7534 19.9967 12.1834 19.7825 11.7467 19.3542L9.41505 17.0542C9.08754 16.7308 9.08421 16.2033 9.40671 15.8758C9.73005 15.5483 10.2575 15.545 10.5851 15.8675L12.9151 18.1658C13.1434 18.39 13.5159 18.3908 13.7442 18.1625L18.5801 13.3717C18.9084 13.0467 19.4351 13.0492 19.7584 13.3767C20.0826 13.7042 20.0801 14.2308 19.7534 14.555ZM8.33337 18.3333H4.16669C2.78835 18.3333 1.66667 17.2117 1.66667 15.8333V4.16667C1.66667 2.78833 2.78835 1.66667 4.16669 1.66667H9.16671C10.5451 1.66667 11.6667 2.78833 11.6667 4.16667V14.1667C11.6667 14.6275 12.0392 15 12.5001 15C12.9609 15 13.3334 14.6275 13.3334 14.1667V4.16667C13.3334 1.86917 11.4642 0 9.16671 0H4.16669C1.86918 0 0 1.86917 0 4.16667V15.8333C0 18.1308 1.86918 20 4.16669 20H8.33337C8.79338 20 9.16671 19.6275 9.16671 19.1667C9.16671 18.7058 8.79338 18.3333 8.33337 18.3333ZM5.00002 10.8333H4.16669C3.70668 10.8333 3.33335 11.2058 3.33335 11.6667C3.33335 12.1275 3.70668 12.5 4.16669 12.5H5.00002C5.46003 12.5 5.83336 12.1275 5.83336 11.6667C5.83336 11.2058 5.46003 10.8333 5.00002 10.8333ZM10 11.6667C10 11.2058 9.62671 10.8333 9.16671 10.8333H8.33337C7.87337 10.8333 7.50004 11.2058 7.50004 11.6667C7.50004 12.1275 7.87337 12.5 8.33337 12.5H9.16671C9.62671 12.5 10 12.1275 10 11.6667ZM5.00002 14.1667H4.16669C3.70668 14.1667 3.33335 14.5392 3.33335 15C3.33335 15.4608 3.70668 15.8333 4.16669 15.8333H5.00002C5.46003 15.8333 5.83336 15.4608 5.83336 15C5.83336 14.5392 5.46003 14.1667 5.00002 14.1667ZM5.00002 4.16667H4.16669C3.70668 4.16667 3.33335 4.53917 3.33335 5C3.33335 5.46083 3.70668 5.83333 4.16669 5.83333H5.00002C5.46003 5.83333 5.83336 5.46083 5.83336 5C5.83336 4.53917 5.46003 4.16667 5.00002 4.16667ZM9.16671 4.16667H8.33337C7.87337 4.16667 7.50004 4.53917 7.50004 5C7.50004 5.46083 7.87337 5.83333 8.33337 5.83333H9.16671C9.62671 5.83333 10 5.46083 10 5C10 4.53917 9.62671 4.16667 9.16671 4.16667ZM5.00002 7.5H4.16669C3.70668 7.5 3.33335 7.8725 3.33335 8.33333C3.33335 8.79417 3.70668 9.16667 4.16669 9.16667H5.00002C5.46003 9.16667 5.83336 8.79417 5.83336 8.33333C5.83336 7.8725 5.46003 7.5 5.00002 7.5ZM9.16671 7.5H8.33337C7.87337 7.5 7.50004 7.8725 7.50004 8.33333C7.50004 8.79417 7.87337 9.16667 8.33337 9.16667H9.16671C9.62671 9.16667 10 8.79417 10 8.33333C10 7.8725 9.62671 7.5 9.16671 7.5Z"
+                          fill="white" />
+                      </svg>
 
-                                            Add Company</a>
-                                    </li>
-                                    <!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="allcompanies.html">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M17.5 11.6667C17.5 10.7475 16.7525 10 15.8333 10H14.1667C13.2475 10 12.5 10.7475 12.5 11.6667C11.1217 11.6667 10 12.7883 10 14.1667V17.5C10 18.8783 11.1217 20 12.5 20H17.5C18.8783 20 20 18.8783 20 17.5V14.1667C20 12.7883 18.8783 11.6667 17.5 11.6667ZM14.1667 10.8333H15.8333C16.2933 10.8333 16.6667 11.2067 16.6667 11.6667H13.3333C13.3333 11.2067 13.7067 10.8333 14.1667 10.8333ZM12.5 12.5H17.5C18.4192 12.5 19.1667 13.2475 19.1667 14.1667V15H10.8333V14.1667C10.8333 13.2475 11.5808 12.5 12.5 12.5ZM17.5 19.1667H12.5C11.5808 19.1667 10.8333 18.4192 10.8333 17.5V15.8333H14.5833V17.0833C14.5833 17.3133 14.77 17.5 15 17.5C15.23 17.5 15.4167 17.3133 15.4167 17.0833V15.8333H19.1667V17.5C19.1667 18.4192 18.4192 19.1667 17.5 19.1667ZM8.33333 19.5833C8.33333 19.8133 8.14667 20 7.91667 20H3.75C1.6825 20 0 18.3175 0 16.25V3.75C0 1.6825 1.6825 0 3.75 0H9.58333C11.6508 0 13.3333 1.6825 13.3333 3.75V7.91667C13.3333 8.14667 13.1467 8.33333 12.9167 8.33333C12.6867 8.33333 12.5 8.14667 12.5 7.91667V3.75C12.5 2.14167 11.1917 0.833333 9.58333 0.833333H3.75C2.14167 0.833333 0.833333 2.14167 0.833333 3.75V16.25C0.833333 17.8583 2.14167 19.1667 3.75 19.1667H7.91667C8.14667 19.1667 8.33333 19.3533 8.33333 19.5833ZM5.83333 11.25C5.83333 11.48 5.64667 11.6667 5.41667 11.6667H3.75C3.52 11.6667 3.33333 11.48 3.33333 11.25C3.33333 11.02 3.52 10.8333 3.75 10.8333H5.41667C5.64667 10.8333 5.83333 11.02 5.83333 11.25ZM10 11.25C10 11.48 9.81333 11.6667 9.58333 11.6667H7.91667C7.68667 11.6667 7.5 11.48 7.5 11.25C7.5 11.02 7.68667 10.8333 7.91667 10.8333H9.58333C9.81333 10.8333 10 11.02 10 11.25ZM5.83333 14.5833C5.83333 14.8133 5.64667 15 5.41667 15H3.75C3.52 15 3.33333 14.8133 3.33333 14.5833C3.33333 14.3533 3.52 14.1667 3.75 14.1667H5.41667C5.64667 14.1667 5.83333 14.3533 5.83333 14.5833ZM5.83333 4.58333C5.83333 4.81333 5.64667 5 5.41667 5H3.75C3.52 5 3.33333 4.81333 3.33333 4.58333C3.33333 4.35333 3.52 4.16667 3.75 4.16667H5.41667C5.64667 4.16667 5.83333 4.35333 5.83333 4.58333ZM10 4.58333C10 4.81333 9.81333 5 9.58333 5H7.91667C7.68667 5 7.5 4.81333 7.5 4.58333C7.5 4.35333 7.68667 4.16667 7.91667 4.16667H9.58333C9.81333 4.16667 10 4.35333 10 4.58333ZM5.83333 7.91667C5.83333 8.14667 5.64667 8.33333 5.41667 8.33333H3.75C3.52 8.33333 3.33333 8.14667 3.33333 7.91667C3.33333 7.68667 3.52 7.5 3.75 7.5H5.41667C5.64667 7.5 5.83333 7.68667 5.83333 7.91667ZM10 7.91667C10 8.14667 9.81333 8.33333 9.58333 8.33333H7.91667C7.68667 8.33333 7.5 8.14667 7.5 7.91667C7.5 7.68667 7.68667 7.5 7.91667 7.5H9.58333C9.81333 7.5 10 7.68667 10 7.91667Z"
-                                                    fill="white" />
-                                            </svg>
+                      Add Company</a>
+                  </li>
+                  <!--end nav-item-->
+                  <li class="nav-item">
+                    <a class="nav-link" href="allcompanies.html">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M17.5 11.6667C17.5 10.7475 16.7525 10 15.8333 10H14.1667C13.2475 10 12.5 10.7475 12.5 11.6667C11.1217 11.6667 10 12.7883 10 14.1667V17.5C10 18.8783 11.1217 20 12.5 20H17.5C18.8783 20 20 18.8783 20 17.5V14.1667C20 12.7883 18.8783 11.6667 17.5 11.6667ZM14.1667 10.8333H15.8333C16.2933 10.8333 16.6667 11.2067 16.6667 11.6667H13.3333C13.3333 11.2067 13.7067 10.8333 14.1667 10.8333ZM12.5 12.5H17.5C18.4192 12.5 19.1667 13.2475 19.1667 14.1667V15H10.8333V14.1667C10.8333 13.2475 11.5808 12.5 12.5 12.5ZM17.5 19.1667H12.5C11.5808 19.1667 10.8333 18.4192 10.8333 17.5V15.8333H14.5833V17.0833C14.5833 17.3133 14.77 17.5 15 17.5C15.23 17.5 15.4167 17.3133 15.4167 17.0833V15.8333H19.1667V17.5C19.1667 18.4192 18.4192 19.1667 17.5 19.1667ZM8.33333 19.5833C8.33333 19.8133 8.14667 20 7.91667 20H3.75C1.6825 20 0 18.3175 0 16.25V3.75C0 1.6825 1.6825 0 3.75 0H9.58333C11.6508 0 13.3333 1.6825 13.3333 3.75V7.91667C13.3333 8.14667 13.1467 8.33333 12.9167 8.33333C12.6867 8.33333 12.5 8.14667 12.5 7.91667V3.75C12.5 2.14167 11.1917 0.833333 9.58333 0.833333H3.75C2.14167 0.833333 0.833333 2.14167 0.833333 3.75V16.25C0.833333 17.8583 2.14167 19.1667 3.75 19.1667H7.91667C8.14667 19.1667 8.33333 19.3533 8.33333 19.5833ZM5.83333 11.25C5.83333 11.48 5.64667 11.6667 5.41667 11.6667H3.75C3.52 11.6667 3.33333 11.48 3.33333 11.25C3.33333 11.02 3.52 10.8333 3.75 10.8333H5.41667C5.64667 10.8333 5.83333 11.02 5.83333 11.25ZM10 11.25C10 11.48 9.81333 11.6667 9.58333 11.6667H7.91667C7.68667 11.6667 7.5 11.48 7.5 11.25C7.5 11.02 7.68667 10.8333 7.91667 10.8333H9.58333C9.81333 10.8333 10 11.02 10 11.25ZM5.83333 14.5833C5.83333 14.8133 5.64667 15 5.41667 15H3.75C3.52 15 3.33333 14.8133 3.33333 14.5833C3.33333 14.3533 3.52 14.1667 3.75 14.1667H5.41667C5.64667 14.1667 5.83333 14.3533 5.83333 14.5833ZM5.83333 4.58333C5.83333 4.81333 5.64667 5 5.41667 5H3.75C3.52 5 3.33333 4.81333 3.33333 4.58333C3.33333 4.35333 3.52 4.16667 3.75 4.16667H5.41667C5.64667 4.16667 5.83333 4.35333 5.83333 4.58333ZM10 4.58333C10 4.81333 9.81333 5 9.58333 5H7.91667C7.68667 5 7.5 4.81333 7.5 4.58333C7.5 4.35333 7.68667 4.16667 7.91667 4.16667H9.58333C9.81333 4.16667 10 4.35333 10 4.58333ZM5.83333 7.91667C5.83333 8.14667 5.64667 8.33333 5.41667 8.33333H3.75C3.52 8.33333 3.33333 8.14667 3.33333 7.91667C3.33333 7.68667 3.52 7.5 3.75 7.5H5.41667C5.64667 7.5 5.83333 7.68667 5.83333 7.91667ZM10 7.91667C10 8.14667 9.81333 8.33333 9.58333 8.33333H7.91667C7.68667 8.33333 7.5 8.14667 7.5 7.91667C7.5 7.68667 7.68667 7.5 7.91667 7.5H9.58333C9.81333 7.5 10 7.68667 10 7.91667Z"
+                          fill="white" />
+                      </svg>
 
-                                            All Companies</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                      All Companies</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link d-flex gap-2" href="#sidebarManager" data-bs-toggle="collapse"
-                                role="button" aria-expanded="false" aria-controls="sidebarManager">
-                                <img src="./assets/images/license-maintenance.svg" width="20px" alt="" />
-                                <span>Manager</span>
-                            </a>
-                            <div class="collapse" id="sidebarManager">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="addmanager.html">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M13.1777 8.9541C13.5459 8.9541 13.8444 9.25258 13.8444 9.62077C13.8444 9.98896 13.5459 10.2874 13.1777 10.2874H6.06706C5.69887 10.2874 5.40039 9.98896 5.40039 9.62077C5.40039 9.25258 5.69887 8.9541 6.06706 8.9541H13.1777Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M8.95898 13.1768V6.06608C8.95898 5.69789 9.25746 5.39941 9.62565 5.39941C9.99384 5.39941 10.2923 5.69789 10.2923 6.06608V13.1768C10.2923 13.5449 9.99384 13.8434 9.62565 13.8434C9.25746 13.8434 8.95898 13.5449 8.95898 13.1768Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M17.7773 6.95573C17.7773 4.80623 17.3431 3.49184 16.5482 2.69661C15.753 1.90148 14.4387 1.4662 12.2891 1.46615H6.95573C4.80584 1.46615 3.4918 1.90143 2.69661 2.69661C1.90143 3.4918 1.46615 4.80584 1.46615 6.95573V12.2891C1.4662 14.4387 1.90148 15.753 2.69661 16.5482C3.49184 17.3431 4.80623 17.7773 6.95573 17.7773H12.2891C14.4387 17.7773 15.753 17.3433 16.5482 16.5482C17.3433 15.753 17.7773 14.4387 17.7773 12.2891V6.95573ZM19.2448 12.2891C19.2447 14.5834 18.7894 16.3799 17.5846 17.5846C16.3799 18.7894 14.5834 19.2447 12.2891 19.2448H6.95573C4.66118 19.2448 2.86367 18.7894 1.65885 17.5846C0.454278 16.3799 5.73907e-05 14.5833 0 12.2891V6.95573C0 4.66118 0.45404 2.86367 1.65885 1.65885C2.86367 0.45404 4.66118 0 6.95573 0H12.2891C14.5833 5.73907e-05 16.3799 0.454278 17.5846 1.65885C18.7894 2.86367 19.2448 4.66118 19.2448 6.95573V12.2891Z"
-                                                    fill="white" />
-                                            </svg>
-                                            Add Manager</a>
-                                    </li>
-                                    <!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="allmanagers.html">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M10.9403 5.83333C11.4049 5.83333 11.7819 6.20583 11.7819 6.66667C11.7819 7.1275 11.4049 7.5 10.9403 7.5H4.20782C3.74327 7.5 3.36625 7.1275 3.36625 6.66667C3.36625 6.20583 3.74327 5.83333 4.20782 5.83333H10.9403ZM19.8878 17.2867C19.7321 17.5542 19.4494 17.7042 19.1574 17.7042C19.0151 17.7042 18.8704 17.6683 18.7383 17.5925L17.916 17.1233C17.4069 17.6667 16.7437 18.0617 15.9897 18.2325V19.1667C15.9897 19.6275 15.6127 20 15.1481 20C14.6836 20 14.3066 19.6275 14.3066 19.1667V18.2325C13.5525 18.0617 12.8885 17.6675 12.3802 17.1233L11.558 17.5925C11.4259 17.6683 11.2812 17.7042 11.1389 17.7042C10.8478 17.7042 10.5641 17.5542 10.4085 17.2867C10.177 16.8875 10.315 16.3783 10.7182 16.1492L11.5454 15.6775C11.4368 15.3292 11.3619 14.9667 11.3619 14.5833C11.3619 14.2 11.4368 13.8375 11.5454 13.4892L10.7182 13.0175C10.315 12.7883 10.177 12.2783 10.4085 11.88C10.6407 11.4808 11.1566 11.3442 11.558 11.5742L12.3802 12.0433C12.8894 11.5 13.5525 11.105 14.3066 10.9342V10C14.3066 9.53917 14.6836 9.16667 15.1481 9.16667C15.6127 9.16667 15.9897 9.53917 15.9897 10V10.9342C16.7437 11.105 17.4077 11.4992 17.916 12.0433L18.7383 11.5742C19.1405 11.3442 19.6547 11.4817 19.8878 11.88C20.1193 12.2792 19.9812 12.7883 19.5781 13.0175L18.7509 13.4892C18.8594 13.8375 18.9343 14.2 18.9343 14.5833C18.9343 14.9667 18.8594 15.3292 18.7509 15.6775L19.5781 16.1492C19.9812 16.3783 20.1193 16.8883 19.8878 17.2867ZM17.2521 14.5833C17.2521 13.4342 16.3078 12.5 15.1481 12.5C13.9885 12.5 13.0442 13.4342 13.0442 14.5833C13.0442 15.7325 13.9885 16.6667 15.1481 16.6667C16.3078 16.6667 17.2521 15.7325 17.2521 14.5833ZM9.2572 18.3333H4.20782C2.81587 18.3333 1.68313 17.2117 1.68313 15.8333V5.83333C1.68313 4.455 2.81587 3.33333 4.20782 3.33333H5.04938C5.51392 3.33333 5.89094 2.96083 5.89094 2.5C5.89094 2.03917 6.26881 1.66667 6.73251 1.66667H8.41564C8.87934 1.66667 9.2572 2.04 9.2572 2.5C9.2572 2.96 9.63422 3.33333 10.0988 3.33333H10.9403C12.3323 3.33333 13.465 4.455 13.465 5.83333V6.66667C13.465 7.1275 13.842 7.5 14.3066 7.5C14.7711 7.5 15.1481 7.1275 15.1481 6.66667V5.83333C15.1481 3.53583 13.2605 1.66667 10.9403 1.66667H10.7964C10.4489 0.696667 9.51303 0 8.41564 0H6.73251C5.63511 0 4.69929 0.696667 4.35173 1.66667H4.20782C1.88763 1.66667 0 3.53583 0 5.83333V15.8333C0 18.1308 1.88763 20 4.20782 20H9.2572C9.72174 20 10.0988 19.6275 10.0988 19.1667C10.0988 18.7058 9.72174 18.3333 9.2572 18.3333ZM9.2572 9.16667H4.20782C3.74327 9.16667 3.36625 9.53917 3.36625 10C3.36625 10.4608 3.74327 10.8333 4.20782 10.8333H9.2572C9.72174 10.8333 10.0988 10.4608 10.0988 10C10.0988 9.53917 9.72174 9.16667 9.2572 9.16667ZM7.57407 14.1667C8.03862 14.1667 8.41564 13.7942 8.41564 13.3333C8.41564 12.8725 8.03862 12.5 7.57407 12.5H4.20782C3.74327 12.5 3.36625 12.8725 3.36625 13.3333C3.36625 13.7942 3.74327 14.1667 4.20782 14.1667H7.57407Z"
-                                                    fill="white" />
-                                            </svg>
+            <li class="nav-item">
+              <a class="nav-link d-flex gap-2" href="#sidebarManager" data-bs-toggle="collapse" role="button"
+                aria-expanded="false" aria-controls="sidebarManager">
+                <img src="./assets/images/license-maintenance.svg" width="20px" alt="" />
+                <span>Manager</span>
+              </a>
+              <div class="collapse" id="sidebarManager">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="addmanager.html">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.1777 8.9541C13.5459 8.9541 13.8444 9.25258 13.8444 9.62077C13.8444 9.98896 13.5459 10.2874 13.1777 10.2874H6.06706C5.69887 10.2874 5.40039 9.98896 5.40039 9.62077C5.40039 9.25258 5.69887 8.9541 6.06706 8.9541H13.1777Z"
+                          fill="white" />
+                        <path
+                          d="M8.95898 13.1768V6.06608C8.95898 5.69789 9.25746 5.39941 9.62565 5.39941C9.99384 5.39941 10.2923 5.69789 10.2923 6.06608V13.1768C10.2923 13.5449 9.99384 13.8434 9.62565 13.8434C9.25746 13.8434 8.95898 13.5449 8.95898 13.1768Z"
+                          fill="white" />
+                        <path
+                          d="M17.7773 6.95573C17.7773 4.80623 17.3431 3.49184 16.5482 2.69661C15.753 1.90148 14.4387 1.4662 12.2891 1.46615H6.95573C4.80584 1.46615 3.4918 1.90143 2.69661 2.69661C1.90143 3.4918 1.46615 4.80584 1.46615 6.95573V12.2891C1.4662 14.4387 1.90148 15.753 2.69661 16.5482C3.49184 17.3431 4.80623 17.7773 6.95573 17.7773H12.2891C14.4387 17.7773 15.753 17.3433 16.5482 16.5482C17.3433 15.753 17.7773 14.4387 17.7773 12.2891V6.95573ZM19.2448 12.2891C19.2447 14.5834 18.7894 16.3799 17.5846 17.5846C16.3799 18.7894 14.5834 19.2447 12.2891 19.2448H6.95573C4.66118 19.2448 2.86367 18.7894 1.65885 17.5846C0.454278 16.3799 5.73907e-05 14.5833 0 12.2891V6.95573C0 4.66118 0.45404 2.86367 1.65885 1.65885C2.86367 0.45404 4.66118 0 6.95573 0H12.2891C14.5833 5.73907e-05 16.3799 0.454278 17.5846 1.65885C18.7894 2.86367 19.2448 4.66118 19.2448 6.95573V12.2891Z"
+                          fill="white" />
+                      </svg>
+                      Add Manager</a>
+                  </li>
+                  <!--end nav-item-->
+                  <li class="nav-item">
+                    <a class="nav-link" href="allmanagers.html">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.9403 5.83333C11.4049 5.83333 11.7819 6.20583 11.7819 6.66667C11.7819 7.1275 11.4049 7.5 10.9403 7.5H4.20782C3.74327 7.5 3.36625 7.1275 3.36625 6.66667C3.36625 6.20583 3.74327 5.83333 4.20782 5.83333H10.9403ZM19.8878 17.2867C19.7321 17.5542 19.4494 17.7042 19.1574 17.7042C19.0151 17.7042 18.8704 17.6683 18.7383 17.5925L17.916 17.1233C17.4069 17.6667 16.7437 18.0617 15.9897 18.2325V19.1667C15.9897 19.6275 15.6127 20 15.1481 20C14.6836 20 14.3066 19.6275 14.3066 19.1667V18.2325C13.5525 18.0617 12.8885 17.6675 12.3802 17.1233L11.558 17.5925C11.4259 17.6683 11.2812 17.7042 11.1389 17.7042C10.8478 17.7042 10.5641 17.5542 10.4085 17.2867C10.177 16.8875 10.315 16.3783 10.7182 16.1492L11.5454 15.6775C11.4368 15.3292 11.3619 14.9667 11.3619 14.5833C11.3619 14.2 11.4368 13.8375 11.5454 13.4892L10.7182 13.0175C10.315 12.7883 10.177 12.2783 10.4085 11.88C10.6407 11.4808 11.1566 11.3442 11.558 11.5742L12.3802 12.0433C12.8894 11.5 13.5525 11.105 14.3066 10.9342V10C14.3066 9.53917 14.6836 9.16667 15.1481 9.16667C15.6127 9.16667 15.9897 9.53917 15.9897 10V10.9342C16.7437 11.105 17.4077 11.4992 17.916 12.0433L18.7383 11.5742C19.1405 11.3442 19.6547 11.4817 19.8878 11.88C20.1193 12.2792 19.9812 12.7883 19.5781 13.0175L18.7509 13.4892C18.8594 13.8375 18.9343 14.2 18.9343 14.5833C18.9343 14.9667 18.8594 15.3292 18.7509 15.6775L19.5781 16.1492C19.9812 16.3783 20.1193 16.8883 19.8878 17.2867ZM17.2521 14.5833C17.2521 13.4342 16.3078 12.5 15.1481 12.5C13.9885 12.5 13.0442 13.4342 13.0442 14.5833C13.0442 15.7325 13.9885 16.6667 15.1481 16.6667C16.3078 16.6667 17.2521 15.7325 17.2521 14.5833ZM9.2572 18.3333H4.20782C2.81587 18.3333 1.68313 17.2117 1.68313 15.8333V5.83333C1.68313 4.455 2.81587 3.33333 4.20782 3.33333H5.04938C5.51392 3.33333 5.89094 2.96083 5.89094 2.5C5.89094 2.03917 6.26881 1.66667 6.73251 1.66667H8.41564C8.87934 1.66667 9.2572 2.04 9.2572 2.5C9.2572 2.96 9.63422 3.33333 10.0988 3.33333H10.9403C12.3323 3.33333 13.465 4.455 13.465 5.83333V6.66667C13.465 7.1275 13.842 7.5 14.3066 7.5C14.7711 7.5 15.1481 7.1275 15.1481 6.66667V5.83333C15.1481 3.53583 13.2605 1.66667 10.9403 1.66667H10.7964C10.4489 0.696667 9.51303 0 8.41564 0H6.73251C5.63511 0 4.69929 0.696667 4.35173 1.66667H4.20782C1.88763 1.66667 0 3.53583 0 5.83333V15.8333C0 18.1308 1.88763 20 4.20782 20H9.2572C9.72174 20 10.0988 19.6275 10.0988 19.1667C10.0988 18.7058 9.72174 18.3333 9.2572 18.3333ZM9.2572 9.16667H4.20782C3.74327 9.16667 3.36625 9.53917 3.36625 10C3.36625 10.4608 3.74327 10.8333 4.20782 10.8333H9.2572C9.72174 10.8333 10.0988 10.4608 10.0988 10C10.0988 9.53917 9.72174 9.16667 9.2572 9.16667ZM7.57407 14.1667C8.03862 14.1667 8.41564 13.7942 8.41564 13.3333C8.41564 12.8725 8.03862 12.5 7.57407 12.5H4.20782C3.74327 12.5 3.36625 12.8725 3.36625 13.3333C3.36625 13.7942 3.74327 14.1667 4.20782 14.1667H7.57407Z"
+                          fill="white" />
+                      </svg>
 
 
-                                            All Managers</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                      All Managers</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link d-flex gap-2" href="login.html" role="button" aria-expanded="false"
-                                aria-controls="sidebarLogout">
-                                <img src="./assets/images/sign-out-alt 1.svg" width="20px" alt="" />
-                                <span>Logout</span>
-                            </a>
+            <li class="nav-item">
+              <a class="nav-link d-flex gap-2" href="login.html" role="button" aria-expanded="false"
+                aria-controls="sidebarLogout">
+                <img src="./assets/images/sign-out-alt 1.svg" width="20px" alt="" />
+                <span>Logout</span>
+              </a>
 
-                        </li>
+            </li>
 
-                        <!-- <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#sidebarCompany" data-bs-toggle="collapse" role="button" aria-expanded="false"
                 aria-controls="sidebarCompany">
                 <i class="iconoir-task-list menu-icon"></i>
@@ -591,7 +566,7 @@
 
             </li> -->
 
-                        <!-- <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#sidebarManager" data-bs-toggle="collapse" role="button" aria-expanded="false"
                 aria-controls="sidebarManager">
                 <i class="iconoir-task-list menu-icon"></i>
@@ -612,737 +587,811 @@
               </div>
               
             </li> -->
-                    </ul>
-                    <!--end navbar-nav--->
-                </div>
-            </div>
-            <!--end startbar-collapse-->
-            <!--end startbar-collapse-->
+          </ul>
+          <!--end navbar-nav--->
         </div>
-        <!--end startbar-menu-->
+      </div>
+      <!--end startbar-collapse-->
+      <!--end startbar-collapse-->
     </div>
-    <!--end startbar-->
-    <div class="startbar-overlay d-print-none"></div>
-    <!-- end leftbar-tab-menu-->
+    <!--end startbar-menu-->
+  </div>
+  <!--end startbar-->
+  <div class="startbar-overlay d-print-none"></div>
+  <!-- end leftbar-tab-menu-->
 
-    <div class="page-wrapper">
-        <!-- Page Content-->
-        <div class="page-content">
-            <div class="container-fluid px-1">
-                <div class="dashboard-wrapper">
-
-                    <!-- WELCOME -->
-                    <div class="row mb-3">
-                        <div class="col-12">
-                            <h3 class="dashboard-title">Welcome Here,</h3>
-                            <p class="dashboard-subtitle">Garrett</p>
-                        </div>
+  <div class="page-wrapper">
+    <!-- Page Content-->
+    <div class="page-content">
+      <div class="container-fluid">
+        <div class="dashboard-wrapper">
+          <div class="assignments-container">
+            <!-- WELCOME -->
+            <div class="top-bar">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+                    <div class="closed-topbar d-block dashboard-topbar">
+                      <h2 class="color d-lg-none d-block">Welcome Here,</h2>
+                      <h4 class="d-lg-none d-block" style="color: #89868d;">Garret</h4>
+                      <h2 class="color-dark d-none d-lg-block">Welcome Here,</h2>
+                      <h4 class="color-dark d-none d-lg-block" style="color: #89868d;">Garret</h4>
                     </div>
 
-                    <!-- TOP CARDS ROW 1 -->
-                    <div class="row mb-3">
-                        <!-- Today -->
-                        <div class="col-md-6 mb-3">
-                            <div class="stats-card stats-card-lg stats-today">
-                                <div class="stats-card-header">
-                                    <div class="icon-wrap icon-green">
-                                        <i class="fa-regular fa-calendar-check"></i>
-                                    </div>
-                                    <h5 class="stats-title">Today's Assignments</h5>
-                                </div>
-                                <div class="stats-body">
-                                    <div>
-                                        <span class="stats-label">Scheduled</span>
-                                        <div class="stats-value">32</div>
-                                    </div>
-                                    <div>
-                                        <span class="stats-label">Inspected</span>
-                                        <div class="stats-value">44</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tomorrow -->
-                        <div class="col-md-6 mb-3">
-                            <div class="stats-card stats-card-lg stats-tomorrow">
-                                <div class="stats-card-header">
-                                    <div class="icon-wrap icon-orange">
-                                        <i class="fa-regular fa-calendar-days"></i>
-                                    </div>
-                                    <h5 class="stats-title">Tomorrow's Assignments</h5>
-                                </div>
-                                <div class="stats-body">
-                                    <div>
-                                        <span class="stats-label">Scheduled</span>
-                                        <div class="stats-value">32</div>
-                                    </div>
-                                    <div>
-                                        <span class="stats-label">Inspected</span>
-                                        <div class="stats-value">44</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- TOP CARDS ROW 2 -->
-                    <div class="row mb-3">
-                        <div class="col-sm-6 col-lg-3 mb-3">
-                            <div class="stats-card stats-small">
-                                <div class="stats-card-header">
-                                    <div class="icon-wrap icon-blue">
-                                        <i class="fa-regular fa-clipboard"></i>
-                                    </div>
-                                    <h6 class="stats-title">Total Assignment</h6>
-                                </div>
-                                <div class="stats-body single">
-                                    <div class="stats-value">100</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-lg-3 mb-3">
-                            <div class="stats-card stats-small">
-                                <div class="stats-card-header">
-                                    <div class="icon-wrap icon-green">
-                                        <i class="fa-regular fa-clipboard"></i>
-                                    </div>
-                                    <h6 class="stats-title">Active Assignment</h6>
-                                </div>
-                                <div class="stats-body single">
-                                    <div class="stats-value">60</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-lg-3 mb-3">
-                            <div class="stats-card stats-small">
-                                <div class="stats-card-header">
-                                    <div class="icon-wrap icon-orange">
-                                        <i class="fa-regular fa-clipboard"></i>
-                                    </div>
-                                    <h6 class="stats-title">Closed Assignment</h6>
-                                </div>
-                                <div class="stats-body single">
-                                    <div class="stats-value">40</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-lg-3 mb-3">
-                            <div class="stats-card stats-small">
-                                <div class="stats-card-header">
-                                    <div class="icon-wrap icon-red">
-                                        <i class="fa-regular fa-clipboard"></i>
-                                    </div>
-                                    <h6 class="stats-title">Average Per Day</h6>
-                                </div>
-                                <div class="stats-body single">
-                                    <div class="stats-value">50</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ASSIGNMENTS CHART -->
-                    <div class="row mb-3">
-                        <div class="col-12">
-                            <div class="card chart-card">
-                                <div class="chart-header d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-wrap icon-blue me-2">
-                                            <i class="fa-regular fa-clipboard"></i>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <h6 class="chart-title mb-0 me-2">Assignments</h6>
-                                            <span class="badge-count">400</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center chart-legend">
-                                        <div class="legend-item">
-                                            <span class="legend-dot legend-active"></span> Active
-                                        </div>
-                                        <div class="legend-item">
-                                            <span class="legend-dot legend-closed"></span> Closed
-                                        </div>
-
-                                        <button type="button" class="view-toggle">
-                                            <span id="viewToggleLabel">Weekly</span>
-                                            <i class="fa-solid fa-chevron-down ms-1"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="chart-body">
-                                    <canvas id="assignmentsChart" height="130"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- BOTTOM 3 CARDS -->
-                    <div class="row mb-3">
-                        <!-- Top 10 States -->
-                        <div class="col-md-4 mb-3">
-                            <div class="card list-card">
-                                <div class="list-header">
-                                    <h6>Top 10 States</h6>
-                                </div>
-                                <ul class="list-body">
-                                    <li>
-                                        <span>1. State Name</span>
-                                        <span class="list-count">12</span>
-                                    </li>
-                                    <li>
-                                        <span>2. State Name</span>
-                                        <span class="list-count">12</span>
-                                    </li>
-                                    <li>
-                                        <span>3. State Name</span>
-                                        <span class="list-count">12</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Top 10 Cities -->
-                        <div class="col-md-4 mb-3">
-                            <div class="card list-card">
-                                <div class="list-header">
-                                    <h6>Top 10 Cities</h6>
-                                </div>
-                                <ul class="list-body">
-                                    <li>
-                                        <span>1. City Name</span>
-                                        <span class="list-count">12</span>
-                                    </li>
-                                    <li>
-                                        <span>2. City Name</span>
-                                        <span class="list-count">12</span>
-                                    </li>
-                                    <li>
-                                        <span>3. City Name</span>
-                                        <span class="list-count">12</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Top 10 Inspectors -->
-                        <div class="col-md-4 mb-3">
-                            <div class="card list-card">
-                                <div class="list-header">
-                                    <h6>Top 10 Inspectors</h6>
-                                </div>
-                                <ul class="list-body">
-                                    <li>
-                                        <span>1. Inspector Name</span>
-                                        <span class="list-count">12</span>
-                                    </li>
-                                    <li>
-                                        <span>2. Inspector Name</span>
-                                        <span class="list-count">12</span>
-                                    </li>
-                                    <li>
-                                        <span>3. Inspector Name</span>
-                                        <span class="list-count">12</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
+                  </div>
+                  <!--end page-title-box-->
                 </div>
+                <!--end col-->
+
+              </div>
+
+
             </div>
 
-            <!-- ===== STYLES (dashboard specific) ===== -->
-            <style>
-                .dashboard-wrapper {
-                    padding-top: 10px;
-                    padding-bottom: 20px;
-                }
-
-                .dashboard-title {
-                    font-size: 22px;
-                    font-weight: 600;
-                    color: #212121;
-                    margin-bottom: 2px;
-                }
-
-                .dashboard-subtitle {
-                    font-size: 13px;
-                    color: #9ca3af;
-                    margin-bottom: 10px;
-                }
-
-                .stats-card {
-                    background: #ffffff;
-                    border-radius: 8px;
-                    border: 1px solid #edf0f7;
-                    padding: 14px 18px;
-                }
-
-                .stats-card-lg {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    min-height: 120px;
-                }
-
-                .stats-today {
-                    background: #e9f9f2;
-                    border-color: #e0f3ec;
-                }
-
-                .stats-tomorrow {
-                    background: #ffe9dd;
-                    border-color: #ffd9c5;
-                }
-
-                .stats-small {
-                    min-height: 100px;
-                }
-
-                .stats-card-header {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    margin-bottom: 8px;
-                }
-
-                .stats-title {
-                    font-size: 13px;
-                    font-weight: 600;
-                    color: #111827;
-                    margin: 0;
-                }
-
-                .icon-wrap {
-                    width: 32px;
-                    height: 32px;
-                    border-radius: 999px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 14px;
-                }
-
-                .icon-green {
-                    background: #d2f5e5;
-                    color: #1d9c68;
-                }
-
-                .icon-orange {
-                    background: #ffe2cd;
-                    color: #ff7d2a;
-                }
-
-                .icon-blue {
-                    background: #dde7ff;
-                    color: #1e3a8a;
-                }
-
-                .icon-red {
-                    background: #ffe0e0;
-                    color: #f04438;
-                }
-
-                .stats-body {
-                    display: flex;
-                    justify-content: flex-start;
-                    gap: 40px;
-                }
-
-                .stats-body.single {
-                    justify-content: flex-start;
-                    gap: 0;
-                }
-
-                .stats-label {
-                    font-size: 11px;
-                    color: #9ca3af;
-                }
-
-                .stats-value {
-                    font-size: 22px;
-                    font-weight: 600;
-                    color: #111827;
-                    margin-top: 4px;
-                }
-
-                /* Chart card */
-                .chart-card {
-                    border-radius: 8px;
-                    border: 1px solid #edf0f7;
-                    padding: 16px 18px 10px;
-                }
-
-                .chart-header {
-                    margin-bottom: 10px;
-                }
-
-                .chart-title {
-                    font-size: 14px;
-                    font-weight: 600;
-                    color: #111827;
-                }
-
-                .badge-count {
-                    background: #1f3a8a;
-                    color: #fff;
-                    border-radius: 999px;
-                    padding: 3px 10px;
-                    font-size: 11px;
-                    font-weight: 500;
-                }
-
-                .chart-legend .legend-item {
-                    font-size: 11px;
-                    color: #6b7280;
-                    margin-right: 14px;
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
-                }
-
-                .legend-dot {
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 999px;
-                    display: inline-block;
-                }
-
-                .legend-active {
-                    background: #1f3a8a;
-                }
-
-                .legend-closed {
-                    background: #ff7d2a;
-                }
-
-                .view-toggle {
-                    border-radius: 999px;
-                    border: 1px solid #e5e7eb;
-                    background: #ffffff;
-                    padding: 4px 10px;
-                    font-size: 11px;
-                    color: #6b7280;
-                    display: inline-flex;
-                    align-items: center;
-                    cursor: pointer;
-                }
-
-                .chart-body {
-                    padding-top: 4px;
-                }
-
-                /* bottom list cards */
-                .list-card {
-                    border-radius: 8px;
-                    border: 1px solid #edf0f7;
-                }
-
-                .list-header {
-                    padding: 12px 16px 6px;
-                }
-
-                .list-header h6 {
-                    font-size: 13px;
-                    font-weight: 600;
-                    margin: 0;
-                    color: #111827;
-                }
-
-                .list-body {
-                    list-style: none;
-                    margin: 0;
-                    padding: 4px 16px 12px;
-                }
-
-                .list-body li {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-size: 12px;
-                    padding: 6px 0;
-                    border-bottom: 1px solid #f3f4f6;
-                }
-
-                .list-body li:last-child {
-                    border-bottom: none;
-                }
-
-                .list-count {
-                    font-weight: 600;
-                    color: #111827;
-                }
-
-
-                /* OUTER CARDS */
-                .list-card {
-                    border-radius: 10px;
-                    border: 1px solid #edf0f7;
-                    background: #ffffff;
-                    padding: 14px 18px 16px;
-                    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-                }
-
-                .list-card:hover {
-                    border-color: #d4d9e6;
-                    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-                    transform: translateY(-2px);
-                }
-
-                /* TITLE */
-                .list-header {
-                    padding-bottom: 8px;
-                }
-
-                .list-header h6 {
-                    font-size: 14px;
-                    font-weight: 600;
-                    color: #111827;
-                    margin: 0;
-                }
-
-                /* LIST ROWS */
-                .list-body {
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
-                }
-
-                .list-body li {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-size: 13px;
-                    color: #111827;
-                    padding: 8px 14px;
-                    border-radius: 4px;
-                    background: #f4f4f5;
-                    /* light grey block jaisa screenshot */
-                }
-
-                .list-body li span:first-child {
-                    /* "1. State Name" side */
-                    white-space: nowrap;
-                }
-
-                .list-count {
-                    font-weight: 600;
-                    color: #111827;
-                }
-
-
-                /* Responsive tweaks */
-                @media (max-width: 767.98px) {
-                    .stats-body {
-                        gap: 24px;
-                    }
-
-                    .chart-header {
-                        flex-direction: column;
-                        align-items: flex-start !important;
-                        gap: 8px;
-                    }
-
-                    .chart-legend {
-                        width: 100%;
-                        justify-content: space-between;
-                    }
-                }
-            </style>
-
-            <!-- ===== SCRIPTS (Chart.js) ===== -->
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script>
-                (function () {
-                    const ctx = document.getElementById('assignmentsChart').getContext('2d');
-
-                    // Weekly data (as screenshot vibe)
-                    const weeklyLabels = ['Mon', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
-                    const weeklyActive = [20, 35, 20, 35, 20, 30, 40];
-                    const weeklyClosed = [12, 18, 50, 12, 48, 20, 55];
-
-                    // Example monthly data (for toggle)
-                    const monthlyLabels = ['W1', 'W2', 'W3', 'W4'];
-                    const monthlyActive = [70, 90, 85, 95];
-                    const monthlyClosed = [60, 80, 75, 88];
-
-                    let currentView = 'weekly';
-
-                    const chartConfig = {
-                        type: 'bar',
-                        data: {
-                            labels: weeklyLabels,
-                            datasets: [
-                                {
-                                    label: 'Active',
-                                    data: weeklyActive,
-                                    backgroundColor: '#1f3a8a',
-                                    borderRadius: 4,
-                                    barPercentage: 0.5,
-                                    categoryPercentage: 0.5
-                                },
-                                {
-                                    label: 'Closed',
-                                    data: weeklyClosed,
-                                    backgroundColor: '#ff7d2a',
-                                    borderRadius: 4,
-                                    barPercentage: 0.5,
-                                    categoryPercentage: 0.5
-                                }
-                            ]
-                        },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio: false,
-                            plugins: {
-                                legend: { display: false },
-                                tooltip: {
-                                    backgroundColor: '#111827',
-                                    titleColor: '#fff',
-                                    bodyColor: '#f9fafb'
-                                }
-                            },
-                            scales: {
-                                x: {
-                                    grid: { display: false },
-                                    ticks: {
-                                        font: { size: 10 }
-                                    }
-                                },
-                                y: {
-                                    grid: {
-                                        color: '#e5e7eb'
-                                    },
-                                    beginAtZero: true,
-                                    ticks: {
-                                        stepSize: 10,
-                                        font: { size: 10 }
-                                    }
-                                }
-                            }
-                        }
-                    };
-
-                    const assignmentsChart = new Chart(ctx, chartConfig);
-
-                    // Toggle Weekly / Monthly
-                    const toggleBtn = document.querySelector('.view-toggle');
-                    const toggleLabel = document.getElementById('viewToggleLabel');
-
-                    if (toggleBtn) {
-                        toggleBtn.addEventListener('click', function () {
-                            if (currentView === 'weekly') {
-                                // Switch to monthly
-                                assignmentsChart.data.labels = monthlyLabels;
-                                assignmentsChart.data.datasets[0].data = monthlyActive;
-                                assignmentsChart.data.datasets[1].data = monthlyClosed;
-                                currentView = 'monthly';
-                                toggleLabel.textContent = 'Monthly';
-                            } else {
-                                // Back to weekly
-                                assignmentsChart.data.labels = weeklyLabels;
-                                assignmentsChart.data.datasets[0].data = weeklyActive;
-                                assignmentsChart.data.datasets[1].data = weeklyClosed;
-                                currentView = 'weekly';
-                                toggleLabel.textContent = 'Weekly';
-                            }
-                            assignmentsChart.update();
-                        });
-                    }
-                })();
-            </script>
-
-        </div>
-        <!--end row-->
-    </div>
-
-
-
-    <!-- container -->
-
-    <!--Start Rightbar-->
-    <!--Start Rightbar/offcanvas-->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
-        <div class="offcanvas-header border-bottom justify-content-between">
-            <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
-            <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <h6>Account Settings</h6>
-            <div class="p-2 text-start mt-3">
-                <div class="form-check form-switch mb-2">
-                    <input class="form-check-input" type="checkbox" id="settings-switch1" />
-                    <label class="form-check-label" for="settings-switch1">Auto updates</label>
+            <!-- TOP CARDS ROW 1 -->
+            <div class="row mb-3">
+              <!-- Today -->
+              <div class="col-md-6 mb-3">
+                <div class="stats-card stats-card-lg stats-today p-3">
+                  <div class="stats-card-header">
+                    <div class="icon-wrap icon-green">
+                      <img class="assignment-img" src="./assets/images/create.svg" alt="">
+                    </div>
+                    <h5 class="stats-title">Today's Assignments</h5>
+                  </div>
+                  <div class="row stats-body pt-2">
+                    <div class="col-2">
+                      <span class="stats-label">Scheduled</span>
+                      <div class="label-value">32</div>
+                    </div>
+                    <div class="col-2">
+                      <span class="stats-label">Inspected</span>
+                      <div class="label-value">44</div>
+                    </div>
+                  </div>
                 </div>
-                <!--end form-switch-->
-                <div class="form-check form-switch mb-2">
-                    <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
-                    <label class="form-check-label" for="settings-switch2">Location Permission</label>
+              </div>
+
+              <!-- Tomorrow -->
+              <div class="col-md-6 mb-3">
+                <div class="stats-card stats-card-lg stats-tomorrow p-3">
+                  <div class="stats-card-header">
+                    <div class="icon-wrap icon-orange">
+                                            <img class="assignment-img" src="./assets/images/create.svg" alt="">
+
+                    </div>
+                    <h5 class="stats-title">Tomorrow's Assignments</h5>
+                  </div>
+                  <div class="row stats-body pt-2">
+                    <div class="col-2">
+                      <span class="stats-label">Scheduled</span>
+                      <div class="label-value">32</div>
+                    </div>
+                    <div class="col-2">
+                      <span class="stats-label">Inspected</span>
+                      <div class="label-value">44</div>
+                    </div>
+                  </div>
                 </div>
-                <!--end form-switch-->
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="settings-switch3" />
-                    <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
-                </div>
-                <!--end form-switch-->
+              </div>
             </div>
-            <!--end /div-->
-            <h6>General Settings</h6>
-            <div class="p-2 text-start mt-3">
-                <div class="form-check form-switch mb-2">
-                    <input class="form-check-input" type="checkbox" id="settings-switch4" />
-                    <label class="form-check-label" for="settings-switch4">Show me Online</label>
+
+            <!-- TOP CARDS ROW 2 -->
+            <div class="row mb-3">
+              <div class="col-sm-6 col-lg-3 mb-3">
+                <div class="stats-card stats-small">
+                  <div class="stats-card-header stats-detail-card-header">
+                    <div class="icon-wrap icon-blue">
+                                            <img class="assignment-img" src="./assets/images/create.svg" alt="">
+                    </div>
+                    <h6 class="stats-title">Total Assignment</h6>
+                  </div>
+                  <div class="stats-body single">
+                    <div class="stats-value">100</div>
+                  </div>
                 </div>
-                <!--end form-switch-->
-                <div class="form-check form-switch mb-2">
-                    <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
-                    <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+              </div>
+
+              <div class="col-sm-6 col-lg-3 mb-3">
+                <div class="stats-card stats-small">
+                  <div class="stats-card-header stats-detail-card-header">
+                    <div class="icon-wrap icon-green">
+  <svg width="20" height="20" viewBox="0 0 23 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12.8798 12.8424C13.1511 12.5937 13.5724 12.6116 13.8212 12.8827C14.0699 13.154 14.052 13.5753 13.7808 13.8241L10.872 16.4908C10.6171 16.7244 10.2258 16.7244 9.97094 16.4908L8.8798 15.4908C8.60866 15.242 8.59073 14.8207 8.83943 14.5494C9.08826 14.2783 9.50952 14.2603 9.78084 14.509L10.4202 15.095L12.8798 12.8424Z"
+                          fill="white" />
+                        <path
+                          d="M13.9987 3.33399C13.9987 2.38557 13.7934 2.15721 13.7279 2.10483C13.6309 2.02728 13.4742 2.00066 12.9987 2.00066H9.66536C9.18985 2.00066 9.03313 2.02728 8.9362 2.10483C8.87071 2.15721 8.66536 2.38557 8.66536 3.33399C8.66536 4.28242 8.87071 4.51077 8.9362 4.56316C9.03313 4.6407 9.18985 4.66733 9.66536 4.66733H12.9987C13.6959 4.66733 13.8267 4.46935 13.8737 4.38477C13.9181 4.30473 13.9556 4.18306 13.9766 3.99415C13.9977 3.80326 13.9987 3.59155 13.9987 3.33399ZM15.332 3.33399C15.332 3.57618 15.3329 3.86488 15.3021 4.14259C15.271 4.42219 15.2041 4.73846 15.0404 5.03321C14.6707 5.69855 13.9681 6.00066 12.9987 6.00066H9.66536C9.30754 6.00066 8.63093 6.02728 8.10286 5.60483C7.54335 5.15721 7.33203 4.38557 7.33203 3.33399C7.33203 2.28242 7.54335 1.51077 8.10286 1.06316C8.63093 0.640704 9.30754 0.667326 9.66536 0.667326H12.9987C13.3565 0.667326 14.0331 0.640704 14.5612 1.06316C15.1207 1.51077 15.332 2.28242 15.332 3.33399Z"
+                          fill="white" />
+                        <path
+                          d="M2 16.437V10.2079C2.00001 7.79521 2.40402 6.08688 3.36589 4.96437C4.34591 3.821 5.77635 3.43127 7.44271 3.33416C7.81018 3.31274 8.12558 3.59303 8.14714 3.96046C8.16854 4.32783 7.88812 4.64317 7.52083 4.66489C5.98075 4.75464 5.00331 5.10264 4.3776 5.83286C3.73396 6.58433 3.33334 7.88686 3.33333 10.2079V16.437C3.33333 18.507 3.58549 19.8471 4.26823 20.6883C4.92004 21.4914 6.10706 21.9995 8.44401 21.9995H14.2227C16.5596 21.9995 17.7466 21.4914 18.3984 20.6883C19.0812 19.8471 19.3333 18.507 19.3333 16.437V10.2079C19.3333 7.88087 18.9324 6.57879 18.2891 5.82895C17.6638 5.10023 16.6871 4.75471 15.1458 4.66489C14.7785 4.64317 14.4981 4.32783 14.5195 3.96046C14.5411 3.59303 14.8565 3.31274 15.224 3.33416C16.8893 3.43121 18.3203 3.81794 19.3008 4.96046C20.2631 6.08196 20.6667 7.79045 20.6667 10.2079V16.437C20.6667 18.5198 20.4373 20.2943 19.4349 21.5295C18.4016 22.8026 16.7 23.3328 14.2227 23.3329H8.44401C5.96668 23.3328 4.26504 22.8026 3.23177 21.5295C2.22933 20.2943 2 18.5198 2 16.437Z"
+                          fill="white" />
+                      </svg>                 </div>
+                    <div>
+                      <h6 class="stats-title">Active Assignment</h6>
+                    </div>
+                  </div>
+                  <div class="stats-body single">
+                    <div class="stats-value">60</div>
+                  </div>
                 </div>
-                <!--end form-switch-->
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="settings-switch6" />
-                    <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+              </div>
+
+              <div class="col-sm-6 col-lg-3 mb-3">
+                <div class="stats-card stats-small">
+                  <div class="stats-card-header stats-detail-card-header">
+                    <div class="icon-wrap icon-orange">
+<svg width="20" height="20" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.9987 3.33302C13.9987 2.38459 13.7934 2.15624 13.7279 2.10385C13.6309 2.0263 13.4742 1.99968 12.9987 1.99968H9.66536C9.18985 1.99968 9.03313 2.0263 8.9362 2.10385C8.87071 2.15624 8.66536 2.38459 8.66536 3.33302C8.66536 4.28144 8.87071 4.50979 8.9362 4.56218C9.03313 4.63973 9.18985 4.66635 9.66536 4.66635H12.9987C13.6959 4.66635 13.8267 4.46838 13.8737 4.3838C13.9181 4.30375 13.9556 4.18209 13.9766 3.99317C13.9977 3.80228 13.9987 3.59057 13.9987 3.33302ZM15.332 3.33302C15.332 3.5752 15.3329 3.8639 15.3021 4.14161C15.271 4.42122 15.2041 4.73748 15.0404 5.03223C14.6707 5.69758 13.9681 5.99968 12.9987 5.99968H9.66536C9.30754 5.99968 8.63093 6.0263 8.10286 5.60385C7.54335 5.15624 7.33203 4.38459 7.33203 3.33302C7.33203 2.28144 7.54335 1.50979 8.10286 1.06218C8.63093 0.639727 9.30754 0.666349 9.66536 0.666349H12.9987C13.3565 0.666349 14.0331 0.639727 14.5612 1.06218C15.1207 1.50979 15.332 2.28144 15.332 3.33302Z"
+                          fill="white" />
+                        <path
+                          d="M2 16.437V10.2079C2.00001 7.79521 2.40402 6.08688 3.36589 4.96437C4.34591 3.821 5.77635 3.43127 7.44271 3.33416C7.81018 3.31274 8.12558 3.59303 8.14714 3.96046C8.16854 4.32783 7.88812 4.64317 7.52083 4.66489C5.98075 4.75464 5.00331 5.10264 4.3776 5.83286C3.73396 6.58433 3.33334 7.88686 3.33333 10.2079V16.437C3.33333 18.507 3.58549 19.8471 4.26823 20.6883C4.92004 21.4914 6.10706 21.9995 8.44401 21.9995H14.2227C16.5596 21.9995 17.7466 21.4914 18.3984 20.6883C19.0812 19.8471 19.3333 18.507 19.3333 16.437V10.2079C19.3333 7.88087 18.9324 6.57879 18.2891 5.82895C17.6638 5.10023 16.6871 4.75471 15.1458 4.66489C14.7785 4.64317 14.4981 4.32783 14.5195 3.96046C14.5411 3.59303 14.8565 3.31274 15.224 3.33416C16.8893 3.43121 18.3203 3.81794 19.3008 4.96046C20.2631 6.08196 20.6667 7.79045 20.6667 10.2079V16.437C20.6667 18.5198 20.4373 20.2943 19.4349 21.5295C18.4016 22.8026 16.7 23.3328 14.2227 23.3329H8.44401C5.96668 23.3328 4.26504 22.8026 3.23177 21.5295C2.22933 20.2943 2 18.5198 2 16.437Z"
+                          fill="white" />
+                        <path
+                          d="M14.3268 13C14.879 13.0001 15.3268 13.4478 15.3268 14C15.3268 14.5522 14.879 14.9999 14.3268 15H8C7.44772 15 7 14.5523 7 14C7 13.4477 7.44772 13 8 13H14.3268Z"
+                          fill="white" />
+                      </svg>
+                                     </div>
+                    <h6 class="stats-title">Closed Assignment</h6>
+                  </div>
+                  <div class="stats-body single">
+                    <div class="stats-value">40</div>
+                  </div>
                 </div>
-                <!--end form-switch-->
+              </div>
+
+              <div class="col-sm-6 col-lg-3 mb-3">
+                <div class="stats-card stats-small">
+                  <div class="stats-card-header stats-detail-card-header">
+                    <div class="icon-wrap icon-red">
+<img class="assignment-img" src="./assets/images/create.svg" alt="">                    </div>
+                    <h6 class="stats-title">Average Per Day</h6>
+                  </div>
+                  <div class="stats-body single">
+                    <div class="stats-value">50</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!--end /div-->
+
+            <!-- ASSIGNMENTS CHART -->
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card chart-card">
+                  <div class="chart-header d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="icon-wrap icon-blue me-2">
+<img class="assignment-img" src="./assets/images/create.svg" alt="">                       </div>
+                      <div class="d-flex align-items-center">
+                        <h6 class="chart-title mb-0 me-2">Assignments</h6>
+                        <span class="badge-count">400</span>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-center chart-legend">
+                      <div class="legend-item">
+                        <span class="legend-dot legend-active"></span> Active
+                      </div>
+                      <div class="legend-item">
+                        <span class="legend-dot legend-closed"></span> Closed
+                      </div>
+
+                      <button type="button" class="view-toggle">
+                        <span id="viewToggleLabel">Weekly</span>
+                        <i class="fa-solid fa-chevron-down ms-1"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="chart-body">
+                    <canvas id="assignmentsChart" height="330"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BOTTOM 3 CARDS -->
+            <div class="row mb-3">
+              <!-- Top 10 States -->
+              <div class="col-md-4 mb-3">
+                <div class="card list-card">
+                  <div class="list-header">
+                    <h6>Top 10 States</h6>
+                  </div>
+                  <ul class="list-body">
+                    <li>
+                      <div class="list-body-li-card-text">
+                        <span>1. </span>
+                      <span>State Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                        <div class="list-body-li-card-text">
+                        <span>2. </span>
+                      <span>State Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                       <div class="list-body-li-card-text">
+                        <span>3. </span>
+                      <span>State Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Top 10 Cities -->
+              <div class="col-md-4 mb-3">
+                <div class="card list-card">
+                  <div class="list-header">
+                    <h6>Top 10 Cities</h6>
+                  </div>
+                  <ul class="list-body">
+                    <li>
+                      <div class="list-body-li-card-text">
+                        <span>1. </span>
+                      <span>City Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                      <div class="list-body-li-card-text">
+                        <span>2. </span>
+                      <span>City Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                       <div class="list-body-li-card-text">
+                        <span>3. </span>
+                      <span>City Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Top 10 Inspectors -->
+              <div class="col-md-4 mb-3">
+                <div class="card list-card">
+                  <div class="list-header">
+                    <h6>Top 10 Inspectors</h6>
+                  </div>
+                  <ul class="list-body">
+                    <li>
+                      <div class="list-body-li-card-text">
+                        <span>1. </span>
+                      <span>Inspector Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                         <div class="list-body-li-card-text">
+                        <span>2. </span>
+                      <span>Inspector Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                    <li>
+                         <div class="list-body-li-card-text">
+                        <span>3. </span>
+                      <span>Inspector Name</span>
+                      </div>
+                      <span class="list-count">12</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--end offcanvas-body-->
+      </div>
+
+      <!-- ===== STYLES (dashboard specific) ===== -->
+      <style>
+        .dashboard-wrapper {
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
+
+        .dashboard-title {
+          font-size: 22px;
+          font-weight: 600;
+          color: #212121;
+          margin-bottom: 2px;
+        }
+
+        .dashboard-subtitle {
+          font-size: 13px;
+          color: #9ca3af;
+          margin-bottom: 10px;
+        }
+
+        .stats-card {
+          background: #ffffff;
+          border-radius: 8px;
+          border: 1px solid #edf0f7;
+          padding: 14px 18px;
+        }
+
+        .stats-card-lg {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 120px;
+        }
+
+        .stats-today {
+          background: #e9f9f2;
+          border-color: #e0f3ec;
+        }
+
+        .stats-tomorrow {
+          background: #ffe9dd;
+          border-color: #ffd9c5;
+        }
+
+        .stats-small {
+          min-height: 100px;
+        }
+
+        .stats-card-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 8px;
+        }
+
+        .stats-title {
+          font-size: 13px;
+          font-weight: 600;
+          color: #111827;
+          margin: 0;
+        }
+
+        .icon-wrap {
+          width: 40px;
+          height: 40px;
+          border-radius: 08px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+        }
+
+        .icon-green {
+          background: #14b371;
+
+        }
+
+
+        .icon-green img {
+          width: 22px;
+          height: 22px;
+        }
+
+        .icon-orange {
+          background: #ffe2cd;
+          color: #ff7d2a;
+        }
+
+        .icon-blue {
+          background: #dde7ff;
+          color: #1e3a8a;
+        }
+
+        .icon-red {
+          background: #ffe0e0;
+          color: #f04438;
+        }
+
+        .stats-body {
+          display: flex;
+          justify-content: flex-start;
+          gap: 40px;
+        }
+
+        .stats-body.single {
+          justify-content: flex-start;
+          gap: 0;
+        }
+
+        .stats-label {
+          font-size: 11px;
+          color: #444444;
+        }
+
+        .stats-value {
+          font-size: 22px;
+          font-weight: 600;
+          color: #111827;
+          margin-top: 4px;
+        }
+
+        /* Chart card */
+        .chart-card {
+          border-radius: 8px;
+          border: 1px solid #edf0f7;
+          padding: 16px 18px 10px;
+        }
+
+        .chart-header {
+          margin-bottom: 10px;
+        }
+
+        .chart-title {
+          font-size: 20px;
+          font-weight: 600;
+          color: #111827;
+        }
+
+        .badge-count {
+          background: #1f3a8a;
+          color: #fff;
+          border-radius: 5px;
+          padding: 3px 20px;
+          font-size: 17px;
+          font-weight: 500;
+        }
+
+        .chart-legend .legend-item {
+          font-size: 15px;
+          color: #6b7280;
+          margin-right: 14px;
+          display: flex;
+          align-items: center;
+          font-weight: lighter;
+          gap: 5px;
+        }
+
+        .legend-dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 999px;
+          display: inline-block;
+        }
+
+        .legend-active {
+          background: #1f3a8a;
+        }
+
+        .legend-closed {
+          background: #ff7d2a;
+        }
+
+        .view-toggle {
+          border-radius: 999px;
+          border: none;
+          background: #ffffff;
+          padding: 4px 10px;
+          font-size: 15px;
+          color: #6b7280;
+          display: inline-flex;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        .chart-body {
+          padding-top: 4px;
+        }
+
+        /* bottom list cards */
+        .list-card {
+          border-radius: 8px;
+          border: 1px solid #edf0f7;
+        }
+
+        .list-header {
+          padding: 12px 16px 6px;
+        }
+
+        .list-header h6 {
+          font-size: 20px !important;
+          font-weight: 600;
+          margin: 0;
+          color: #111827;
+        }
+
+        .list-body {
+          list-style: none;
+          margin: 10px 0 0 0 !important;
+          padding: 4px 16px 12px;
+gap: 15px !important;
+        }
+.list-body-li-card-text{
+  display: flex;
+gap: 30px !important;
+}
+        .list-body li {
+          display: flex;
+          /* justify-content: space-between; */
+          align-items: center;
+          font-size: 17px !important;
+          padding: 6px 0;
+          font-weight: lighter !important;
+          border-bottom: 1px solid #f3f4f6;
+          gap: 20px !important;
+        }
+
+        .list-body li:last-child {
+          border-bottom: none;
+        }
+
+        .list-count {
+          font-weight: 500  !important;
+          color: #111827;
+        }
+
+
+        /* OUTER CARDS */
+        .list-card {
+          border-radius: 10px;
+          border: 1px solid #edf0f7;
+          background: #ffffff;
+          padding: 14px 18px 16px;
+          transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+        }
+
+        .list-card:hover {
+          border-color: #d4d9e6;
+          box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+          transform: translateY(-2px);
+        }
+
+        /* TITLE */
+        .list-header {
+          padding-bottom: 8px;
+        }
+
+        .list-header h6 {
+          font-size: 14px;
+          font-weight: 600;
+          color: #111827;
+          margin: 0;
+        }
+
+        /* LIST ROWS */
+        .list-body {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .list-body li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 13px;
+          color: #111827;
+          padding: 8px 14px;
+          border-radius: 4px;
+          background: #f4f4f5;
+          /* light grey block jaisa screenshot */
+        }
+
+        .list-body li span:first-child {
+          /* "1. State Name" side */
+          white-space: nowrap;
+        }
+
+        .list-count {
+          font-weight: 600;
+          color: #111827;
+        }
+
+
+        /* Responsive tweaks */
+        @media (max-width: 767.98px) {
+          .stats-body {
+            gap: 24px;
+          }
+
+          .chart-header {
+            flex-direction: column;
+            align-items: flex-start !important;
+            gap: 8px;
+          }
+
+          .chart-legend {
+            width: 100%;
+            justify-content: space-between;
+          }
+        }
+      </style>
+
+      <!-- ===== SCRIPTS (Chart.js) ===== -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        (function () {
+          const ctx = document.getElementById('assignmentsChart').getContext('2d');
+
+          // Weekly data (as screenshot vibe)
+          const weeklyLabels = ['Mon', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+          const weeklyActive = [20, 35, 20, 35, 20, 30, 40];
+          const weeklyClosed = [12, 18, 50, 12, 48, 20, 55];
+
+          // Example monthly data (for toggle)
+          const monthlyLabels = ['W1', 'W2', 'W3', 'W4'];
+          const monthlyActive = [70, 90, 85, 95];
+          const monthlyClosed = [60, 80, 75, 88];
+
+          let currentView = 'weekly';
+
+          const chartConfig = {
+            type: 'bar',
+            data: {
+              labels: weeklyLabels,
+              datasets: [
+                {
+                  label: 'Active',
+                  data: weeklyActive,
+                  backgroundColor: '#1f3a8a',
+                  borderRadius: 4,
+                  barPercentage: 0.5,
+                  categoryPercentage: 0.5
+                },
+                {
+                  label: 'Closed',
+                  data: weeklyClosed,
+                  backgroundColor: '#ff7d2a',
+                  borderRadius: 4,
+                  barPercentage: 0.5,
+                  categoryPercentage: 0.5
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  backgroundColor: '#111827',
+                  titleColor: '#fff',
+                  bodyColor: '#f9fafb'
+                }
+              },
+              scales: {
+                x: {
+                  grid: { display: false },
+                  ticks: {
+                    font: { size: 10 }
+                  }
+                },
+                y: {
+                  grid: {
+                    color: '#e5e7eb'
+                  },
+                  beginAtZero: true,
+                  ticks: {
+                    stepSize: 10,
+                    font: { size: 10 }
+                  }
+                }
+              }
+            }
+          };
+
+          const assignmentsChart = new Chart(ctx, chartConfig);
+
+          // Toggle Weekly / Monthly
+          const toggleBtn = document.querySelector('.view-toggle');
+          const toggleLabel = document.getElementById('viewToggleLabel');
+
+          if (toggleBtn) {
+            toggleBtn.addEventListener('click', function () {
+              if (currentView === 'weekly') {
+                // Switch to monthly
+                assignmentsChart.data.labels = monthlyLabels;
+                assignmentsChart.data.datasets[0].data = monthlyActive;
+                assignmentsChart.data.datasets[1].data = monthlyClosed;
+                currentView = 'monthly';
+                toggleLabel.textContent = 'Monthly';
+              } else {
+                // Back to weekly
+                assignmentsChart.data.labels = weeklyLabels;
+                assignmentsChart.data.datasets[0].data = weeklyActive;
+                assignmentsChart.data.datasets[1].data = weeklyClosed;
+                currentView = 'weekly';
+                toggleLabel.textContent = 'Weekly';
+              }
+              assignmentsChart.update();
+            });
+          }
+        })();
+      </script>
+
     </div>
-    <!--end Rightbar/offcanvas-->
-    <!--end Rightbar-->
-    <!--Start Footer-->
+    <!--end row-->
+  </div>
 
 
-    <!--end footer-->
+
+  <!-- container -->
+
+  <!--Start Rightbar-->
+  <!--Start Rightbar/offcanvas-->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+    <div class="offcanvas-header border-bottom justify-content-between">
+      <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+      <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
+        aria-label="Close"></button>
     </div>
-    <!-- end page content -->
+    <div class="offcanvas-body">
+      <h6>Account Settings</h6>
+      <div class="p-2 text-start mt-3">
+        <div class="form-check form-switch mb-2">
+          <input class="form-check-input" type="checkbox" id="settings-switch1" />
+          <label class="form-check-label" for="settings-switch1">Auto updates</label>
+        </div>
+        <!--end form-switch-->
+        <div class="form-check form-switch mb-2">
+          <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
+          <label class="form-check-label" for="settings-switch2">Location Permission</label>
+        </div>
+        <!--end form-switch-->
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="settings-switch3" />
+          <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+        </div>
+        <!--end form-switch-->
+      </div>
+      <!--end /div-->
+      <h6>General Settings</h6>
+      <div class="p-2 text-start mt-3">
+        <div class="form-check form-switch mb-2">
+          <input class="form-check-input" type="checkbox" id="settings-switch4" />
+          <label class="form-check-label" for="settings-switch4">Show me Online</label>
+        </div>
+        <!--end form-switch-->
+        <div class="form-check form-switch mb-2">
+          <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
+          <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+        </div>
+        <!--end form-switch-->
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="settings-switch6" />
+          <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+        </div>
+        <!--end form-switch-->
+      </div>
+      <!--end /div-->
     </div>
-    <!-- end page-wrapper -->
+    <!--end offcanvas-body-->
+  </div>
+  <!--end Rightbar/offcanvas-->
+  <!--end Rightbar-->
+  <!--Start Footer-->
 
-    <!-- Javascript  -->
-    <!-- vendor js -->
 
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
-    <script src="assets/libs/huebee/huebee.pkgd.min.js"></script>
-    <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
-    <script src="assets/js/moment.js"></script>
-    <script src="assets/libs/imask/imask.min.js"></script>
-    <script src="assets/js/pages/forms-advanced.js"></script>
-    <script src="assets/js/datepicker.js"></script>
-    <script src="assets/js/app.js"></script>
+  <!--end footer-->
+  </div>
+  <!-- end page content -->
+  </div>
+  <!-- end page-wrapper -->
+
+  <!-- Javascript  -->
+  <!-- vendor js -->
+
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/simplebar/simplebar.min.js"></script>
+  <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
+  <script src="assets/libs/huebee/huebee.pkgd.min.js"></script>
+  <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+  <script src="assets/js/moment.js"></script>
+  <script src="assets/libs/imask/imask.min.js"></script>
+  <script src="assets/js/pages/forms-advanced.js"></script>
+  <script src="assets/js/datepicker.js"></script>
+  <script src="assets/js/app.js"></script>
 
 </body>
 <!--end body-->

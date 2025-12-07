@@ -601,7 +601,7 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid px-1">
+      <div class="container-fluid">
         <div class="top-bar">
           <div class="row">
             <div class="col-sm-12">
@@ -626,8 +626,8 @@
         </div>
 
         <!-- Table -->
-        <div class="table-wrapper">
-          <table>
+        <div class="table-wrapper delete">
+          <table class="inspector-table">
             <thead>
               <tr>
                 <th>ID</th>
@@ -639,7 +639,7 @@
               </tr>
             </thead>
 
-            <tbody id="companiesTable">
+            <tbody id="allInspectorsTable">
               <!-- ROW 1 -->
               <tr>
                 <td>9999</td>
@@ -647,102 +647,95 @@
                 <td>2134</td>
                 <td>4356</td>
                 <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
+                <td class="action-col d-flex gap-2">
+                  <button type="button" class="table1-btn">Edit</button>
+                  <button type="submit" class="table2-btn">Delete</button>
                 </td>
               </tr>
 
-              <!-- SAMPLE DUPLICATE ROWS -->
+              <!-- ROW 2 -->
               <tr>
                 <td>9999</td>
                 <td>ABC Insure</td>
                 <td>2134</td>
                 <td>4356</td>
                 <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
+                <td class="action-col d-flex gap-2">
+                  <button type="button" class="table1-btn">Edit</button>
+                  <button type="submit" class="table2-btn">Delete</button>
                 </td>
               </tr>
 
+              <!-- ROW 3 -->
               <tr>
                 <td>9999</td>
                 <td>ABC Insure</td>
                 <td>2134</td>
                 <td>4356</td>
                 <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
+                <td class="action-col d-flex gap-2">
+                  <button type="button" class="table1-btn">Edit</button>
+                  <button type="submit" class="table2-btn">Delete</button>
                 </td>
               </tr>
 
+              <!-- ROW 4 -->
               <tr>
                 <td>9999</td>
                 <td>ABC Insure</td>
                 <td>2134</td>
                 <td>4356</td>
                 <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
+                <td class="action-col d-flex gap-2">
+                  <button type="button" class="table1-btn">Edit</button>
+                  <button type="submit" class="table2-btn">Delete</button>
                 </td>
               </tr>
 
+              <!-- ROW 5 -->
               <tr>
                 <td>9999</td>
                 <td>ABC Insure</td>
                 <td>2134</td>
                 <td>4356</td>
                 <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
+                <td class="action-col d-flex gap-2">
+                  <button type="button" class="table1-btn">Edit</button>
+                  <button type="submit" class="table2-btn">Delete</button>
                 </td>
               </tr>
 
+              <!-- ROW 6 -->
               <tr>
                 <td>9999</td>
                 <td>ABC Insure</td>
                 <td>2134</td>
                 <td>4356</td>
                 <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
-                </td>
-              </tr>
-
-              <tr>
-                <td>9999</td>
-                <td>ABC Insure</td>
-                <td>2134</td>
-                <td>4356</td>
-                <td>3245</td>
-                <td>
-                  <button class="btn-edit table1-btn">Edit</button>
-                  <button class="btn-delete table2-btn">Delete</button>
+                <td class="action-col d-flex gap-2">
+                  <button type="button" class="table1-btn">Edit</button>
+                  <button type="submit" class="table2-btn">Delete</button>
                 </td>
               </tr>
             </tbody>
           </table>
 
-          <!-- FOOTER + PAGINATION -->
+          <!-- FOOTER + PAGINATION (same as your existing one) -->
           <div class="table-footer d-flex justify-content-between align-items-center">
             <span class="table-info">Showing 1-100 from 660</span>
             <div class="pagination">
-              <button class="page-btn">&lsaquo;</button>
+              <button class="page-btn page-btn-navigator">&lsaquo;</button>
               <button class="page-btn active">1</button>
               <button class="page-btn">2</button>
               <button class="page-btn">3</button>
               <button class="page-btn">4</button>
               <button class="page-btn">5</button>
               <button class="page-btn">…</button>
-              <button class="page-btn">&rsaquo;</button>
+              <button class="page-btn page-btn-navigator">&rsaquo;</button>
             </div>
           </div>
         </div>
+
       </div>
     </div>
     <!--end row-->

@@ -11,10 +11,14 @@
 
   <!-- App favicon -->
   <link rel="shortcut icon" href="assets/images/favicon.ico" />
-
-  <link href="assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
-  <link href="assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+    integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- App css -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -288,7 +292,8 @@
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-end py-0">
-              <a class="dropdown-item" href="profile.html"><i class="las la-user fs-18 me-1 align-text-bottom"></i>
+              <a class="dropdown-item" href="profile.html"><i
+                  class="las la-user fs-18 me-1 align-text-bottom"></i>
                 Update Profile</a>
               <div class="dropdown-divider mb-0"></div>
               <a class="dropdown-item text-danger" href="auth-login.html"><i
@@ -325,11 +330,12 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-auto w-100">
             <li class="nav-item">
-              <a class="nav-link d-flex gap-2" href="./dashboard.html" role="button" aria-controls="sidebarDashboard">
+              <a class="nav-link d-flex gap-2" href="dashboard.html" role="button"
+                aria-expanded="false" aria-controls="sidebarDashboard">
                 <img src="./assets/images/chart-pie-alt.svg" width="20px" alt="" />
                 <span>Statistics</span>
               </a>
-
+             
             </li>
             <!-- Static -->
             <li class="nav-item">
@@ -491,6 +497,7 @@
 
                       All Companies</a>
                   </li>
+
                 </ul>
               </div>
             </li>
@@ -533,14 +540,13 @@
                 </ul>
               </div>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link d-flex gap-2" href="login.html" role="button" aria-expanded="false"
-                aria-controls="sidebarLogout">
+              <a class="nav-link d-flex gap-2" href="login.html" role="button"
+                aria-expanded="false" aria-controls="sidebarLogout">
                 <img src="./assets/images/sign-out-alt 1.svg" width="20px" alt="" />
                 <span>Logout</span>
               </a>
-
+            
             </li>
 
             <!-- <li class="nav-item">
@@ -602,602 +608,177 @@
   <div class="page-wrapper">
     <!-- Page Content-->
     <div class="page-content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
-              <div class="closed-topbar">
-                <h2 class="color d-lg-none d-block">Manage Profile</h2>
-                <h2 class="color-dark d-none d-lg-block">Manage Profile</h2>
+  <div class="container-fluid photos-gen-wrapper">
+  <div class="row justify-content-center">
+    <div class="col-12 col-xl-11">
+
+      <!-- Page Title -->
+      <h2 class="photos-gen-title text-center mb-2 mt-3">Photos PDF Generation</h2>
+
+      <!-- Section label -->
+      <p class="photos-gen-label mb-1">Inspection Photos</p>
+
+      <!-- Cards Row -->
+      <div class="photos-gen-row" id="photosGenRow">
+        <!-- CARD 1 -->
+        <div class="photos-gen-card" data-photo-id="1">
+          <img src="https://images.unsplash.com/photo-1764889289957-242fc538a90c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="photos-gen-img" alt="Leaked pipe">
+          <div class="photos-gen-card-body">
+            <h5 class="photos-gen-card-title">Leaked pipe</h5>
+            <p class="photos-gen-card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo
+            </p>
+            <label class="photos-gen-select">
+              <input type="checkbox" class="photo-select-checkbox">
+              <span>Select</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+          <div class="photos-gen-card" data-photo-id="2">
+          <img src="https://images.unsplash.com/photo-1764889289957-242fc538a90c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="photos-gen-img" alt="Leaked pipe">
+
+          <div class="photos-gen-card-body">
+            <h5 class="photos-gen-card-title">Leaked pipe</h5>
+            <p class="photos-gen-card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo
+            </p>
+            <label class="photos-gen-select">
+              <input type="checkbox" class="photo-select-checkbox">
+              <span>Select</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="photos-gen-card" data-photo-id="3">
+          <img src="https://images.unsplash.com/photo-1764889289957-242fc538a90c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="photos-gen-img" alt="Leaked pipe">
+          <div class="photos-gen-card-body">
+            <h5 class="photos-gen-card-title">Leaked pipe</h5>
+            <p class="photos-gen-card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo
+            </p>
+            <label class="photos-gen-select">
+              <input type="checkbox" class="photo-select-checkbox">
+              <span>Select</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="photos-gen-card" data-photo-id="4">
+          <img src="https://images.unsplash.com/photo-1764889289957-242fc538a90c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="photos-gen-img" alt="Leaked pipe">
+          <div class="photos-gen-card-body">
+            <h5 class="photos-gen-card-title">Leaked pipe</h5>
+            <p class="photos-gen-card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo
+            </p>
+            <label class="photos-gen-select">
+              <input type="checkbox" class="photo-select-checkbox">
+              <span>Select</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- aur cards chahiye to same structure copy kar lo -->
+
+      </div>
+
+      <!-- Generate PDF button -->
+      <div class="d-flex justify-content-center mt-4">
+        <button class="btn photos-gen-btn" id="btnGeneratePdf">
+          Generate PDF
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <!-- container -->
+
+      <!--Start Rightbar-->
+      <!--Start Rightbar/offcanvas-->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+        <div class="offcanvas-header border-bottom justify-content-between">
+          <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+          <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <h6>Account Settings</h6>
+          <div class="p-2 text-start mt-3">
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch1" />
+              <label class="form-check-label" for="settings-switch1">Auto updates</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
+              <label class="form-check-label" for="settings-switch2">Location Permission</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="settings-switch3" />
+              <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+            </div>
+            <!--end form-switch-->
+          </div>
+          <!--end /div-->
+          <h6>General Settings</h6>
+          <div class="p-2 text-start mt-3">
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch4" />
+              <label class="form-check-label" for="settings-switch4">Show me Online</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
+              <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+            </div>
+            <!--end form-switch-->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="settings-switch6" />
+              <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+            </div>
+            <!--end form-switch-->
+          </div>
+          <!--end /div-->
+        </div>
+        <!--end offcanvas-body-->
+      </div>
+      <!--end Rightbar/offcanvas-->
+      <!--end Rightbar-->
+
+
+      <!--Start Footer-->
+
+      <!-- <footer class="footer text-center text-sm-start d-print-none">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="card mb-0 rounded-bottom-0">
+                <div class="card-body">
+                  <p class="text-muted mb-0">
+                    ©
+                    <script>
+                      document.write(new Date().getFullYear());
+                    </script>
+                    Leak Detector
+                    <span class="text-muted d-none d-sm-inline-block float-end">
+                      Develop by innovationpixel</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!--end title row-->
+      </footer> -->
 
-        <div class="row">
-          <form class="assignment-form w-100">
-
-            <div class="row">
-              <!-- Name -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Name <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Name">
-                </div>
-              </div>
-
-              <!-- Email -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Email <span class="starColor">*</span></label>
-                  <input type="email" class="" placeholder="Enter Email">
-                </div>
-              </div>
-
-              <!-- Phone -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Phone <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Phone">
-                </div>
-              </div>
-
-              <!-- Password -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Password <span class="starColor">*</span></label>
-                  <input type="password" class="" placeholder="Enter Password">
-                </div>
-              </div>
-
-              <!-- Company Name -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Company Name <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Name">
-                </div>
-              </div>
-
-              <!-- Company Email -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Company Email <span class="starColor">*</span></label>
-                  <input type="email" class="" placeholder="Enter Email">
-                </div>
-              </div>
-
-              <!-- Company Phone -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Company Phone <span class="starColor">*</span></label>
-                  <input type="text" class="" placeholder="Enter Phone">
-                </div>
-              </div>
-
-              <!-- Time Zone -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Time Zone <span class="starColor">*</span></label>
-                  <select class="form-select">
-                    <option>Select Time Zone</option>
-                    <option>(UTC -05:00) Eastern Time</option>
-                    <option>(UTC -06:00) Central Time</option>
-                    <option>(UTC -08:00) Pacific Time</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Company Logo -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Company Logo <span class="starColor">*</span></label>
-                  <div class="file-upload">
-                    <label class="upload-btn">
-                      Chosen File
-                      <input type="file" class="file-input d-none">
-                    </label>
-                    <span class="file-name">No Chosen File</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Company Icon -->
-              <div class="col-md-6 col-12 mb-3">
-                <div class="form-group">
-                  <label>Company Icon <span class="starColor">*</span></label>
-                  <div class="file-upload">
-                    <label class="upload-btn">
-                      Chosen File
-                      <input type="file" class="file-input d-none">
-                    </label>
-                    <span class="file-name">No Chosen File</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Buttons row -->
-            <div class="button-row mt-3 d-flex justify-content-end">
-              <button type="button" class="cancel-btn me-2">Cancel</button>
-              <button type="submit" class="create-btn">Update Profile</button>
-            </div>
-
-          </form>
-        </div>
-      </div>
-
-
-      <!-- ===== STYLES (dashboard specific) ===== -->
-      <style>
-        .dashboard-wrapper {
-          padding-top: 10px;
-          padding-bottom: 20px;
-        }
-
-        .dashboard-title {
-          font-size: 22px;
-          font-weight: 600;
-          color: #212121;
-          margin-bottom: 2px;
-        }
-
-        .dashboard-subtitle {
-          font-size: 13px;
-          color: #9ca3af;
-          margin-bottom: 10px;
-        }
-
-        .stats-card {
-          background: #ffffff;
-          border-radius: 8px;
-          border: 1px solid #edf0f7;
-          padding: 14px 18px;
-        }
-
-        .stats-card-lg {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          min-height: 120px;
-        }
-
-        .stats-today {
-          background: #e9f9f2;
-          border-color: #e0f3ec;
-        }
-
-        .stats-tomorrow {
-          background: #ffe9dd;
-          border-color: #ffd9c5;
-        }
-
-        .stats-small {
-          min-height: 100px;
-        }
-
-        .stats-card-header {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-bottom: 8px;
-        }
-
-        .stats-title {
-          font-size: 13px;
-          font-weight: 600;
-          color: #111827;
-          margin: 0;
-        }
-
-        .icon-wrap {
-          width: 32px;
-          height: 32px;
-          border-radius: 999px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 14px;
-        }
-
-        .icon-green {
-          background: #d2f5e5;
-          color: #1d9c68;
-        }
-
-        .icon-orange {
-          background: #ffe2cd;
-          color: #ff7d2a;
-        }
-
-        .icon-blue {
-          background: #dde7ff;
-          color: #1e3a8a;
-        }
-
-        .icon-red {
-          background: #ffe0e0;
-          color: #f04438;
-        }
-
-        .stats-body {
-          display: flex;
-          justify-content: flex-start;
-          gap: 40px;
-        }
-
-        .stats-body.single {
-          justify-content: flex-start;
-          gap: 0;
-        }
-
-        .stats-label {
-          font-size: 11px;
-          color: #9ca3af;
-        }
-
-        .stats-value {
-          font-size: 22px;
-          font-weight: 600;
-          color: #111827;
-          margin-top: 4px;
-        }
-
-        /* Chart card */
-        .chart-card {
-          border-radius: 8px;
-          border: 1px solid #edf0f7;
-          padding: 16px 18px 10px;
-        }
-
-        .chart-header {
-          margin-bottom: 10px;
-        }
-
-        .chart-title {
-          font-size: 14px;
-          font-weight: 600;
-          color: #111827;
-        }
-
-        .badge-count {
-          background: #1f3a8a;
-          color: #fff;
-          border-radius: 999px;
-          padding: 3px 10px;
-          font-size: 11px;
-          font-weight: 500;
-        }
-
-        .chart-legend .legend-item {
-          font-size: 11px;
-          color: #6b7280;
-          margin-right: 14px;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-        }
-
-        .legend-dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 999px;
-          display: inline-block;
-        }
-
-        .legend-active {
-          background: #1f3a8a;
-        }
-
-        .legend-closed {
-          background: #ff7d2a;
-        }
-
-        .view-toggle {
-          border-radius: 999px;
-          border: 1px solid #e5e7eb;
-          background: #ffffff;
-          padding: 4px 10px;
-          font-size: 11px;
-          color: #6b7280;
-          display: inline-flex;
-          align-items: center;
-          cursor: pointer;
-        }
-
-        .chart-body {
-          padding-top: 4px;
-        }
-
-        /* bottom list cards */
-        .list-card {
-          border-radius: 8px;
-          border: 1px solid #edf0f7;
-        }
-
-        .list-header {
-          padding: 12px 16px 6px;
-        }
-
-        .list-header h6 {
-          font-size: 13px;
-          font-weight: 600;
-          margin: 0;
-          color: #111827;
-        }
-
-        .list-body {
-          list-style: none;
-          margin: 0;
-          padding: 4px 16px 12px;
-        }
-
-        .list-body li {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 12px;
-          padding: 6px 0;
-          border-bottom: 1px solid #f3f4f6;
-        }
-
-        .list-body li:last-child {
-          border-bottom: none;
-        }
-
-        .list-count {
-          font-weight: 600;
-          color: #111827;
-        }
-
-
-        /* OUTER CARDS */
-        .list-card {
-          border-radius: 10px;
-          border: 1px solid #edf0f7;
-          background: #ffffff;
-          padding: 14px 18px 16px;
-          transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-        }
-
-        .list-card:hover {
-          border-color: #d4d9e6;
-          box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-          transform: translateY(-2px);
-        }
-
-        /* TITLE */
-        .list-header {
-          padding-bottom: 8px;
-        }
-
-        .list-header h6 {
-          font-size: 14px;
-          font-weight: 600;
-          color: #111827;
-          margin: 0;
-        }
-
-        /* LIST ROWS */
-        .list-body {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
-
-        .list-body li {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 13px;
-          color: #111827;
-          padding: 8px 14px;
-          border-radius: 4px;
-          background: #f4f4f5;
-          /* light grey block jaisa screenshot */
-        }
-
-        .list-body li span:first-child {
-          /* "1. State Name" side */
-          white-space: nowrap;
-        }
-
-        .list-count {
-          font-weight: 600;
-          color: #111827;
-        }
-
-
-        /* Responsive tweaks */
-        @media (max-width: 767.98px) {
-          .stats-body {
-            gap: 24px;
-          }
-
-          .chart-header {
-            flex-direction: column;
-            align-items: flex-start !important;
-            gap: 8px;
-          }
-
-          .chart-legend {
-            width: 100%;
-            justify-content: space-between;
-          }
-        }
-      </style>
-
-      <!-- ===== SCRIPTS (Chart.js) ===== -->
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script>
-        (function () {
-          const ctx = document.getElementById('assignmentsChart').getContext('2d');
-
-          // Weekly data (as screenshot vibe)
-          const weeklyLabels = ['Mon', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
-          const weeklyActive = [20, 35, 20, 35, 20, 30, 40];
-          const weeklyClosed = [12, 18, 50, 12, 48, 20, 55];
-
-          // Example monthly data (for toggle)
-          const monthlyLabels = ['W1', 'W2', 'W3', 'W4'];
-          const monthlyActive = [70, 90, 85, 95];
-          const monthlyClosed = [60, 80, 75, 88];
-
-          let currentView = 'weekly';
-
-          const chartConfig = {
-            type: 'bar',
-            data: {
-              labels: weeklyLabels,
-              datasets: [
-                {
-                  label: 'Active',
-                  data: weeklyActive,
-                  backgroundColor: '#1f3a8a',
-                  borderRadius: 4,
-                  barPercentage: 0.5,
-                  categoryPercentage: 0.5
-                },
-                {
-                  label: 'Closed',
-                  data: weeklyClosed,
-                  backgroundColor: '#ff7d2a',
-                  borderRadius: 4,
-                  barPercentage: 0.5,
-                  categoryPercentage: 0.5
-                }
-              ]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              plugins: {
-                legend: { display: false },
-                tooltip: {
-                  backgroundColor: '#111827',
-                  titleColor: '#fff',
-                  bodyColor: '#f9fafb'
-                }
-              },
-              scales: {
-                x: {
-                  grid: { display: false },
-                  ticks: {
-                    font: { size: 10 }
-                  }
-                },
-                y: {
-                  grid: {
-                    color: '#e5e7eb'
-                  },
-                  beginAtZero: true,
-                  ticks: {
-                    stepSize: 10,
-                    font: { size: 10 }
-                  }
-                }
-              }
-            }
-          };
-
-          const assignmentsChart = new Chart(ctx, chartConfig);
-
-          // Toggle Weekly / Monthly
-          const toggleBtn = document.querySelector('.view-toggle');
-          const toggleLabel = document.getElementById('viewToggleLabel');
-
-          if (toggleBtn) {
-            toggleBtn.addEventListener('click', function () {
-              if (currentView === 'weekly') {
-                // Switch to monthly
-                assignmentsChart.data.labels = monthlyLabels;
-                assignmentsChart.data.datasets[0].data = monthlyActive;
-                assignmentsChart.data.datasets[1].data = monthlyClosed;
-                currentView = 'monthly';
-                toggleLabel.textContent = 'Monthly';
-              } else {
-                // Back to weekly
-                assignmentsChart.data.labels = weeklyLabels;
-                assignmentsChart.data.datasets[0].data = weeklyActive;
-                assignmentsChart.data.datasets[1].data = weeklyClosed;
-                currentView = 'weekly';
-                toggleLabel.textContent = 'Weekly';
-              }
-              assignmentsChart.update();
-            });
-          }
-        })();
-      </script>
-
+      <!--end footer-->
     </div>
-    <!--end row-->
-  </div>
-
-
-
-  <!-- container -->
-
-  <!--Start Rightbar-->
-  <!--Start Rightbar/offcanvas-->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
-    <div class="offcanvas-header border-bottom justify-content-between">
-      <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
-      <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas"
-        aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <h6>Account Settings</h6>
-      <div class="p-2 text-start mt-3">
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch1" />
-          <label class="form-check-label" for="settings-switch1">Auto updates</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch2" checked />
-          <label class="form-check-label" for="settings-switch2">Location Permission</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="settings-switch3" />
-          <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
-        </div>
-        <!--end form-switch-->
-      </div>
-      <!--end /div-->
-      <h6>General Settings</h6>
-      <div class="p-2 text-start mt-3">
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch4" />
-          <label class="form-check-label" for="settings-switch4">Show me Online</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch mb-2">
-          <input class="form-check-input" type="checkbox" id="settings-switch5" checked />
-          <label class="form-check-label" for="settings-switch5">Status visible to all</label>
-        </div>
-        <!--end form-switch-->
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="settings-switch6" />
-          <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
-        </div>
-        <!--end form-switch-->
-      </div>
-      <!--end /div-->
-    </div>
-    <!--end offcanvas-body-->
-  </div>
-  <!--end Rightbar/offcanvas-->
-  <!--end Rightbar-->
-  <!--Start Footer-->
-
-
-  <!--end footer-->
-  </div>
-  <!-- end page content -->
+    <!-- end page content -->
   </div>
   <!-- end page-wrapper -->
 
@@ -1206,14 +787,78 @@
 
   <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/libs/simplebar/simplebar.min.js"></script>
-  <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
-  <script src="assets/libs/huebee/huebee.pkgd.min.js"></script>
   <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
-  <script src="assets/js/moment.js"></script>
-  <script src="assets/libs/imask/imask.min.js"></script>
-  <script src="assets/js/pages/forms-advanced.js"></script>
+  <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+  <script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
+  <script src="assets/js/pages/index.init.js"></script>
+  <script src="assets/js/DynamicSelect.js"></script>
   <script src="assets/js/datepicker.js"></script>
   <script src="assets/js/app.js"></script>
+
+  <script>
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+      let filter = this.value.toLowerCase();
+      let rows = document.querySelectorAll("#assignmentTable tr");
+
+      rows.forEach(row => {
+        let text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+
+  </script>
+  <script>
+    // Toggle filter panel
+    document.getElementById("filterToggle").onclick = function (e) {
+      e.stopPropagation(); // Isse toggle click pe outside-close fire nahi hoga
+      const panel = document.getElementById("filterPanel");
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    };
+
+    // Close when clicking outside
+    document.addEventListener("click", function (e) {
+      const panel = document.getElementById("filterPanel");
+      const toggleBtn = document.getElementById("filterToggle");
+
+      // Agar panel hidden hai to kuch mat karo
+      if (panel.style.display !== "block") return;
+
+      // Agar click panel ke andar ya toggle button par hai → ignore
+      if (panel.contains(e.target) || toggleBtn.contains(e.target)) {
+        return;
+      }
+
+      // Otherwise close panel
+      panel.style.display = "none";
+    });
+
+  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const btnGenerate = document.getElementById("btnGeneratePdf");
+
+    btnGenerate.addEventListener("click", function () {
+      const selected = Array.from(
+        document.querySelectorAll(".photo-select-checkbox")
+      )
+        .filter(cb => cb.checked)
+        .map(cb => cb.closest(".photos-gen-card").dataset.photoId);
+
+      if (selected.length === 0) {
+        alert("Please select at least one photo for PDF.");
+        return;
+      }
+
+      // Demo behaviour
+      alert("Generate PDF for photos IDs: " + selected.join(", "));
+      console.log("Selected photo IDs:", selected);
+
+      // yahan apni real PDF generation API call laga sakte ho:
+      // fetch('/api/generate-photo-pdf', { method: 'POST', body: JSON.stringify({ photoIds: selected }), headers: { 'Content-Type': 'application/json' } })
+    });
+  });
+</script>
+
 
 </body>
 <!--end body-->
