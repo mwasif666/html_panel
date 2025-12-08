@@ -503,24 +503,6 @@ td {
   color: #ff4d4f;
 }
 
-/* inputs */
-.assignment-detail-card .form-control,
-.assignment-detail-card .form-select,
-.assignment-detail-card textarea {
-  font-size: 14px;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-  padding: 9px 12px;
-  background-color: #f9fafb;
-}
-
-.assignment-detail-card .form-control:focus,
-.assignment-detail-card .form-select:focus,
-.assignment-detail-card textarea:focus {
-  border-color: #fe5e15;
-  box-shadow: 0 0 0 0.15rem rgba(255, 122, 41, 0.2);
-}
-
 /* date icon inside input */
 .ad-input-with-icon {
   position: relative;
@@ -895,24 +877,30 @@ td {
   margin-bottom: 12px;
   font-weight: 500;
 }
+.doc-actions {
+  display: flex;
+  justify-content: space-between;
+}
 
 .doc-actions .btn {
   width: 48%;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
-  padding: 6px 0;
-  border-radius: 6px;
+  padding: 10px 0;
+  border-radius: 10px;
 }
 
 .doc-delete {
   border: 1px solid #ff4d4f;
   color: #ff4d4f;
   background: none;
+  background-color: #fff2f2;
 }
 
 .doc-delete:hover {
-  background: #ff4d4f;
-  color: #ffffff;
+  background-color: #fff2f2;
+  color: #ff4d4f;
+  border: 1px solid #ff4d4f;
 }
 
 .doc-download {
