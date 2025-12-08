@@ -623,91 +623,101 @@
         <form class="leak-report-form">
           <!-- TOP 2-COLUMN GRID -->
           <div class="row">
-            <!-- LEFT COLUMN -->
-            <div class="col-md-6 col-12">
-              <!-- Date -->
-              <div class="form-group mb-3">
+            <!-- Date -->
+            <div class="col-md-6 col-6 mb-3">
+              <div class="form-group date-group">
                 <label>Date</label>
                 <div class="datepicker-wrapper w-100">
-                  <input type="text" id="notifStartDate" placeholder="12/4/2025" autocomplete="off" readonly />
-                  <div class="datepicker-icon" id="icon-notifStartDate">
-                    <span class="calendar-icon">
+                  <input type="text" id="notifStartDate" class="" placeholder="12/4/2025" autocomplete="off" readonly />
+                  <div class="datepicker-icon">
+                    <span class="calendar-icon" id="icon-notifStartDate">
                       <img src="/assets/images/datepicker.svg" alt="calendar" />
                     </span>
                   </div>
                 </div>
-              </div>
-
-              <!-- Insured Name -->
-              <div class="form-group mb-3">
-                <label>Insured Name</label>
-                <input type="text" id="lr_insured_name" class="leak-input" placeholder="Alex Mark" />
-              </div>
-
-              <!-- Date of Loss -->
-              <div class="form-group mb-3">
-                <label>Date</label>
-                <div class="datepicker-wrapper w-100">
-                  <input type="text" id="notifEndDate" placeholder="12/4/2025" autocomplete="off" readonly />
-                  <div class="datepicker-icon" id="icon-notifEndDate">
-                    <span class="calendar-icon">
-                      <img src="/assets/images/datepicker.svg" alt="calendar" />
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <style>
-                .calendar-icon img {
-                  /* margin-bottom: 21px !important; */
-                  margin-top: 0px;
-                }
-              </style>
-              <!-- City -->
-              <div class="form-group mb-3">
-                <label>City</label>
-                <input type="text" id="lr_city" class="leak-input" placeholder="123456789" />
-              </div>
-
-              <!-- Zip Code -->
-              <div class="form-group mb-3">
-                <label>Zip Code</label>
-                <input type="text" id="lr_zip" class="leak-input" placeholder="32456" />
               </div>
             </div>
 
-            <!-- RIGHT COLUMN -->
-            <div class="col-md-6 col-12">
-              <!-- Claim Number -->
-              <div class="form-group mb-3">
+            <!-- Claim Number -->
+            <div class="col-md-6 col-6 mb-3">
+              <div class="form-group">
                 <label>Claim Number</label>
-                <input type="text" id="lr_claim_number" class="leak-input" placeholder="143256" />
+                <input type="text" id="lr_claim_number" class="" placeholder="143256" />
               </div>
+            </div>
 
-              <!-- Insurance Company -->
-              <div class="form-group mb-3">
+            <!-- Insured Name -->
+            <div class="col-md-6 col-6 mb-3">
+              <div class="form-group">
+                <label>Insured Name</label>
+                <input type="text" id="lr_insured_name" class="" placeholder="Alex Mark" />
+              </div>
+            </div>
+
+            <!-- Insurance Company -->
+            <div class="col-md-6 col-6 mb-3">
+              <div class="form-group">
                 <label>Insurance Company</label>
-                <input type="text" id="lr_ins_company" class="leak-input" placeholder="ABC Company" />
+                <input type="text" id="lr_ins_company" class="" placeholder="ABC Company" />
               </div>
+            </div>
 
-              <!-- Address -->
-              <div class="form-group mb-3">
+            <!-- Date of Loss / Second Date -->
+            <div class="col-md-6 col-6 mb-3">
+              <div class="form-group date-group">
+                <label>Date</label>
+                <div class="datepicker-wrapper w-100">
+                  <input type="text" id="notifEndDate" class="" placeholder="12/4/2025" autocomplete="off" readonly />
+                  <div class="datepicker-icon">
+                    <span class="calendar-icon" id="icon-notifEndDate">
+                      <img src="/assets/images/datepicker.svg" alt="calendar" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- City -->
+            <div class="col-md-6 col-6 mb-3">
+              <div class="form-group">
+                <label>City</label>
+                <input type="text" id="lr_city" class="" placeholder="123456789" />
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="col-md-6 col-6 mb-3">
+              <div class="form-group">
                 <label>Address</label>
-                <input type="text" id="lr_address" class="leak-input" placeholder="123456789" />
+                <input type="text" id="lr_address" class="" placeholder="123456789" />
               </div>
+            </div>
 
-              <!-- State -->
-              <div class="form-group mb-3">
+            <!-- State -->
+            <div class="col-md-6 col-6 mb-3">
+              <div class="form-group">
                 <label>State</label>
-                <input type="text" id="lr_state" class="leak-input" placeholder="XYZ" />
+                <input type="text" id="lr_state" class="" placeholder="XYZ" />
               </div>
+            </div>
 
-              <!-- Inspector -->
-              <div class="form-group mb-3">
+            <!-- Zip Code -->
+            <div class="col-md-6 col-6 mb-3">
+              <div class="form-group">
+                <label>Zip Code</label>
+                <input type="text" id="lr_zip" class="" placeholder="32456" />
+              </div>
+            </div>
+
+            <!-- Inspector -->
+            <div class="col-md-6 col-6 mb-3">
+              <div class="form-group">
                 <label>Inspector</label>
-                <input type="text" id="lr_inspector" class="leak-input" placeholder="Alex John" />
+                <input type="text" id="lr_inspector" class="" placeholder="Alex John" />
               </div>
             </div>
           </div>
+
 
           <!-- FOR MANAGER SECTION -->
           <div class="row mt-2">
@@ -721,7 +731,7 @@
             <div class="col-md-6 col-12">
               <!-- Leak detection conducted on -->
               <div class="form-group mb-3">
-                <label>Leak detection conducted on:</label>
+                <label class="pb-1">Leak detection conducted on:</label>
                 <div class="leak-checkbox-group">
                   <label class="leak-checkbox">
                     <input type="checkbox" name="lr_lines" value="Freshwater lines" />
@@ -746,7 +756,7 @@
 
               <!-- Duration -->
               <div class="form-group mb-3">
-                <label>Duration of the leak</label>
+                <label class="pb-1">Duration of the leak</label>
                 <div class="leak-checkbox-group">
                   <label class="leak-checkbox">
                     <input type="checkbox" name="lr_duration" value="Less than 2 weeks" />
@@ -768,7 +778,7 @@
             <div class="col-md-6 col-12">
               <!-- Is leak active... -->
               <div class="form-group mb-3">
-                <label>Is leak active all the time, intermittent, or only when a fixture is used?</label>
+                <label class="pb-1">Is leak active all the time, intermittent, or only when a fixture is used?</label>
                 <div class="leak-checkbox-group">
                   <label class="leak-checkbox">
                     <input type="checkbox" name="lr_active" value="All the time" />
@@ -851,36 +861,6 @@
           margin-bottom: 16px;
         }
 
-        /* form basics */
-        .leak-report-form label {
-          font-size: 12px;
-          color: #6b7280;
-          margin-bottom: 5px;
-          display: block;
-        }
-
-        .leak-input,
-        .leak-textarea {
-          width: 100%;
-          border-radius: 6px;
-          border: 1px solid #e5e7eb;
-          padding: 8px 10px;
-          font-size: 13px;
-          background-color: #ffffff;
-          outline: none;
-        }
-
-        .leak-input::placeholder,
-        .leak-textarea::placeholder {
-          color: #9ca3af;
-          font-weight: 300;
-        }
-
-        .leak-input:focus,
-        .leak-textarea:focus {
-          border-color: #ff7d1f;
-          box-shadow: 0 0 0 1px rgba(255, 125, 31, 0.2);
-        }
 
         /* datepicker wrapper */
         .leak-report-page .datepicker-wrapper {

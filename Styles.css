@@ -1679,7 +1679,7 @@ td {
 
 /* Top Title */
 .photos-pdf-title {
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 24px;
@@ -1803,7 +1803,7 @@ td {
 /* Title */
 .photos-gen-title {
   color: #1f2937;
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 600;
   margin-bottom: 10px;
   margin-top: 15px;
@@ -1870,13 +1870,14 @@ td {
   align-items: center;
   gap: 6px;
   font-size: 13px;
-  color: #6b7280;
+  color: #a0a3bd;
   user-select: none;
 }
 
 .photos-gen-select input[type="checkbox"] {
   width: 16px;
   height: 16px;
+  border: 2px solid #a0a3bd !important;
 }
 
 /* Generate PDF button */
